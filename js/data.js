@@ -6,9 +6,18 @@ const DataSystem = {
     try {
       this.cards = await githubDB.fetchCardsFromRaw();
     } catch (e) {
-      console.warn('Loading cards from raw failed, using localStorage fallback');
-      this.cards = localStorage.getItem('local_cards') ? JSON.parse(localStorage.getItem('local_cards')) : [];
+      console.warn('Failed to load cards, using localStorage fallback');
+      this.cards = [];
     }
+    // Backward compatibility: if a card has no "status", set it to "active"
+    this.cards = this.cards.map(card => ({
+      ...card,
+      status: card.status || 'active',
+      // Also ensure other new fields exist (they will be filled in edit anyway)
+      email: card.email || '',
+      verificationCode: card.verificationCode || '0000',
+    }));
+    console.log('Cards normalized:', this.cards.length);
   },
 
   async loadHomepage() {
@@ -28,7 +37,6 @@ const DataSystem = {
     return this.cards.find(c => c.id === id && c.secretCode === secret);
   },
 
-  // Check if a username already exists
   isUsernameTaken(username) {
     return this.cards.some(c => c.coreIdentity?.username?.toLowerCase() === username.toLowerCase());
   }

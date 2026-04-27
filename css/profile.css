@@ -1,0 +1,140 @@
+/* ========== Profile Page View & Edit ========== */
+.profile-card-view {
+  background: var(--glass);
+  backdrop-filter: blur(30px);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 0 50px rgba(255,51,102,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.profile-card-view::before {
+  content: '';
+  position: absolute;
+  top: -30%; left: -30%;
+  width: 160%; height: 160%;
+  background: radial-gradient(circle at 30% 30%, rgba(0,229,255,0.1), transparent 70%);
+  pointer-events: none;
+}
+.dp-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.dp-section img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 30px var(--glow-pink);
+}
+.profile-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem 2rem;
+  color: var(--text2);
+}
+.profile-details .detail-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 0.6rem 0;
+}
+.profile-details .detail-label {
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+/* Gallery Carousel */
+.gallery-section {
+  margin-top: 2rem;
+}
+.gallery-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+.gallery-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.gallery-item {
+  position: relative;
+  flex: 0 0 200px;
+  height: 150px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--glass-border);
+  scroll-snap-align: start;
+  transition: transform 0.2s;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-item .delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+}
+
+/* Edit mode overrides */
+.edit-mode .profile-card-view {
+  display: none;
+}
+.edit-form-container {
+  display: none;
+}
+.edit-mode .edit-form-container {
+  display: block;
+}
+
+/* Upload overlay */
+.upload-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.upload-box {
+  background: var(--bg2);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 400px;
+}

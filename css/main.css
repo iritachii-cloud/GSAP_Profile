@@ -188,7 +188,7 @@ main { padding-top: 5rem; min-height: 80vh; }
 }
 .flip-details { padding: 1.5rem; }
 .flip-details h2 { font-size: 1.8rem; color: var(--accent); }
-.flip-row { display: flex; justify-content: space-between; margin: 0.8rem 0; font-size: 0.9rem; }
+.flip-row { display: flex; justify-content: space-between; margin: 0.2rem 0; font-size: 0.9rem; }
 .flip-back .flip-details { color: var(--accent2); }
 
 /* Forms */

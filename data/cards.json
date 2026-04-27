@@ -3,6 +3,9 @@
     {
       "id": "Bijusayswaddup",
       "secretCode": "ExampleSecret",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Biju",
         "lastName": "Maharjan",
@@ -24,8 +27,15 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert (INTJ)",
-        "strengths": ["Creative", "Loyal", "Strategic"],
-        "weaknesses": ["Overthinking", "Emotional Attachment"],
+        "strengths": [
+          "Creative",
+          "Loyal",
+          "Strategic"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Emotional Attachment"
+        ],
         "habits": [
           "Late-night Gaming",
           "Coding",
@@ -69,8 +79,16 @@
         "quote": "Stay soft, think sharp."
       },
       "lifestyle": {
-        "hobbies": ["Coding", "Writing", "Gaming"],
-        "skills": ["Leadership", "Design", "Strategy"],
+        "hobbies": [
+          "Coding",
+          "Writing",
+          "Gaming"
+        ],
+        "skills": [
+          "Leadership",
+          "Design",
+          "Strategy"
+        ],
         "dreamDestination": "Japan",
         "biggestFear": "Failing In Life",
         "biggestMotivation": "Creating something that lasts"
@@ -89,22 +107,25 @@
       "media": {
         "dp": "assets/images/dp/biju.png",
         "gallery": [
-          "assets/images/gallery/biju1.jpg",
-          "assets/images/gallery/biju2.jpg",
-          "assets/images/gallery/biju3.jpg",
-          "assets/images/gallery/biju4.jpg",
-          "assets/images/gallery/biju5.jpg",
-          "assets/images/gallery/biju6.jpg",
-          "assets/images/gallery/biju7.jpg",
-          "assets/images/gallery/biju8.jpg",
-          "assets/images/gallery/biju9.jpg",
-          "assets/images/gallery/biju10.jpg"
+          "assets/images/gallery/bijusayswaddup/gallery1.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery2.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery3.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery4.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery5.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery6.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery7.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery8.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery9.jpg",
+          "assets/images/gallery/bijusayswaddup/gallery10.jpg"
         ]
       }
     },
     {
       "id": "Xoxosaibaaa",
       "secretCode": "LuckyPhoenix271",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Saiba",
         "lastName": "Shrestha",
@@ -126,17 +147,37 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Loyal", "Trustworthy", "Cheerful", "Creative"],
-        "weaknesses": ["Overthinking", "Social Anxiety", "Insecure"],
+        "strengths": [
+          "Loyal",
+          "Trustworthy",
+          "Cheerful",
+          "Creative"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Social Anxiety",
+          "Insecure"
+        ],
         "habits": [
           "Music while working",
           "Checking social media constantly"
         ],
-        "petPeeves": ["Copying others", "Being misunderstood"]
+        "petPeeves": [
+          "Copying others",
+          "Being misunderstood"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Nature", "Music", "Photography"],
-        "dislikes": ["Crowds", "College", "Betrayal"]
+        "likes": [
+          "Nature",
+          "Music",
+          "Photography"
+        ],
+        "dislikes": [
+          "Crowds",
+          "College",
+          "Betrayal"
+        ]
       },
       "favorites": {
         "musicGenre": "All genres",
@@ -153,8 +194,17 @@
         "quote": "Work smart not hard"
       },
       "lifestyle": {
-        "hobbies": ["Photography", "Writing", "Singing", "Dancing"],
-        "skills": ["Singing", "Creative writing", "Emotional support"],
+        "hobbies": [
+          "Photography",
+          "Writing",
+          "Singing",
+          "Dancing"
+        ],
+        "skills": [
+          "Singing",
+          "Creative writing",
+          "Emotional support"
+        ],
         "dreamDestination": "Mount Everest",
         "biggestFear": "Losing loved ones",
         "biggestMotivation": "Personal growth"
@@ -184,6 +234,9 @@
     {
       "id": "Sofieee",
       "secretCode": "SwiftDragon582",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Sofiya",
         "lastName": "Lama",
@@ -205,14 +258,36 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Loyal", "Patient", "Understanding", "Problem-solving"],
-        "weaknesses": ["Social Anxiety", "Overthinking"],
-        "habits": ["Music while working", "Staying up late"],
-        "petPeeves": ["Loud chewing", "Crowded places", "Slow internet"]
+        "strengths": [
+          "Loyal",
+          "Patient",
+          "Understanding",
+          "Problem-solving"
+        ],
+        "weaknesses": [
+          "Social Anxiety",
+          "Overthinking"
+        ],
+        "habits": [
+          "Music while working",
+          "Staying up late"
+        ],
+        "petPeeves": [
+          "Loud chewing",
+          "Crowded places",
+          "Slow internet"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Cloudy weather", "Late night deep conversations"],
-        "dislikes": ["Dishonesty", "Winter", "Being misunderstood"]
+        "likes": [
+          "Cloudy weather",
+          "Late night deep conversations"
+        ],
+        "dislikes": [
+          "Dishonesty",
+          "Winter",
+          "Being misunderstood"
+        ]
       },
       "favorites": {
         "musicGenre": "Synthwave",
@@ -229,8 +304,15 @@
         "quote": "The best way out is through"
       },
       "lifestyle": {
-        "hobbies": ["Makeup artistry", "Listening to music"],
-        "skills": ["Cooking", "Makeup", "Problem-solving"],
+        "hobbies": [
+          "Makeup artistry",
+          "Listening to music"
+        ],
+        "skills": [
+          "Cooking",
+          "Makeup",
+          "Problem-solving"
+        ],
         "dreamDestination": "New Zealand",
         "biggestFear": "Heights",
         "biggestMotivation": "Personal growth"
@@ -258,6 +340,9 @@
     {
       "id": "Kyzoochan",
       "secretCode": "MightyEagle714",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Nischal",
         "lastName": "Pokharel",
@@ -279,14 +364,37 @@
       },
       "personalityTraits": {
         "personalityType": "Strategic Thinker",
-        "strengths": ["Loyal", "Patient", "Strategic", "Logical"],
-        "weaknesses": ["Overthinking", "Anxiety", "Emotional sensitivity"],
-        "habits": ["Listening to music", "Late night thinking"],
-        "petPeeves": ["Betrayal", "People breaking promises"]
+        "strengths": [
+          "Loyal",
+          "Patient",
+          "Strategic",
+          "Logical"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Anxiety",
+          "Emotional sensitivity"
+        ],
+        "habits": [
+          "Listening to music",
+          "Late night thinking"
+        ],
+        "petPeeves": [
+          "Betrayal",
+          "People breaking promises"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Deep conversations", "Anime", "Gaming"],
-        "dislikes": ["Dishonesty", "Liars", "Crowds"]
+        "likes": [
+          "Deep conversations",
+          "Anime",
+          "Gaming"
+        ],
+        "dislikes": [
+          "Dishonesty",
+          "Liars",
+          "Crowds"
+        ]
       },
       "favorites": {
         "musicGenre": "Lo-fi, Pop, J-pop",
@@ -303,8 +411,16 @@
         "quote": "In a world full of rudeness be the kindness"
       },
       "lifestyle": {
-        "hobbies": ["Gaming", "Reading", "Singing"],
-        "skills": ["Problem-solving", "Mental health support", "Therapeutic listening"],
+        "hobbies": [
+          "Gaming",
+          "Reading",
+          "Singing"
+        ],
+        "skills": [
+          "Problem-solving",
+          "Mental health support",
+          "Therapeutic listening"
+        ],
         "dreamDestination": "USA",
         "biggestFear": "Heights and failure",
         "biggestMotivation": "Helping others and personal support"
@@ -334,6 +450,9 @@
     {
       "id": "Sweetieetweetiee",
       "secretCode": "NobleWolf329",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Sweetie",
         "lastName": "Gurung",
@@ -355,14 +474,35 @@
       },
       "personalityTraits": {
         "personalityType": "Extrovert with close people",
-        "strengths": ["Creative", "Compassionate", "Talkative"],
-        "weaknesses": ["Panics easily", "Emotional"],
-        "habits": ["Diary writing", "Being talkative"],
-        "petPeeves": ["Unwanted touching", "Lies"]
+        "strengths": [
+          "Creative",
+          "Compassionate",
+          "Talkative"
+        ],
+        "weaknesses": [
+          "Panics easily",
+          "Emotional"
+        ],
+        "habits": [
+          "Diary writing",
+          "Being talkative"
+        ],
+        "petPeeves": [
+          "Unwanted touching",
+          "Lies"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Poetry", "Traveling", "Reading"],
-        "dislikes": ["Lies", "Heights", "Dishonesty"]
+        "likes": [
+          "Poetry",
+          "Traveling",
+          "Reading"
+        ],
+        "dislikes": [
+          "Lies",
+          "Heights",
+          "Dishonesty"
+        ]
       },
       "favorites": {
         "musicGenre": "90s music",
@@ -379,8 +519,17 @@
         "quote": "Don't give up, keep moving forward"
       },
       "lifestyle": {
-        "hobbies": ["Traveling", "Writing", "Reading", "Sleeping"],
-        "skills": ["Creative writing", "Comforting people", "Sleeping"],
+        "hobbies": [
+          "Traveling",
+          "Writing",
+          "Reading",
+          "Sleeping"
+        ],
+        "skills": [
+          "Creative writing",
+          "Comforting people",
+          "Sleeping"
+        ],
         "dreamDestination": "Japan",
         "biggestFear": "Heights",
         "biggestMotivation": "Personal development and family"
@@ -408,6 +557,9 @@
     {
       "id": "Geniyasuuu",
       "secretCode": "CleverJaguar186",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Sagya",
         "lastName": "Ghising",
@@ -429,14 +581,39 @@
       },
       "personalityTraits": {
         "personalityType": "Bold & Creative",
-        "strengths": ["Loyal", "Humble", "Patient", "Artistic"],
-        "weaknesses": ["Overthinking", "Anxiety"],
-        "habits": ["Drawing", "Sketching", "Baking", "Cooking"],
-        "petPeeves": ["Slow internet", "Loud noises"]
+        "strengths": [
+          "Loyal",
+          "Humble",
+          "Patient",
+          "Artistic"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Anxiety"
+        ],
+        "habits": [
+          "Drawing",
+          "Sketching",
+          "Baking",
+          "Cooking"
+        ],
+        "petPeeves": [
+          "Slow internet",
+          "Loud noises"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Creating art", "Sleeping", "Eating", "Shopping"],
-        "dislikes": ["Slow internet", "Bad smells", "Dairy products"]
+        "likes": [
+          "Creating art",
+          "Sleeping",
+          "Eating",
+          "Shopping"
+        ],
+        "dislikes": [
+          "Slow internet",
+          "Bad smells",
+          "Dairy products"
+        ]
       },
       "favorites": {
         "musicGenre": "Classical, Pop, Hiphop, Rap",
@@ -453,8 +630,17 @@
         "quote": "Tit for tat"
       },
       "lifestyle": {
-        "hobbies": ["Sleeping", "Gaming", "Drawing", "Baking"],
-        "skills": ["Drawing", "Cooking", "Art creation"],
+        "hobbies": [
+          "Sleeping",
+          "Gaming",
+          "Drawing",
+          "Baking"
+        ],
+        "skills": [
+          "Drawing",
+          "Cooking",
+          "Art creation"
+        ],
         "dreamDestination": "Egypt",
         "biggestFear": "Being worthless or a burden",
         "biggestMotivation": "Helping people and creating art"
@@ -482,6 +668,9 @@
     {
       "id": "Lilythebilli",
       "secretCode": "BraveTiger402",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Lily",
         "lastName": "Rai",
@@ -503,14 +692,34 @@
       },
       "personalityTraits": {
         "personalityType": "Reserved & Observant",
-        "strengths": ["Strict", "Focused", "Independent"],
-        "weaknesses": ["Sleepy", "Withdrawn"],
-        "habits": ["Sleeping", "Quiet observation"],
-        "petPeeves": ["Disturbances during sleep"]
+        "strengths": [
+          "Strict",
+          "Focused",
+          "Independent"
+        ],
+        "weaknesses": [
+          "Sleepy",
+          "Withdrawn"
+        ],
+        "habits": [
+          "Sleeping",
+          "Quiet observation"
+        ],
+        "petPeeves": [
+          "Disturbances during sleep"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Sleeping", "Peace and quiet", "Gaming"],
-        "dislikes": ["Being awake", "Noise", "Interruptions"]
+        "likes": [
+          "Sleeping",
+          "Peace and quiet",
+          "Gaming"
+        ],
+        "dislikes": [
+          "Being awake",
+          "Noise",
+          "Interruptions"
+        ]
       },
       "favorites": {
         "musicGenre": "Ambient & Lullabies",
@@ -527,8 +736,16 @@
         "quote": "Move quietly"
       },
       "lifestyle": {
-        "hobbies": ["Gaming", "Sleeping", "Writing"],
-        "skills": ["Writing", "Observation", "Resting"],
+        "hobbies": [
+          "Gaming",
+          "Sleeping",
+          "Writing"
+        ],
+        "skills": [
+          "Writing",
+          "Observation",
+          "Resting"
+        ],
         "dreamDestination": "USA",
         "biggestFear": "Insomnia",
         "biggestMotivation": "Personal peace and comfort"
@@ -555,6 +772,9 @@
     {
       "id": "Rosieposie",
       "secretCode": "QuietFalcon847",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Rojina",
         "lastName": "Chapagain",
@@ -576,14 +796,35 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Patient", "Kind", "Observant"],
-        "weaknesses": ["Overthinking", "Anxious"],
-        "habits": ["Listening to music while working"],
-        "petPeeves": ["Slow internet", "Dishonesty"]
+        "strengths": [
+          "Patient",
+          "Kind",
+          "Observant"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Anxious"
+        ],
+        "habits": [
+          "Listening to music while working"
+        ],
+        "petPeeves": [
+          "Slow internet",
+          "Dishonesty"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Anime", "Novels", "Flowers", "Music"],
-        "dislikes": ["Crowds", "Liars", "Dishonesty"]
+        "likes": [
+          "Anime",
+          "Novels",
+          "Flowers",
+          "Music"
+        ],
+        "dislikes": [
+          "Crowds",
+          "Liars",
+          "Dishonesty"
+        ]
       },
       "favorites": {
         "musicGenre": "Alternative Rock",
@@ -600,8 +841,16 @@
         "quote": "Life is all about the next step"
       },
       "lifestyle": {
-        "hobbies": ["Singing", "Reading", "Cooking"],
-        "skills": ["Cooking", "Singing", "Strategic thinking"],
+        "hobbies": [
+          "Singing",
+          "Reading",
+          "Cooking"
+        ],
+        "skills": [
+          "Cooking",
+          "Singing",
+          "Strategic thinking"
+        ],
         "dreamDestination": "Mountains",
         "biggestFear": "Failure",
         "biggestMotivation": "Being kind and helpful"
@@ -631,6 +880,9 @@
     {
       "id": "Selubuvaii",
       "secretCode": "BoldPanda568",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Salina",
         "lastName": "Rana",
@@ -652,14 +904,37 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Creative", "Patient", "Observant"],
-        "weaknesses": ["Social anxiety", "Overthinking"],
-        "habits": ["Gaming", "Crafting", "Yapping"],
-        "petPeeves": ["Loud chewing", "Slow internet", "Bad teammates"]
+        "strengths": [
+          "Creative",
+          "Patient",
+          "Observant"
+        ],
+        "weaknesses": [
+          "Social anxiety",
+          "Overthinking"
+        ],
+        "habits": [
+          "Gaming",
+          "Crafting",
+          "Yapping"
+        ],
+        "petPeeves": [
+          "Loud chewing",
+          "Slow internet",
+          "Bad teammates"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Rainy weather", "Deep conversations", "Beautiful scenery"],
-        "dislikes": ["Energy mismatches", "Boastful people", "Being misunderstood"]
+        "likes": [
+          "Rainy weather",
+          "Deep conversations",
+          "Beautiful scenery"
+        ],
+        "dislikes": [
+          "Energy mismatches",
+          "Boastful people",
+          "Being misunderstood"
+        ]
       },
       "favorites": {
         "musicGenre": "Pop",
@@ -676,8 +951,16 @@
         "quote": "Be selfish, love yourself more"
       },
       "lifestyle": {
-        "hobbies": ["Gaming", "Flower making", "Crafting"],
-        "skills": ["Cooking", "Problem-solving", "Communication"],
+        "hobbies": [
+          "Gaming",
+          "Flower making",
+          "Crafting"
+        ],
+        "skills": [
+          "Cooking",
+          "Problem-solving",
+          "Communication"
+        ],
         "dreamDestination": "Japan (Inazuma inspired)",
         "biggestFear": "Being abandoned or misunderstood",
         "biggestMotivation": "Self-love and personal growth"
@@ -707,6 +990,9 @@
     {
       "id": "Jujuthecutu",
       "secretCode": "MightyHawk913",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Jamuna",
         "lastName": "Maharjan",
@@ -728,14 +1014,35 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Charismatic", "Patient", "Loyal"],
-        "weaknesses": ["Social Anxiety", "Doom Scrolling"],
-        "habits": ["Listening to bhajans while working"],
-        "petPeeves": ["People invading personal space", "Emotional immaturity"]
+        "strengths": [
+          "Charismatic",
+          "Patient",
+          "Loyal"
+        ],
+        "weaknesses": [
+          "Social Anxiety",
+          "Doom Scrolling"
+        ],
+        "habits": [
+          "Listening to bhajans while working"
+        ],
+        "petPeeves": [
+          "People invading personal space",
+          "Emotional immaturity"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Fluffy things", "Pets", "Family", "Quiet spaces"],
-        "dislikes": ["Crowds", "Loud music", "Liars"]
+        "likes": [
+          "Fluffy things",
+          "Pets",
+          "Family",
+          "Quiet spaces"
+        ],
+        "dislikes": [
+          "Crowds",
+          "Loud music",
+          "Liars"
+        ]
       },
       "favorites": {
         "musicGenre": "R&B",
@@ -751,8 +1058,17 @@
         "quote": "Peace comes from within. Do not seek it without."
       },
       "lifestyle": {
-        "hobbies": ["Painting", "Cooking", "Baking"],
-        "skills": ["Cooking", "Baking", "Writing", "Sports"],
+        "hobbies": [
+          "Painting",
+          "Cooking",
+          "Baking"
+        ],
+        "skills": [
+          "Cooking",
+          "Baking",
+          "Writing",
+          "Sports"
+        ],
         "dreamDestination": "Tibet",
         "biggestFear": "Heights and Darkness",
         "biggestMotivation": "Family and sister"
@@ -782,6 +1098,9 @@
     {
       "id": "Dalitmorphy",
       "secretCode": "SwiftLion284",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Rashiph",
         "lastName": "Maharjan",
@@ -803,14 +1122,32 @@
       },
       "personalityTraits": {
         "personalityType": "Introvert",
-        "strengths": ["Loyal", "Observant"],
-        "weaknesses": ["Overthinking"],
-        "habits": ["Smoking", "Late-night gaming"],
-        "petPeeves": ["Dark system teams", "Disorganization"]
+        "strengths": [
+          "Loyal",
+          "Observant"
+        ],
+        "weaknesses": [
+          "Overthinking"
+        ],
+        "habits": [
+          "Smoking",
+          "Late-night gaming"
+        ],
+        "petPeeves": [
+          "Dark system teams",
+          "Disorganization"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Anime", "Games", "Quiet time"],
-        "dislikes": ["Waking up early", "Crowds"]
+        "likes": [
+          "Anime",
+          "Games",
+          "Quiet time"
+        ],
+        "dislikes": [
+          "Waking up early",
+          "Crowds"
+        ]
       },
       "favorites": {
         "musicGenre": "Lo-fi, Metal",
@@ -826,8 +1163,14 @@
         "quote": "Keep moving forward"
       },
       "lifestyle": {
-        "hobbies": ["Photography", "Gaming"],
-        "skills": ["Gaming", "Observation"],
+        "hobbies": [
+          "Photography",
+          "Gaming"
+        ],
+        "skills": [
+          "Gaming",
+          "Observation"
+        ],
         "dreamDestination": "Japan",
         "biggestFear": "Loneliness",
         "biggestMotivation": "Helping others"
@@ -857,6 +1200,9 @@
     {
       "id": "Cutuluyumo",
       "secretCode": "CleverWolf167",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Sujina",
         "lastName": "Shrestha",
@@ -878,14 +1224,32 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Loyal", "Creative"],
-        "weaknesses": ["Anger issues"],
-        "habits": ["Music everywhere", "Gaming"],
-        "petPeeves": ["Fake people", "Dishonesty"]
+        "strengths": [
+          "Loyal",
+          "Creative"
+        ],
+        "weaknesses": [
+          "Anger issues"
+        ],
+        "habits": [
+          "Music everywhere",
+          "Gaming"
+        ],
+        "petPeeves": [
+          "Fake people",
+          "Dishonesty"
+        ]
       },
       "likesDislikes": {
-        "likes": ["K-dramas", "Music", "Gaming"],
-        "dislikes": ["Fake people", "Crowds"]
+        "likes": [
+          "K-dramas",
+          "Music",
+          "Gaming"
+        ],
+        "dislikes": [
+          "Fake people",
+          "Crowds"
+        ]
       },
       "favorites": {
         "musicGenre": "Indie Pop",
@@ -901,8 +1265,15 @@
         "quote": "Be yourself"
       },
       "lifestyle": {
-        "hobbies": ["Gaming", "Sleeping", "Listening to music"],
-        "skills": ["Writing", "Observation"],
+        "hobbies": [
+          "Gaming",
+          "Sleeping",
+          "Listening to music"
+        ],
+        "skills": [
+          "Writing",
+          "Observation"
+        ],
         "dreamDestination": "New York",
         "biggestFear": "Fake people",
         "biggestMotivation": "Helping others"
@@ -937,6 +1308,9 @@
     {
       "id": "Krijalll",
       "secretCode": "NobleEagle823",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Krijal",
         "lastName": "Maharjan",
@@ -958,14 +1332,35 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Creative", "Strong", "Loyal"],
-        "weaknesses": ["Procrastination", "Social Anxiety"],
-        "habits": ["Music while working", "Gaming", "Sleeping"],
-        "petPeeves": ["Slow internet", "Being late"]
+        "strengths": [
+          "Creative",
+          "Strong",
+          "Loyal"
+        ],
+        "weaknesses": [
+          "Procrastination",
+          "Social Anxiety"
+        ],
+        "habits": [
+          "Music while working",
+          "Gaming",
+          "Sleeping"
+        ],
+        "petPeeves": [
+          "Slow internet",
+          "Being late"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Rainy weather", "Games", "Quiet time"],
-        "dislikes": ["Waking up early", "Dishonesty"]
+        "likes": [
+          "Rainy weather",
+          "Games",
+          "Quiet time"
+        ],
+        "dislikes": [
+          "Waking up early",
+          "Dishonesty"
+        ]
       },
       "favorites": {
         "musicGenre": "Lo-fi",
@@ -981,8 +1376,15 @@
         "quote": "Do everything yourself nobody cares about you"
       },
       "lifestyle": {
-        "hobbies": ["Gaming", "Music"],
-        "skills": ["Cooking", "Writing", "Design"],
+        "hobbies": [
+          "Gaming",
+          "Music"
+        ],
+        "skills": [
+          "Cooking",
+          "Writing",
+          "Design"
+        ],
         "dreamDestination": "Japan",
         "biggestFear": "Darkness",
         "biggestMotivation": "Personal growth"
@@ -1012,6 +1414,9 @@
     {
       "id": "Sapanasista",
       "secretCode": "BraveFalcon346",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Sapana",
         "lastName": "Limbu",
@@ -1033,8 +1438,17 @@
       },
       "personalityTraits": {
         "personalityType": "INTJ",
-        "strengths": ["Patient", "Loyal", "Sensitive", "Family-oriented"],
-        "weaknesses": ["Social Anxiety", "Overthinking", "Enchlophobia"],
+        "strengths": [
+          "Patient",
+          "Loyal",
+          "Sensitive",
+          "Family-oriented"
+        ],
+        "weaknesses": [
+          "Social Anxiety",
+          "Overthinking",
+          "Enchlophobia"
+        ],
         "habits": [
           "Morning coffee",
           "Music while writing",
@@ -1075,8 +1489,17 @@
         "quote": "Laugh as much as you breathe and love as long as you live."
       },
       "lifestyle": {
-        "hobbies": ["Photography", "Gaming", "Eating", "Reading manga"],
-        "skills": ["Writing", "Cooking", "Gaming"],
+        "hobbies": [
+          "Photography",
+          "Gaming",
+          "Eating",
+          "Reading manga"
+        ],
+        "skills": [
+          "Writing",
+          "Cooking",
+          "Gaming"
+        ],
         "dreamDestination": "China",
         "biggestFear": "Failure and loneliness",
         "biggestMotivation": "Helping others and personal growth"
@@ -1106,6 +1529,9 @@
     {
       "id": "Sabzthemagar",
       "secretCode": "LuckyPanda451",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Sabina",
         "lastName": "Magar",
@@ -1127,14 +1553,31 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Creative", "Loyal", "Friendly"],
-        "weaknesses": ["Overthinking", "Self-doubt"],
-        "habits": ["Music while working"],
-        "petPeeves": ["People pretending to be nice"]
+        "strengths": [
+          "Creative",
+          "Loyal",
+          "Friendly"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Self-doubt"
+        ],
+        "habits": [
+          "Music while working"
+        ],
+        "petPeeves": [
+          "People pretending to be nice"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Chinese dramas", "Friend gatherings"],
-        "dislikes": ["Winter", "Waking up early"]
+        "likes": [
+          "Chinese dramas",
+          "Friend gatherings"
+        ],
+        "dislikes": [
+          "Winter",
+          "Waking up early"
+        ]
       },
       "favorites": {
         "musicGenre": "Indie Pop, R&B",
@@ -1150,8 +1593,15 @@
         "quote": "It is what it is"
       },
       "lifestyle": {
-        "hobbies": ["Cooking", "Relaxing"],
-        "skills": ["Cooking", "Cleaning", "Socializing"],
+        "hobbies": [
+          "Cooking",
+          "Relaxing"
+        ],
+        "skills": [
+          "Cooking",
+          "Cleaning",
+          "Socializing"
+        ],
         "dreamDestination": "Switzerland",
         "biggestFear": "Failure",
         "biggestMotivation": "Staying busy and productive"
@@ -1181,6 +1631,9 @@
     {
       "id": "Unumunuchunu",
       "secretCode": "QuietTiger792",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Munu",
         "lastName": "Gurung",
@@ -1202,14 +1655,29 @@
       },
       "personalityTraits": {
         "personalityType": "Reserved",
-        "strengths": ["Loyal", "Independent"],
-        "weaknesses": ["Overthinking"],
-        "habits": ["Late nights"],
-        "petPeeves": ["Excessive niceness"]
+        "strengths": [
+          "Loyal",
+          "Independent"
+        ],
+        "weaknesses": [
+          "Overthinking"
+        ],
+        "habits": [
+          "Late nights"
+        ],
+        "petPeeves": [
+          "Excessive niceness"
+        ]
       },
       "likesDislikes": {
-        "likes": ["Food", "Simplicity"],
-        "dislikes": ["Complexity", "Fakeness"]
+        "likes": [
+          "Food",
+          "Simplicity"
+        ],
+        "dislikes": [
+          "Complexity",
+          "Fakeness"
+        ]
       },
       "favorites": {
         "musicGenre": "Bhojpuri",
@@ -1225,8 +1693,14 @@
         "quote": "Keep moving forward"
       },
       "lifestyle": {
-        "hobbies": ["Sleeping", "Eating"],
-        "skills": ["Sleeping", "Relaxing"],
+        "hobbies": [
+          "Sleeping",
+          "Eating"
+        ],
+        "skills": [
+          "Sleeping",
+          "Relaxing"
+        ],
         "dreamDestination": "North Korea",
         "biggestFear": "Own height",
         "biggestMotivation": "Personal peace"
@@ -1256,6 +1730,9 @@
     {
       "id": "Karmaisabitch",
       "secretCode": "BoldPhoenix632",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Saransh",
         "lastName": "Joshi",
@@ -1277,14 +1754,25 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Strategic", "Thoughtful"],
-        "weaknesses": ["Overthinking", "Procrastination", "Social Anxiety"],
+        "strengths": [
+          "Strategic",
+          "Thoughtful"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Procrastination",
+          "Social Anxiety"
+        ],
         "habits": [
           "Late-night thinking",
           "Morning coffee",
           "Music while working"
         ],
-        "petPeeves": ["Loud chewing", "Being late", "Slow internet"]
+        "petPeeves": [
+          "Loud chewing",
+          "Being late",
+          "Slow internet"
+        ]
       },
       "likesDislikes": {
         "likes": [
@@ -1314,8 +1802,15 @@
         "quote": "Life is life"
       },
       "lifestyle": {
-        "hobbies": ["Thinking", "Breathing exercises", "Art"],
-        "skills": ["Strategic thinking", "Problem-solving"],
+        "hobbies": [
+          "Thinking",
+          "Breathing exercises",
+          "Art"
+        ],
+        "skills": [
+          "Strategic thinking",
+          "Problem-solving"
+        ],
         "dreamDestination": "Japan",
         "biggestFear": "Life itself",
         "biggestMotivation": "Creating art"
@@ -1345,6 +1840,9 @@
     {
       "id": "Nomibaddie",
       "secretCode": "SwiftDoe948",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Nomika",
         "lastName": "Pun Magar",
@@ -1366,10 +1864,24 @@
       },
       "personalityTraits": {
         "personalityType": "Ambivert",
-        "strengths": ["Loyal", "Respectful", "Friendly"],
-        "weaknesses": ["Overthinking", "Easily hurt"],
-        "habits": ["Late night parties", "Phone usage", "Being lazy"],
-        "petPeeves": ["Being late", "Slow internet"]
+        "strengths": [
+          "Loyal",
+          "Respectful",
+          "Friendly"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Easily hurt"
+        ],
+        "habits": [
+          "Late night parties",
+          "Phone usage",
+          "Being lazy"
+        ],
+        "petPeeves": [
+          "Being late",
+          "Slow internet"
+        ]
       },
       "likesDislikes": {
         "likes": [
@@ -1378,7 +1890,11 @@
           "Hair clips",
           "Rainy weather"
         ],
-        "dislikes": ["Waking up early", "Hangovers", "Hot weather"]
+        "dislikes": [
+          "Waking up early",
+          "Hangovers",
+          "Hot weather"
+        ]
       },
       "favorites": {
         "musicGenre": "90s Nepali Songs",
@@ -1394,8 +1910,15 @@
         "quote": "Vision so bad that I saw the good in him"
       },
       "lifestyle": {
-        "hobbies": ["Singing", "Photography", "Drawing"],
-        "skills": ["Socializing", "Problem creation"],
+        "hobbies": [
+          "Singing",
+          "Photography",
+          "Drawing"
+        ],
+        "skills": [
+          "Socializing",
+          "Problem creation"
+        ],
         "dreamDestination": "Korea",
         "biggestFear": "Water and loneliness",
         "biggestMotivation": "Helping others"
@@ -1425,6 +1948,9 @@
     {
       "id": "Sujalkaizochan",
       "secretCode": "NobleJaguar763",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Sujal",
         "lastName": "Maharjan",
@@ -1453,8 +1979,17 @@
           "Caring",
           "Supportive"
         ],
-        "weaknesses": ["Overwhelmed", "Overthinking"],
-        "habits": ["Gaming", "Singing", "Thinking", "Hiking", "Traveling"],
+        "weaknesses": [
+          "Overwhelmed",
+          "Overthinking"
+        ],
+        "habits": [
+          "Gaming",
+          "Singing",
+          "Thinking",
+          "Hiking",
+          "Traveling"
+        ],
         "petPeeves": [
           "Loud eating noises",
           "Slow internet",
@@ -1496,7 +2031,11 @@
           "Reading comics",
           "Photography"
         ],
-        "skills": ["Cooking", "Problem-solving", "Research"],
+        "skills": [
+          "Cooking",
+          "Problem-solving",
+          "Research"
+        ],
         "dreamDestination": "South Korea",
         "biggestFear": "Being left alone",
         "biggestMotivation": "Helping others, podcasts, Bible reading"
@@ -1526,6 +2065,9 @@
     {
       "id": "Serikacutie",
       "secretCode": "MightyDragon881",
+      "status": "active",
+      "verificationCode": "0000",
+      "email": "bijumaharjan2@gmail.com",
       "coreIdentity": {
         "firstName": "Serika",
         "lastName": "Dangol",
@@ -1547,10 +2089,25 @@
       },
       "personalityTraits": {
         "personalityType": "INTJ Ambivert",
-        "strengths": ["Loyal", "Creative", "Focused", "Calm"],
-        "weaknesses": ["Overthinking", "Introverted"],
-        "habits": ["Late night thinking", "Music while working"],
-        "petPeeves": ["Slow internet", "Being late", "Tardiness"]
+        "strengths": [
+          "Loyal",
+          "Creative",
+          "Focused",
+          "Calm"
+        ],
+        "weaknesses": [
+          "Overthinking",
+          "Introverted"
+        ],
+        "habits": [
+          "Late night thinking",
+          "Music while working"
+        ],
+        "petPeeves": [
+          "Slow internet",
+          "Being late",
+          "Tardiness"
+        ]
       },
       "likesDislikes": {
         "likes": [
@@ -1559,7 +2116,11 @@
           "Quiet environments",
           "Deep conversations"
         ],
-        "dislikes": ["Dishonesty", "Crowds", "Betrayal"]
+        "dislikes": [
+          "Dishonesty",
+          "Crowds",
+          "Betrayal"
+        ]
       },
       "favorites": {
         "musicGenre": "Lo-fi, Indie Pop",

@@ -9,15 +9,92 @@ class GitHubAPI {
     this.useLocal = !this.token;
   }
 
+  _localKey() { return 'shadow_cards'; }
+  _loadLocal() {
+    const raw = localStorage.getItem(this._localKey());
+    return raw ? JSON.parse(raw) : null;
+  }
+  _saveLocal(cards) {
+    localStorage.setItem(this._localKey(), JSON.stringify(cards));
+  }
+
+  _getDefaultCards() {
+    return [
+      {
+        id: "Bijusayswaddup",
+        secretCode: "ExampleSecret",
+        status: "active",
+        verificationCode: "0000",
+        email: "biju@shadow.archive",
+        coreIdentity: {
+          firstName: "Biju",
+          lastName: "Maharjan",
+          nickname: "BOMB BOMB",
+          username: "bijusayswaddup",
+          dateOfBirth: "1999-04-14",
+          age: 26,
+          gender: "Male",
+          nationality: "Nepali",
+          bloodGroup: "O+"
+        },
+        officialDetails: {
+          cardNumber: "CORE-001",
+          cardType: "Shadow Lord",
+          organization: "Joint",
+          role: "Strategist & Developer",
+          issueDate: "2026-01-01",
+          expiryDate: "9999-01-01"
+        },
+        personalityTraits: {
+          personalityType: "Ambivert (INTJ)",
+          strengths: ["Creative","Loyal","Strategic"],
+          weaknesses: ["Overthinking"],
+          habits: ["Gaming"],
+          petPeeves: ["Dishonesty"]
+        },
+        likesDislikes: { likes: ["Rain"], dislikes: ["Crowds"] },
+        favorites: { musicGenre: "Lo-fi", artist: "RADWIMPS", color: "#7f5af0", quote: "Stay soft." },
+        lifestyle: { hobbies: ["Coding"], skills: ["Design"], dreamDestination: "Japan" },
+        digitalSocial: { gamerTag: "biju.exe", socialHandle: "@bijumaharjan" },
+        storyMode: { lifeMotto: "Keep moving forward.", makesHappy: "Everything" },
+        media: { dp: "assets/images/dp/biju.png", gallery: [] }
+      }
+    ];
+  }
+
+  async fetchCardsFromRaw() {
+    if (!this.useLocal) {
+      try {
+        const raw = `https://raw.githubusercontent.com/${this.owner}/${this.repo}/${this.branch}/${this.path}`;
+        const res = await fetch(raw);
+        if (res.ok) {
+          const json = await res.json();
+          const cards = json.cards || json;
+          this._saveLocal(cards);
+          return cards;
+        }
+      } catch (e) { console.warn('GitHub raw failed'); }
+    }
+    let cards = this._loadLocal();
+    if (cards && cards.length > 0) return cards;
+    try {
+      const res = await fetch('data/cards.json');
+      if (res.ok) {
+        const json = await res.json();
+        cards = json.cards || json;
+        this._saveLocal(cards);
+        return cards;
+      }
+    } catch (e) { console.warn('Local file failed'); }
+    cards = this._getDefaultCards();
+    this._saveLocal(cards);
+    return cards;
+  }
+
   async _getFile() {
     const url = `${this.base}${this.path}`;
-    const res = await fetch(url, {
-      headers: { Authorization: `token ${this.token}` }
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(`GitHub API error ${res.status}: ${err.message}`);
-    }
+    const res = await fetch(url, { headers: { Authorization: `token ${this.token}` } });
+    if (!res.ok) throw new Error('GitHub API error');
     const data = await res.json();
     return { sha: data.sha, content: data.content ? atob(data.content) : '[]' };
   }
@@ -31,43 +108,20 @@ class GitHubAPI {
 
   async _commit(cardsArray, message, sha) {
     const newJson = JSON.stringify({ cards: cardsArray }, null, 2);
-    const body = JSON.stringify({
-      message,
-      content: this._toBase64(newJson),
-      sha
-    });
+    const body = JSON.stringify({ message, content: this._toBase64(newJson), sha });
     const res = await fetch(`${this.base}${this.path}`, {
       method: 'PUT',
-      headers: {
-        Authorization: `token ${this.token}`,
-        'Content-Type': 'application/json'
-      },
+      headers: { Authorization: `token ${this.token}`, 'Content-Type': 'application/json' },
       body
     });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(`Commit failed: ${res.status} ${err.message}`);
-    }
-  }
-
-  async fetchCardsFromRaw() {
-    if (this.useLocal) {
-      let cards = localStorage.getItem('local_cards');
-      return cards ? JSON.parse(cards) : [];
-    }
-    const raw = `https://raw.githubusercontent.com/${this.owner}/${this.repo}/${this.branch}/${this.path}`;
-    const res = await fetch(raw);
-    if (!res.ok) throw new Error(`Raw fetch failed (${res.status})`);
-    const json = await res.json();
-    return json.cards || json;
+    if (!res.ok) throw new Error('Commit failed');
   }
 
   async addCard(card) {
     if (this.useLocal) {
-      let cards = localStorage.getItem('local_cards');
-      cards = cards ? JSON.parse(cards) : [];
+      const cards = this._loadLocal() || this._getDefaultCards();
       cards.push(card);
-      localStorage.setItem('local_cards', JSON.stringify(cards));
+      this._saveLocal(cards);
       return;
     }
     const { sha, content } = await this._getFile();
@@ -79,12 +133,11 @@ class GitHubAPI {
 
   async updateCard(id, updatedCard) {
     if (this.useLocal) {
-      let cards = localStorage.getItem('local_cards');
-      cards = cards ? JSON.parse(cards) : [];
+      const cards = this._loadLocal() || this._getDefaultCards();
       const idx = cards.findIndex(c => c.id === id);
       if (idx === -1) throw new Error('Card not found');
       cards[idx] = updatedCard;
-      localStorage.setItem('local_cards', JSON.stringify(cards));
+      this._saveLocal(cards);
       return;
     }
     const { sha, content } = await this._getFile();
@@ -98,10 +151,9 @@ class GitHubAPI {
 
   async deleteCard(id) {
     if (this.useLocal) {
-      let cards = localStorage.getItem('local_cards');
-      cards = cards ? JSON.parse(cards) : [];
+      let cards = this._loadLocal() || this._getDefaultCards();
       cards = cards.filter(c => c.id !== id);
-      localStorage.setItem('local_cards', JSON.stringify(cards));
+      this._saveLocal(cards);
       return;
     }
     const { sha, content } = await this._getFile();
