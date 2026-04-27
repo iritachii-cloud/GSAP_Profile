@@ -37,37 +37,56 @@
     <script src="js/github.js"></script>
     <script src="js/data.js"></script>
     <script>
-        document.getElementById('regForm').addEventListener('submit', async (e) => {
+        document.getElementById('regForm').addEventListener('submit', (e) => {
             e.preventDefault();
+
             const id = Utils.generateId(12);
             const secret = Utils.generateSecret();
+
             const card = {
-                id, secretCode: secret,
+                id,
+                secretCode: secret,
                 coreIdentity: {
-                    firstName: document.getElementById('fname').value,
-                    lastName: document.getElementById('lname').value,
-                    nickname: document.getElementById('nick').value,
-                    username: document.getElementById('username').value,
+                    firstName: document.getElementById('fname').value.trim(),
+                    lastName: document.getElementById('lname').value.trim(),
+                    nickname: document.getElementById('nick').value.trim(),
+                    username: document.getElementById('username').value.trim(),
                     dateOfBirth: document.getElementById('dob').value,
                     age: Utils.getAge(document.getElementById('dob').value),
                     gender: document.getElementById('gender').value,
-                    nationality: document.getElementById('nationality').value,
-                    bloodGroup: document.getElementById('blood').value
+                    nationality: document.getElementById('nationality').value.trim(),
+                    bloodGroup: document.getElementById('blood').value.trim()
                 },
-                officialDetails: { cardType: 'Shadow Neophyte', organization: 'Independent' },
+                officialDetails: {
+                    cardType: 'Shadow Neophyte',
+                    organization: 'Independent'
+                },
                 favorites: { color: '#ff3366' },
                 media: { dp: 'assets/images/default-dp.png' }
             };
-            try {
-                await githubDB.addCard(card);
-                document.getElementById('regForm').classList.add('hidden');
-                const res = document.getElementById('result');
-                res.classList.remove('hidden');
-                document.getElementById('autoLoginBtn').addEventListener('click', () => {
-                    UserSession.set(card);
-                    window.location.href = 'profile.html';
-                });
-            } catch (err) { alert('Registration failed. The shadows are restless.'); }
+
+            // Save to localStorage
+            let cards = localStorage.getItem('local_cards');
+            cards = cards ? JSON.parse(cards) : [];
+            cards.push(card);
+            localStorage.setItem('local_cards', JSON.stringify(cards));
+
+            // Show success
+            document.getElementById('regForm').classList.add('hidden');
+            const res = document.getElementById('result');
+            res.classList.remove('hidden');
+            res.innerHTML = `
+                    <h3>🎭 Shadow Created!</h3>
+                    <p><strong>Your ID:</strong> ${id}</p>
+                    <p><strong>Secret Code:</strong> ${secret}</p>
+                    <p style="color:var(--accent2);"><em>Write these down. The void forgets.</em></p>
+                    <button id="autoLoginBtn" class="btn btn-primary">🔓 Instant Login</button>
+                    <a href="login.html" class="btn btn-secondary" style="margin-top:1rem;">Go to Login</a>
+                `;
+            document.getElementById('autoLoginBtn').addEventListener('click', () => {
+                UserSession.set(card);
+                window.location.href = 'profile.html';
+            });
         });
     </script>
 </body>
