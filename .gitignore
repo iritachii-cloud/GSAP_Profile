@@ -1,1 +1,4 @@
-secret.js 
+echo secret.js >> .gitignore
+git add .gitignore
+git commit -m "Ignore secret.js"
+git push
