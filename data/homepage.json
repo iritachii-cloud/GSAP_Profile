@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "title": "DIGITAL<br>SHADOW<br>ARCHIVE",
+    "subtitle": "Because your real personality is just a badly written fanfic. Let’s turn it into an epic trading card.",
+    "cta": "Summon a Shadow",
+    "exampleCardId": "Bijusayswaddup"
+  },
+  "features": [
+    {
+      "icon": "🔑",
+      "title": "Secret‑Code Protected",
+      "description": "Your card is locked tighter than a forgotten diary."
+    },
+    {
+      "icon": "🃏",
+      "title": "Flip‑Card 3D",
+      "description": "Smooth 3D flips that would make your real ID jealous."
+    },
+    {
+      "icon": "🎵",
+      "title": "Theme Songs",
+      "description": "Each card comes with a personal anthem – we don’t judge your taste (mostly)."
+    },
+    {
+      "icon": "👻",
+      "title": "GitHub‑Powered",
+      "description": "No servers, no databases, just pure nerd energy."
+    }
+  ],
+  "steps": [
+    {
+      "number": "01",
+      "title": "Step into the Void",
+      "text": "Hit <a href='register.html' style='color:#ff66a3;'>Register</a> and create your shadow. Fake name? We won’t tell."
+    },
+    {
+      "number": "02",
+      "title": "Receive Your Cipher",
+      "text": "A secret code is whispered into your ear (displayed on screen). Lose it and join the ghost dimension."
+    },
+    {
+      "number": "03",
+      "title": "Unlock & Collect",
+      "text": "Use your ID + Secret to view your card. Share with friends to see their dark secrets."
+    }
+  ],
+  "about": {
+    "title": "Why Do We Exist?",
+    "text": "We believe that every human being is a glitch in the matrix, and every glitch deserves a well‑designed card. This is our rebellion against boring profile pages.",
+    "team": [
+      {
+        "name": "Biju Maharjan",
+        "role": "Founder & Chief Overthinker",
+        "dp": "assets/images/dp/biju.png",
+        "quote": "I put the 'pro' in procrastination."
+      },
+      {
+        "name": "Saiba Shrestha",
+        "role": "Creative Spirit & Lore Master",
+        "dp": "assets/images/dp/saiba.png",
+        "quote": "I make chaos look cute."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact the Shadow Council",
+    "text": "We don’t have a contact form because pigeons are more secure. But you may attempt to reach us via telepathy, or just yell into the void.",
+    "email": "GSAP@gmail.com"
+  }
+}

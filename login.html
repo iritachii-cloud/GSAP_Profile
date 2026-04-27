@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Digital Shadow Archive</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html" class="active">Login</a>
+    </nav>
+  </header>
+  <main style="display:flex; align-items:center; justify-content:center;">
+    <form id="loginForm" class="form-box">
+      <h2>Unlock Your Shadow</h2>
+      <input type="text" id="loginId" placeholder="Card ID" required>
+      <input type="text" id="loginSecret" placeholder="Secret Code" required>
+      <button type="submit" class="btn btn-primary">Enter the Void</button>
+      <p style="margin-top:1rem;">No shadow? <a href="register.html">Create one</a></p>
+    </form>
+  </main>
+  <footer>© 2026 Digital Shadow Archive</footer>
+
+  <script src="secret.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // If already logged in, go straight to profile
+    if (UserSession.isLoggedIn()) {
+      window.location.href = 'profile.html';
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await DataSystem.loadCards();
+      const id = document.getElementById('loginId').value.trim();
+      const secret = document.getElementById('loginSecret').value.trim();
+      const card = DataSystem.getBySecret(id, secret);
+      if (card) {
+        UserSession.set(card);   // persists in localStorage
+        window.location.href = 'profile.html';
+      } else {
+        alert('Invalid credentials. The shadows reject you.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel | Identity Archive</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body class="theme-dark">
+    <header>
+        <div class="logo"><a href="index.html">IDENTITY ARCHIVE</a></div>
+        <nav><a href="index.html">Home</a> <a href="admin.html">Admin</a></nav>
+    </header>
+
+    <main class="admin-page">
+        <div id="login-section" class="gsap-fade-up">
+            <h2>Admin Login</h2>
+            <form id="login-form">
+                <input type="text" id="admin-user" placeholder="Username" required>
+                <input type="password" id="admin-pass" placeholder="Password" required>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+
+        <div id="dashboard" class="hidden">
+            <h2>All Identities</h2>
+            <input type="text" id="search-input" placeholder="Search...">
+            <div id="cards-grid" class="cards-grid"></div>
+            <div id="modal" class="modal hidden">
+                <div class="modal-content" id="modal-content"></div>
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>© 2026 Identity Archive</p></footer>
+
+    <script src="secret.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await DataSystem.load();
+            const loginSection = document.getElementById('login-section');
+            const dashboard = document.getElementById('dashboard');
+            if (AdminAuth.isLoggedIn()) {
+                showDashboard();
+            }
+
+            document.getElementById('login-form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const user = document.getElementById('admin-user').value.trim();
+                const pass = document.getElementById('admin-pass').value;
+                const success = await AdminAuth.login(user, pass);
+                if (success) {
+                    AdminAuth.setLoggedIn();
+                    showDashboard();
+                } else {
+                    alert('Wrong credentials');
+                }
+            });
+
+            function showDashboard() {
+                loginSection.classList.add('hidden');
+                dashboard.classList.remove('hidden');
+                renderCards(DataSystem.cards);
+                document.getElementById('search-input').addEventListener('input', (e) => {
+                    const filtered = DataSystem.search(e.target.value);
+                    renderCards(filtered);
+                });
+            }
+
+            function renderCards(list) {
+                const grid = document.getElementById('cards-grid');
+                grid.innerHTML = '';
+                list.forEach(card => {
+                    const el = document.createElement('div');
+                    el.className = 'card-item';
+                    el.innerHTML = `
+                        <img src="${card.media?.dp}" alt="${card.coreIdentity.firstName}">
+                        <h3>${card.coreIdentity.firstName} ${card.coreIdentity.lastName}</h3>
+                        <p>@${card.coreIdentity.username}</p>
+                    `;
+                    el.addEventListener('click', () => openModal(card));
+                    grid.appendChild(el);
+                });
+            }
+
+            function openModal(card) {
+                const modal = document.getElementById('modal');
+                const content = document.getElementById('modal-content');
+                content.innerHTML = `<pre>${JSON.stringify(card, null, 2)}</pre>`;
+                modal.classList.remove('hidden');
+                gsap.from(modal, { opacity: 0, duration: 0.3 });
+            }
+            document.querySelector('.modal-close').addEventListener('click', () => {
+                document.getElementById('modal').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

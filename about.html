@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Digital Shadow Archive</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">Profile</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="card.html">Card</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height:auto; padding:4rem 2rem;">
+            <h1 id="aboutTitle">Loading...</h1>
+            <p id="aboutText" style="max-width:700px; margin:0 auto;"></p>
+        </section>
+
+        <section class="team" id="teamContainer" style="max-width:1000px; margin:2rem auto; display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; padding:2rem;">
+            <!-- Dynamic team cards -->
+        </section>
+    </main>
+
+    <footer>© 2026 Digital Shadow Archive – We are the glitch in the system.</footer>
+
+    <script src="secret.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await DataSystem.loadHomepage();
+            const about = DataSystem.homepage?.about;
+            if (!about) {
+                document.getElementById('aboutTitle').textContent = 'The Void is Empty';
+                document.getElementById('aboutText').textContent = 'No data yet.';
+                return;
+            }
+
+            document.getElementById('aboutTitle').textContent = about.title;
+            document.getElementById('aboutText').textContent = about.text;
+
+            const teamDiv = document.getElementById('teamContainer');
+            teamDiv.innerHTML = '';
+            about.team.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'team-member';
+                card.innerHTML = `
+                    <img src="${member.dp}" alt="${member.name}" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid var(--accent); box-shadow:0 0 20px var(--glow-pink);">
+                    <h3 style="margin-top:1rem;">${member.name}</h3>
+                    <p style="color:var(--accent2);">${member.role}</p>
+                    <p><em>“${member.quote}”</em></p>
+                `;
+                teamDiv.appendChild(card);
+            });
+
+            // GSAP team member animation (already handled by main.js for .team-member)
+            // but we trigger a refresh since we added them dynamically
+            gsap.utils.toArray('.team-member').forEach((member, i) => {
+                gsap.from(member, {
+                    scrollTrigger: { trigger: member, start: 'top 85%' },
+                    scale: 0.7,
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: i * 0.2,
+                    ease: 'back.out(1.5)'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

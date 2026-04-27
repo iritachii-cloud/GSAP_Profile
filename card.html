@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Shadow Card | Archive</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
+    <nav><a href="index.html">Home</a><a href="card.html" class="active">Card</a></nav>
+  </header>
+  <main>
+    <div id="lockedMsg" class="form-box hidden">
+      <h2>🔒 Shadow Locked</h2>
+      <p>Enter Card ID and Secret Code to reveal.</p>
+      <form id="unlockForm">
+        <input type="text" id="cardIdInput" placeholder="Card ID" required>
+        <input type="text" id="cardSecretInput" placeholder="Secret Code" required>
+        <button class="btn btn-primary">Unlock</button>
+      </form>
+      <p style="margin-top:1rem;">Example: <a href="?id=Bijusayswaddup">Bijusayswaddup</a> (no secret)</p>
+    </div>
+    <div id="cardDisplay" class="hidden">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">
+            <img id="cardDp" class="flip-img" src="">
+            <div class="flip-details">
+              <h2 id="cardName"></h2>
+              <p id="cardType"></p>
+              <div class="flip-row"><span>Organization</span><span id="cardOrg"></span></div>
+              <div class="flip-row"><span>Role</span><span id="cardRole"></span></div>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div class="flip-details">
+              <h2>Classified</h2>
+              <div class="flip-row"><span>DOB</span><span id="cardDOB"></span></div>
+              <div class="flip-row"><span>Blood</span><span id="cardBlood"></span></div>
+              <div class="flip-row"><span>Likes</span><span id="cardLikes"></span></div>
+              <div class="flip-row"><span>Quote</span><span id="cardQuote"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>© 2026 Digital Shadow Archive</footer>
+  <script src="secret.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (async () => {
+      await DataSystem.loadCards();
+      const params = Utils.getParams();
+      const id = params.id;
+      const secret = params.secret;
+      let card = null;
+      if (id === 'Bijusayswaddup') card = DataSystem.getCardById(id); // public example
+      else if (id && secret) card = DataSystem.getBySecret(id, secret);
+      else if (UserSession.isLoggedIn()) card = UserSession.get();
+      if (card) revealCard(card);
+      else document.getElementById('lockedMsg').classList.remove('hidden');
+
+      document.getElementById('unlockForm')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const sid = document.getElementById('cardIdInput').value.trim();
+        const ssec = document.getElementById('cardSecretInput').value.trim();
+        const c = DataSystem.getBySecret(sid, ssec);
+        if (c) revealCard(c);
+        else alert('Wrong ID or Secret.');
+      });
+
+      function revealCard(card) {
+        document.getElementById('lockedMsg').classList.add('hidden');
+        document.getElementById('cardDisplay').classList.remove('hidden');
+        document.getElementById('cardDp').src = card.media?.dp;
+        document.getElementById('cardName').textContent = `${card.coreIdentity.firstName} ${card.coreIdentity.lastName}`;
+        document.getElementById('cardType').textContent = card.officialDetails?.cardType;
+        document.getElementById('cardOrg').textContent = card.officialDetails?.organization;
+        document.getElementById('cardRole').textContent = card.officialDetails?.role;
+        document.getElementById('cardDOB').textContent = Utils.formatDate(card.coreIdentity.dateOfBirth);
+        document.getElementById('cardBlood').textContent = card.coreIdentity.bloodGroup;
+        document.getElementById('cardLikes').textContent = card.likesDislikes?.likes?.slice(0,3).join(', ');
+        document.getElementById('cardQuote').textContent = card.favorites?.quote;
+        // Trigger GSAP entrance
+        gsap.from('.flip-card', { scale: 0.8, opacity: 0, duration: 1, ease: 'elastic.out(1,0.7)' });
+      }
+    })();
+  </script>
+</body>
+</html>

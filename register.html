@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Shadow Archive</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
+        <nav><a href="index.html">Home</a><a href="register.html" class="active">Register</a></nav>
+    </header>
+    <main>
+        <form id="regForm" class="form-box">
+            <h2>Create Your Shadow</h2>
+            <input type="text" id="fname" placeholder="First Name" required>
+            <input type="text" id="lname" placeholder="Last Name" required>
+            <input type="text" id="nick" placeholder="Nickname">
+            <input type="text" id="username" placeholder="Username">
+            <input type="date" id="dob" required>
+            <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <input type="text" id="nationality" placeholder="Nationality">
+            <input type="text" id="blood" placeholder="Blood Group">
+            <button type="submit" class="btn btn-primary">Summon Shadow</button>
+        </form>
+        <div id="result" class="form-box hidden" style="text-align:center;"></div>
+    </main>
+    <footer>© 2026 Digital Shadow Archive</footer>
+    <script src="secret.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/data.js"></script>
+    <script>
+        document.getElementById('regForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const id = Utils.generateId(12);
+            const secret = Utils.generateSecret();
+            const card = {
+                id, secretCode: secret,
+                coreIdentity: {
+                    firstName: document.getElementById('fname').value,
+                    lastName: document.getElementById('lname').value,
+                    nickname: document.getElementById('nick').value,
+                    username: document.getElementById('username').value,
+                    dateOfBirth: document.getElementById('dob').value,
+                    age: Utils.getAge(document.getElementById('dob').value),
+                    gender: document.getElementById('gender').value,
+                    nationality: document.getElementById('nationality').value,
+                    bloodGroup: document.getElementById('blood').value
+                },
+                officialDetails: { cardType: 'Shadow Neophyte', organization: 'Independent' },
+                favorites: { color: '#ff3366' },
+                media: { dp: 'assets/images/default-dp.png' }
+            };
+            try {
+                await githubDB.addCard(card);
+                document.getElementById('regForm').classList.add('hidden');
+                const res = document.getElementById('result');
+                res.classList.remove('hidden');
+                document.getElementById('autoLoginBtn').addEventListener('click', () => {
+                    UserSession.set(card);
+                    window.location.href = 'profile.html';
+                });
+            } catch (err) { alert('Registration failed. The shadows are restless.'); }
+        });
+    </script>
+</body>
+
+</html>

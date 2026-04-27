@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Digital Shadow Archive</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">Profile</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="card.html">Card</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height:auto; padding:4rem 2rem;">
+            <h1 id="contactTitle">Loading...</h1>
+            <p id="contactText" style="max-width:600px; margin:0 auto;"></p>
+            <p style="margin-top:2rem; font-size:1.2rem;"><strong>📬 Email:</strong> <span id="contactEmail" style="color:var(--accent2);"></span></p>
+        </section>
+    </main>
+
+    <footer>© 2026 Digital Shadow Archive – We read all carrier pigeons.</footer>
+
+    <script src="secret.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await DataSystem.loadHomepage();
+            const contact = DataSystem.homepage?.contact;
+            if (!contact) {
+                document.getElementById('contactTitle').textContent = 'No Signal';
+                document.getElementById('contactText').textContent = 'The shadows are silent.';
+                return;
+            }
+            document.getElementById('contactTitle').textContent = contact.title;
+            document.getElementById('contactText').textContent = contact.text;
+            document.getElementById('contactEmail').textContent = contact.email;
+
+            // Simple entrance
+            gsap.from('.hero h1', { y: 50, opacity: 0, duration: 1, ease: 'power3.out' });
+            gsap.from('.hero p', { y: 30, opacity: 0, duration: 0.8, delay: 0.2 });
+        });
+    </script>
+</body>
+</html>
