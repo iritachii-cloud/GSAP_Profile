@@ -25,7 +25,7 @@
     <section class="hero">
       <h1 id="heroTitle">Loading...</h1>
       <p id="heroSubtitle"></p>
-      <a id="heroCta" href="#" class="btn btn-primary">Summon a Shadow</a>
+      <a id="heroCta" href="register.html" class="btn btn-primary">Summon a Shadow</a>
     </section>
     <section class="features" id="featuresContainer"></section>
     <section class="steps" id="stepsContainer"></section>
@@ -43,9 +43,7 @@
       if (!h) return;
       document.getElementById('heroTitle').innerHTML = h.hero.title;
       document.getElementById('heroSubtitle').textContent = h.hero.subtitle;
-      document.getElementById('heroCta').href = 'register.html';
       document.getElementById('heroCta').textContent = h.hero.cta;
-
       const feat = document.getElementById('featuresContainer');
       h.features.forEach(f => {
         const d = document.createElement('div');
@@ -53,7 +51,6 @@
         d.innerHTML = `<div class="feature-icon">${f.icon}</div><h3>${f.title}</h3><p>${f.description}</p>`;
         feat.appendChild(d);
       });
-
       const steps = document.getElementById('stepsContainer');
       h.steps.forEach(s => {
         const d = document.createElement('div');

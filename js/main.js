@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ===== Home Page 3D Background =====
+  // Home page 3D
   const canvas = document.getElementById('home3d');
   if (canvas) {
     const scene = new THREE.Scene();
@@ -33,14 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animate();
     window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth/window.innerHeight;
+      camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
   }
 
-  // ===== GSAP animations =====
-  // Hero
+  // Hero text
   const heroTitle = document.querySelector('.hero h1');
   if (heroTitle) {
     gsap.from(heroTitle, { y: 100, opacity: 0, duration: 1.2, ease: 'power4.out' });
@@ -48,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.hero .btn', { y: 30, opacity: 0, duration: 0.8, delay: 0.6 });
   }
 
-  // Features (scroll-triggered)
+  // Features
   gsap.utils.toArray('.feature-card').forEach((card, i) => {
     gsap.from(card, {
       scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
@@ -64,14 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Flip card click handler
+  // Flip card
   const flipCard = document.querySelector('.flip-card');
   if (flipCard) {
     flipCard.addEventListener('click', () => flipCard.classList.toggle('flipped'));
     gsap.from('.flip-card', { scale: 0.8, opacity: 0, duration: 1, ease: 'elastic.out(1,0.7)' });
   }
 
-  // Team member entrance (about page)
+  // Team members
   gsap.utils.toArray('.team-member').forEach((member, i) => {
     gsap.from(member, {
       scrollTrigger: { trigger: member, start: 'top 85%' },
@@ -79,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Form entrance
+  // Forms
   const form = document.querySelector('.form-box');
   if (form) {
     gsap.from(form, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' });

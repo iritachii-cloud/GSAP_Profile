@@ -1,94 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Register | Shadow Archive</title>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <title>Register | Shadow Archive</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-    <header>
-        <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
-        <nav><a href="index.html">Home</a><a href="register.html" class="active">Register</a></nav>
-    </header>
-    <main>
-        <form id="regForm" class="form-box">
-            <h2>Create Your Shadow</h2>
-            <input type="text" id="fname" placeholder="First Name" required>
-            <input type="text" id="lname" placeholder="Last Name" required>
-            <input type="text" id="nick" placeholder="Nickname">
-            <input type="text" id="username" placeholder="Username">
-            <input type="date" id="dob" required>
-            <select id="gender">
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-            </select>
-            <input type="text" id="nationality" placeholder="Nationality">
-            <input type="text" id="blood" placeholder="Blood Group">
-            <button type="submit" class="btn btn-primary">Summon Shadow</button>
-        </form>
-        <div id="result" class="form-box hidden" style="text-align:center;"></div>
-    </main>
-    <footer>© 2026 Digital Shadow Archive</footer>
-    <script src="secret.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/github.js"></script>
-    <script src="js/data.js"></script>
-    <script>
-        document.getElementById('regForm').addEventListener('submit', (e) => {
-            e.preventDefault();
+  <header>
+    <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html" class="active">Register</a>
+    </nav>
+  </header>
+  <main>
+    <form id="regForm" class="form-box">
+      <h2>Create Your Shadow</h2>
+      <input type="text" id="fname" placeholder="First Name" required>
+      <input type="text" id="lname" placeholder="Last Name" required>
+      <input type="text" id="nick" placeholder="Nickname">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="date" id="dob" required>
+      <select id="gender"><option>Male</option><option>Female</option><option>Other</option></select>
+      <input type="text" id="nationality" placeholder="Nationality">
+      <input type="text" id="blood" placeholder="Blood Group">
+      <button type="submit" class="btn btn-primary">Summon Shadow</button>
+    </form>
+    <div id="result" class="form-box hidden" style="text-align:center;"></div>
+  </main>
+  <footer>© 2026 Digital Shadow Archive</footer>
 
-            const id = Utils.generateId(12);
-            const secret = Utils.generateSecret();
+  <script src="secret.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.getElementById('regForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      if (!username) return alert('Username is required');
 
-            const card = {
-                id,
-                secretCode: secret,
-                coreIdentity: {
-                    firstName: document.getElementById('fname').value.trim(),
-                    lastName: document.getElementById('lname').value.trim(),
-                    nickname: document.getElementById('nick').value.trim(),
-                    username: document.getElementById('username').value.trim(),
-                    dateOfBirth: document.getElementById('dob').value,
-                    age: Utils.getAge(document.getElementById('dob').value),
-                    gender: document.getElementById('gender').value,
-                    nationality: document.getElementById('nationality').value.trim(),
-                    bloodGroup: document.getElementById('blood').value.trim()
-                },
-                officialDetails: {
-                    cardType: 'Shadow Neophyte',
-                    organization: 'Independent'
-                },
-                favorites: { color: '#ff3366' },
-                media: { dp: 'assets/images/default-dp.png' }
-            };
+      // Load existing cards to check uniqueness
+      await DataSystem.loadCards();
+      if (DataSystem.isUsernameTaken(username)) {
+        return alert('That username is already taken. Choose another shadow name.');
+      }
 
-            // Save to localStorage
-            let cards = localStorage.getItem('local_cards');
-            cards = cards ? JSON.parse(cards) : [];
-            cards.push(card);
-            localStorage.setItem('local_cards', JSON.stringify(cards));
+      const id = Utils.generateId(12);
+      const secret = Utils.generateSecret();
+      const card = {
+        id,
+        secretCode: secret,
+        coreIdentity: {
+          firstName: document.getElementById('fname').value.trim(),
+          lastName: document.getElementById('lname').value.trim(),
+          nickname: document.getElementById('nick').value.trim(),
+          username: username,
+          dateOfBirth: document.getElementById('dob').value,
+          age: Utils.getAge(document.getElementById('dob').value),
+          gender: document.getElementById('gender').value,
+          nationality: document.getElementById('nationality').value.trim(),
+          bloodGroup: document.getElementById('blood').value.trim()
+        },
+        officialDetails: {
+          cardNumber: 'NEW',
+          cardType: 'Shadow Neophyte',
+          organization: 'Independent',
+          role: 'Member',
+          issueDate: new Date().toISOString().split('T')[0],
+          expiryDate: '2099-12-31'
+        },
+        favorites: { color: '#ff3366' },
+        media: { dp: 'assets/images/default-dp.png' }
+      };
 
-            // Show success
-            document.getElementById('regForm').classList.add('hidden');
-            const res = document.getElementById('result');
-            res.classList.remove('hidden');
-            res.innerHTML = `
-                    <h3>🎭 Shadow Created!</h3>
-                    <p><strong>Your ID:</strong> ${id}</p>
-                    <p><strong>Secret Code:</strong> ${secret}</p>
-                    <p style="color:var(--accent2);"><em>Write these down. The void forgets.</em></p>
-                    <button id="autoLoginBtn" class="btn btn-primary">🔓 Instant Login</button>
-                    <a href="login.html" class="btn btn-secondary" style="margin-top:1rem;">Go to Login</a>
-                `;
-            document.getElementById('autoLoginBtn').addEventListener('click', () => {
-                UserSession.set(card);
-                window.location.href = 'profile.html';
-            });
-        });
-    </script>
+      try {
+        await githubDB.addCard(card);
+        showSuccess(card);
+      } catch (err) {
+        console.error(err);
+        alert('Registration failed: ' + err.message);
+      }
+    });
+
+    function showSuccess(card) {
+      document.getElementById('regForm').classList.add('hidden');
+      const result = document.getElementById('result');
+      result.classList.remove('hidden');
+      result.innerHTML = `
+        <h3>🎭 Shadow Created!</h3>
+        <p><strong>Your ID:</strong> ${card.id}</p>
+        <p><strong>Secret Code:</strong> ${card.secretCode}</p>
+        <p style="color:var(--accent2);"><em>Write these down. The void forgets.</em></p>
+        <button id="autoLoginBtn" class="btn btn-primary">🔓 Instant Login</button>
+        <a href="login.html" class="btn btn-secondary" style="display:inline-block; margin-top:1rem;">I'll remember, go to Login</a>
+      `;
+      document.getElementById('autoLoginBtn').addEventListener('click', () => {
+        UserSession.set(card);
+        window.location.href = 'profile.html';
+      });
+    }
+  </script>
 </body>
-
 </html>

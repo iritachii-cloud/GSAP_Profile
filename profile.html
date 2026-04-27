@@ -1,170 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Shadow | Digital Shadow Archive</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shadow | Digital Shadow Archive</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="profile.html" class="active">Profile</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="card.html">Card</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo"><a href="index.html">SHADOW ARCHIVE</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="card.html">Card</a>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Not logged in -->
-        <div id="notLoggedIn" class="hidden" style="text-align:center; margin-top:5rem;">
-            <h2>🚫 Access Denied</h2>
-            <p>You must <a href="login.html">log in</a> to view your shadow profile.</p>
+  <main>
+    <div id="notLoggedIn" class="hidden" style="text-align:center; margin-top:5rem;">
+      <h2>🚫 Access Denied</h2>
+      <p>You must <a href="login.html">log in</a> to view your shadow profile.</p>
+    </div>
+
+    <div id="profileContainer" class="hidden form-box" style="max-width:800px; margin:2rem auto;">
+      <h2>✎ Edit Your Shadow</h2>
+      <form id="profileForm">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <label>First Name <input type="text" id="edFirstName" required></label>
+          <label>Last Name <input type="text" id="edLastName" required></label>
+          <label>Nickname <input type="text" id="edNickname"></label>
+          <label>Username <input type="text" id="edUsername" required></label>
+          <label>Date of Birth <input type="date" id="edDOB" required></label>
+          <label>Age <input type="text" id="edAge" disabled></label>
+          <label>Gender
+            <select id="edGender">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Nationality <input type="text" id="edNationality"></label>
+          <label>Blood Group <input type="text" id="edBloodGroup"></label>
+          <label>Card Type <input type="text" id="edCardType"></label>
+          <label>Organization <input type="text" id="edOrganization"></label>
+          <label>Role <input type="text" id="edRole"></label>
+          <label>Favourite Colour <input type="color" id="edColor" value="#7f5af0"></label>
         </div>
-
-        <!-- Profile editor (when logged in) -->
-        <div id="profileContainer" class="hidden form-box" style="max-width:800px; margin:2rem auto;">
-            <h2>✎ Edit Your Shadow</h2>
-            <form id="profileForm">
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-                    <label>First Name <input type="text" id="edFirstName" required></label>
-                    <label>Last Name <input type="text" id="edLastName" required></label>
-                    <label>Nickname <input type="text" id="edNickname"></label>
-                    <label>Username <input type="text" id="edUsername"></label>
-                    <label>Date of Birth <input type="date" id="edDOB" required></label>
-                    <label>Age <input type="text" id="edAge" disabled></label>
-                    <label>Gender
-                        <select id="edGender">
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
-                    </label>
-                    <label>Nationality <input type="text" id="edNationality"></label>
-                    <label>Blood Group <input type="text" id="edBloodGroup"></label>
-                    <label>Card Type <input type="text" id="edCardType"></label>
-                    <label>Organization <input type="text" id="edOrganization"></label>
-                    <label>Role <input type="text" id="edRole"></label>
-                    <label>Favourite Colour <input type="color" id="edColor" value="#7f5af0"></label>
-                </div>
-
-                <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
-                    <button type="submit" class="btn btn-primary">💾 Save Changes</button>
-                    <button type="button" id="deleteBtn" class="btn btn-secondary" style="background:#ff3366; color:#fff; border:none;">☠️ Delete Shadow</button>
-                    <button type="button" id="logoutBtn" class="btn btn-secondary">🚪 Logout</button>
-                </div>
-            </form>
-            <p id="saveStatus" class="hidden" style="margin-top:1rem; color: var(--accent2);"></p>
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <button type="submit" class="btn btn-primary">💾 Save Changes</button>
+          <button type="button" id="deleteBtn" class="btn btn-secondary" style="background:#ff3366; color:#fff; border:none;">☠️ Delete Shadow</button>
+          <button type="button" id="logoutBtn" class="btn btn-secondary">🚪 Logout</button>
         </div>
-    </main>
+      </form>
+      <p id="saveStatus" class="hidden" style="margin-top:1rem; color: var(--accent2);"></p>
+    </div>
+  </main>
 
-    <footer>© 2026 Digital Shadow Archive – Your data, your darkness.</footer>
+  <footer>© 2026 Digital Shadow Archive – Your data, your darkness.</footer>
 
-    <script src="secret.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/github.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            // Check login
-            if (!UserSession.isLoggedIn()) {
-                document.getElementById('notLoggedIn').classList.remove('hidden');
-                return;
-            }
+  <script src="secret.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (async () => {
+      if (!UserSession.isLoggedIn()) {
+        document.getElementById('notLoggedIn').classList.remove('hidden');
+        return;
+      }
 
-            await DataSystem.loadCards();
-            let currentCard = UserSession.get();
-            if (!currentCard) {
-                UserSession.clear();
-                window.location.reload();
-                return;
-            }
+      await DataSystem.loadCards();
+      let currentCard = UserSession.get();
+      if (!currentCard) {
+        UserSession.clear();
+        window.location.reload();
+        return;
+      }
 
-            // Show editor
-            const container = document.getElementById('profileContainer');
-            container.classList.remove('hidden');
+      const container = document.getElementById('profileContainer');
+      container.classList.remove('hidden');
 
-            // Populate fields
-            function populateForm(card) {
-                document.getElementById('edFirstName').value = card.coreIdentity?.firstName || '';
-                document.getElementById('edLastName').value = card.coreIdentity?.lastName || '';
-                document.getElementById('edNickname').value = card.coreIdentity?.nickname || '';
-                document.getElementById('edUsername').value = card.coreIdentity?.username || '';
-                document.getElementById('edDOB').value = card.coreIdentity?.dateOfBirth || '';
-                document.getElementById('edAge').value = card.coreIdentity?.age || Utils.getAge(card.coreIdentity?.dateOfBirth) || '';
-                document.getElementById('edGender').value = card.coreIdentity?.gender || 'Other';
-                document.getElementById('edNationality').value = card.coreIdentity?.nationality || '';
-                document.getElementById('edBloodGroup').value = card.coreIdentity?.bloodGroup || '';
-                document.getElementById('edCardType').value = card.officialDetails?.cardType || '';
-                document.getElementById('edOrganization').value = card.officialDetails?.organization || '';
-                document.getElementById('edRole').value = card.officialDetails?.role || '';
-                document.getElementById('edColor').value = card.favorites?.color || '#7f5af0';
-            }
+      function populate() {
+        document.getElementById('edFirstName').value = currentCard.coreIdentity?.firstName || '';
+        document.getElementById('edLastName').value = currentCard.coreIdentity?.lastName || '';
+        document.getElementById('edNickname').value = currentCard.coreIdentity?.nickname || '';
+        document.getElementById('edUsername').value = currentCard.coreIdentity?.username || '';
+        document.getElementById('edDOB').value = currentCard.coreIdentity?.dateOfBirth || '';
+        document.getElementById('edAge').value = currentCard.coreIdentity?.age || '';
+        document.getElementById('edGender').value = currentCard.coreIdentity?.gender || 'Other';
+        document.getElementById('edNationality').value = currentCard.coreIdentity?.nationality || '';
+        document.getElementById('edBloodGroup').value = currentCard.coreIdentity?.bloodGroup || '';
+        document.getElementById('edCardType').value = currentCard.officialDetails?.cardType || '';
+        document.getElementById('edOrganization').value = currentCard.officialDetails?.organization || '';
+        document.getElementById('edRole').value = currentCard.officialDetails?.role || '';
+        document.getElementById('edColor').value = currentCard.favorites?.color || '#ff3366';
+      }
 
-            populateForm(currentCard);
+      populate();
 
-            // Save changes
-            document.getElementById('profileForm').addEventListener('submit', async (e) => {
-                e.preventDefault();
+      document.getElementById('profileForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const newUsername = document.getElementById('edUsername').value.trim();
 
-                // Update card object from form
-                currentCard.coreIdentity.firstName = document.getElementById('edFirstName').value.trim();
-                currentCard.coreIdentity.lastName = document.getElementById('edLastName').value.trim();
-                currentCard.coreIdentity.nickname = document.getElementById('edNickname').value.trim();
-                currentCard.coreIdentity.username = document.getElementById('edUsername').value.trim();
-                currentCard.coreIdentity.dateOfBirth = document.getElementById('edDOB').value;
-                currentCard.coreIdentity.age = Utils.getAge(document.getElementById('edDOB').value);
-                currentCard.coreIdentity.gender = document.getElementById('edGender').value;
-                currentCard.coreIdentity.nationality = document.getElementById('edNationality').value.trim();
-                currentCard.coreIdentity.bloodGroup = document.getElementById('edBloodGroup').value.trim();
-                currentCard.officialDetails.cardType = document.getElementById('edCardType').value.trim();
-                currentCard.officialDetails.organization = document.getElementById('edOrganization').value.trim();
-                currentCard.officialDetails.role = document.getElementById('edRole').value.trim();
-                currentCard.favorites.color = document.getElementById('edColor').value;
+        // Check username uniqueness (if changed)
+        if (newUsername !== currentCard.coreIdentity.username && DataSystem.isUsernameTaken(newUsername)) {
+          return alert('That username is already taken by another shadow.');
+        }
 
-                try {
-                    await githubDB.updateCard(currentCard.id, currentCard);
-                    // Re-cache updated card
-                    UserSession.set(currentCard);
-                    document.getElementById('saveStatus').classList.remove('hidden');
-                    document.getElementById('saveStatus').textContent = '✅ Changes saved to the void.';
-                    // Update age visual
-                    document.getElementById('edAge').value = currentCard.coreIdentity.age;
-                } catch (err) {
-                    alert('Failed to save. The shadows are stubborn. ' + err);
-                }
-            });
+        currentCard.coreIdentity.firstName = document.getElementById('edFirstName').value.trim();
+        currentCard.coreIdentity.lastName = document.getElementById('edLastName').value.trim();
+        currentCard.coreIdentity.nickname = document.getElementById('edNickname').value.trim();
+        currentCard.coreIdentity.username = newUsername;
+        currentCard.coreIdentity.dateOfBirth = document.getElementById('edDOB').value;
+        currentCard.coreIdentity.age = Utils.getAge(document.getElementById('edDOB').value);
+        currentCard.coreIdentity.gender = document.getElementById('edGender').value;
+        currentCard.coreIdentity.nationality = document.getElementById('edNationality').value.trim();
+        currentCard.coreIdentity.bloodGroup = document.getElementById('edBloodGroup').value.trim();
+        currentCard.officialDetails.cardType = document.getElementById('edCardType').value.trim();
+        currentCard.officialDetails.organization = document.getElementById('edOrganization').value.trim();
+        currentCard.officialDetails.role = document.getElementById('edRole').value.trim();
+        currentCard.favorites.color = document.getElementById('edColor').value;
 
-            // Delete account
-            document.getElementById('deleteBtn').addEventListener('click', async () => {
-                if (confirm('Are you sure? This will erase your digital shadow forever.')) {
-                    try {
-                        await githubDB.deleteCard(currentCard.id);
-                        UserSession.clear();
-                        window.location.href = 'index.html';
-                    } catch (err) {
-                        alert('Deletion failed. The void refused.');
-                    }
-                }
-            });
+        try {
+          await githubDB.updateCard(currentCard.id, currentCard);
+          UserSession.set(currentCard);
+          document.getElementById('edAge').value = currentCard.coreIdentity.age;
+          document.getElementById('saveStatus').classList.remove('hidden');
+          document.getElementById('saveStatus').textContent = '✅ Changes saved to the void.';
+        } catch (err) {
+          alert('Failed to save: ' + err.message);
+        }
+      });
 
-            // Logout
-            document.getElementById('logoutBtn').addEventListener('click', () => {
-                UserSession.clear();
-                window.location.href = 'login.html';
-            });
+      document.getElementById('deleteBtn').addEventListener('click', async () => {
+        if (confirm('Are you sure? This will erase your digital shadow forever.')) {
+          try {
+            await githubDB.deleteCard(currentCard.id);
+            UserSession.clear();
+            window.location.href = 'index.html';
+          } catch (err) {
+            alert('Deletion failed: ' + err.message);
+          }
+        }
+      });
 
-            // Animate form appearance
-            gsap.from('.form-box', { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' });
-        });
-    </script>
+      document.getElementById('logoutBtn').addEventListener('click', () => {
+        UserSession.clear();
+        window.location.href = 'login.html';
+      });
+    })();
+  </script>
 </body>
 </html>

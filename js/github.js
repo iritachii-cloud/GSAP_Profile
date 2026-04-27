@@ -1,16 +1,14 @@
-// github.js – Full GitHub API CRUD for Digital Shadow Archive
 class GitHubAPI {
   constructor() {
     this.token = window.GITHUB_TOKEN;
     this.owner = window.GITHUB_REPO_OWNER;
     this.repo  = window.GITHUB_REPO_NAME;
     this.path  = window.CARDS_FILE_PATH || 'data/cards.json';
-    this.branch = 'main';                     // change only if your default branch is different
+    this.branch = 'main';
     this.base = `https://api.github.com/repos/${this.owner}/${this.repo}/contents/`;
     this.useLocal = !this.token;
   }
 
-  // ---------- helpers ----------
   async _getFile() {
     const url = `${this.base}${this.path}`;
     const res = await fetch(url, {
@@ -21,10 +19,7 @@ class GitHubAPI {
       throw new Error(`GitHub API error ${res.status}: ${err.message}`);
     }
     const data = await res.json();
-    return {
-      sha: data.sha,
-      content: data.content ? atob(data.content) : '[]'
-    };
+    return { sha: data.sha, content: data.content ? atob(data.content) : '[]' };
   }
 
   _toBase64(str) {
@@ -55,11 +50,9 @@ class GitHubAPI {
     }
   }
 
-  // ---------- public API ----------
   async fetchCardsFromRaw() {
     if (this.useLocal) {
-      // fallback (should not happen if token is set)
-      const cards = localStorage.getItem('local_cards');
+      let cards = localStorage.getItem('local_cards');
       return cards ? JSON.parse(cards) : [];
     }
     const raw = `https://raw.githubusercontent.com/${this.owner}/${this.repo}/${this.branch}/${this.path}`;

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><title>Shadow Card | Archive</title>
+  <meta charset="UTF-8">
+  <title>Shadow Card | Archive</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animations.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -48,6 +49,7 @@
     </div>
   </main>
   <footer>© 2026 Digital Shadow Archive</footer>
+
   <script src="secret.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/github.js"></script>
@@ -61,9 +63,12 @@
       const id = params.id;
       const secret = params.secret;
       let card = null;
-      if (id === 'Bijusayswaddup') card = DataSystem.getCardById(id); // public example
+
+      // Example card without secret, or logged‑in user's own card
+      if (id === 'Bijusayswaddup') card = DataSystem.getCardById(id);
       else if (id && secret) card = DataSystem.getBySecret(id, secret);
       else if (UserSession.isLoggedIn()) card = UserSession.get();
+
       if (card) revealCard(card);
       else document.getElementById('lockedMsg').classList.remove('hidden');
 
@@ -88,7 +93,6 @@
         document.getElementById('cardBlood').textContent = card.coreIdentity.bloodGroup;
         document.getElementById('cardLikes').textContent = card.likesDislikes?.likes?.slice(0,3).join(', ');
         document.getElementById('cardQuote').textContent = card.favorites?.quote;
-        // Trigger GSAP entrance
         gsap.from('.flip-card', { scale: 0.8, opacity: 0, duration: 1, ease: 'elastic.out(1,0.7)' });
       }
     })();

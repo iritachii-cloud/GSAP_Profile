@@ -27,7 +27,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Typography */
 h1, h2, h3 { font-weight: 800; }
 h1 { font-size: 4rem; letter-spacing: -1px; }
 h2 { font-size: 2rem; }
@@ -147,16 +146,14 @@ main { padding-top: 5rem; min-height: 80vh; }
 }
 
 /* About page */
-.about-grid {
-  max-width: 1000px; margin: 4rem auto; display: grid; gap: 2rem;
-}
+.about-grid { max-width: 1000px; margin: 4rem auto; display:grid; gap:2rem; }
 .team { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
 .team-member {
   background: var(--glass); border-radius: var(--radius); padding: 2rem;
   text-align: center; width: 220px;
   border: 1px solid var(--glass-border);
 }
-.team-member img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); }
+.team-member img { width:100px; height:100px; border-radius:50%; object-fit:cover; border:2px solid var(--accent); }
 
 /* Contact */
 .contact-mock { max-width: 600px; margin: 4rem auto; text-align: center; font-style: italic; }
@@ -215,7 +212,6 @@ footer {
 
 .hidden { display: none !important; }
 
-/* Glitch animation */
 @keyframes glitchText {
   0%, 100% { text-shadow: 2px 2px var(--accent), -2px -2px var(--accent2); }
   25% { text-shadow: -2px 2px var(--accent2), 2px -2px var(--accent); }
