@@ -19,7 +19,7 @@ function setGroundY() {
 }
 
 function playCloneJump(clone) {
-    const baseY = clone.userData.baseY ?? groundY;
+    const baseY = clone.userData.baseY ?? 0;   // local Y (0 = on ground)
     const baseScale = clone.userData.baseScale ?? 0.55;
     const tl = gsap.timeline();
     tl.to(clone.scale, { y: baseScale * 0.65, duration: 0.12, ease: 'power2.in' })
@@ -40,17 +40,17 @@ function playCloneSpin(clone) {
     // Rotate clone itself (Y rotation only) – stays at groundY
     tl.to(clone.rotation, { y: '+=6.2832', duration: 1.3, ease: 'power1.inOut' }, 0);
     
-    // Create a particle cylinder around the clone that rises from ground, but clone itself does not lift
+    // Create a particle cylinder around the clone that rises from ground
     const vortexGroup = new THREE.Group();
     vortexGroup.position.copy(clone.position);
-    vortexGroup.position.y = groundY; // ensure group at ground
-    state.scene.add(vortexGroup);
+    vortexGroup.position.y = 0; // local space – group handles world Y
+    state.scene.add(vortexGroup);  // add to scene so it's in world space
     state.tempGroups.push(vortexGroup);
     
     const particleCount = 180;
     const radius = 0.8;
-    const minY = groundY - 0.15;
-    const maxY = groundY + 1.7;
+    const minY = -0.15;   // relative to vortexGroup (which sits at world groundY)
+    const maxY = 1.7;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const particleData = [];
@@ -163,16 +163,16 @@ function getRoundAction() {
 }
 
 function performActionThenMove(clone, currentIdx, actionType) {
-    // Circle positions at ground level, radius 2.6 units
+    // Local positions relative to cloneGroup (which is already at groundY in world space)
     const positions = [
-        new THREE.Vector3( 2.6, groundY,  2.6),
-        new THREE.Vector3(-2.6, groundY,  2.6),
-        new THREE.Vector3(-2.6, groundY, -2.6),
-        new THREE.Vector3( 2.6, groundY, -2.6),
+        new THREE.Vector3( 2.6, 0,  2.6),
+        new THREE.Vector3(-2.6, 0,  2.6),
+        new THREE.Vector3(-2.6, 0, -2.6),
+        new THREE.Vector3( 2.6, 0, -2.6),
     ];
-    
-    // Ensure clone is exactly at groundY before any action
-    clone.position.y = groundY;
+
+    // Ensure clone is exactly at local Y=0 before any action
+    clone.position.y = 0;
     
     const centre = state.claw.position.clone();
     centre.y = groundY; // ignore vertical offset for facing direction
@@ -201,8 +201,8 @@ function performActionThenMove(clone, currentIdx, actionType) {
             const nextAction = getRoundAction();
             const nextIdx = (currentIdx + 1) % 4;
             const targetPos = positions[nextIdx].clone();
-            // Ensure target Y is groundY
-            targetPos.y = groundY;
+            // local Y stays 0 (group handles world offset)
+            targetPos.y = 0;
             
             const direction = new THREE.Vector3().subVectors(targetPos, clone.position);
             const targetAngle = Math.atan2(direction.x, direction.z);
@@ -224,11 +224,10 @@ function performActionThenMove(clone, currentIdx, actionType) {
                     duration: 3,
                     ease: 'power2.inOut',
                     onUpdate: () => {
-                        // No vertical movement at all – keep exactly at groundY
-                        clone.position.y = groundY;
+                        clone.position.y = 0; // keep exactly on ground (local)
                     },
                     onComplete: () => {
-                        clone.position.y = groundY;
+                        clone.position.y = 0;
                         performActionThenMove(clone, nextIdx, nextAction);
                     }
                 });
@@ -260,15 +259,20 @@ export function spawnDanceClones() {
     setGroundY(); // update groundY from main character
     clearDanceClones();
     state.cloneGroup = new THREE.Group();
-    state.cloneGroup.position.copy(state.claw.position);
-    state.cloneGroup.position.y = groundY;
+    // Position group at claw's XZ, Y = groundY so clones with local Y=0 land exactly on ground
+    state.cloneGroup.position.set(
+        state.claw.position.x,
+        state.claw.userData.baseY ?? 0,
+        state.claw.position.z
+    );
     state.scene.add(state.cloneGroup);
-    
+
+    // Local positions (relative to group) – Y=0 means exactly at ground level
     const positions = [
-        new THREE.Vector3( 2.6, groundY,  2.6),
-        new THREE.Vector3(-2.6, groundY,  2.6),
-        new THREE.Vector3(-2.6, groundY, -2.6),
-        new THREE.Vector3( 2.6, groundY, -2.6),
+        new THREE.Vector3( 2.6, 0,  2.6),
+        new THREE.Vector3(-2.6, 0,  2.6),
+        new THREE.Vector3(-2.6, 0, -2.6),
+        new THREE.Vector3( 2.6, 0, -2.6),
     ];
     const firstAction = getRoundAction();
     for (let i = 0; i < 4; i++) {
@@ -276,7 +280,7 @@ export function spawnDanceClones() {
         clone.position.copy(positions[i]);
         clone.scale.setScalar(0.55);
         clone.rotation.set(0, 0, 0);
-        clone.userData.baseY = groundY;
+        clone.userData.baseY = 0;   // local Y relative to group
         clone.userData.baseScale = 0.55;
         clone.traverse(o => { if (o.isMesh) { o.castShadow = o.receiveShadow = true; } });
         state.cloneGroup.add(clone);

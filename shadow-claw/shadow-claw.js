@@ -19,67 +19,129 @@ state.cardEl   = document.querySelector('.card');
 let config;
 let sequenceDisplay;
 
-// Dark sky + floating dark particles
+// Spawn a single jagged lightning bolt line in the scene
+function spawnLightningArc(scene) {
+    const x      = (Math.random() - 0.5) * 16;
+    const z      = -3 + (Math.random() - 0.5) * 10;
+    const topY   = 2.5 + Math.random() * 4.5;
+    const botY   = -0.3 + Math.random() * 1.2;
+    const segs   = 5 + Math.floor(Math.random() * 7);
+
+    // Build jagged points from top down
+    const points = [];
+    let cx = x;
+    points.push(new THREE.Vector3(cx, topY, z));
+    for (let i = 1; i < segs; i++) {
+        const t = i / segs;
+        cx += (Math.random() - 0.5) * 1.1;
+        const cy = topY - (topY - botY) * t + (Math.random() - 0.5) * 0.25;
+        points.push(new THREE.Vector3(cx, cy, z + (Math.random() - 0.5) * 0.15));
+    }
+    points.push(new THREE.Vector3(cx + (Math.random() - 0.5) * 0.3, botY, z));
+
+    const geo    = new THREE.BufferGeometry().setFromPoints(points);
+    const mat    = new THREE.LineBasicMaterial({ color: 0x66ff88, transparent: true, opacity: 0.95, blending: THREE.AdditiveBlending });
+    const bolt   = new THREE.Line(geo, mat);
+    scene.add(bolt);
+
+    // Soft glow halo (slightly wider colour)
+    const glowMat = new THREE.LineBasicMaterial({ color: 0xaaffc8, transparent: true, opacity: 0.28, blending: THREE.AdditiveBlending });
+    const glow    = new THREE.Line(geo, glowMat);
+    scene.add(glow);
+
+    // Fade out quickly – lightning is brief
+    const dur = 0.08 + Math.random() * 0.22;
+    gsap.to([mat, glowMat], {
+        opacity: 0,
+        duration: dur,
+        ease: 'power2.in',
+        onComplete: () => {
+            scene.remove(bolt);
+            scene.remove(glow);
+            geo.dispose();
+            mat.dispose();
+            glowMat.dispose();
+        }
+    });
+
+    // Branch lightning ~55% of the time
+    if (Math.random() > 0.45 && points.length > 2) {
+        const branchFrom = points[1 + Math.floor(Math.random() * (points.length - 2))].clone();
+        const bpts = [branchFrom];
+        let bx = branchFrom.x, by = branchFrom.y;
+        const bSegs = 2 + Math.floor(Math.random() * 3);
+        for (let i = 0; i < bSegs; i++) {
+            bx += (Math.random() - 0.5) * 0.9;
+            by -= 0.25 + Math.random() * 0.35;
+            bpts.push(new THREE.Vector3(bx, by, branchFrom.z + (Math.random() - 0.5) * 0.2));
+        }
+        const bGeo = new THREE.BufferGeometry().setFromPoints(bpts);
+        const bMat = new THREE.LineBasicMaterial({ color: 0x88ffbb, transparent: true, opacity: 0.65, blending: THREE.AdditiveBlending });
+        const branch = new THREE.Line(bGeo, bMat);
+        scene.add(branch);
+        gsap.to(bMat, {
+            opacity: 0, duration: dur * 0.8, ease: 'power2.in',
+            onComplete: () => { scene.remove(branch); bGeo.dispose(); bMat.dispose(); }
+        });
+    }
+
+    // Tiny ground-impact glow at bolt base
+    const impactGeo = new THREE.SphereGeometry(0.08 + Math.random() * 0.12, 6, 6);
+    const impactMat = new THREE.MeshBasicMaterial({ color: 0x88ffaa, transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending });
+    const impact    = new THREE.Mesh(impactGeo, impactMat);
+    impact.position.set(cx, botY, z);
+    scene.add(impact);
+    gsap.to(impact.scale, { x: 3, y: 0.4, z: 3, duration: 0.25, ease: 'power2.out' });
+    gsap.to(impactMat,    { opacity: 0, duration: 0.28, ease: 'power2.in',
+        onComplete: () => { scene.remove(impact); impactGeo.dispose(); impactMat.dispose(); }
+    });
+}
+
+// Continuously schedule background lightning arcs
+function startBackgroundLightning(scene) {
+    function fire() {
+        if (!scene) return;
+        // Burst of 1-3 near-simultaneous bolts (like a real lightning strike)
+        const count = Math.random() > 0.65 ? 1 + Math.floor(Math.random() * 2) : 1;
+        for (let i = 0; i < count; i++) {
+            setTimeout(() => spawnLightningArc(scene), i * (30 + Math.random() * 80));
+        }
+        // Next strike in 0.6 – 3.5 s
+        setTimeout(fire, 600 + Math.random() * 2900);
+    }
+    fire();
+}
+
+// Dark sky + lightning background
 function createDarkBackground() {
     const bgCanvas = document.createElement('canvas');
     bgCanvas.width = 512;
     bgCanvas.height = 512;
     const ctx = bgCanvas.getContext('2d');
     const grad = ctx.createLinearGradient(0, 0, 512, 512);
-    grad.addColorStop(0, '#0a0515');
-    grad.addColorStop(0.5, '#150a2a');
+    grad.addColorStop(0, '#060310');
+    grad.addColorStop(0.5, '#0e0620');
     grad.addColorStop(1, '#020004');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, 512, 512);
-    for(let i=0;i<1800;i++) {
-        ctx.fillStyle = `rgba(80, 255, 80, ${Math.random() * 0.1})`;
-        ctx.fillRect(Math.random()*512, Math.random()*512, 2, 2);
+    // Very faint star-like dots
+    for (let i = 0; i < 900; i++) {
+        const alpha = Math.random() * 0.07;
+        ctx.fillStyle = `rgba(100, 255, 140, ${alpha})`;
+        ctx.fillRect(Math.random() * 512, Math.random() * 512, 1.5, 1.5);
     }
     const texture = new THREE.CanvasTexture(bgCanvas);
     texture.needsUpdate = true;
 
     const geo = new THREE.SphereGeometry(35, 64, 64);
-    const mat = new THREE.MeshBasicMaterial({
-        map: texture,
-        side: THREE.BackSide,
-        depthWrite: false
-    });
+    const mat = new THREE.MeshBasicMaterial({ map: texture, side: THREE.BackSide, depthWrite: false });
     const sky = new THREE.Mesh(geo, mat);
     sky.name = 'darkSkySphere';
     state.skySphere = sky;
     state.scene.add(sky);
 
-    const particleGroup = new THREE.Group();
-    particleGroup.name = 'bgDarkParticles';
-    state.scene.add(particleGroup);
-    for (let i = 0; i < 24; i++) {
-        const particle = createDarkEnergyMesh();
-        const angle = Math.random() * Math.PI * 2;
-        const radius = 3 + Math.random() * 7;
-        const height = -1 + Math.random() * 3;
-        particle.position.set(
-            Math.cos(angle) * radius,
-            height,
-            Math.sin(angle) * radius
-        );
-        particle.scale.setScalar(0.2 + Math.random() * 0.3);
-        particleGroup.add(particle);
-
-        gsap.to(particle.position, {
-            y: `+=${0.3 + Math.random() * 1.2}`,
-            duration: 4 + Math.random() * 5,
-            ease: 'sine.inOut',
-            repeat: -1,
-            yoyo: true,
-            delay: Math.random() * 5
-        });
-        gsap.to(particle.material, {
-            opacity: 0.2 + Math.random() * 0.5,
-            duration: 2 + Math.random() * 3,
-            repeat: -1,
-            yoyo: true
-        });
-    }
+    // Start the lightning arc system
+    startBackgroundLightning(state.scene);
 }
 
 // Realistic ground: dark cobblestone/gravel texture
@@ -214,7 +276,10 @@ function initScene() {
             state.claw.position.y = (state.claw.userData.baseY ?? 0) + Math.sin(performance.now() * 0.0018) * 0.03;
         }
         if (state.cloneGroup) {
-            state.cloneGroup.position.copy(state.claw.position);
+            // Only follow horizontal movement – never copy the claw's animated Y
+            state.cloneGroup.position.x = state.claw.position.x;
+            state.cloneGroup.position.z = state.claw.position.z;
+            state.cloneGroup.position.y = state.claw.userData.baseY ?? 0;
         }
         controls.update();
         renderer.render(scene, camera);

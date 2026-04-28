@@ -107,9 +107,12 @@ export function stopStorm() {
     // restore original light intensities
     if (state.lights.key && originalLightIntensities.key) state.lights.key.intensity = originalLightIntensities.key;
     if (state.lights.ambient && originalLightIntensities.ambient) state.lights.ambient.intensity = originalLightIntensities.ambient;
-    // remove extra storm groups
+    // remove extra storm point lights, keep other temp groups
     state.tempGroups = state.tempGroups.filter(g => {
-        if (g && g.type === 'PointLight' && g.intensity && g.parent) state.scene.remove(g);
-        return false;
+        if (g && g.isPointLight && g.parent) {
+            state.scene.remove(g);
+            return false; // remove from array
+        }
+        return true; // keep non-storm entries
     });
 }
