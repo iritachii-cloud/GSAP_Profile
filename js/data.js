@@ -1,43 +1,29 @@
-const DataSystem = {
-  cards: [],
-  homepage: null,
+// Example DataManager for another page (e.g., profile.html).
+// You can copy this file and adjust Github credentials/path as needed.
+class PageDataManager {
+  constructor() {
+    this.github = new GitHubAPI(
+      window.GITHUB_TOKEN,
+      window.GITHUB_REPO_OWNER,
+      window.GITHUB_REPO_NAME,
+      window.CARDS_FILE_PATH || 'data/cards.json'
+    );
+    this.cards = [];
+  }
 
-  async loadCards() {
-    try {
-      this.cards = await githubDB.fetchCardsFromRaw();
-    } catch (e) {
-      console.warn('Failed to load cards, using localStorage fallback');
-      this.cards = [];
-    }
-    // Backward compatibility: if a card has no "status", set it to "active"
-    this.cards = this.cards.map(card => ({
-      ...card,
-      status: card.status || 'active',
-      // Also ensure other new fields exist (they will be filled in edit anyway)
-      email: card.email || '',
-      verificationCode: card.verificationCode || '0000',
-    }));
-    console.log('Cards normalized:', this.cards.length);
-  },
-
-  async loadHomepage() {
-    try {
-      const res = await fetch('data/homepage.json');
-      this.homepage = await res.json();
-    } catch {
-      this.homepage = null;
-    }
-  },
+  async load() {
+    try { this.cards = await this.github.fetchCards(); }
+    catch(e) { this.cards = []; }
+  }
 
   getCardById(id) {
     return this.cards.find(c => c.id === id);
-  },
-
-  getBySecret(id, secret) {
-    return this.cards.find(c => c.id === id && c.secretCode === secret);
-  },
-
-  isUsernameTaken(username) {
-    return this.cards.some(c => c.coreIdentity?.username?.toLowerCase() === username.toLowerCase());
   }
-};
+
+  // Add other methods as needed (update, delete, etc.)
+  async updateCard(id, updatedCard) {
+    await this.github.updateCard(id, updatedCard);
+    // refresh local copy
+    await this.load();
+  }
+}

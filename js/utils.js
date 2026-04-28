@@ -6,8 +6,7 @@ class Utils {
     return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
   }
   static getParams() {
-    const p = new URLSearchParams(window.location.search);
-    return Object.fromEntries(p.entries());
+    return Object.fromEntries(new URLSearchParams(window.location.search));
   }
   static formatDate(iso) {
     if (!iso) return '';
@@ -30,8 +29,8 @@ class Utils {
     return id;
   }
   static generateSecret() {
-    const adj = ['Cyber','Shadow','Neon','Glitch','Pixel','Quantum','Lunar','Solar'];
-    const noun = ['Phantom','Raven','Wolf','Wraith','Dragon','Viper','Phoenix','Ghost'];
+    const adj = ['Kitty','Star','Moon','Candy','Pink','Sweet','Dream','Magic'];
+    const noun = ['Paw','Ribbon','Heart','Sparkle','Cloud','Berry','Muffin','Bunny'];
     const num = Math.floor(Math.random() * 900 + 100);
     return `${adj[Math.floor(Math.random()*adj.length)]}${noun[Math.floor(Math.random()*noun.length)]}${num}`;
   }

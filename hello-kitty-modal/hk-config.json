@@ -1,0 +1,18 @@
+{
+  "emojiBackground": ["🎀","💕","⭐","✨","💗","🌸","💖","🍓"],
+  "emojiCount": 24,
+  "animations": [
+    { "id": "dance",  "label": "💃 Dance" },
+    { "id": "jump",   "label": "🦘 Jump" },
+    { "id": "spin",   "label": "🌀 Spin" },
+    { "id": "attack", "label": "💖 Heart Attack" },
+    { "id": "reset",  "label": "↩ Reset" }
+  ],
+  "modelFile": "hello_kitty.glb",
+  "modelScaleTarget": 2.4,
+  "cameraFov": 38,
+  "cameraDistance": 5,
+  "orbitLimits": { "min": 1, "max": 12 },
+  "shadowMapSize": 2048,
+  "toneMappingExposure": 1.25
+}

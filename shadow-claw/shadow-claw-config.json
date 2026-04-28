@@ -1,0 +1,24 @@
+{
+  "particleBackground": ["⚡","🌙","🐾","🗡️","🌑","💀"],
+  "particleCount": 28,
+  "animations": [
+    { "id": "dance",  "label": "🌩️ Storm Dance" },
+    { "id": "jump",   "label": "🦇 Shadow Leap" },
+    { "id": "spin",   "label": "🌀 Abyss Twister" },
+    { "id": "claw",   "label": "🐾 Claw Slash" },
+    { "id": "reset",  "label": "↩ Dark Reset" }
+  ],
+  "modelFile": "shadow_claw.glb",
+  "modelScaleTarget": 2.4,
+  "cameraFov": 38,
+  "cameraDistance": 5,
+  "orbitLimits": { "min": 1, "max": 12 },
+  "shadowMapSize": 2048,
+  "toneMappingExposure": 1.2,
+  "stormConfig": {
+    "lightningIntervalMin": 1.2,
+    "lightningIntervalMax": 4.5,
+    "rainDropCount": 800,
+    "thunderVolumes": [0.5, 0.8]
+  }
+}

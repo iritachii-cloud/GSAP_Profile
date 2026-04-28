@@ -1,64 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Digital Shadow Archive | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow Archive • Dual Theme</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Comfortaa:wght@700&family=Nosifer&display=swap"
+    rel="stylesheet">
+  <!-- Styles (theme variants defined via custom properties) -->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <!-- GSAP + ScrollTrigger + Three.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-<body>
-  <canvas id="home3d"></canvas>
-  <header>
-    <div class="logo">SHADOW ARCHIVE</div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="login.html">Login</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="card.html">Card</a>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <h1 id="heroTitle">Loading...</h1>
-      <p id="heroSubtitle"></p>
-      <a id="heroCta" href="register.html" class="btn btn-primary">Summon a Shadow</a>
-    </section>
-    <section class="features" id="featuresContainer"></section>
-    <section class="steps" id="stepsContainer"></section>
-  </main>
-  <footer>© 2026 Digital Shadow Archive – We see your true self.</footer>
 
-  <script src="secret.js"></script>
+<body>
+  <header>
+    <div class="logo" id="site-logo">🐱 Kitty Archive</div>
+    <nav id="main-nav"></nav>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </header>
+
+  <main>
+    <section id="hero">
+      <canvas id="hero3d"></canvas>
+      <div class="hero-content">
+        <div id="hero-text-container"></div>
+        <div class="hero-actions" id="hero-actions" style="opacity:0; visibility:hidden;">
+          <button id="btn-login" class="btn btn-primary">🔐 Login</button>
+          <button id="btn-register" class="btn btn-secondary">✨ Register</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="auth-section" class="hidden">
+      <div class="auth-container">
+        <!-- Login form -->
+        <div id="login-form-container" class="auth-form hidden">
+          <h2>🐱 Welcome Back</h2>
+          <form id="login-form">
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit" class="btn btn-primary">Log In</button>
+            <p class="form-footer">
+              <a href="#" id="forgot-password-link">Forgot password?</a><br>
+              New here? <a href="#" id="show-register-from-login">Create a shadow</a>
+            </p>
+          </form>
+          <div id="login-message" class="message"></div>
+        </div>
+
+        <!-- Register form -->
+        <div id="register-form-container" class="auth-form hidden">
+          <h2>🐱 Create Your Shadow</h2>
+          <form id="register-form">
+            <div class="form-row">
+              <input type="text" id="reg-firstname" placeholder="First Name" required>
+              <input type="text" id="reg-lastname" placeholder="Last Name" required>
+            </div>
+            <input type="text" id="reg-username" placeholder="Username" required>
+            <input type="email" id="reg-email" placeholder="Email" required>
+            <input type="password" id="reg-password" placeholder="Password (min 8 chars)" required>
+            <input type="password" id="reg-confirm-password" placeholder="Confirm Password" required>
+            <input type="text" id="reg-secretcode" placeholder="Secret Code (for card sharing)" required>
+            <label class="file-upload">
+              📸 Profile Picture
+              <input type="file" id="reg-dp" accept="image/*">
+            </label>
+            <button type="submit" class="btn btn-primary">Summon Shadow</button>
+          </form>
+          <div id="register-message" class="message"></div>
+          <p class="form-footer">Already have a shadow? <a href="#" id="show-login-from-register">Log in</a></p>
+        </div>
+
+        <!-- Verification -->
+        <div id="verification-container" class="auth-form hidden">
+          <h2>📬 Verify Your Email</h2>
+          <p>Code sent to <strong id="verify-email-display"></strong> (simulated)</p>
+          <p style="color:var(--primary);">Your code: <strong id="verify-code-display"></strong></p>
+          <input type="text" id="verification-input" placeholder="Enter 4‑digit code" maxlength="4">
+          <button id="verify-btn" class="btn btn-primary">Verify & Activate</button>
+          <div id="verify-message" class="message"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS files in order -->
   <script src="js/utils.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/3d.js"></script> <!-- Hero3D defined here -->
+  <script src="js/auth.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/registration.js"></script>
+  <script src="js/index.js"></script>
   <script>
-    (async () => {
-      await DataSystem.loadHomepage();
-      const h = DataSystem.homepage;
-      if (!h) return;
-      document.getElementById('heroTitle').innerHTML = h.hero.title;
-      document.getElementById('heroSubtitle').textContent = h.hero.subtitle;
-      document.getElementById('heroCta').textContent = h.hero.cta;
-      const feat = document.getElementById('featuresContainer');
-      h.features.forEach(f => {
-        const d = document.createElement('div');
-        d.className = 'feature-card';
-        d.innerHTML = `<div class="feature-icon">${f.icon}</div><h3>${f.title}</h3><p>${f.description}</p>`;
-        feat.appendChild(d);
-      });
-      const steps = document.getElementById('stepsContainer');
-      h.steps.forEach(s => {
-        const d = document.createElement('div');
-        d.className = 'step';
-        d.innerHTML = `<div class="step-number">${s.number}</div><div><h3>${s.title}</h3><p>${s.text}</p></div>`;
-        steps.appendChild(d);
-      });
-    })();
+    document.addEventListener('DOMContentLoaded', () => {
+      window.app = new App();
+      window.app.init();
+    });
   </script>
 </body>
+
 </html>
