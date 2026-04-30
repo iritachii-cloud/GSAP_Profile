@@ -1,4 +1,5 @@
 import { state } from './state.js';
+import { showIdleThought } from './fpvHUD.js';
 
 // ─── Day messages ──────────────────────────────────────────────────────────
 const dayMessages = [
@@ -47,6 +48,9 @@ let typeTimer    = null;
 let lastMsgIdx   = -1;
 let visible      = false;
 
+let customMessageActive = false;
+let postCustomTimer = null;
+
 // ─── Build DOM ─────────────────────────────────────────────────────────────
 function createBubble() {
     const wrap = document.querySelector('.canvas-wrap') || document.body;
@@ -82,7 +86,6 @@ function createBubble() {
     textEl.id = 'speechText';
     div.appendChild(textEl);
 
-    // Triangle tail pointing down toward character
     tailEl = document.createElement('div');
     Object.assign(tailEl.style, {
         position:     'absolute',
@@ -112,7 +115,7 @@ function applyEmotion(emotion) {
     tailEl.style.borderTopColor = s.tail;
 }
 
-// ─── Typewriter ────────────────────────────────────────────────────────────
+// ─── Typewriter (used for normal idle messages) ─────────────────────────────
 function typeWrite(text, onDone) {
     if (typeTimer) { clearTimeout(typeTimer); typeTimer = null; }
     textEl.textContent = '';
@@ -156,19 +159,36 @@ function popOut(onDone) {
     setTimeout(onDone, 280);
 }
 
-// ─── Cycle loop ────────────────────────────────────────────────────────────
+// ─── Cycle loop (normal idle messages) ─────────────────────────────────────
 function cycleMessage() {
     if (!visible || !bubble) return;
+    if (customMessageActive) return;
 
+    // In FPV mode, use the HUD idle thought with cooldown
+    if (state.cameraMode === 'fpv') {
+        const now = performance.now();
+        const cooldownEnd = state.fpvCustomMessageEndTime + 3500;   // 3.5 s after custom message ends
+        const delay = Math.max(0, cooldownEnd - now) + 500 + Math.random() * 1500;
+        messageTimer = setTimeout(() => {
+            if (!visible || state.cameraMode !== 'fpv') return;
+            const { text } = pickMessage();
+            showIdleThought(text, 4000);
+            // Schedule next cycle after the thought finishes + a small gap
+            messageTimer = setTimeout(cycleMessage, 4000 + 1000 + Math.random() * 2000);
+        }, delay);
+        return;
+    }
+
+    // Standard bubble mode
     const { text, emotion } = pickMessage();
     applyEmotion(emotion);
-
     popIn();
     typeWrite(text, () => {
+        if (!visible || customMessageActive) return;
         const hold = 2200 + text.length * 28 + Math.random() * 1000;
         messageTimer = setTimeout(() => {
             popOut(() => {
-                if (!visible) return;
+                if (!visible || customMessageActive) return;
                 messageTimer = setTimeout(cycleMessage, 400 + Math.random() * 600);
             });
         }, hold);
@@ -183,7 +203,7 @@ function updateBubblePosition() {
     if (!wrapper) return;
 
     const worldPos = state.claw.position.clone();
-    worldPos.y += 0.8;   // height above character — adjust to taste
+    worldPos.y += 0.8;
 
     const vector = worldPos.project(state.camera);
     if (vector.z > 1) {
@@ -198,7 +218,6 @@ function updateBubblePosition() {
     bubble.style.left = `${x}px`;
     bubble.style.top  = `${y}px`;
 
-    // Clamp horizontally and shift tail to compensate
     const bw       = bubble.offsetWidth;
     const half     = bw / 2;
     const clampedX = Math.max(half + 8, Math.min(rect.width - half - 8, x));
@@ -212,14 +231,19 @@ function updateBubblePosition() {
 }
 
 // ─── Public API ────────────────────────────────────────────────────────────
+
 export function showSpeechBubble() {
     if (!bubble) createBubble();
     visible = true;
+    customMessageActive = false;
+    clearIdleResumeTimers();
     messageTimer = setTimeout(cycleMessage, 600);
 }
 
 export function hideSpeechBubble() {
     visible = false;
+    customMessageActive = false;
+    clearIdleResumeTimers();
     if (messageTimer) { clearTimeout(messageTimer); messageTimer = null; }
     if (typeTimer)    { clearTimeout(typeTimer);    typeTimer    = null; }
     if (bubble) {
@@ -228,6 +252,39 @@ export function hideSpeechBubble() {
     }
 }
 
+export function showCustomMessage(text, emotion = 'happy', holdMs = 3500, postDelay = 4000) {
+    if (!bubble) createBubble();
+    customMessageActive = true;
+    clearIdleResumeTimers();
+    if (messageTimer) { clearTimeout(messageTimer); messageTimer = null; }
+    if (typeTimer)    { clearTimeout(typeTimer);    typeTimer    = null; }
+
+    applyEmotion(emotion);
+    textEl.textContent = text;
+    visible = true;
+    popIn();
+
+    messageTimer = setTimeout(() => {
+        popOut(() => {
+            postCustomTimer = setTimeout(() => {
+                customMessageActive = false;
+                if (state.dancePhase !== null) {
+                    messageTimer = setTimeout(cycleMessage, 500);
+                } else {
+                    hideSpeechBubble();
+                }
+            }, postDelay);
+        });
+    }, holdMs);
+}
+
 export function updateSpeechBubble() {
     if (bubble && visible) updateBubblePosition();
+}
+
+function clearIdleResumeTimers() {
+    if (postCustomTimer) {
+        clearTimeout(postCustomTimer);
+        postCustomTimer = null;
+    }
 }

@@ -47,7 +47,8 @@ body {
 .card {
     position:relative;
     background:rgba(12,8,16,0.92);
-    border-radius:20px; width:100%; max-width:600px;
+    border-radius:20px; width:100%;
+    /* max-width:600px; */
     padding:2rem 1.6rem 1.6rem; text-align:center;
     box-shadow:0 0 0 2px #ff99bb, 0 0 0 6px rgba(255,105,135,0.2), 0 20px 40px rgba(0,0,0,0.8);
     transform:scale(.78) translateY(30px); opacity:0;

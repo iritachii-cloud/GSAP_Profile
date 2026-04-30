@@ -122,7 +122,7 @@ function buildTree(scale = 1.0) {
             transparent:      true,
             opacity:          0.92
         });
-        allBlossomMats.push(bMat);   // <-- REGULAR BLOSSOM MATERIAL
+        allBlossomMats.push(bMat);
 
         const size   = (0.12 + Math.random() * 0.18) * scale;
         const sphere = new THREE.Mesh(new THREE.SphereGeometry(size, 5, 4), bMat);
@@ -139,7 +139,7 @@ function buildTree(scale = 1.0) {
         group.add(sphere);
     }
 
-    // Inner denser core (also regular blossoms)
+    // Inner denser core
     for (let i = 0; i < Math.floor(120 * scale); i++) {
         const bMat = new THREE.MeshStandardMaterial({
             color:            CHERRY.blossom.clone(),
@@ -149,7 +149,7 @@ function buildTree(scale = 1.0) {
             transparent:      true,
             opacity:          0.92
         });
-        allBlossomMats.push(bMat);   // <-- REGULAR BLOSSOM MATERIAL
+        allBlossomMats.push(bMat);
 
         const size   = (0.08 + Math.random() * 0.1) * scale;
         const blob   = new THREE.Mesh(new THREE.SphereGeometry(size, 4, 3), bMat);
@@ -165,12 +165,12 @@ function buildTree(scale = 1.0) {
         const wMat = new THREE.MeshStandardMaterial({
             color:            WISTERIA.blossom.clone(),
             emissive:         WISTERIA.emissive.clone(),
-            emissiveIntensity: 0,         // start invisible
+            emissiveIntensity: 0,
             roughness:        0.5,
             transparent:      true,
-            opacity:          0           // start invisible
+            opacity:          0
         });
-        allPendantMats.push(wMat);      // <-- WISTERIA PENDANT MATERIAL
+        allPendantMats.push(wMat);
 
         const clusterH = (0.4 + Math.random() * 0.7) * scale;
         const clusterR = (0.06 + Math.random() * 0.06) * scale;
@@ -240,7 +240,7 @@ export function setupCherryTree() {
 }
 
 // ─── Day / Night color transition ──────────────────────────────────────────
-let transitionProgress = 0;   // 0 = full cherry, 1 = full wisteria
+let transitionProgress = 0;
 let transitionTarget   = 0;
 let transitionActive   = false;
 
@@ -255,11 +255,10 @@ function lerpColor(a, b, t, out) {
     out.b = a.b + (b.b - a.b) * t;
 }
 
-// Called every frame
 function updateTreeTransition(delta) {
     if (!transitionActive) return;
 
-    const speed = delta * 0.4;   // full transition in ~2.5 s
+    const speed = delta * 0.4;
     const diff  = transitionTarget - transitionProgress;
     if (Math.abs(diff) < 0.002) {
         transitionProgress = transitionTarget;
@@ -271,7 +270,6 @@ function updateTreeTransition(delta) {
     const t = transitionProgress;
     const tmpColor = new THREE.Color();
 
-    // Regular cherry blossoms – lerp color and emissive only
     allBlossomMats.forEach(mat => {
         lerpColor(CHERRY.blossom,  WISTERIA.blossom,  t, tmpColor);
         mat.color.copy(tmpColor);
@@ -281,28 +279,24 @@ function updateTreeTransition(delta) {
         mat.needsUpdate = true;
     });
 
-    // Wisteria pendants – only change opacity and emissiveIntensity
     allPendantMats.forEach(mat => {
         mat.opacity           = t * 0.88;
         mat.emissiveIntensity = t * WISTERIA.emissiveI;
         mat.needsUpdate       = true;
     });
 
-    // Trunks – darken slightly
     allTrunkMats.forEach(mat => {
         lerpColor(CHERRY.trunk, WISTERIA.trunk, t, tmpColor);
         mat.color.copy(tmpColor);
         mat.needsUpdate = true;
     });
 
-    // Particle system color/texture swap
     if (state.petalSystem) {
         const { material } = state.petalSystem;
         lerpColor(CHERRY.particleColor, WISTERIA.particleColor, t, tmpColor);
         material.color.copy(tmpColor);
         material.size    = CHERRY.petalSize + (WISTERIA.petalSize - CHERRY.petalSize) * t;
         material.opacity = CHERRY.petalOpac + (WISTERIA.petalOpac - CHERRY.petalOpac) * t;
-        // Swap texture at midpoint
         if (t > 0.5 && material.map === petalTexDay) {
             material.map = petalTexNight;
             material.needsUpdate = true;

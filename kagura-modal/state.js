@@ -44,5 +44,13 @@ export const state = {
     speechBubble: null,
 
     // Camera mode
-    cameraMode: 'free'      // 'free' | 'track' | 'fpv'
+    cameraMode: 'free',      // 'free' | 'track' | 'fpv'
+
+    // Hayabusa chase
+    chaseTarget: null,
+    chasePause: false,
+    escapeCount: 0,
+
+    // FPV idle cooldown – timestamp after which idle thoughts are allowed
+    fpvCustomMessageEndTime: 0,
 };

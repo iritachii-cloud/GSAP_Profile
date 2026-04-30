@@ -9,7 +9,7 @@
     { "id": "reset",  "label": "↩ Peace Reset" }
   ],
   "modelFile": "kagura.glb",
-  "modelScaleTarget": 2.4,
+  "modelScaleTarget": 1,
   "cameraFov": 38,
   "cameraDistance": 5,
   "orbitLimits": { "min": 1, "max": 40 },

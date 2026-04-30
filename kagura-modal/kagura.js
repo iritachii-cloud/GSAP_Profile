@@ -7,6 +7,7 @@ import { jumpClaw } from './jump.js';
 import { spinClaw } from './spin.js';
 import { attackClaw } from './attack.js';
 import { aiModeClaw, stopAICleanup } from './aiMode.js';
+import { startHayabusaChase, stopHayabusaChase } from './hayabusa.js';
 import { resetPose } from './reset.js';
 import { groundCharacter } from './utils.js';
 import { updateSpeechBubble } from './speechBubble.js';
@@ -41,15 +42,14 @@ function initScene() {
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.toneMapping = THREE.ReinhardToneMapping;
-    renderer.toneMappingExposure = config.toneMappingExposure ?? 1.4;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = config.toneMappingExposure ?? 1.2;
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     state.renderer = renderer;
 
     setupEnvironment();
 
-    // Initialise camera manager with free‑orbit controls
     initCameraManager(camera, canvas, {
         min: config.orbitLimits?.min ?? 1,
         max: config.orbitLimits?.max ?? 12
@@ -73,8 +73,6 @@ function initScene() {
 
         updateEnvironment(delta);
         updateSpeechBubble();
-
-        // Update the current camera mode (free / track / fpv)
         updateCamera();
 
         renderer.render(scene, camera);
@@ -119,16 +117,7 @@ function loadModel() {
             groundCharacter();
 
             const mid = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
-            // Update the free camera's look‑at target to the model centre
             state.camera.position.set(mid.x, mid.y + 0.5, mid.z + config.cameraDistance);
-            if (state.cameraMode === 'free' || state.cameraMode === 'track') {
-                // We can set the free camera target via cameramovement
-                import('./cameramovement.js').then(({ setCameraMode }) => {
-                    // No direct export for target, but we can do a quick switch to force target update
-                    // Actually, the free camera target was set in createFreeCamera, so it's fine.
-                    // We'll just leave it.
-                });
-            }
 
             loading.classList.add('hidden');
         },
@@ -161,6 +150,7 @@ function handleAnimBtn(id) {
         state.mainDanceTL = null;
     }
     stopAICleanup();
+    stopHayabusaChase();
 
     document.querySelectorAll('.btns button').forEach(b => b.classList.remove('active'));
 
@@ -184,7 +174,10 @@ function handleAnimBtn(id) {
             case 'jump':   jumpClaw(loop, sequences); break;
             case 'spin':   spinClaw(loop, sequences); break;
             case 'attack': attackClaw(loop, sequences); break;
-            case 'ai':     aiModeClaw(loop, sequences); break;
+            case 'ai':
+                aiModeClaw(loop, sequences);
+                startHayabusaChase();
+                break;
         }
     });
 }
@@ -275,6 +268,7 @@ function openModal() {
 function closeModal() {
     resetPose(0.25, true);
     stopAICleanup();
+    stopHayabusaChase();
     overlay.classList.remove('open');
     document.querySelectorAll('.btns button').forEach(b => b.classList.remove('active'));
     state.currentSequence = 0;

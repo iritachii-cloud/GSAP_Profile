@@ -5,9 +5,12 @@ import { playJumpSFX, playSpinSFX, playAttackSFX, createDanceAudio, getAudioDura
 import { showSpeechBubble, hideSpeechBubble } from './speechBubble.js';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  OBSTACLE CHECK
+//  OBSTACLE CHECK  (also checks map boundaries)
 // ═══════════════════════════════════════════════════════════════════════════════
 function isBlocked(x, z) {
+    const bounds = state.groundBounds;
+    if (x < bounds.xMin || x > bounds.xMax || z < bounds.zMin || z > bounds.zMax) return true;
+
     for (const obs of state.obstacles) {
         if (obs.type === 'rect') {
             const d = obs.data;
@@ -22,11 +25,10 @@ function isBlocked(x, z) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  A* PATHFINDING
-//  Grid cell size 0.6 world units — fine enough for narrow passages.
+//  A* PATHFINDING  (unchanged)
 // ═══════════════════════════════════════════════════════════════════════════════
-const CELL   = 0.6;     // world units per grid cell
-const MARGIN = 0.28;    // character half-width for collision checks
+const CELL   = 0.6;
+const MARGIN = 0.28;
 
 function worldToCell(v) {
     const bounds = state.groundBounds;
@@ -47,7 +49,6 @@ function cellToWorld(cx, cy) {
 
 function isCellBlocked(cx, cy) {
     const w = cellToWorld(cx, cy);
-    // Sample a cross of points to give the character a body radius
     const offsets = [
         [0, 0],
         [MARGIN, 0], [-MARGIN, 0],
@@ -63,15 +64,10 @@ function heuristic(ax, ay, bx, by) {
     return Math.abs(ax - bx) + Math.abs(ay - by);
 }
 
-/**
- * A* from start → goal.
- * Returns array of THREE.Vector3 waypoints (world space), or null if no path found.
- */
 function aStar(start, goal) {
     const sc = worldToCell(start);
     const gc = worldToCell(goal);
 
-    // If goal cell is blocked, find nearest free cell
     if (isCellBlocked(gc.cx, gc.cy)) {
         let bestDist = Infinity, bestCx = gc.cx, bestCy = gc.cy;
         for (let r = 1; r <= 6; r++) {
@@ -92,8 +88,7 @@ function aStar(start, goal) {
 
     if (sc.cx === gc.cx && sc.cy === gc.cy) return [goal];
 
-    // Priority queue (min-heap via sorted array — grid is modest)
-    const open   = new Map();   // key → {g, f, px, py}
+    const open   = new Map();
     const closed = new Set();
     const key    = (cx, cy) => `${cx},${cy}`;
 
@@ -110,7 +105,6 @@ function aStar(start, goal) {
 
     outer:
     for (let iter = 0; iter < 8000; iter++) {
-        // Pick lowest-f node from open
         let bestKey = null, bestF = Infinity;
         for (const [k, v] of open) {
             if (v.f < bestF) { bestF = v.f; bestKey = k; }
@@ -146,7 +140,6 @@ function aStar(start, goal) {
 
     if (!found) return null;
 
-    // Reconstruct path
     const rawPath = [];
     let node = found;
     while (node) {
@@ -155,11 +148,9 @@ function aStar(start, goal) {
     }
     rawPath.reverse();
 
-    // String-pull (remove unnecessary waypoints when line-of-sight is clear)
     return stringPull(rawPath);
 }
 
-/** Remove collinear/redundant waypoints when there's a clear straight line. */
 function stringPull(path) {
     if (path.length <= 2) return path;
     const result = [path[0]];
@@ -176,7 +167,6 @@ function stringPull(path) {
     return result;
 }
 
-/** Check if two world-space points can be connected without hitting an obstacle. */
 function lineOfSight(a, b) {
     const steps = Math.ceil(a.distanceTo(b) / (CELL * 0.5));
     for (let s = 1; s < steps; s++) {
@@ -189,9 +179,9 @@ function lineOfSight(a, b) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  PICK A RANDOM WALKABLE WORLD POSITION
+//  PICK A RANDOM WALKABLE WORLD POSITION  (exported for hayabusa)
 // ═══════════════════════════════════════════════════════════════════════════════
-function getRandomWalkablePosition() {
+export function getRandomWalkablePosition() {
     const bounds = state.groundBounds;
     for (let attempt = 0; attempt < 80; attempt++) {
         const x = bounds.xMin + Math.random() * (bounds.xMax - bounds.xMin);
@@ -294,7 +284,7 @@ function danceWobble() {
 const actionPool = [miniJump, miniSpin, miniAttack, danceWobble];
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  WALK SEGMENT  (single straight leg)
+//  WALK SEGMENT
 // ═══════════════════════════════════════════════════════════════════════════════
 function walkSegment(targetPos) {
     return new Promise(resolve => {
@@ -311,7 +301,17 @@ function walkSegment(targetPos) {
         while (rotDiff >  Math.PI) rotDiff -= Math.PI * 2;
         while (rotDiff < -Math.PI) rotDiff += Math.PI * 2;
 
-        const tl = gsap.timeline({ onComplete: resolve, onInterrupt: resolve });
+        const tl = gsap.timeline({
+            onComplete: resolve,
+            onInterrupt: resolve,
+            onUpdate: () => {
+                // Abort immediately if chase should be paused
+                if (state.chasePause) {
+                    tl.kill();
+                    resolve();
+                }
+            }
+        });
         tl.to(state.claw.rotation, { y: state.claw.rotation.y + rotDiff, duration: Math.min(0.25, duration * 0.3), ease: 'power2.out' }, 0);
         tl.to(state.claw.position, {
             x: targetPos.x, z: targetPos.z,
@@ -334,7 +334,7 @@ function walkSegment(targetPos) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  WALK TO TARGET  via A* path
+//  WALK TO TARGET
 // ═══════════════════════════════════════════════════════════════════════════════
 async function walkToPoint(targetPos) {
     if (!state.claw || !state.dancePhase) return;
@@ -345,16 +345,13 @@ async function walkToPoint(targetPos) {
         state.claw.position.z
     );
 
-    // Try direct path first
     if (lineOfSight(startPos, targetPos) && !isBlocked(targetPos.x, targetPos.z)) {
         await walkSegment(targetPos);
         return;
     }
 
-    // A* routing
     const path = aStar(startPos, targetPos);
     if (!path || path.length === 0) {
-        // Fallback: just stay put and do a wobble
         await danceWobble();
         return;
     }
@@ -366,7 +363,7 @@ async function walkToPoint(targetPos) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  MAIN AI LOOP
+//  MAIN AI LOOP  (respects chasePause)
 // ═══════════════════════════════════════════════════════════════════════════════
 async function aiLoop() {
     while (state.dancePhase !== null) {
@@ -377,14 +374,21 @@ async function aiLoop() {
             continue;
         }
 
-        // If somehow inside an obstacle, escape
+        // ── Pause logic for chase drama ─────────────────────────────────
+        if (state.chasePause) {
+            // Stay frozen (no movement) but keep the loop alive
+            await new Promise(r => setTimeout(r, 100));
+            continue;
+        }
+
+        // ── Normal navigation ───────────────────────────────────────────
         if (isBlocked(state.claw.position.x, state.claw.position.z)) {
             const safePoint = getRandomWalkablePosition();
             await walkToPoint(safePoint);
             continue;
         }
 
-        const target = getRandomWalkablePosition();
+        const target = state.chaseTarget ? state.chaseTarget : getRandomWalkablePosition();
         await walkToPoint(target);
 
         if (!state.claw || state.dancePhase === null) break;
@@ -412,6 +416,7 @@ function stopAIInternal() {
         }
         state.currentAnim  = null;
         state.activeTimeline = null;
+        state.chasePause = false;
         hideSpeechBubble();
     }
 }
