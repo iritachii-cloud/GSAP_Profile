@@ -29,6 +29,7 @@ export const state = {
 
     obstacles: [],
     groundBounds: { xMin: -18, xMax: 18, zMin: -18, zMax: 18 },
+    cherryTrees: [],
 
     timeOfDay: 'day',
     lantern: null,
