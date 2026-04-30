@@ -1,32 +1,23 @@
 import { state } from './state.js';
 
-// ─── Day messages ──────────────────────────────────────────────────────────
-const dayMessages = [
-    { text: "Hi, I am Kagura!",                        emotion: 'happy'    },
-    { text: "Umbrella is my weapon!",                  emotion: 'excited'  },
-    { text: "I love Cherry Blossom~",                  emotion: 'happy'    },
-    { text: "Wisteria is my second favourite flower…", emotion: 'peaceful' },
-    { text: "The petals are so beautiful today.",      emotion: 'peaceful' },
-    { text: "Let's dance together!",                   emotion: 'excited'  },
-    { text: "Have you seen my umbrella?",              emotion: 'curious'  },
-    { text: "I feel so alive under the blossoms.",     emotion: 'peaceful' },
-    { text: "Birds are singing in the sky~",           emotion: 'happy'    },
-    { text: "Cherry storms are my favourite kind.",    emotion: 'happy'    },
-    { text: "Watch out — petal attack!",               emotion: 'excited'  },
-];
-
-// ─── Night messages ────────────────────────────────────────────────────────
-const nightMessages = [
-    { text: "The stars are so beautiful tonight…",    emotion: 'peaceful' },
-    { text: "Do you hear the wind?",                  emotion: 'curious'  },
-    { text: "Stay close — it's getting dark!",        emotion: 'playful'  },
-    { text: "I wonder what lies beyond the torii…",   emotion: 'curious'  },
-    { text: "Night time is so peaceful…",             emotion: 'peaceful' },
-    { text: "The fireflies are dancing with me~",     emotion: 'happy'    },
-    { text: "My lantern keeps the shadows away.",     emotion: 'peaceful' },
-    { text: "Can you see the moon from here?",        emotion: 'curious'  },
-    { text: "Even the shrine feels alive at night.",  emotion: 'playful'  },
-    { text: "Wisteria blooms best under moonlight.",  emotion: 'peaceful' },
+// ─── Message pool with emotions ────────────────────────────────────────────
+// emotions: 'happy' | 'excited' | 'curious' | 'peaceful' | 'playful'
+const messages = [
+    { text: "Hi, I am Kagura!",                              emotion: 'happy'    },
+    { text: "Umbrella is my weapon!",                        emotion: 'excited'  },
+    { text: "I love Cherry Blossom~",                        emotion: 'happy'    },
+    { text: "Wisteria is my second favourite flower…",       emotion: 'peaceful' },
+    { text: "The petals are so beautiful today.",            emotion: 'peaceful' },
+    { text: "Let's dance together!",                         emotion: 'excited'  },
+    { text: "Have you seen my umbrella?",                    emotion: 'curious'  },
+    { text: "I feel so alive under the blossoms.",           emotion: 'peaceful' },
+    { text: "Night time is so peaceful…",                    emotion: 'peaceful' },
+    { text: "Birds are singing in the sky~",                 emotion: 'happy'    },
+    { text: "Do you hear the wind?",                         emotion: 'curious'  },
+    { text: "Stay close — it's getting dark!",               emotion: 'playful'  },
+    { text: "I wonder what lies beyond the torii…",         emotion: 'curious'  },
+    { text: "Cherry storms are my favourite kind.",          emotion: 'happy'    },
+    { text: "Watch out — petal attack!",                     emotion: 'excited'  },
 ];
 
 // ─── Emotion → visual style ────────────────────────────────────────────────
@@ -51,19 +42,20 @@ let visible      = false;
 function createBubble() {
     const wrap = document.querySelector('.canvas-wrap') || document.body;
 
+    // Outer bubble
     const div = document.createElement('div');
     div.id = 'speechBubble';
     Object.assign(div.style, {
         position:        'absolute',
         maxWidth:        '200px',
         minWidth:        '80px',
-        padding:         '0.25rem 0.7rem',
+        padding:         '0.45rem 0.85rem 0.45rem 0.85rem',
         borderRadius:    '16px',
         border:          '2px solid #ff99bb',
         background:      'rgba(255,240,248,0.97)',
         boxShadow:       '0 3px 12px rgba(0,0,0,0.25)',
         fontFamily:      'Quicksand, sans-serif',
-        fontSize:        '0.62rem',
+        fontSize:        '0.72rem',
         fontWeight:      '600',
         lineHeight:      '1.4',
         color:           '#b30047',
@@ -78,11 +70,12 @@ function createBubble() {
         willChange:      'transform, opacity',
     });
 
+    // Text node
     textEl = document.createElement('span');
     textEl.id = 'speechText';
     div.appendChild(textEl);
 
-    // Triangle tail pointing down toward character
+    // Triangle tail (CSS triangle pointing downward toward character)
     tailEl = document.createElement('div');
     Object.assign(tailEl.style, {
         position:     'absolute',
@@ -106,26 +99,27 @@ function createBubble() {
 // ─── Apply emotion styling ──────────────────────────────────────────────────
 function applyEmotion(emotion) {
     const s = emotionStyle[emotion] || emotionStyle.happy;
-    bubble.style.background     = s.bg;
-    bubble.style.borderColor    = s.border;
-    bubble.style.color          = s.color;
+    bubble.style.background  = s.bg;
+    bubble.style.borderColor = s.border;
+    bubble.style.color       = s.color;
     tailEl.style.borderTopColor = s.tail;
 }
 
 // ─── Typewriter ────────────────────────────────────────────────────────────
 function typeWrite(text, onDone) {
-    if (typeTimer) { clearTimeout(typeTimer); typeTimer = null; }
+    if (typeTimer) { clearInterval(typeTimer); typeTimer = null; }
     textEl.textContent = '';
     let i = 0;
+    // Speed varies slightly per character for natural feel
     function tick() {
         if (!visible) return;
         textEl.textContent = text.slice(0, i + 1);
         i++;
         if (i < text.length) {
             const ch = text[i - 1];
-            const delay = /[.,!?…~]/.test(ch)
-                ? 120 + Math.random() * 80
-                :  28 + Math.random() * 22;
+            // Pause longer after punctuation
+            const delay = /[.,!?…~]/.test(ch) ? 120 + Math.random() * 80
+                                                : 28  + Math.random() * 22;
             typeTimer = setTimeout(tick, delay);
         } else {
             if (onDone) onDone();
@@ -134,17 +128,16 @@ function typeWrite(text, onDone) {
     typeTimer = setTimeout(tick, 30);
 }
 
-// ─── Pick next message from correct pool ───────────────────────────────────
+// ─── Pick next message (no repeat) ─────────────────────────────────────────
 function pickMessage() {
-    const pool = state.timeOfDay === 'night' ? nightMessages : dayMessages;
     let idx;
-    do { idx = Math.floor(Math.random() * pool.length); }
-    while (idx === lastMsgIdx && pool.length > 1);
+    do { idx = Math.floor(Math.random() * messages.length); }
+    while (idx === lastMsgIdx && messages.length > 1);
     lastMsgIdx = idx;
-    return pool[idx];
+    return messages[idx];
 }
 
-// ─── Pop animations ────────────────────────────────────────────────────────
+// ─── Show bubble with pop-in ────────────────────────────────────────────────
 function popIn() {
     bubble.style.opacity   = '1';
     bubble.style.transform = 'translateX(-50%) translateY(-100%) scale(1)';
@@ -165,10 +158,12 @@ function cycleMessage() {
 
     popIn();
     typeWrite(text, () => {
+        // Hold the completed message for a beat, then fade out and repeat
         const hold = 2200 + text.length * 28 + Math.random() * 1000;
         messageTimer = setTimeout(() => {
             popOut(() => {
                 if (!visible) return;
+                // Short silence before the next line
                 messageTimer = setTimeout(cycleMessage, 400 + Math.random() * 600);
             });
         }, hold);
@@ -183,7 +178,7 @@ function updateBubblePosition() {
     if (!wrapper) return;
 
     const worldPos = state.claw.position.clone();
-    worldPos.y += 0.8;   // height above character — adjust to taste
+    worldPos.y += 0.8;   // above head — adjust this to move the bubble up/down
 
     const vector = worldPos.project(state.camera);
     if (vector.z > 1) {
@@ -191,20 +186,22 @@ function updateBubblePosition() {
         return;
     }
 
-    const rect = wrapper.getBoundingClientRect();
-    const x    = (vector.x *  0.5 + 0.5) * rect.width;
-    const y    = (vector.y * -0.5 + 0.5) * rect.height;
+    const rect  = wrapper.getBoundingClientRect();
+    const x     = (vector.x *  0.5 + 0.5) * rect.width;
+    const y     = (vector.y * -0.5 + 0.5) * rect.height;
 
+    // left is bubble center; top is bottom edge of bubble (tail points down to head)
     bubble.style.left = `${x}px`;
     bubble.style.top  = `${y}px`;
 
-    // Clamp horizontally and shift tail to compensate
-    const bw       = bubble.offsetWidth;
-    const half     = bw / 2;
+    // Keep bubble inside canvas horizontally
+    const bw   = bubble.offsetWidth;
+    const half = bw / 2;
     const clampedX = Math.max(half + 8, Math.min(rect.width - half - 8, x));
     if (clampedX !== x) {
         bubble.style.left = `${clampedX}px`;
-        const tailShift   = x - clampedX;
+        // Shift the tail to compensate so it still points at the character
+        const tailShift = x - clampedX;
         tailEl.style.left = `calc(50% + ${tailShift}px)`;
     } else {
         tailEl.style.left = '50%';
@@ -215,6 +212,7 @@ function updateBubblePosition() {
 export function showSpeechBubble() {
     if (!bubble) createBubble();
     visible = true;
+    // Small delay so the character has settled before the bubble appears
     messageTimer = setTimeout(cycleMessage, 600);
 }
 
