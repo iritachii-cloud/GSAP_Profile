@@ -1,0 +1,36 @@
+import * as THREE from 'three';
+import { state } from './state.js';
+
+let trackDistance = 4.0;        // initial zoom distance
+const minDistance = 1.5;
+const maxDistance = 10.0;
+const heightOffset = 1.2;      // camera height above character's base
+
+export function setTrackDistance(delta) {
+    trackDistance = Math.min(maxDistance, Math.max(minDistance, trackDistance + delta));
+}
+
+export function getTrackDistance() {
+    return trackDistance;
+}
+
+export function updateTracking(camera, target) {
+    if (!target) return;
+
+    // Position camera behind the character based on its Y rotation
+    const charPos = target.position.clone();
+    const rotY = target.rotation.y;
+    const offset = new THREE.Vector3(
+        Math.sin(rotY) * trackDistance,
+        heightOffset,
+        Math.cos(rotY) * trackDistance
+    );
+    camera.position.copy(charPos).add(offset);
+    camera.lookAt(charPos.x, charPos.y + 0.4, charPos.z);  // look at chest height
+}
+
+// Wheel event handler – call this from main when in track mode
+export function handleTrackWheel(event) {
+    const delta = event.deltaY > 0 ? 0.5 : -0.5;
+    setTrackDistance(delta);
+}

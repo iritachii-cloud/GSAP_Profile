@@ -1,0 +1,18 @@
+{
+  "emojiBackground": ["✦","🌙","💜","🔮","⚔️","🌀","👁️","🌸","🗡️","✨"],
+  "emojiCount": 22,
+  "animations": [
+    { "id": "dance",  "label": "🌀 Aerial Dance" },
+    { "id": "jump",   "label": "⚡ Cable Dash" },
+    { "id": "spin",   "label": "🌙 Pinate Spin" },
+    { "id": "attack", "label": "🗡️ Cut Throat" },
+    { "id": "reset",  "label": "↩ Rest" }
+  ],
+  "modelFile": "fanny.glb",
+  "modelScaleTarget": 2.4,
+  "cameraFov": 38,
+  "cameraDistance": 5,
+  "orbitLimits": { "min": 1, "max": 12 },
+  "shadowMapSize": 2048,
+  "toneMappingExposure": 1.1
+}
