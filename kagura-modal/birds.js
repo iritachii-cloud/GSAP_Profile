@@ -7,14 +7,14 @@ let animHandle = null;
 let running    = false;
 
 // ─── Scene "box" birds fly through ────────────────────────────────────────
-const BOX = { x: 30, y: 8, z: 30 };   // half-extents of visible volume
-const BIRD_COUNT = 14;
+const BOX = { x: 30, y: 25, z: 30 };   // half-extents of visible volume
+const BIRD_COUNT = 30;
 
 // ─── Build one bird mesh ───────────────────────────────────────────────────
 // Uses a sprite-style "M" silhouette drawn on canvas — looks like a real
 // bird in flight when small and far away, which is exactly how we see them.
 function createBirdSprite() {
-    const size = 64;
+    const size = 30;
     const c = document.createElement('canvas');
     c.width = size; c.height = size;
     const ctx = c.getContext('2d');

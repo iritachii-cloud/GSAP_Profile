@@ -16,7 +16,7 @@ const CHERRY = {
 const WISTERIA = {
     blossom:   new THREE.Color('#7b3fa0'),
     emissive:  new THREE.Color('#2a005a'),
-    emissiveI: 0.65,   // glow more at night
+    emissiveI: 0.65,
     trunk:     new THREE.Color('#3a2418'),
     petalTex:  '#a855d4',
     petalSize: 0.14,
@@ -25,8 +25,10 @@ const WISTERIA = {
 };
 
 // ─── Global refs for day/night transitions ────────────────────────────────
-let allBlossomMats = [];   // every blossom MeshStandardMaterial
-let allTrunkMats   = [];   // every trunk/branch MeshStandardMaterial
+let allBlossomMats = [];   // regular cherry blossom spheres
+let allPendantMats = [];   // wisteria pendant cylinders
+let allTrunkMats   = [];
+
 let petalTexDay    = null;
 let petalTexNight  = null;
 
@@ -37,8 +39,6 @@ function createPetalTexture(color) {
     const ctx = c.getContext('2d');
     ctx.clearRect(0, 0, 32, 32);
     ctx.fillStyle = color;
-    // Cherry / wisteria petal shape — elongated for wisteria, round for cherry
-    const isWisteria = color.includes('a8') || color.charCodeAt(1) < 100;
     ctx.beginPath();
     ctx.ellipse(16, 10, 7, 5, 0, 0, Math.PI * 2); ctx.fill();
     ctx.beginPath();
@@ -47,7 +47,6 @@ function createPetalTexture(color) {
     ctx.ellipse(10, 18, 6, 4, -0.4, 0, Math.PI * 2); ctx.fill();
     ctx.beginPath();
     ctx.ellipse(16, 24, 7, 5, 0, 0, Math.PI * 2); ctx.fill();
-    // Centre highlight
     ctx.fillStyle = 'rgba(255,220,255,0.45)';
     ctx.beginPath();
     ctx.ellipse(16, 16, 4, 3, 0, 0, Math.PI * 2); ctx.fill();
@@ -112,19 +111,18 @@ function buildTree(scale = 1.0) {
         addBranch(trunkH * 0.75, 1.4, ay, 0.55 + Math.random() * 0.2, 2, 0.12);
     }
 
-    // ── Blossom canopy ────────────────────────────────────────────────────
-    // Outer fluffy clusters
+    // ── Blossom canopy (regular cherry spheres) ──────────────────────────
     const canopyCount = Math.floor(320 * scale);
     for (let i = 0; i < canopyCount; i++) {
         const bMat = new THREE.MeshStandardMaterial({
             color:            CHERRY.blossom.clone(),
             emissive:         CHERRY.emissive.clone(),
-            emissiveIntensity:CHERRY.emissiveI,
+            emissiveIntensity: CHERRY.emissiveI,
             roughness:        0.55,
             transparent:      true,
             opacity:          0.92
         });
-        allBlossomMats.push(bMat);
+        allBlossomMats.push(bMat);   // <-- REGULAR BLOSSOM MATERIAL
 
         const size   = (0.12 + Math.random() * 0.18) * scale;
         const sphere = new THREE.Mesh(new THREE.SphereGeometry(size, 5, 4), bMat);
@@ -141,17 +139,17 @@ function buildTree(scale = 1.0) {
         group.add(sphere);
     }
 
-    // Inner denser core
+    // Inner denser core (also regular blossoms)
     for (let i = 0; i < Math.floor(120 * scale); i++) {
         const bMat = new THREE.MeshStandardMaterial({
             color:            CHERRY.blossom.clone(),
             emissive:         CHERRY.emissive.clone(),
-            emissiveIntensity:CHERRY.emissiveI,
+            emissiveIntensity: CHERRY.emissiveI,
             roughness:        0.55,
             transparent:      true,
             opacity:          0.92
         });
-        allBlossomMats.push(bMat);
+        allBlossomMats.push(bMat);   // <-- REGULAR BLOSSOM MATERIAL
 
         const size   = (0.08 + Math.random() * 0.1) * scale;
         const blob   = new THREE.Mesh(new THREE.SphereGeometry(size, 4, 3), bMat);
@@ -163,17 +161,16 @@ function buildTree(scale = 1.0) {
     }
 
     // ── Wisteria drooping clusters (hidden at day, shown at night) ────────
-    // Long teardrop-shaped pendant clusters
     for (let i = 0; i < Math.floor(60 * scale); i++) {
         const wMat = new THREE.MeshStandardMaterial({
             color:            WISTERIA.blossom.clone(),
             emissive:         WISTERIA.emissive.clone(),
-            emissiveIntensity:0,
+            emissiveIntensity: 0,         // start invisible
             roughness:        0.5,
             transparent:      true,
-            opacity:          0        // start invisible
+            opacity:          0           // start invisible
         });
-        allBlossomMats.push(wMat);     // same pool, controlled via opacity
+        allPendantMats.push(wMat);      // <-- WISTERIA PENDANT MATERIAL
 
         const clusterH = (0.4 + Math.random() * 0.7) * scale;
         const clusterR = (0.06 + Math.random() * 0.06) * scale;
@@ -222,6 +219,7 @@ const TREE_CONFIGS = [
 // ─── Setup ─────────────────────────────────────────────────────────────────
 export function setupCherryTree() {
     allBlossomMats = [];
+    allPendantMats = [];
     allTrunkMats   = [];
     state.cherryTrees = [];
 
@@ -271,37 +269,33 @@ function updateTreeTransition(delta) {
     }
 
     const t = transitionProgress;
-
-    // Update blossom materials
     const tmpColor = new THREE.Color();
-    allBlossomMats.forEach(mat => {
-        // Determine if this is a pendant (wisteria-only) by checking base color proximity
-        const isWisteriaPendant = mat.color.r < 0.6;  // purple has low red
 
-        if (isWisteriaPendant) {
-            // Pendants fade in at night
-            mat.opacity          = t * 0.88;
-            mat.emissiveIntensity = t * WISTERIA.emissiveI;
-            mat.needsUpdate      = true;
-        } else {
-            // Regular blossom spheres crossfade color
-            lerpColor(CHERRY.blossom,  WISTERIA.blossom,  t, tmpColor);
-            mat.color.copy(tmpColor);
-            lerpColor(CHERRY.emissive, WISTERIA.emissive, t, tmpColor);
-            mat.emissive.copy(tmpColor);
-            mat.emissiveIntensity = CHERRY.emissiveI + (WISTERIA.emissiveI - CHERRY.emissiveI) * t;
-            mat.needsUpdate       = true;
-        }
+    // Regular cherry blossoms – lerp color and emissive only
+    allBlossomMats.forEach(mat => {
+        lerpColor(CHERRY.blossom,  WISTERIA.blossom,  t, tmpColor);
+        mat.color.copy(tmpColor);
+        lerpColor(CHERRY.emissive, WISTERIA.emissive, t, tmpColor);
+        mat.emissive.copy(tmpColor);
+        mat.emissiveIntensity = CHERRY.emissiveI + (WISTERIA.emissiveI - CHERRY.emissiveI) * t;
+        mat.needsUpdate = true;
     });
 
-    // Trunk darkens slightly at night
+    // Wisteria pendants – only change opacity and emissiveIntensity
+    allPendantMats.forEach(mat => {
+        mat.opacity           = t * 0.88;
+        mat.emissiveIntensity = t * WISTERIA.emissiveI;
+        mat.needsUpdate       = true;
+    });
+
+    // Trunks – darken slightly
     allTrunkMats.forEach(mat => {
         lerpColor(CHERRY.trunk, WISTERIA.trunk, t, tmpColor);
         mat.color.copy(tmpColor);
         mat.needsUpdate = true;
     });
 
-    // Particle color and texture
+    // Particle system color/texture swap
     if (state.petalSystem) {
         const { material } = state.petalSystem;
         lerpColor(CHERRY.particleColor, WISTERIA.particleColor, t, tmpColor);
