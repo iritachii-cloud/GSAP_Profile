@@ -32,12 +32,12 @@ function createGrassTexture() {
     const texture = new THREE.CanvasTexture(canvas);
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(16, 16);
+    texture.repeat.set(6, 6);
     return texture;
 }
 
 export function setupGround() {
-    const groundGeo = new THREE.PlaneGeometry(40, 40);
+    const groundGeo = new THREE.PlaneGeometry(12, 12);
     const groundMat = new THREE.MeshStandardMaterial({
         map: createGrassTexture(),
         roughness: 0.9,
@@ -55,7 +55,7 @@ export function setupGround() {
     for (let i = 0; i < 150; i++) {
         const petal = createPetalSprite('#ff365e', 0.08 + Math.random() * 0.06);
         const angle = Math.random() * Math.PI * 2;
-        const radius = 4 + Math.random() * 14;
+        const radius = 2 + Math.random() * 4;
         petal.position.set(Math.cos(angle) * radius, 0.02, Math.sin(angle) * radius);
         petal.rotation.z = Math.random() * Math.PI;
         group.add(petal);

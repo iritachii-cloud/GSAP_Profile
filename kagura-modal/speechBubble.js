@@ -5,7 +5,7 @@ const dayMessages = [
     { text: "Hi, I am Kagura!",                        emotion: 'happy'    },
     { text: "Umbrella is my weapon!",                  emotion: 'excited'  },
     { text: "I love Cherry Blossom~",                  emotion: 'happy'    },
-    { text: "Wisteria is my second favourite flower…", emotion: 'peaceful' },
+    { text: "Wisteria is my favourite flower…", emotion: 'peaceful' },
     { text: "The petals are so beautiful today.",      emotion: 'peaceful' },
     { text: "Let's dance together!",                   emotion: 'excited'  },
     { text: "Have you seen my umbrella?",              emotion: 'curious'  },

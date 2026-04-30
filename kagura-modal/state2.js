@@ -28,7 +28,7 @@ export const state = {
     danceEndTimer: null,
 
     obstacles: [],
-    groundBounds: { xMin: -18, xMax: 18, zMin: -18, zMax: 18 },
+    groundBounds: { xMin: -6, xMax: 6, zMin: -6, zMax: 6 },
 
     timeOfDay: 'day',
     lantern: null,

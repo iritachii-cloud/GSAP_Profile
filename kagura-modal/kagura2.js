@@ -34,7 +34,7 @@ function initScene() {
     scene.fog = new THREE.FogExp2('#1a0010', 0.005);
     state.scene = scene;
 
-    const camera = new THREE.PerspectiveCamera(config.cameraFov, 1, 0.1, 500);
+    const camera = new THREE.PerspectiveCamera(config.cameraFov, 1, 0.1, 200);
     camera.position.set(0, 1.4, config.cameraDistance);
     state.camera = camera;
 

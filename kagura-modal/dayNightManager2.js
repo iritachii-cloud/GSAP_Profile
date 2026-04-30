@@ -62,8 +62,8 @@ export function applyTimeOfDay(time) {
 
     // Fog
     scene.fog = time === 'day'
-        ? new THREE.FogExp2('#1a0010', 0.008) 
-        : new THREE.FogExp2('#0a0010', 0.012);
+        ? new THREE.FogExp2('#1a0010', 0.005)
+        : new THREE.FogExp2('#0a0010', 0.015);
 }
 
 // Update function called every frame for lantern position
