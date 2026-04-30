@@ -1,7 +1,7 @@
 import { state } from './state.js';
 import { setupSky } from './sky.js';
 import { setupGround } from './ground.js';
-import { setupWaterBridge } from './waterBridge.js';
+import { setupWaterBridge, updateWaterLilies } from './waterBridge.js';
 import { setupCherryTree, updateFallingPetals } from './cherryTree.js';
 import { setupToriiShrine } from './toriiShrine.js';
 import { createLantern, updateLanternPosition, showLantern, hideLantern } from './lantern.js';
@@ -25,9 +25,10 @@ export function setupEnvironment() {
 // Called every frame from kagura.js
 export function updateEnvironment(delta) {
     updateFallingPetals(delta);
+    updateWaterLilies(delta);
     if (state.timeOfDay === 'night') {
         updateLanternPosition();
     }
 }
 
-export { applyTimeOfDay };   // export the toggle function
+export { applyTimeOfDay };

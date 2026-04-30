@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Kagura – Cherry Blossom Shrine</title>
+    <link rel="stylesheet" href="kagura.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three":         "https://unpkg.com/three@0.161.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="kagura.js"></script>
+</head>
+<body>
+
+<div class="particles-bg" id="particlesBg"></div>
+
+<button class="open-btn" id="openBtn">🌸 Invoke Kagura 🌸</button>
+
+<div class="overlay" id="overlay">
+    <div class="card">
+        <button class="close-btn" id="closeBtn">✕</button>
+        <h2>🌸 Kagura – Cherry Storm 🌸</h2>
+        <div class="canvas-wrap">
+            <canvas id="c"></canvas>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Cherry blossoms gathering…</p>
+            </div>
+        </div>
+        <div class="btns"></div>
+        <p class="hint">🌸 Drag to rotate · Scroll to zoom 🌸</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -4,7 +4,9 @@ import { spawnPetalBurst, groundCharacter, createPetalSprite } from './utils.js'
 import { playJumpSFX, playSpinSFX, playAttackSFX, createDanceAudio, getAudioDuration } from './music.js';
 import { showSpeechBubble, hideSpeechBubble } from './speechBubble.js';
 
-// ─── Obstacle check ────────────────────────────
+// ═══════════════════════════════════════════════════════════════════════════════
+//  OBSTACLE CHECK
+// ═══════════════════════════════════════════════════════════════════════════════
 function isBlocked(x, z) {
     for (const obs of state.obstacles) {
         if (obs.type === 'rect') {
@@ -19,10 +21,179 @@ function isBlocked(x, z) {
     return false;
 }
 
-// ─── Pick a safe position ──────────────────────
+// ═══════════════════════════════════════════════════════════════════════════════
+//  A* PATHFINDING
+//  Grid cell size 0.6 world units — fine enough for narrow passages.
+// ═══════════════════════════════════════════════════════════════════════════════
+const CELL   = 0.6;     // world units per grid cell
+const MARGIN = 0.28;    // character half-width for collision checks
+
+function worldToCell(v) {
+    const bounds = state.groundBounds;
+    return {
+        cx: Math.round((v.x - bounds.xMin) / CELL),
+        cy: Math.round((v.z - bounds.zMin) / CELL)
+    };
+}
+
+function cellToWorld(cx, cy) {
+    const bounds = state.groundBounds;
+    return new THREE.Vector3(
+        bounds.xMin + cx * CELL,
+        0,
+        bounds.zMin + cy * CELL
+    );
+}
+
+function isCellBlocked(cx, cy) {
+    const w = cellToWorld(cx, cy);
+    // Sample a cross of points to give the character a body radius
+    const offsets = [
+        [0, 0],
+        [MARGIN, 0], [-MARGIN, 0],
+        [0, MARGIN], [0, -MARGIN]
+    ];
+    for (const [dx, dz] of offsets) {
+        if (isBlocked(w.x + dx, w.z + dz)) return true;
+    }
+    return false;
+}
+
+function heuristic(ax, ay, bx, by) {
+    return Math.abs(ax - bx) + Math.abs(ay - by);
+}
+
+/**
+ * A* from start → goal.
+ * Returns array of THREE.Vector3 waypoints (world space), or null if no path found.
+ */
+function aStar(start, goal) {
+    const sc = worldToCell(start);
+    const gc = worldToCell(goal);
+
+    // If goal cell is blocked, find nearest free cell
+    if (isCellBlocked(gc.cx, gc.cy)) {
+        let bestDist = Infinity, bestCx = gc.cx, bestCy = gc.cy;
+        for (let r = 1; r <= 6; r++) {
+            for (let dx = -r; dx <= r; dx++) {
+                for (let dy = -r; dy <= r; dy++) {
+                    if (Math.abs(dx) !== r && Math.abs(dy) !== r) continue;
+                    const ncx = gc.cx + dx, ncy = gc.cy + dy;
+                    if (!isCellBlocked(ncx, ncy)) {
+                        const d = Math.abs(dx) + Math.abs(dy);
+                        if (d < bestDist) { bestDist = d; bestCx = ncx; bestCy = ncy; }
+                    }
+                }
+            }
+            if (bestDist < Infinity) break;
+        }
+        gc.cx = bestCx; gc.cy = bestCy;
+    }
+
+    if (sc.cx === gc.cx && sc.cy === gc.cy) return [goal];
+
+    // Priority queue (min-heap via sorted array — grid is modest)
+    const open   = new Map();   // key → {g, f, px, py}
+    const closed = new Set();
+    const key    = (cx, cy) => `${cx},${cy}`;
+
+    const startKey = key(sc.cx, sc.cy);
+    open.set(startKey, { cx: sc.cx, cy: sc.cy, g: 0, f: heuristic(sc.cx, sc.cy, gc.cx, gc.cy), pk: null });
+
+    const DIRS = [
+        [1,0],[-1,0],[0,1],[0,-1],
+        [1,1],[1,-1],[-1,1],[-1,-1]
+    ];
+    const COST = [1,1,1,1, 1.414,1.414,1.414,1.414];
+
+    let found = null;
+
+    outer:
+    for (let iter = 0; iter < 8000; iter++) {
+        // Pick lowest-f node from open
+        let bestKey = null, bestF = Infinity;
+        for (const [k, v] of open) {
+            if (v.f < bestF) { bestF = v.f; bestKey = k; }
+        }
+        if (!bestKey) break;
+
+        const cur = open.get(bestKey);
+        open.delete(bestKey);
+        closed.add(bestKey);
+
+        if (cur.cx === gc.cx && cur.cy === gc.cy) { found = cur; break; }
+
+        for (let d = 0; d < DIRS.length; d++) {
+            const ncx = cur.cx + DIRS[d][0];
+            const ncy = cur.cy + DIRS[d][1];
+            const nk  = key(ncx, ncy);
+            if (closed.has(nk)) continue;
+            if (isCellBlocked(ncx, ncy)) { closed.add(nk); continue; }
+
+            const ng = cur.g + COST[d];
+            const existing = open.get(nk);
+            if (!existing || ng < existing.g) {
+                open.set(nk, {
+                    cx: ncx, cy: ncy,
+                    g: ng,
+                    f: ng + heuristic(ncx, ncy, gc.cx, gc.cy),
+                    pk: bestKey,
+                    parent: cur
+                });
+            }
+        }
+    }
+
+    if (!found) return null;
+
+    // Reconstruct path
+    const rawPath = [];
+    let node = found;
+    while (node) {
+        rawPath.push(cellToWorld(node.cx, node.cy));
+        node = node.parent;
+    }
+    rawPath.reverse();
+
+    // String-pull (remove unnecessary waypoints when line-of-sight is clear)
+    return stringPull(rawPath);
+}
+
+/** Remove collinear/redundant waypoints when there's a clear straight line. */
+function stringPull(path) {
+    if (path.length <= 2) return path;
+    const result = [path[0]];
+    let i = 0;
+    while (i < path.length - 1) {
+        let j = path.length - 1;
+        while (j > i + 1) {
+            if (lineOfSight(path[i], path[j])) break;
+            j--;
+        }
+        result.push(path[j]);
+        i = j;
+    }
+    return result;
+}
+
+/** Check if two world-space points can be connected without hitting an obstacle. */
+function lineOfSight(a, b) {
+    const steps = Math.ceil(a.distanceTo(b) / (CELL * 0.5));
+    for (let s = 1; s < steps; s++) {
+        const t = s / steps;
+        const x = a.x + (b.x - a.x) * t;
+        const z = a.z + (b.z - a.z) * t;
+        if (isBlocked(x, z)) return false;
+    }
+    return true;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  PICK A RANDOM WALKABLE WORLD POSITION
+// ═══════════════════════════════════════════════════════════════════════════════
 function getRandomWalkablePosition() {
     const bounds = state.groundBounds;
-    for (let attempt = 0; attempt < 50; attempt++) {
+    for (let attempt = 0; attempt < 80; attempt++) {
         const x = bounds.xMin + Math.random() * (bounds.xMax - bounds.xMin);
         const z = bounds.zMin + Math.random() * (bounds.zMax - bounds.zMin);
         if (!isBlocked(x, z)) return new THREE.Vector3(x, 0, z);
@@ -32,21 +203,20 @@ function getRandomWalkablePosition() {
         : new THREE.Vector3(0, 0, 0);
 }
 
-// ─── Mini‑actions (each returns a Promise) ─────
-// Each action guards against a null dancePhase (i.e. externally stopped) and
-// resolves immediately in that case so the async loop can exit cleanly.
-
+// ═══════════════════════════════════════════════════════════════════════════════
+//  MINI-ACTIONS
+// ═══════════════════════════════════════════════════════════════════════════════
 function miniJump() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
         playJumpSFX();
         const base = state.claw.userData.baseY ?? 0;
         const tl = gsap.timeline({ onComplete: resolve, onInterrupt: resolve });
-        tl.to(state.claw.scale, { y: 0.8, duration: 0.08, ease: 'power2.in' })
+        tl.to(state.claw.scale,    { y: 0.8,      duration: 0.08, ease: 'power2.in' })
           .to(state.claw.position, { y: base + 0.5, duration: 0.18, ease: 'power2.out' })
-          .to(state.claw.scale, { y: 1.1, duration: 0.1 }, '-=0.1')
-          .to(state.claw.position, { y: base, duration: 0.18, ease: 'bounce.out' })
-          .to(state.claw.scale, { y: 1, duration: 0.12 });
+          .to(state.claw.scale,    { y: 1.1,      duration: 0.1 }, '-=0.1')
+          .to(state.claw.position, { y: base,     duration: 0.18, ease: 'bounce.out' })
+          .to(state.claw.scale,    { y: 1,        duration: 0.12 });
     });
 }
 
@@ -89,12 +259,10 @@ function miniAttack() {
         };
 
         const tl = gsap.timeline({ onComplete: resolve, onInterrupt: () => { cleanup(); resolve(); } });
-        tl.to(petals.map(p => p.position), {
-                x: 0, y: 0.2, z: 0, duration: 0.3, ease: 'power2.in'
-            }, 0)
+        tl.to(petals.map(p => p.position), { x: 0, y: 0.2, z: 0, duration: 0.3, ease: 'power2.in' }, 0)
           .to({}, { duration: 0.1 })
           .to(petals.map(p => p.position), {
-                onStart: function() {
+                onStart() {
                     const camPos = state.camera.position.clone();
                     const charPos = group.position.clone();
                     const dir = camPos.sub(charPos).normalize();
@@ -105,8 +273,7 @@ function miniAttack() {
                 x: (i) => petals[i].userData.throwTarget?.x ?? 0,
                 y: (i) => (petals[i].userData.throwTarget?.y ?? 0) + Math.random() * 1.2,
                 z: (i) => petals[i].userData.throwTarget?.z ?? 0,
-                duration: 0.5,
-                ease: 'power2.out'
+                duration: 0.5, ease: 'power2.out'
             }, 0.4)
           .to(petals.map(p => p.material), { opacity: 0, duration: 0.3 }, 0.5)
           .call(cleanup);
@@ -126,34 +293,36 @@ function danceWobble() {
 
 const actionPool = [miniJump, miniSpin, miniAttack, danceWobble];
 
-// ─── Walk to target with wobble ────────────────
-function walkToPoint(targetPos) {
+// ═══════════════════════════════════════════════════════════════════════════════
+//  WALK SEGMENT  (single straight leg)
+// ═══════════════════════════════════════════════════════════════════════════════
+function walkSegment(targetPos) {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
         const startPos = state.claw.position.clone();
         const dx = targetPos.x - startPos.x;
         const dz = targetPos.z - startPos.z;
         const distance = Math.sqrt(dx * dx + dz * dz);
-        const duration = Math.max(1.0, distance * 0.8);
+        if (distance < 0.05) { resolve(); return; }
 
-        const rotY = Math.atan2(dx, dz);
-        const rotStart = state.claw.rotation.y;
-        let rotDiff = rotY - rotStart;
-        while (rotDiff > Math.PI) rotDiff -= Math.PI * 2;
+        const duration = Math.max(0.5, distance * 0.75);
+        const rotY    = Math.atan2(dx, dz);
+        let rotDiff   = rotY - state.claw.rotation.y;
+        while (rotDiff >  Math.PI) rotDiff -= Math.PI * 2;
         while (rotDiff < -Math.PI) rotDiff += Math.PI * 2;
 
         const tl = gsap.timeline({ onComplete: resolve, onInterrupt: resolve });
-        tl.to(state.claw.rotation, { y: rotStart + rotDiff, duration: 0.3, ease: 'power2.out' }, 0);
+        tl.to(state.claw.rotation, { y: state.claw.rotation.y + rotDiff, duration: Math.min(0.25, duration * 0.3), ease: 'power2.out' }, 0);
         tl.to(state.claw.position, {
             x: targetPos.x, z: targetPos.z,
-            duration: duration,
+            duration,
             ease: 'none',
             onStart: () => {
                 if (!state.claw) return;
                 gsap.to(state.claw.rotation, { z: 0.06, duration: 0.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
                 gsap.to(state.claw.position, { y: (state.claw.userData.baseY ?? 0) + 0.05, duration: 0.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
             }
-        }, 0.3);
+        }, 0.15);
         tl.call(() => {
             if (!state.claw) return;
             gsap.killTweensOf(state.claw.rotation, 'z');
@@ -164,20 +333,51 @@ function walkToPoint(targetPos) {
     });
 }
 
-// ─── Main AI loop ───────────────────────────────
-// Continues during both 'active' AND 'ending' phases.
-// Only exits when dancePhase is null (externally stopped).
+// ═══════════════════════════════════════════════════════════════════════════════
+//  WALK TO TARGET  via A* path
+// ═══════════════════════════════════════════════════════════════════════════════
+async function walkToPoint(targetPos) {
+    if (!state.claw || !state.dancePhase) return;
+
+    const startPos = new THREE.Vector3(
+        state.claw.position.x,
+        0,
+        state.claw.position.z
+    );
+
+    // Try direct path first
+    if (lineOfSight(startPos, targetPos) && !isBlocked(targetPos.x, targetPos.z)) {
+        await walkSegment(targetPos);
+        return;
+    }
+
+    // A* routing
+    const path = aStar(startPos, targetPos);
+    if (!path || path.length === 0) {
+        // Fallback: just stay put and do a wobble
+        await danceWobble();
+        return;
+    }
+
+    for (const waypoint of path) {
+        if (!state.claw || state.dancePhase === null) return;
+        await walkSegment(waypoint);
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  MAIN AI LOOP
+// ═══════════════════════════════════════════════════════════════════════════════
 async function aiLoop() {
     while (state.dancePhase !== null) {
         if (!state.claw) break;
 
-        // During the ending phase just keep doing small wobble moves – no walking
         if (state.dancePhase === 'ending') {
             await danceWobble();
             continue;
         }
 
-        // If stuck inside an obstacle, walk out first
+        // If somehow inside an obstacle, escape
         if (isBlocked(state.claw.position.x, state.claw.position.z)) {
             const safePoint = getRandomWalkablePosition();
             await walkToPoint(safePoint);
@@ -187,61 +387,19 @@ async function aiLoop() {
         const target = getRandomWalkablePosition();
         await walkToPoint(target);
 
-        // Re-check after the walk (phase may have changed)
         if (!state.claw || state.dancePhase === null) break;
-
         if (isBlocked(state.claw.position.x, state.claw.position.z)) continue;
 
-        // Random dance move
         const action = actionPool[Math.floor(Math.random() * actionPool.length)];
         await action();
     }
     hideSpeechBubble();
 }
 
-// ─── Internal stop ──────────────────────────────
+// ═══════════════════════════════════════════════════════════════════════════════
+//  INTERNAL STOP
+// ═══════════════════════════════════════════════════════════════════════════════
 function stopAIInternal() {
-    if (state.dancePhase !== null) {
-        state.dancePhase = null;   // signals the async loop to exit on its next iteration
-        if (state.danceAudio) {
-            state.danceAudio.pause();
-            state.danceAudio = null;
-        }
-        if (state.danceEndTimer) {
-            clearTimeout(state.danceEndTimer);
-            state.danceEndTimer = null;
-        }
-        if (state.claw) {
-            gsap.killTweensOf(state.claw.position);
-            gsap.killTweensOf(state.claw.rotation);
-            gsap.killTweensOf(state.claw.scale);
-            groundCharacter();
-        }
-        state.currentAnim = null;
-        state.activeTimeline = null;
-        hideSpeechBubble();
-    }
-}
-
-export function stopAICleanup() {
-    stopAIInternal();
-}
-
-// ─── Main entry ─────────────────────────────────
-export function aiModeClaw(loop = false, sequences = 1) {
-    if (!state.claw) return;
-
-    // Kill any prior animations
-    if (state.activeTimeline) {
-        state.activeTimeline.kill();
-        state.activeTimeline = null;
-    }
-    if (state.mainDanceTL) {
-        state.mainDanceTL.kill();
-        state.mainDanceTL = null;
-    }
-
-    // Stop any previous AI session without triggering a new loop
     if (state.dancePhase !== null) {
         state.dancePhase = null;
         if (state.danceAudio) { state.danceAudio.pause(); state.danceAudio = null; }
@@ -250,11 +408,38 @@ export function aiModeClaw(loop = false, sequences = 1) {
             gsap.killTweensOf(state.claw.position);
             gsap.killTweensOf(state.claw.rotation);
             gsap.killTweensOf(state.claw.scale);
+            groundCharacter();
+        }
+        state.currentAnim  = null;
+        state.activeTimeline = null;
+        hideSpeechBubble();
+    }
+}
+
+export function stopAICleanup() { stopAIInternal(); }
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  ENTRY POINT
+// ═══════════════════════════════════════════════════════════════════════════════
+export function aiModeClaw(loop = false, sequences = 1) {
+    if (!state.claw) return;
+
+    if (state.activeTimeline)  { state.activeTimeline.kill();  state.activeTimeline  = null; }
+    if (state.mainDanceTL)     { state.mainDanceTL.kill();     state.mainDanceTL     = null; }
+
+    if (state.dancePhase !== null) {
+        state.dancePhase = null;
+        if (state.danceAudio)   { state.danceAudio.pause(); state.danceAudio = null; }
+        if (state.danceEndTimer){ clearTimeout(state.danceEndTimer); state.danceEndTimer = null; }
+        if (state.claw) {
+            gsap.killTweensOf(state.claw.position);
+            gsap.killTweensOf(state.claw.rotation);
+            gsap.killTweensOf(state.claw.scale);
         }
         hideSpeechBubble();
     }
 
-    state.currentAnim = 'ai';
+    state.currentAnim    = 'ai';
     state.currentSequence = 0;
     const disp = document.getElementById('seqDisplay');
     if (disp) disp.textContent = '0';
@@ -265,13 +450,11 @@ export function aiModeClaw(loop = false, sequences = 1) {
 
     showSpeechBubble();
 
-    // Schedule the graceful ending ~10 s before song ends
     getAudioDuration(audio).then(duration => {
-        if (state.dancePhase === null) return;   // already stopped before metadata arrived
+        if (state.dancePhase === null) return;
         const endStart = Math.max(0, duration - 10);
         state.danceEndTimer = setTimeout(() => {
             if (!state.claw || state.dancePhase === null) return;
-            // Switch to ending phase – the loop keeps running but only does wobbles
             state.dancePhase = 'ending';
             const base = state.claw.userData.baseY ?? 0;
             gsap.to(state.claw.position, { x: 0, y: base, z: 0, duration: 10, ease: 'power2.inOut' });
@@ -282,12 +465,8 @@ export function aiModeClaw(loop = false, sequences = 1) {
         }, endStart * 1000);
     });
 
-    // Song finished → clean up
-    audio.addEventListener('ended', () => {
-        stopAIInternal();
-    });
+    audio.addEventListener('ended', () => stopAIInternal());
 
-    // Start the loop
     state.dancePhase = 'active';
     aiLoop();
 }
