@@ -7,6 +7,7 @@ import { spawnPetalBurst } from './utils.js';
 import { showCustomMessage } from './speechBubble.js';
 import { showCharacterMessage, updateDistance, updateEscapeCount } from './fpvHUD.js';
 
+// ─── Chase runtime state ─────────────────────────────────────────────────
 let hayabusaModel     = null;
 let chaseActive       = false;
 let teleportAnimId    = null;
@@ -14,18 +15,24 @@ let canTeleport       = true;
 let teleportPending   = false;
 const TELEPORT_COOLDOWN = 2000;
 
-// ─── Draco loader for Hayabusa (shared or separate) ─────────────────────
+// ─── Preload cache ────────────────────────────────────────────────────────
+// Filled by preloadHayabusa() (called from kagura.js after Kagura loads).
+// startHayabusaChase() checks this first so it never has to wait for a fetch.
+let preloadedModel  = null;
+let preloadPromise  = null;   // Promise<THREE.Group> while fetch is in-flight
+
+// ─── Draco loader ─────────────────────────────────────────────────────────
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
 dracoLoader.setDecoderConfig({ type: 'js' });
 const hayabusaGltfLoader = new GLTFLoader();
 hayabusaGltfLoader.setDRACOLoader(dracoLoader);
 
-// ─── Regular Hayabusa bubble (non‑FPV) ──────────────────────────────────
-let bubble       = null;
-let tailEl       = null;
-let textEl       = null;
-let hideTimer    = null;
+// ─── Regular Hayabusa speech bubble (non‑FPV) ────────────────────────────
+let bubble    = null;
+let tailEl    = null;
+let textEl    = null;
+let hideTimer = null;
 
 function createHayabusaBubble() {
     if (bubble) return;
@@ -112,7 +119,7 @@ function showHayabusaMessage(text, holdMs = 3500) {
     }, holdMs);
 }
 
-// ─── Cheesy lines ────────────────────────────────────────────────────────
+// ─── Dialogue lines ───────────────────────────────────────────────────────
 const HAYABUSA_LINES = [
     "Almost, sweetheart~ Better luck next time! 💕",
     "You're getting warmer, my love! 🥰",
@@ -160,18 +167,18 @@ const KAGURA_REPLIES = [
 const HAYABUSA_FIRST = "Try to catch me if you can, Kagura~ ❤️";
 const KAGURA_FIRST   = "Ok, my love Hayabusa… I will find you! 🌸";
 
-// ─── Load model ──────────────────────────────────────────────────────────
-function loadModel() {
+// ─── Core model loader (returns a Promise<THREE.Group>) ───────────────────
+function loadModelFromDisk(onProgress) {
     return new Promise((resolve, reject) => {
         hayabusaGltfLoader.load(
             'hayabusa-v1.glb',
             (gltf) => {
                 const model = gltf.scene;
-                const box = new THREE.Box3().setFromObject(model);
-                const size = box.getSize(new THREE.Vector3());
+                const box    = new THREE.Box3().setFromObject(model);
+                const size   = box.getSize(new THREE.Vector3());
                 const center = box.getCenter(new THREE.Vector3());
                 const maxDim = Math.max(size.x, size.y, size.z);
-                const scale = 1 / maxDim;
+                const scale  = 1 / maxDim;
 
                 model.scale.setScalar(scale);
                 model.position.sub(center.multiplyScalar(scale));
@@ -181,22 +188,46 @@ function loadModel() {
 
                 model.traverse(obj => {
                     if (obj.isMesh && obj.material) {
-                        obj.castShadow = true;
+                        obj.castShadow    = true;
                         obj.receiveShadow = true;
                     }
                 });
                 resolve(model);
             },
             (xhr) => {
-                // Optional progress – you could update a loading bar
-                // For simplicity we ignore here
+                if (onProgress && xhr.lengthComputable) {
+                    onProgress(Math.round((xhr.loaded / xhr.total) * 100));
+                }
             },
             reject
         );
     });
 }
 
-// ─── Teleport animation ─────────────────────────────────────────────────
+// ─── Public: preload (called silently from kagura.js after Kagura loads) ─
+// onProgress(pct 0-100) and onDone() are optional callbacks for a UI bar.
+export function preloadHayabusa(onProgress, onDone) {
+    // Already loaded or loading — nothing to do
+    if (preloadedModel || preloadPromise) {
+        if (onDone) onDone();
+        return;
+    }
+
+    preloadPromise = loadModelFromDisk(onProgress)
+        .then(model => {
+            preloadedModel = model;
+            preloadPromise = null;
+            if (onDone) onDone();
+        })
+        .catch(err => {
+            // Silent failure — chase start will try again live
+            console.warn('Hayabusa background preload failed (will retry on chase start):', err);
+            preloadPromise = null;
+            if (onDone) onDone();
+        });
+}
+
+// ─── Teleport animation ───────────────────────────────────────────────────
 function performTeleport(newPos) {
     teleportPending = false;
     if (!hayabusaModel || !chaseActive) return;
@@ -226,7 +257,7 @@ function performTeleport(newPos) {
       }, null, 0.4);
 }
 
-// ─── Pause + drama ──────────────────────────────────────────────────────
+// ─── Close-encounter drama ────────────────────────────────────────────────
 async function triggerCloseEncounter() {
     if (!hayabusaModel || !chaseActive || teleportPending || !canTeleport) return;
     teleportPending = true;
@@ -257,9 +288,9 @@ async function triggerCloseEncounter() {
 
 function teleportCheck() {
     if (!chaseActive || !hayabusaModel || !state.claw || !canTeleport || teleportPending) return;
-    const kaguraPos = state.claw.position.clone();
+    const kaguraPos   = state.claw.position.clone();
     const hayabusaPos = hayabusaModel.position.clone();
-    const dist = kaguraPos.distanceTo(hayabusaPos);
+    const dist        = kaguraPos.distanceTo(hayabusaPos);
 
     updateDistance(dist);
 
@@ -283,14 +314,24 @@ function chaseTick() {
     teleportAnimId = requestAnimationFrame(chaseTick);
 }
 
-// ─── Public API ──────────────────────────────────────────────────────────
+// ─── Public: start chase ─────────────────────────────────────────────────
 export async function startHayabusaChase() {
     if (chaseActive) return;
     chaseActive = true;
 
     if (!hayabusaModel) {
         try {
-            hayabusaModel = await loadModel();
+            if (preloadedModel) {
+                // ✅ Instant: model was preloaded in the background
+                hayabusaModel  = preloadedModel;
+                preloadedModel = null;
+            } else if (preloadPromise) {
+                // Still loading — await the in-flight fetch instead of re-fetching
+                hayabusaModel = await preloadPromise;
+            } else {
+                // Fallback: user clicked AI Mode before preload started
+                hayabusaModel = await loadModelFromDisk();
+            }
             state.scene.add(hayabusaModel);
         } catch (e) {
             console.error('Hayabusa model load failed:', e);
@@ -305,7 +346,7 @@ export async function startHayabusaChase() {
     hayabusaModel.position.set(spawnPos.x, hayabusaModel.userData.baseY, spawnPos.z);
     hayabusaModel.visible = true;
     state.chaseTarget = spawnPos.clone();
-    state.chasePause = false;
+    state.chasePause  = false;
 
     if (state.cameraMode === 'fpv') {
         showCharacterMessage('hayabusa', HAYABUSA_FIRST, 3500);
@@ -324,13 +365,17 @@ export async function startHayabusaChase() {
     chaseTick();
 }
 
+// ─── Public: stop chase ───────────────────────────────────────────────────
 export function stopHayabusaChase() {
-    chaseActive = false;
+    chaseActive     = false;
     state.chaseTarget = null;
-    state.chasePause = false;
-    teleportPending = false;
+    state.chasePause  = false;
+    teleportPending   = false;
     if (teleportAnimId) { cancelAnimationFrame(teleportAnimId); teleportAnimId = null; }
-    if (bubble) { bubble.remove(); bubble = null; textEl = null; tailEl = null; }
+    if (bubble)   { bubble.remove(); bubble = null; textEl = null; tailEl = null; }
     if (hideTimer) clearTimeout(hideTimer);
-    if (hayabusaModel) { state.scene.remove(hayabusaModel); hayabusaModel = null; }
+    if (hayabusaModel) {
+        state.scene.remove(hayabusaModel);
+        hayabusaModel = null;
+    }
 }

@@ -25,12 +25,12 @@ const WISTERIA = {
 };
 
 // ─── Global refs for day/night transitions ────────────────────────────────
-let allBlossomMats = [];   // regular cherry blossom spheres
-let allPendantMats = [];   // wisteria pendant cylinders
+let allBlossomMats = [];
+let allPendantMats = [];
 let allTrunkMats   = [];
 
-let petalTexDay    = null;
-let petalTexNight  = null;
+let petalTexDay   = null;
+let petalTexNight = null;
 
 // ─── Petal textures ────────────────────────────────────────────────────────
 function createPetalTexture(color) {
@@ -39,18 +39,17 @@ function createPetalTexture(color) {
     const ctx = c.getContext('2d');
     ctx.clearRect(0, 0, 32, 32);
     ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.ellipse(16, 10, 7, 5, 0, 0, Math.PI * 2); ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(22, 18, 6, 4, 0.4, 0, Math.PI * 2); ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(10, 18, 6, 4, -0.4, 0, Math.PI * 2); ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(16, 24, 7, 5, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(16, 10, 7, 5, 0,    0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(22, 18, 6, 4, 0.4,  0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(10, 18, 6, 4, -0.4, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(16, 24, 7, 5, 0,    0, Math.PI * 2); ctx.fill();
     ctx.fillStyle = 'rgba(255,220,255,0.45)';
-    ctx.beginPath();
-    ctx.ellipse(16, 16, 4, 3, 0, 0, Math.PI * 2); ctx.fill();
-    return new THREE.CanvasTexture(c);
+    ctx.beginPath(); ctx.ellipse(16, 16, 4, 3, 0,    0, Math.PI * 2); ctx.fill();
+
+    const tex = new THREE.CanvasTexture(c);
+    // Canvas pixels are sRGB; tagging prevents the double-conversion green tint on mobile.
+    tex.colorSpace = THREE.SRGBColorSpace;
+    return tex;
 }
 
 // ─── Build one tree ────────────────────────────────────────────────────────
@@ -67,8 +66,8 @@ function buildTree(scale = 1.0) {
         new THREE.CylinderGeometry(0.18 * scale, 0.32 * scale, trunkH, 8),
         trunkMat
     );
-    trunk.position.y = trunkH / 2;
-    trunk.castShadow = true;
+    trunk.position.y  = trunkH / 2;
+    trunk.castShadow  = true;
     group.add(trunk);
 
     // ── Recursive branches ────────────────────────────────────────────────
@@ -115,12 +114,12 @@ function buildTree(scale = 1.0) {
     const canopyCount = Math.floor(320 * scale);
     for (let i = 0; i < canopyCount; i++) {
         const bMat = new THREE.MeshStandardMaterial({
-            color:            CHERRY.blossom.clone(),
-            emissive:         CHERRY.emissive.clone(),
+            color:             CHERRY.blossom.clone(),
+            emissive:          CHERRY.emissive.clone(),
             emissiveIntensity: CHERRY.emissiveI,
-            roughness:        0.55,
-            transparent:      true,
-            opacity:          0.92
+            roughness:         0.55,
+            transparent:       true,
+            opacity:           0.92
         });
         allBlossomMats.push(bMat);
 
@@ -142,12 +141,12 @@ function buildTree(scale = 1.0) {
     // Inner denser core
     for (let i = 0; i < Math.floor(120 * scale); i++) {
         const bMat = new THREE.MeshStandardMaterial({
-            color:            CHERRY.blossom.clone(),
-            emissive:         CHERRY.emissive.clone(),
+            color:             CHERRY.blossom.clone(),
+            emissive:          CHERRY.emissive.clone(),
             emissiveIntensity: CHERRY.emissiveI,
-            roughness:        0.55,
-            transparent:      true,
-            opacity:          0.92
+            roughness:         0.55,
+            transparent:       true,
+            opacity:           0.92
         });
         allBlossomMats.push(bMat);
 
@@ -163,12 +162,12 @@ function buildTree(scale = 1.0) {
     // ── Wisteria drooping clusters (hidden at day, shown at night) ────────
     for (let i = 0; i < Math.floor(60 * scale); i++) {
         const wMat = new THREE.MeshStandardMaterial({
-            color:            WISTERIA.blossom.clone(),
-            emissive:         WISTERIA.emissive.clone(),
+            color:             WISTERIA.blossom.clone(),
+            emissive:          WISTERIA.emissive.clone(),
             emissiveIntensity: 0,
-            roughness:        0.5,
-            transparent:      true,
-            opacity:          0
+            roughness:         0.5,
+            transparent:       true,
+            opacity:           0
         });
         allPendantMats.push(wMat);
 
@@ -267,7 +266,7 @@ function updateTreeTransition(delta) {
         transitionProgress += diff * Math.min(1, speed * 8);
     }
 
-    const t = transitionProgress;
+    const t        = transitionProgress;
     const tmpColor = new THREE.Color();
 
     allBlossomMats.forEach(mat => {
@@ -313,8 +312,8 @@ const BASE_PETALS_PER_TREE = 60;
 export function startFallingPetals(petalTex) {
     if (state.petalSystem) return;
 
-    const trees  = state.cherryTrees || [];
-    const count  = trees.reduce((s, t) => s + Math.floor(BASE_PETALS_PER_TREE * t.scale), 0);
+    const trees     = state.cherryTrees || [];
+    const count     = trees.reduce((s, t) => s + Math.floor(BASE_PETALS_PER_TREE * t.scale), 0);
     const geometry  = new THREE.BufferGeometry();
     const positions = new Float32Array(count * 3);
     const petalData = [];
@@ -382,7 +381,7 @@ export function updateFallingPetals(delta) {
     const isAI      = state.currentAnim === 'ai';
     const speedMult = isAI ? 1.8 : 1.0;
     if (isAI) {
-        material.size    = (state.timeOfDay === 'night' ? WISTERIA.petalSize : CHERRY.petalSize) * 1.25;
+        material.size = (state.timeOfDay === 'night' ? WISTERIA.petalSize : CHERRY.petalSize) * 1.25;
     }
 
     for (let i = 0; i < count; i++) {

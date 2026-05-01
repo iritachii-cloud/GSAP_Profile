@@ -1,0 +1,87 @@
+name: Compress GLB Models
+
+# ─── Triggers ────────────────────────────────────────────────────────────────
+on:
+  push:
+    paths:
+      - '**/*.glb'          # any .glb anywhere in the repo
+  workflow_dispatch:         # also run manually from the Actions tab
+
+# ─── Permissions ─────────────────────────────────────────────────────────────
+permissions:
+  contents: write            # needed to commit back the compressed files
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    # Skip if this commit was already made by the bot (avoids infinite loop)
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      # 1 ─ Check out the full repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2 ─ Node 20 (avoids the deprecated Node 16 warning you already suppressed)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3 ─ Install both compression tools
+      #   • gltf-pipeline  → Draco-compresses mesh geometry  (fast, reliable)
+      #   • @gltf-transform/cli → converts embedded textures to WebP (biggest win)
+      - name: Install compression tools
+        run: |
+          npm install -g gltf-pipeline
+          npm install -g @gltf-transform/cli
+
+      # 4 ─ Compress every .glb in the repo
+      #   Strategy: Draco first, then WebP texture conversion, keep same filename.
+      #   We skip files already tagged as compressed (size guard: < 5 MB = already done).
+      - name: Compress GLB files
+        run: |
+          shopt -s globstar nullglob
+          for f in **/*.glb; do
+            SIZE=$(stat -c%s "$f" 2>/dev/null || stat -f%z "$f")
+            if [ "$SIZE" -lt 5242880 ]; then
+              echo "⏭  Skipping $f ($(( SIZE / 1024 )) KB — looks already compressed)"
+              continue
+            fi
+            echo "▶  Processing $f  ($(( SIZE / 1024 / 1024 )) MB)…"
+
+            # Step A: Draco geometry compression
+            gltf-pipeline \
+              -i "$f" \
+              -o "$f.draco.glb" \
+              --draco.compressionLevel 7 \
+              --draco.quantizePositionBits 14 \
+              --draco.quantizeNormalBits 10 \
+              --draco.quantizeTexcoordBits 12
+
+            # Step B: WebP texture conversion (biggest size win for textured models)
+            gltf-transform webp "$f.draco.glb" "$f.final.glb" --quality 80
+
+            # Replace original only if the result is actually smaller
+            NEW_SIZE=$(stat -c%s "$f.final.glb" 2>/dev/null || stat -f%z "$f.final.glb")
+            if [ "$NEW_SIZE" -lt "$SIZE" ]; then
+              mv "$f.final.glb" "$f"
+              echo "✅  $f: $(( SIZE / 1024 )) KB → $(( NEW_SIZE / 1024 )) KB"
+            else
+              echo "⚠️  $f: compression did not reduce size, keeping original"
+            fi
+
+            # Clean up temp files
+            rm -f "$f.draco.glb" "$f.final.glb"
+          done
+
+      # 5 ─ Commit compressed files back to the branch
+      - name: Commit compressed models
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # Only commit if something actually changed
+          git diff --staged --quiet \
+            && echo "✅ No changes — models were already optimal." \
+            || (git commit -m "chore: auto-compress GLB models [skip ci]" && git push)

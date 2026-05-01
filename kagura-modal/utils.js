@@ -2,31 +2,30 @@ import * as THREE from 'three';
 import { state } from './state.js';
 
 export function createPetalSprite(color = '#ff365e', size = 0.15) {
-    const canvas = document.createElement('canvas');
-    canvas.width = 32;
+    const canvas  = document.createElement('canvas');
+    canvas.width  = 32;
     canvas.height = 32;
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, 32, 32);
 
     ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.ellipse(16, 8, 6, 4, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(24, 16, 5, 4, 0.3, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(8, 16, 5, 4, -0.3, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(16, 22, 6, 4, 0, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.beginPath(); ctx.ellipse(16,  8, 6, 4,  0,   0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(24, 16, 5, 4,  0.3, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse( 8, 16, 5, 4, -0.3, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(16, 22, 6, 4,  0,   0, Math.PI * 2); ctx.fill();
 
     const texture = new THREE.CanvasTexture(canvas);
+    // Canvas draws in sRGB; tagging prevents the double-conversion that
+    // shows up as a green tint on mobile when outputColorSpace = SRGBColorSpace.
+    texture.colorSpace  = THREE.SRGBColorSpace;
     texture.needsUpdate = true;
+
     const material = new THREE.SpriteMaterial({
-        map: texture, transparent: true, opacity: 0.9,
-        blending: THREE.NormalBlending, depthWrite: false
+        map:       texture,
+        transparent: true,
+        opacity:   0.9,
+        blending:  THREE.NormalBlending,
+        depthWrite: false
     });
     const sprite = new THREE.Sprite(material);
     sprite.scale.set(size, size, 1);
@@ -38,10 +37,13 @@ export function spawnPetalBurst(position, count = 20, color = '#ff365e') {
     group.position.copy(position);
     state.scene.add(group);
     state.tempGroups.push(group);
-    for (let i=0; i<count; i++) {
-        const petal = createPetalSprite(color, 0.12 + Math.random()*0.1);
+
+    for (let i = 0; i < count; i++) {
+        const petal = createPetalSprite(color, 0.12 + Math.random() * 0.1);
         petal.position.set(
-            (Math.random()-0.5)*0.8, Math.random()*0.8, (Math.random()-0.5)*0.8
+            (Math.random()-0.5)*0.8,
+            Math.random()*0.8,
+            (Math.random()-0.5)*0.8
         );
         group.add(petal);
         state.darkEffectsPool.push(petal);
@@ -62,6 +64,7 @@ export function spawnPetalBurst(position, count = 20, color = '#ff365e') {
             }
         });
     }
+
     gsap.to({}, { duration: 1.2, onComplete: () => {
         if (group.parent) state.scene.remove(group);
         const idx = state.tempGroups.indexOf(group);
@@ -76,7 +79,8 @@ export function spawnGroundBash(position) {
     state.scene.add(ring);
     gsap.to(ring.scale, { x: 2.5, y: 2.5, duration: 0.5, ease: 'backOut' });
     gsap.to(ring.material, { opacity: 0, duration: 0.6, onComplete: () => {
-        state.scene.remove(ring); ring.material.dispose();
+        state.scene.remove(ring);
+        ring.material.dispose();
     }});
     spawnPetalBurst(position, 30);
 }
@@ -105,8 +109,8 @@ export function clearAllEffects() {
 
 export function groundCharacter() {
     if (!state.claw) return;
-    const box = new THREE.Box3().setFromObject(state.claw);
+    const box  = new THREE.Box3().setFromObject(state.claw);
     const minY = box.min.y;
-    state.claw.position.y -= minY;
-    state.claw.userData.baseY = state.claw.position.y;
+    state.claw.position.y      -= minY;
+    state.claw.userData.baseY   = state.claw.position.y;
 }

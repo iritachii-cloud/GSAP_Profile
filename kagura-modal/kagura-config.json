@@ -14,5 +14,5 @@
   "cameraDistance": 5,
   "orbitLimits": { "min": 1, "max": 40 },
   "shadowMapSize": 2048,
-  "toneMappingExposure": 1.4
+  "toneMappingExposure": 1.0
 }

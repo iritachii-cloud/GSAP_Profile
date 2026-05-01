@@ -3,9 +3,9 @@ import { state } from './state.js';
 import { RIVER_Z, RIVER_WIDTH } from './waterBridge.js';
 
 // ─── Module state ──────────────────────────────────────────────────────────
-let birds        = [];
-let animHandle   = null;
-let running      = false;
+let birds      = [];
+let animHandle = null;
+let running    = false;
 
 const BIRD_COUNT   = 18;
 const FLEE_RADIUS  = 3.5;
@@ -14,9 +14,11 @@ const SPAWN_RADIUS = 12;
 // ─── Bird sprite ──────────────────────────────────────────────────────────
 function createBirdSprite() {
     const size = 64;
-    const c = document.createElement('canvas');
-    c.width = size; c.height = size;
-    const ctx = c.getContext('2d');
+    const c    = document.createElement('canvas');
+    c.width    = size;
+    c.height   = size;
+    const ctx  = c.getContext('2d');
+
     ctx.fillStyle = '#1a1a1a';
     ctx.beginPath();
     ctx.moveTo(size * 0.5, size * 0.52);
@@ -29,12 +31,16 @@ function createBirdSprite() {
     ctx.beginPath();
     ctx.ellipse(size * 0.5, size * 0.52, size * 0.06, size * 0.04, 0, 0, Math.PI * 2);
     ctx.fill();
+
     const tex = new THREE.CanvasTexture(c);
-    const mat = new THREE.SpriteMaterial({
-        map: tex,
+    // Tag as sRGB to prevent the double-conversion green tint on mobile.
+    tex.colorSpace = THREE.SRGBColorSpace;
+
+    const mat    = new THREE.SpriteMaterial({
+        map:         tex,
         transparent: true,
-        depthWrite: false,
-        color: 0x222222
+        depthWrite:  false,
+        color:       0x222222
     });
     const sprite = new THREE.Sprite(mat);
     sprite.scale.set(0.2, 0.2 * 0.5, 1);
@@ -55,8 +61,8 @@ function randomGroundPosition() {
     for (let attempt = 0; attempt < 50; attempt++) {
         const angle = Math.random() * Math.PI * 2;
         const r     = Math.random() * SPAWN_RADIUS;
-        const x = Math.cos(angle) * r;
-        const z = Math.sin(angle) * r;
+        const x     = Math.cos(angle) * r;
+        const z     = Math.sin(angle) * r;
         if (isOnGround(x, z)) return new THREE.Vector3(x, 0.02, z);
     }
     return new THREE.Vector3(0, 0.02, -8);
@@ -64,7 +70,7 @@ function randomGroundPosition() {
 
 // ─── Spawn a bird at a random ground spot ─────────────────────────────────
 function spawnBird() {
-    const pos = randomGroundPosition();
+    const pos    = randomGroundPosition();
     const sprite = createBirdSprite();
     sprite.position.copy(pos);
     sprite.material.opacity = 0.85;
@@ -72,8 +78,8 @@ function spawnBird() {
 
     return {
         sprite,
-        state: 'idle',
-        speed: 1.5 + Math.random() * 2.0,
+        state:   'idle',
+        speed:   1.5 + Math.random() * 2.0,
         targetY: 3 + Math.random() * 5,
         opacity: 0.85
     };
@@ -86,11 +92,13 @@ function tick() {
     if (!running) return;
     animHandle = requestAnimationFrame(tick);
 
-    const now   = performance.now();
-    const delta = Math.min(0.05, (now - lastTime) / 1000);
-    lastTime    = now;
+    const now     = performance.now();
+    const delta   = Math.min(0.05, (now - lastTime) / 1000);
+    lastTime      = now;
 
-    const charPos = state.claw ? new THREE.Vector3(state.claw.position.x, 0, state.claw.position.z) : null;
+    const charPos = state.claw
+        ? new THREE.Vector3(state.claw.position.x, 0, state.claw.position.z)
+        : null;
 
     for (let i = birds.length - 1; i >= 0; i--) {
         const b = birds[i];
@@ -101,16 +109,16 @@ function tick() {
             if (charPos) {
                 const dist = b.sprite.position.distanceTo(charPos);
                 if (dist < FLEE_RADIUS) {
-                    b.state = 'fleeing';
+                    b.state         = 'fleeing';
                     b.fleeStartTime = now;
-                    b.startY = b.sprite.position.y;
+                    b.startY        = b.sprite.position.y;
                 }
             }
         } else if (b.state === 'fleeing') {
-            const elapsed = (now - b.fleeStartTime) / 1000;
+            const elapsed  = (now - b.fleeStartTime) / 1000;
             const progress = Math.min(1, elapsed * b.speed);
-            b.sprite.position.y = b.startY + progress * b.targetY;
-            b.opacity = Math.max(0, 0.85 * (1 - progress));
+            b.sprite.position.y    = b.startY + progress * b.targetY;
+            b.opacity              = Math.max(0, 0.85 * (1 - progress));
             b.sprite.material.opacity = b.opacity;
 
             b.sprite.position.x += (Math.sin(elapsed * 5 + i) * 0.008) * delta;
@@ -133,7 +141,7 @@ function tick() {
 // ─── Public API ────────────────────────────────────────────────────────────
 export function startBirds() {
     if (running) return;
-    running = true;
+    running  = true;
 
     for (let i = 0; i < BIRD_COUNT; i++) {
         birds.push(spawnBird());

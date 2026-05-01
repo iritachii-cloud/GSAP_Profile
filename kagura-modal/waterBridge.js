@@ -8,9 +8,9 @@ export const BRIDGE_HALF  = 1.2;     // half-width of bridge opening (bridge spa
 export const RIVER_LENGTH = 44;      // east-west extent
 
 // ─── Lily state ───────────────────────────────────────────────────────────
-let lilyGroup   = null;
-let lilyLights  = [];   // PointLight refs for night glow
-let lilyPads    = [];   // mesh refs for opacity toggling
+let lilyGroup  = null;
+let lilyLights = [];   // PointLight refs for night glow
+let lilyPads   = [];   // mesh refs for opacity toggling
 
 export function setupWaterBridge() {
     const riverWidth  = RIVER_WIDTH;
@@ -21,16 +21,16 @@ export function setupWaterBridge() {
     // ── River mesh ─────────────────────────────────────────────────────────
     const riverGeo = new THREE.PlaneGeometry(riverLength, riverWidth, 20, 4);
     const riverMat = new THREE.MeshStandardMaterial({
-        color:            '#1a7acc',
-        roughness:        0.1,
-        metalness:        0.55,
-        transparent:      true,
-        opacity:          0.82,
-        emissive:         new THREE.Color('#001833'),
-        emissiveIntensity:0.25
+        color:             '#1a7acc',
+        roughness:         0.1,
+        metalness:         0.55,
+        transparent:       true,
+        opacity:           0.82,
+        emissive:          new THREE.Color('#001833'),
+        emissiveIntensity: 0.25
     });
     const river = new THREE.Mesh(riverGeo, riverMat);
-    river.rotation.x = -Math.PI / 2;
+    river.rotation.x   = -Math.PI / 2;
     river.position.set(0, 0.03, riverZ);
     river.receiveShadow = true;
     state.scene.add(river);
@@ -38,13 +38,14 @@ export function setupWaterBridge() {
 
     // Animated water texture
     const wCanvas = document.createElement('canvas');
-    wCanvas.width = 512; wCanvas.height = 128;
-    const wCtx = wCanvas.getContext('2d');
+    wCanvas.width  = 512;
+    wCanvas.height = 128;
+    const wCtx  = wCanvas.getContext('2d');
     const wGrad = wCtx.createLinearGradient(0, 0, 512, 0);
-    wGrad.addColorStop(0,   '#2a80e6');
-    wGrad.addColorStop(0.35,'#5ab4ff');
-    wGrad.addColorStop(0.7, '#1a6acc');
-    wGrad.addColorStop(1,   '#2a80e6');
+    wGrad.addColorStop(0,    '#2a80e6');
+    wGrad.addColorStop(0.35, '#5ab4ff');
+    wGrad.addColorStop(0.7,  '#1a6acc');
+    wGrad.addColorStop(1,    '#2a80e6');
     wCtx.fillStyle = wGrad;
     wCtx.fillRect(0, 0, 512, 128);
     // Ripple lines
@@ -61,7 +62,11 @@ export function setupWaterBridge() {
         );
         wCtx.stroke();
     }
+
     const riverTex = new THREE.CanvasTexture(wCanvas);
+    // Tag as sRGB so the renderer doesn't apply a second gamma conversion
+    // (which would make the water look greenish on mobile).
+    riverTex.colorSpace = THREE.SRGBColorSpace;
     riverTex.wrapS = THREE.RepeatWrapping;
     riverTex.wrapT = THREE.RepeatWrapping;
     riverTex.repeat.set(8, 1);
@@ -122,47 +127,35 @@ export function setupWaterBridge() {
 // ─── Build water lily decorations ─────────────────────────────────────────
 function buildWaterLilies(riverZ, halfZ, bridgeHalf) {
     if (lilyGroup) return;
-    lilyGroup = new THREE.Group();
+    lilyGroup  = new THREE.Group();
     lilyLights = [];
     lilyPads   = [];
 
-    // Scatter lilies in the river, avoiding the bridge gap
     const positions = [
-        // West of bridge
-        [-4.5, riverZ - 0.4],
-        [-3.0, riverZ + 0.5],
-        [-5.8, riverZ + 0.3],
-        [-7.0, riverZ - 0.5],
-        [-2.0, riverZ - 0.3],
-        [-6.5, riverZ + 0.7],
+        [-4.5, riverZ - 0.4], [-3.0, riverZ + 0.5], [-5.8, riverZ + 0.3],
+        [-7.0, riverZ - 0.5], [-2.0, riverZ - 0.3], [-6.5, riverZ + 0.7],
         [-8.5, riverZ - 0.2],
-        // East of bridge
-        [ 3.2, riverZ + 0.4],
-        [ 4.8, riverZ - 0.5],
-        [ 6.5, riverZ + 0.3],
-        [ 8.0, riverZ - 0.4],
-        [ 5.5, riverZ + 0.7],
-        [ 9.5, riverZ - 0.3],
+        [ 3.2, riverZ + 0.4], [ 4.8, riverZ - 0.5], [ 6.5, riverZ + 0.3],
+        [ 8.0, riverZ - 0.4], [ 5.5, riverZ + 0.7], [ 9.5, riverZ - 0.3],
     ];
 
     const lilyPadMat = new THREE.MeshStandardMaterial({
-        color: '#2d7a2d',
-        roughness: 0.7,
-        emissive: new THREE.Color('#0a2a0a'),
+        color:             '#2d7a2d',
+        roughness:         0.7,
+        emissive:          new THREE.Color('#0a2a0a'),
         emissiveIntensity: 0.15
     });
     const flowerMat = new THREE.MeshStandardMaterial({
-        color: '#ffe8f0',
-        emissive: new THREE.Color('#ff6090'),
+        color:             '#ffe8f0',
+        emissive:          new THREE.Color('#ff6090'),
         emissiveIntensity: 0.15,
-        roughness: 0.4
+        roughness:         0.4
     });
 
     positions.forEach(([lx, lz]) => {
         const group = new THREE.Group();
         group.position.set(lx, 0.055, lz);
 
-        // Pad (flat disk)
         const pad = new THREE.Mesh(
             new THREE.CylinderGeometry(0.32, 0.3, 0.03, 12),
             lilyPadMat.clone()
@@ -171,7 +164,6 @@ function buildWaterLilies(riverZ, halfZ, bridgeHalf) {
         group.add(pad);
         lilyPads.push(pad);
 
-        // Notch cut (visual only — small dark wedge)
         const notch = new THREE.Mesh(
             new THREE.BoxGeometry(0.12, 0.04, 0.34),
             new THREE.MeshStandardMaterial({ color: '#1a5c1a' })
@@ -179,7 +171,6 @@ function buildWaterLilies(riverZ, halfZ, bridgeHalf) {
         notch.position.set(0.16, 0, 0);
         group.add(notch);
 
-        // Flower — layered petals
         const petalCount = 6;
         for (let p = 0; p < petalCount; p++) {
             const angle = (p / petalCount) * Math.PI * 2;
@@ -197,12 +188,12 @@ function buildWaterLilies(riverZ, halfZ, bridgeHalf) {
             group.add(petal);
             lilyPads.push(petal);
         }
-        // Centre stamen
+
         const stamen = new THREE.Mesh(
             new THREE.SphereGeometry(0.04, 6, 4),
             new THREE.MeshStandardMaterial({
-                color: '#ffdd33',
-                emissive: new THREE.Color('#aa6600'),
+                color:             '#ffdd33',
+                emissive:          new THREE.Color('#aa6600'),
                 emissiveIntensity: 0.4
             })
         );
@@ -210,7 +201,6 @@ function buildWaterLilies(riverZ, halfZ, bridgeHalf) {
         group.add(stamen);
         lilyPads.push(stamen);
 
-        // Night glow light (hidden at day)
         const glow = new THREE.PointLight('#88ffcc', 0, 1.8);
         glow.position.set(0, 0.15, 0);
         group.add(glow);
@@ -228,24 +218,21 @@ export function setLilyTimeOfDay(time) {
     if (!lilyGroup) return;
 
     if (time === 'day') {
-        // Solid green pads, soft pink flowers, no glow
         lilyPads.forEach(m => {
             if (m.material) {
                 if (m.material.color.getHexString().startsWith('2d7a') ||
                     m.material.color.getHexString().startsWith('1a5c')) {
                     m.material.emissiveIntensity = 0.1;
                 } else {
-                    // petal / stamen
                     m.material.emissiveIntensity = 0.15;
                 }
             }
         });
         lilyLights.forEach(l => { l.intensity = 0; });
     } else {
-        // Night: petals glow softly cyan-pink
         lilyPads.forEach(m => {
             if (m.material) {
-                m.material.emissive = new THREE.Color('#66ffcc');
+                m.material.emissive          = new THREE.Color('#66ffcc');
                 m.material.emissiveIntensity = 0.6;
             }
         });
@@ -260,7 +247,6 @@ export function updateWaterLilies(delta) {
 
     const t = performance.now() * 0.001;
     lilyLights.forEach((l, i) => {
-        // Gentle twinkle
         l.intensity = 1.0 + Math.sin(t * 1.8 + i * 1.3) * 0.35;
     });
 }

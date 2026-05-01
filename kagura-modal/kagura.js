@@ -8,17 +8,17 @@ import { jumpClaw } from './jump.js';
 import { spinClaw } from './spin.js';
 import { attackClaw } from './attack.js';
 import { aiModeClaw, stopAICleanup } from './aiMode.js';
-import { startHayabusaChase, stopHayabusaChase } from './hayabusa.js';
+import { startHayabusaChase, stopHayabusaChase, preloadHayabusa } from './hayabusa.js';
 import { resetPose } from './reset.js';
 import { groundCharacter } from './utils.js';
 import { updateSpeechBubble } from './speechBubble.js';
 import { initCameraManager, setCameraMode, updateCamera, disposeCameraManager } from './cameramovement.js';
 
-const canvas = document.getElementById('c');
+const canvas  = document.getElementById('c');
 const overlay = document.getElementById('overlay');
 const loading = document.getElementById('loading');
 const loadingText = loading.querySelector('p');
-state.cardEl = document.querySelector('.card');
+state.cardEl  = document.querySelector('.card');
 
 let config;
 let sequenceDisplay;
@@ -51,13 +51,14 @@ function initScene() {
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-    renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    // renderer.toneMapping = THREE.LinearToneMapping;
-    // 🔧 Lower default exposure – prevents greenish tint
-    renderer.toneMappingExposure = config.toneMappingExposure ?? 1.0;
+
+    // ── Color-space & tone-mapping ─────────────────────────────────────────
+    renderer.outputColorSpace    = THREE.SRGBColorSpace;
+    renderer.toneMapping         = THREE.NoToneMapping;
+    renderer.toneMappingExposure = 1.0;
+
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.shadowMap.type    = THREE.PCFSoftShadowMap;
     state.renderer = renderer;
 
     setupEnvironment();
@@ -70,9 +71,9 @@ function initScene() {
     let lastTime = performance.now();
     function animate() {
         requestAnimationFrame(animate);
-        const now = performance.now();
+        const now   = performance.now();
         const delta = Math.min(0.1, (now - lastTime) / 1000);
-        lastTime = now;
+        lastTime    = now;
 
         if (state.claw && !state.currentAnim) {
             state.claw.position.y = (state.claw.userData.baseY ?? 0) + Math.sin(now * 0.0018) * 0.03;
@@ -93,16 +94,51 @@ function initScene() {
     onResize();
 }
 
+// ── Loading progress bar ───────────────────────────────────────────────────
+function makeProgressBar() {
+    const bar = document.createElement('div');
+    Object.assign(bar.style, {
+        position: 'absolute', bottom: '0', left: '0',
+        height: '3px', width: '0%',
+        background: 'linear-gradient(90deg, #ff99bb, #ffcc88)',
+        transition: 'width 0.25s ease',
+        borderRadius: '0 2px 2px 0',
+        pointerEvents: 'none', zIndex: '2'
+    });
+    loading.appendChild(bar);
+    return bar;
+}
+
+// ── Secondary "preloading Hayabusa" indicator shown below the main bar ────
+function makeSecondaryBar() {
+    const wrap = document.createElement('div');
+    wrap.id = 'hayabusaPreloadBar';
+    Object.assign(wrap.style, {
+        position: 'absolute', bottom: '3px', left: '0',
+        height: '2px', width: '0%',
+        background: 'linear-gradient(90deg, #aaddff, #88aaff)',
+        transition: 'width 0.4s ease',
+        borderRadius: '0 2px 2px 0',
+        pointerEvents: 'none', zIndex: '2',
+        opacity: '0.7'
+    });
+    loading.appendChild(wrap);
+    return wrap;
+}
+
 function loadModel() {
+    const bar = makeProgressBar();
+
     gltfLoader.load(
         config.modelFile || 'kagura-v1.glb',
         (gltf) => {
-            const model = gltf.scene;
-            const box = new THREE.Box3().setFromObject(model);
-            const size = box.getSize(new THREE.Vector3());
+            bar.style.width = '100%';
+            const model  = gltf.scene;
+            const box    = new THREE.Box3().setFromObject(model);
+            const size   = box.getSize(new THREE.Vector3());
             const center = box.getCenter(new THREE.Vector3());
             const maxDim = Math.max(size.x, size.y, size.z);
-            const scale = (config.modelScaleTarget || 2.4) / maxDim;
+            const scale  = (config.modelScaleTarget || 2.4) / maxDim;
 
             model.scale.setScalar(scale);
             model.position.sub(center.multiplyScalar(scale));
@@ -112,7 +148,7 @@ function loadModel() {
 
             model.traverse(obj => {
                 if (obj.isMesh) {
-                    obj.castShadow = true;
+                    obj.castShadow    = true;
                     obj.receiveShadow = true;
                     if (obj.material) {
                         obj.material.roughness = 0.45;
@@ -129,18 +165,32 @@ function loadModel() {
             state.camera.position.set(mid.x, mid.y + 0.5, mid.z + config.cameraDistance);
 
             loading.classList.add('hidden');
+
+            // ── Silently preload Hayabusa in the background ───────────────
+            // 800 ms delay lets the main render loop settle first, then we
+            // kick off the Hayabusa GLB fetch while the user interacts with
+            // Kagura.  By the time they click AI Mode the model is cached.
+            setTimeout(() => {
+                const hBar = makeSecondaryBar();
+                preloadHayabusa(
+                    (pct) => { hBar.style.width = `${pct}%`; },
+                    ()    => { hBar.remove(); }
+                );
+            }, 800);
         },
         (xhr) => {
             if (xhr.lengthComputable) {
                 const pct = Math.round((xhr.loaded / xhr.total) * 100);
+                bar.style.width         = `${pct}%`;
                 loadingText.textContent = `Cherry blossoms gathering… ${pct}%`;
             } else {
-                loadingText.textContent = 'Cherry blossoms gathering…';
+                const mb = (xhr.loaded / 1_048_576).toFixed(1);
+                loadingText.textContent = `Cherry blossoms gathering… ${mb} MB`;
             }
         },
         (err) => {
             console.error(err);
-            loadingText.textContent = '❌ Kagura model missing. Place kagura.glb in the folder.';
+            loadingText.textContent = '❌ Kagura model missing. Place kagura-v1.glb in the folder.';
         }
     );
 }
@@ -152,14 +202,8 @@ function updateSequenceDisplay() {
 function handleAnimBtn(id) {
     if (!state.claw) return;
 
-    if (state.activeTimeline) {
-        state.activeTimeline.kill();
-        state.activeTimeline = null;
-    }
-    if (state.mainDanceTL) {
-        state.mainDanceTL.kill();
-        state.mainDanceTL = null;
-    }
+    if (state.activeTimeline)  { state.activeTimeline.kill();  state.activeTimeline  = null; }
+    if (state.mainDanceTL)     { state.mainDanceTL.kill();     state.mainDanceTL     = null; }
     stopAICleanup();
     stopHayabusaChase();
 
@@ -176,14 +220,14 @@ function handleAnimBtn(id) {
     const btn = document.querySelector(`button[data-anim="${id}"]`);
     if (btn) btn.classList.add('active');
 
-    const loop = state.animationLoop.enabled;
+    const loop      = state.animationLoop.enabled;
     const sequences = state.animationLoop.sequences || 1;
 
     const resetTL = resetPose(0.15, false);
     resetTL.eventCallback('onComplete', () => {
         switch (id) {
-            case 'jump':   jumpClaw(loop, sequences); break;
-            case 'spin':   spinClaw(loop, sequences); break;
+            case 'jump':   jumpClaw(loop, sequences);   break;
+            case 'spin':   spinClaw(loop, sequences);   break;
             case 'attack': attackClaw(loop, sequences); break;
             case 'ai':
                 aiModeClaw(loop, sequences);
@@ -225,9 +269,9 @@ function createCameraModeButtons() {
     const btnGroup = document.createElement('div');
     btnGroup.style.cssText = 'margin-top:0.4rem;display:flex;gap:0.5rem;justify-content:center;';
     const modes = [
-        { id: 'free', text: '🎥 Free' },
+        { id: 'free',  text: '🎥 Free'  },
         { id: 'track', text: '👣 Track' },
-        { id: 'fpv', text: '👁️ FPV' }
+        { id: 'fpv',   text: '👁️ FPV'   }
     ];
     modes.forEach(m => {
         const btn = document.createElement('button');
@@ -295,11 +339,11 @@ async function initApp() {
             particleBackground: ['🌸','🍃','🫧'],
             particleCount: 24,
             animations: [
-                { id:'jump',   label:'🌸 Petal Leap' },
-                { id:'spin',   label:'🍃 Cherry Twister' },
-                { id:'attack', label:'🗡️ Blossom Strike' },
-                { id:'ai',     label:'🤖 AI Mode' },
-                { id:'reset',  label:'↩ Peace Reset' }
+                { id:'jump',   label:'🌸 Petal Leap'     },
+                { id:'spin',   label:'🍃 Cherry Twister'  },
+                { id:'attack', label:'🗡️ Blossom Strike'  },
+                { id:'ai',     label:'🤖 AI Mode'         },
+                { id:'reset',  label:'↩ Peace Reset'      }
             ],
             modelFile: 'kagura-v1.glb',
             modelScaleTarget: 2.4,
@@ -307,7 +351,7 @@ async function initApp() {
             cameraDistance: 5,
             orbitLimits: { min:1, max:12 },
             shadowMapSize: 2048,
-            toneMappingExposure: 1.4
+            toneMappingExposure: 1.0
         };
     }
 
@@ -316,14 +360,14 @@ async function initApp() {
     config.animations.forEach(a => {
         const btn = document.createElement('button');
         btn.dataset.anim = a.id;
-        btn.textContent = a.label;
+        btn.textContent  = a.label;
         btn.addEventListener('click', () => handleAnimBtn(a.id));
         btnsCont.appendChild(btn);
     });
     createLoopUI();
     createCameraModeButtons();
     createDayNightToggle();
-    document.getElementById('openBtn').addEventListener('click', openModal);
+    document.getElementById('openBtn').addEventListener('click',  openModal);
     document.getElementById('closeBtn').addEventListener('click', closeModal);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
 }
