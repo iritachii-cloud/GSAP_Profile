@@ -294,7 +294,7 @@ function teleportCheck() {
 
     updateDistance(dist);
 
-    if (dist < 2.0) {
+    if (dist < 3.0) {
         triggerCloseEncounter();
     }
 }

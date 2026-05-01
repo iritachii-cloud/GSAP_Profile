@@ -6,7 +6,7 @@ const dayMessages = [
     { text: "Hi, I am Kagura!",                        emotion: 'happy'    },
     { text: "Umbrella is my weapon!",                  emotion: 'excited'  },
     { text: "I love Cherry Blossom~",                  emotion: 'happy'    },
-    { text: "Wisteria is my favourite flower…", emotion: 'peaceful' },
+    { text: "Wisteria is my favourite flower…",        emotion: 'peaceful' },
     { text: "The petals are so beautiful today.",      emotion: 'peaceful' },
     { text: "Let's dance together!",                   emotion: 'excited'  },
     { text: "Have you seen my umbrella?",              emotion: 'curious'  },
@@ -49,7 +49,7 @@ let lastMsgIdx   = -1;
 let visible      = false;
 
 let customMessageActive = false;
-let postCustomTimer = null;
+let postCustomTimer     = null;
 
 // ─── Build DOM ─────────────────────────────────────────────────────────────
 function createBubble() {
@@ -115,7 +115,7 @@ function applyEmotion(emotion) {
     tailEl.style.borderTopColor = s.tail;
 }
 
-// ─── Typewriter (used for normal idle messages) ─────────────────────────────
+// ─── Typewriter ─────────────────────────────────────────────────────────────
 function typeWrite(text, onDone) {
     if (typeTimer) { clearTimeout(typeTimer); typeTimer = null; }
     textEl.textContent = '';
@@ -137,7 +137,7 @@ function typeWrite(text, onDone) {
     typeTimer = setTimeout(tick, 30);
 }
 
-// ─── Pick next message from correct pool ───────────────────────────────────
+// ─── Pick next message ────────────────────────────────────────────────────
 function pickMessage() {
     const pool = state.timeOfDay === 'night' ? nightMessages : dayMessages;
     let idx;
@@ -159,27 +159,27 @@ function popOut(onDone) {
     setTimeout(onDone, 280);
 }
 
-// ─── Cycle loop (normal idle messages) ─────────────────────────────────────
+// ─── Cycle loop ────────────────────────────────────────────────────────────
 function cycleMessage() {
     if (!visible || !bubble) return;
     if (customMessageActive) return;
 
-    // In FPV mode, use the HUD idle thought with cooldown
+    // ── FPV mode: use HUD idle thought bubble with emotion ────────────────
     if (state.cameraMode === 'fpv') {
-        const now = performance.now();
-        const cooldownEnd = state.fpvCustomMessageEndTime + 3500;   // 3.5 s after custom message ends
-        const delay = Math.max(0, cooldownEnd - now) + 500 + Math.random() * 1500;
+        const now         = performance.now();
+        const cooldownEnd = state.fpvCustomMessageEndTime + 3500;
+        const delay       = Math.max(0, cooldownEnd - now) + 500 + Math.random() * 1500;
+
         messageTimer = setTimeout(() => {
             if (!visible || state.cameraMode !== 'fpv') return;
-            const { text } = pickMessage();
-            showIdleThought(text, 4000);
-            // Schedule next cycle after the thought finishes + a small gap
+            const { text, emotion } = pickMessage();   // ← emotion now passed through
+            showIdleThought(text, 4000, emotion);
             messageTimer = setTimeout(cycleMessage, 4000 + 1000 + Math.random() * 2000);
         }, delay);
         return;
     }
 
-    // Standard bubble mode
+    // ── Standard bubble mode ──────────────────────────────────────────────
     const { text, emotion } = pickMessage();
     applyEmotion(emotion);
     popIn();
@@ -195,7 +195,7 @@ function cycleMessage() {
     });
 }
 
-// ─── Position: above head, centered ────────────────────────────────────────
+// ─── Position above head ───────────────────────────────────────────────────
 function updateBubblePosition() {
     if (!bubble || !state.claw || !state.camera) return;
 
@@ -223,15 +223,13 @@ function updateBubblePosition() {
     const clampedX = Math.max(half + 8, Math.min(rect.width - half - 8, x));
     if (clampedX !== x) {
         bubble.style.left = `${clampedX}px`;
-        const tailShift   = x - clampedX;
-        tailEl.style.left = `calc(50% + ${tailShift}px)`;
+        tailEl.style.left = `calc(50% + ${x - clampedX}px)`;
     } else {
         tailEl.style.left = '50%';
     }
 }
 
 // ─── Public API ────────────────────────────────────────────────────────────
-
 export function showSpeechBubble() {
     if (!bubble) createBubble();
     visible = true;

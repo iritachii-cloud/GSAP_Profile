@@ -9,6 +9,18 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 
+    <!-- ── Preload hints ──────────────────────────────────────────────────
+         Tells the browser to start fetching the two large GLB files the
+         moment the HTML is parsed – before any JS runs.  On a return visit
+         the Service Worker intercepts these requests and returns them from
+         disk cache in < 50 ms, making the loader feel instant.
+         crossorigin is required so the fetch credential mode matches what
+         GLTFLoader sends.
+    ─────────────────────────────────────────────────────────────────────── -->
+    <link rel="preload" href="kagura-v1.glb"   as="fetch" crossorigin>
+    <link rel="preload" href="hayabusa-v1.glb" as="fetch" crossorigin>
+    <link rel="preload" href="theme.mp3"        as="fetch" crossorigin>
+
     <!-- Social sharing (Open Graph) -->
     <meta property="og:title" content="Kagura – Cherry Blossom Shrine">
     <meta property="og:description" content="Chase your ninja lover through a magical cherry blossom world.">
@@ -36,6 +48,30 @@
         }
     }
     </script>
+
+    <!-- ── Service Worker registration ───────────────────────────────────
+         Inline (not a module) so it runs before any ES-module loading.
+         We use a relative path so GitHub Pages sub-directory scoping works:
+           scope = "./"  covers  /GSAP_Profile/kagura-modal/
+         waitForUpdate is skipped – skipWaiting() inside the SW ensures the
+         newest version activates immediately.
+    ─────────────────────────────────────────────────────────────────────── -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('./sw.js', { scope: './' })
+                    .then(reg => {
+                        console.log('[SW] Registered, scope:', reg.scope);
+                    })
+                    .catch(err => {
+                        // Non-fatal – app works fine without SW, just no caching
+                        console.warn('[SW] Registration failed (no caching):', err);
+                    });
+            });
+        }
+    </script>
+
     <script type="module" src="kagura.js"></script>
 </head>
 <body>
