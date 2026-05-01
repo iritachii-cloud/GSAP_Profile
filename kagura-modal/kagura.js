@@ -53,15 +53,18 @@ function initScene() {
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 
     // ── Color-space & tone-mapping ─────────────────────────────────────────
-    // ANDROID COLOR FIX:
-    // - outputColorSpace = SRGBColorSpace: correct final output for all displays
-    // - toneMapping = ACESFilmicToneMapping: most robust across Mali/Adreno/PowerVR
-    //   Android GPU drivers. LinearToneMapping can cause green-channel amplification
-    //   on some older Mali drivers due to a precision issue in the GLSL shader path.
-    //   ACES at exposure=0.8 is visually near-identical to Linear@1.0 for this scene
-    //   but uses a different GPU shader path that avoids the driver bug.
-    // - All canvas textures MUST be tagged .colorSpace=SRGBColorSpace (done in each
-    //   module) so Three.js converts them correctly to linear before shading.
+    // All canvas textures already tagged .colorSpace = SRGBColorSpace.
+    // GLB textures are forced to sRGB at load time (see loadModel).
+    //
+    // We use ACESFilmicToneMapping (instead of the default linear) because
+    // some older Mali GPUs produce a green-channel amplification with
+    // LinearToneMapping.  ACES avoids that driver bug entirely.
+    //
+    // If you ever still see a green tint after forcing sRGB in the loader,
+    // temporarily fall back to the safer LinearToneMapping by uncommenting
+    // the two lines below.
+    // renderer.toneMapping = THREE.LinearToneMapping;
+    // renderer.toneMappingExposure = 1.0;
     renderer.outputColorSpace    = THREE.SRGBColorSpace;
     renderer.toneMapping         = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 0.85;
@@ -161,6 +164,14 @@ function loadModel() {
                     if (obj.material) {
                         obj.material.roughness = 0.45;
                         obj.material.metalness = 0.1;
+
+                        // ✅ Force all textures to sRGB (fixes Android green tint)
+                        if (obj.material.map)           obj.material.map.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.emissiveMap)   obj.material.emissiveMap.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.roughnessMap)  obj.material.roughnessMap.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.metalnessMap)  obj.material.metalnessMap.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.normalMap)     obj.material.normalMap.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.aoMap)         obj.material.aoMap.colorSpace = THREE.SRGBColorSpace;
                     }
                 }
             });

@@ -545,7 +545,6 @@ async function idleThoughtLoop() {
                 showHayabusaIdleThought(thought.text, 3500);
             }
         }
-        // Slowed down: was 7-12s, now 9-16s
         const interval = IDLE_THOUGHT_MIN + Math.random() * (IDLE_THOUGHT_MAX - IDLE_THOUGHT_MIN);
         await new Promise(r => setTimeout(r, interval));
     }
@@ -576,6 +575,14 @@ function loadModelFromDisk(onProgress) {
                     if (obj.isMesh && obj.material) {
                         obj.castShadow    = true;
                         obj.receiveShadow = true;
+
+                        // ✅ Force all textures to sRGB (fixes Android green tint)
+                        if (obj.material.map)           obj.material.map.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.emissiveMap)   obj.material.emissiveMap.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.roughnessMap)  obj.material.roughnessMap.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.metalnessMap)  obj.material.metalnessMap.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.normalMap)     obj.material.normalMap.colorSpace = THREE.SRGBColorSpace;
+                        if (obj.material.aoMap)         obj.material.aoMap.colorSpace = THREE.SRGBColorSpace;
                     }
                 });
                 resolve(model);
@@ -614,12 +621,10 @@ async function triggerFinalCatch() {
     teleportPending = false;
     state.chasePause = true;
 
-    // Hayabusa freezes
     gsap.killTweensOf(hayabusaModel.position);
     gsap.killTweensOf(hayabusaModel.rotation);
     gsap.killTweensOf(hayabusaModel.scale);
 
-    // He turns to face Kagura
     if (state.claw) {
         const dir  = state.claw.position.clone().sub(hayabusaModel.position).normalize();
         const rotY = Math.atan2(dir.x, dir.z);
@@ -628,7 +633,6 @@ async function triggerFinalCatch() {
         });
     }
 
-    // Hayabusa's surrender line
     const catchMsg = "O-okay… you got me, Kagura~ 💙🌸";
     if (state.cameraMode === 'fpv') {
         showCharacterMessage('hayabusa', catchMsg, 4000);
@@ -636,7 +640,6 @@ async function triggerFinalCatch() {
         showHayabusaMessage(catchMsg, 4000);
     }
 
-    // Big petal burst at Hayabusa's position
     spawnPetalBurst(
         hayabusaModel.position.clone().add(new THREE.Vector3(0, 0.5, 0)),
         60, '#aaddff'
@@ -644,10 +647,8 @@ async function triggerFinalCatch() {
 
     await new Promise(r => setTimeout(r, 1000));
 
-    // Let Kagura run the final catch animation
     const catchPos = hayabusaModel.position.clone();
 
-    // Hide Hayabusa during approach
     await new Promise(r => setTimeout(r, 1500));
     if (hayabusaModel) {
         gsap.to(hayabusaModel.scale, { x: 0, y: 0, z: 0, duration: 0.4, ease: 'power2.in',
@@ -660,10 +661,8 @@ async function triggerFinalCatch() {
         });
     }
 
-    // Clean up bubble
     if (bubble) { bubble.remove(); bubble = null; textEl = null; tailEl = null; }
 
-    // Hand off to AI mode for the final celebration walk
     playFinalCatchSequence(catchPos);
 }
 
@@ -677,13 +676,11 @@ function performTeleport(newPos) {
     state.escapeCount++;
     updateEscapeCount(state.escapeCount);
 
-    // Check if we've hit MAX_ESCAPES — if so, don't teleport: trigger ending
     if (state.escapeCount >= MAX_ESCAPES) {
         triggerFinalCatch();
         return;
     }
 
-    // Show near-end teasing dialogue at 15+ escapes
     if (state.escapeCount >= MAX_ESCAPES - 5) {
         const nearEnd = nearEndDeck.drawNext();
         if (state.cameraMode === 'fpv') {
