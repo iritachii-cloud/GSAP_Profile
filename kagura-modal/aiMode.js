@@ -2,13 +2,24 @@ import * as THREE from 'three';
 import { state } from './state.js';
 import { spawnPetalBurst, groundCharacter, createPetalSprite } from './utils.js';
 import { playJumpSFX, playSpinSFX, playAttackSFX, createDanceAudio, getAudioDuration } from './music.js';
-import { showSpeechBubble, hideSpeechBubble } from './speechBubble.js';
+import { showSpeechBubble, hideSpeechBubble, showCustomMessage } from './speechBubble.js';
+import { RIVER_Z, RIVER_WIDTH, BRIDGE_HALF } from './waterBridge.js';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  OBSTACLE CHECK  (also checks map boundaries)
+//  GRID CONFIGURATION
+//  Smaller cell = more accurate but slower A*. 0.4 is the sweet spot for this
+//  map size (36×36 world → ~90×90 grid ≈ 8100 cells, well within 10k iter budget).
+// ═══════════════════════════════════════════════════════════════════════════════
+const CELL        = 0.4;   // world units per grid cell
+const CHAR_RADIUS = 0.35;  // half-width used for collision probes (was 0.28, too small)
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  OBSTACLE CHECK
+//  Uses a circular probe ring around the cell centre so no diagonal slip-through.
 // ═══════════════════════════════════════════════════════════════════════════════
 function isBlocked(x, z) {
     const bounds = state.groundBounds;
+    // Boundary
     if (x < bounds.xMin || x > bounds.xMax || z < bounds.zMin || z > bounds.zMax) return true;
 
     for (const obs of state.obstacles) {
@@ -17,159 +28,91 @@ function isBlocked(x, z) {
             if (x >= d.xFrom && x <= d.xTo && z >= d.zFrom && z <= d.zTo) return true;
         } else if (obs.type === 'circle') {
             const d = obs.data;
-            const dist = Math.sqrt((x - d.x) ** 2 + (z - d.z) ** 2);
-            if (dist <= d.radius) return true;
+            if ((x - d.x) ** 2 + (z - d.z) ** 2 <= d.radius * d.radius) return true;
         }
     }
     return false;
 }
 
-// ═══════════════════════════════════════════════════════════════════════════════
-//  A* PATHFINDING  (unchanged)
-// ═══════════════════════════════════════════════════════════════════════════════
-const CELL   = 0.6;
-const MARGIN = 0.28;
-
-function worldToCell(v) {
-    const bounds = state.groundBounds;
-    return {
-        cx: Math.round((v.x - bounds.xMin) / CELL),
-        cy: Math.round((v.z - bounds.zMin) / CELL)
-    };
-}
-
-function cellToWorld(cx, cy) {
-    const bounds = state.groundBounds;
-    return new THREE.Vector3(
-        bounds.xMin + cx * CELL,
-        0,
-        bounds.zMin + cy * CELL
-    );
-}
-
+// 8-probe ring — catches diagonal squeezes the old 4-probe missed
 function isCellBlocked(cx, cy) {
     const w = cellToWorld(cx, cy);
-    const offsets = [
-        [0, 0],
-        [MARGIN, 0], [-MARGIN, 0],
-        [0, MARGIN], [0, -MARGIN]
+    // Centre
+    if (isBlocked(w.x, w.z)) return true;
+    // 8-directional ring at CHAR_RADIUS
+    const r = CHAR_RADIUS;
+    const probes = [
+        [ r, 0],[-r, 0],[0, r],[0,-r],
+        [ r, r],[ r,-r],[-r, r],[-r,-r]
     ];
-    for (const [dx, dz] of offsets) {
+    for (const [dx, dz] of probes) {
         if (isBlocked(w.x + dx, w.z + dz)) return true;
     }
     return false;
 }
 
-function heuristic(ax, ay, bx, by) {
-    return Math.abs(ax - bx) + Math.abs(ay - by);
+// ═══════════════════════════════════════════════════════════════════════════════
+//  GRID COORDINATE HELPERS
+// ═══════════════════════════════════════════════════════════════════════════════
+function worldToCell(v) {
+    const b = state.groundBounds;
+    return {
+        cx: Math.round((v.x - b.xMin) / CELL),
+        cy: Math.round((v.z - b.zMin) / CELL)
+    };
 }
 
-function aStar(start, goal) {
-    const sc = worldToCell(start);
-    const gc = worldToCell(goal);
-
-    if (isCellBlocked(gc.cx, gc.cy)) {
-        let bestDist = Infinity, bestCx = gc.cx, bestCy = gc.cy;
-        for (let r = 1; r <= 6; r++) {
-            for (let dx = -r; dx <= r; dx++) {
-                for (let dy = -r; dy <= r; dy++) {
-                    if (Math.abs(dx) !== r && Math.abs(dy) !== r) continue;
-                    const ncx = gc.cx + dx, ncy = gc.cy + dy;
-                    if (!isCellBlocked(ncx, ncy)) {
-                        const d = Math.abs(dx) + Math.abs(dy);
-                        if (d < bestDist) { bestDist = d; bestCx = ncx; bestCy = ncy; }
-                    }
-                }
-            }
-            if (bestDist < Infinity) break;
-        }
-        gc.cx = bestCx; gc.cy = bestCy;
-    }
-
-    if (sc.cx === gc.cx && sc.cy === gc.cy) return [goal];
-
-    const open   = new Map();
-    const closed = new Set();
-    const key    = (cx, cy) => `${cx},${cy}`;
-
-    const startKey = key(sc.cx, sc.cy);
-    open.set(startKey, { cx: sc.cx, cy: sc.cy, g: 0, f: heuristic(sc.cx, sc.cy, gc.cx, gc.cy), pk: null });
-
-    const DIRS = [
-        [1,0],[-1,0],[0,1],[0,-1],
-        [1,1],[1,-1],[-1,1],[-1,-1]
-    ];
-    const COST = [1,1,1,1, 1.414,1.414,1.414,1.414];
-
-    let found = null;
-
-    outer:
-    for (let iter = 0; iter < 8000; iter++) {
-        let bestKey = null, bestF = Infinity;
-        for (const [k, v] of open) {
-            if (v.f < bestF) { bestF = v.f; bestKey = k; }
-        }
-        if (!bestKey) break;
-
-        const cur = open.get(bestKey);
-        open.delete(bestKey);
-        closed.add(bestKey);
-
-        if (cur.cx === gc.cx && cur.cy === gc.cy) { found = cur; break; }
-
-        for (let d = 0; d < DIRS.length; d++) {
-            const ncx = cur.cx + DIRS[d][0];
-            const ncy = cur.cy + DIRS[d][1];
-            const nk  = key(ncx, ncy);
-            if (closed.has(nk)) continue;
-            if (isCellBlocked(ncx, ncy)) { closed.add(nk); continue; }
-
-            const ng = cur.g + COST[d];
-            const existing = open.get(nk);
-            if (!existing || ng < existing.g) {
-                open.set(nk, {
-                    cx: ncx, cy: ncy,
-                    g: ng,
-                    f: ng + heuristic(ncx, ncy, gc.cx, gc.cy),
-                    pk: bestKey,
-                    parent: cur
-                });
-            }
-        }
-    }
-
-    if (!found) return null;
-
-    const rawPath = [];
-    let node = found;
-    while (node) {
-        rawPath.push(cellToWorld(node.cx, node.cy));
-        node = node.parent;
-    }
-    rawPath.reverse();
-
-    return stringPull(rawPath);
+function cellToWorld(cx, cy) {
+    const b = state.groundBounds;
+    return new THREE.Vector3(b.xMin + cx * CELL, 0, b.zMin + cy * CELL);
 }
 
-function stringPull(path) {
-    if (path.length <= 2) return path;
-    const result = [path[0]];
-    let i = 0;
-    while (i < path.length - 1) {
-        let j = path.length - 1;
-        while (j > i + 1) {
-            if (lineOfSight(path[i], path[j])) break;
-            j--;
-        }
-        result.push(path[j]);
-        i = j;
+// ═══════════════════════════════════════════════════════════════════════════════
+//  BINARY MIN-HEAP  (replaces slow O(n) Map scan in open list)
+//  This makes A* ~10× faster on this map size.
+// ═══════════════════════════════════════════════════════════════════════════════
+class MinHeap {
+    constructor() { this._data = []; }
+    push(node) {
+        this._data.push(node);
+        this._bubbleUp(this._data.length - 1);
     }
-    return result;
+    pop() {
+        const top = this._data[0];
+        const last = this._data.pop();
+        if (this._data.length > 0) { this._data[0] = last; this._sinkDown(0); }
+        return top;
+    }
+    get size() { return this._data.length; }
+    _bubbleUp(i) {
+        while (i > 0) {
+            const p = (i - 1) >> 1;
+            if (this._data[p].f <= this._data[i].f) break;
+            [this._data[p], this._data[i]] = [this._data[i], this._data[p]];
+            i = p;
+        }
+    }
+    _sinkDown(i) {
+        const n = this._data.length;
+        while (true) {
+            let min = i, l = 2*i+1, r = 2*i+2;
+            if (l < n && this._data[l].f < this._data[min].f) min = l;
+            if (r < n && this._data[r].f < this._data[min].f) min = r;
+            if (min === i) break;
+            [this._data[min], this._data[i]] = [this._data[i], this._data[min]];
+            i = min;
+        }
+    }
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+//  LINE OF SIGHT  (denser step to avoid water slip-through)
+// ═══════════════════════════════════════════════════════════════════════════════
 function lineOfSight(a, b) {
-    const steps = Math.ceil(a.distanceTo(b) / (CELL * 0.5));
-    for (let s = 1; s < steps; s++) {
+    const dist  = a.distanceTo(b);
+    // Step size = CHAR_RADIUS/2 so we can't skip over thin obstacles
+    const steps = Math.ceil(dist / (CHAR_RADIUS * 0.5)) + 1;
+    for (let s = 0; s <= steps; s++) {
         const t = s / steps;
         const x = a.x + (b.x - a.x) * t;
         const z = a.z + (b.z - a.z) * t;
@@ -179,13 +122,141 @@ function lineOfSight(a, b) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  PICK A RANDOM WALKABLE WORLD POSITION  (exported for hayabusa)
+//  A*  PATHFINDING  (heap-based, octal directions, weighted diagonal cost)
+// ═══════════════════════════════════════════════════════════════════════════════
+const DIRS = [
+    [1,0],[-1,0],[0,1],[0,-1],
+    [1,1],[1,-1],[-1,1],[-1,-1]
+];
+const COST = [1,1,1,1, 1.414,1.414,1.414,1.414];
+
+function heuristic(ax, ay, bx, by) {
+    // Octile distance — admissible for 8-directional movement
+    const dx = Math.abs(ax - bx), dy = Math.abs(ay - by);
+    return Math.max(dx, dy) + (Math.SQRT2 - 1) * Math.min(dx, dy);
+}
+
+/**
+ * Find nearest unblocked cell to `gc` within radius `maxR` cells.
+ * Returns {cx,cy} of best candidate or gc unchanged.
+ */
+function nearestFreeCell(gc, maxR = 8) {
+    if (!isCellBlocked(gc.cx, gc.cy)) return gc;
+    for (let r = 1; r <= maxR; r++) {
+        let best = null, bestD = Infinity;
+        for (let dx = -r; dx <= r; dx++) {
+            for (let dy = -r; dy <= r; dy++) {
+                if (Math.abs(dx) !== r && Math.abs(dy) !== r) continue;
+                const ncx = gc.cx + dx, ncy = gc.cy + dy;
+                if (!isCellBlocked(ncx, ncy)) {
+                    const d = Math.abs(dx) + Math.abs(dy);
+                    if (d < bestD) { bestD = d; best = { cx: ncx, cy: ncy }; }
+                }
+            }
+        }
+        if (best) return best;
+    }
+    return gc; // give up — caller handles null path
+}
+
+function aStar(start, goal) {
+    let sc = worldToCell(start);
+    let gc = worldToCell(goal);
+
+    // Snap start/goal to nearest free cell
+    sc = nearestFreeCell(sc, 4);
+    gc = nearestFreeCell(gc, 8);
+
+    if (sc.cx === gc.cx && sc.cy === gc.cy) return [goal];
+
+    const key  = (cx, cy) => (cx << 16) | cy;  // integer key — faster than string
+    const gMap = new Map();                       // cell key → g cost
+    const par  = new Map();                       // cell key → parent node
+    const heap = new MinHeap();
+
+    const sk = key(sc.cx, sc.cy);
+    gMap.set(sk, 0);
+    heap.push({ cx: sc.cx, cy: sc.cy, f: heuristic(sc.cx, sc.cy, gc.cx, gc.cy), g: 0, k: sk });
+
+    const MAX_ITER = 12000;
+    let found = null;
+
+    for (let iter = 0; iter < MAX_ITER; iter++) {
+        if (heap.size === 0) break;
+        const cur = heap.pop();
+
+        // Skip stale heap entries (node was already expanded with lower g)
+        const curG = gMap.get(cur.k);
+        if (curG === undefined || cur.g > curG) continue;
+
+        if (cur.cx === gc.cx && cur.cy === gc.cy) { found = cur; break; }
+
+        for (let d = 0; d < 8; d++) {
+            const ncx = cur.cx + DIRS[d][0];
+            const ncy = cur.cy + DIRS[d][1];
+
+            if (isCellBlocked(ncx, ncy)) continue;
+
+            // Diagonal movement: both cardinal neighbours must be free
+            if (d >= 4) {
+                if (isCellBlocked(cur.cx + DIRS[d][0], cur.cy) ||
+                    isCellBlocked(cur.cx, cur.cy + DIRS[d][1])) continue;
+            }
+
+            const ng  = cur.g + COST[d];
+            const nk  = key(ncx, ncy);
+            const old = gMap.get(nk);
+            if (old !== undefined && ng >= old) continue;
+
+            gMap.set(nk, ng);
+            par.set(nk, cur);
+            heap.push({
+                cx: ncx, cy: ncy, g: ng,
+                f: ng + heuristic(ncx, ncy, gc.cx, gc.cy),
+                k: nk
+            });
+        }
+    }
+
+    if (!found) return null;
+
+    // Reconstruct path
+    const raw = [];
+    let node = found;
+    while (node) {
+        raw.push(cellToWorld(node.cx, node.cy));
+        node = par.get(node.k);
+    }
+    raw.reverse();
+
+    // String-pull (funnel) to remove unnecessary waypoints
+    return stringPull(raw);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  STRING PULL  (rubber-band path smoothing)
+// ═══════════════════════════════════════════════════════════════════════════════
+function stringPull(path) {
+    if (path.length <= 2) return path;
+    const out = [path[0]];
+    let i = 0;
+    while (i < path.length - 1) {
+        let j = path.length - 1;
+        while (j > i + 1 && !lineOfSight(path[i], path[j])) j--;
+        out.push(path[j]);
+        i = j;
+    }
+    return out;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  RANDOM WALKABLE POSITION  (exported for hayabusa)
 // ═══════════════════════════════════════════════════════════════════════════════
 export function getRandomWalkablePosition() {
-    const bounds = state.groundBounds;
-    for (let attempt = 0; attempt < 80; attempt++) {
-        const x = bounds.xMin + Math.random() * (bounds.xMax - bounds.xMin);
-        const z = bounds.zMin + Math.random() * (bounds.zMax - bounds.zMin);
+    const b = state.groundBounds;
+    for (let attempt = 0; attempt < 120; attempt++) {
+        const x = b.xMin + Math.random() * (b.xMax - b.xMin);
+        const z = b.zMin + Math.random() * (b.zMax - b.zMin);
         if (!isBlocked(x, z)) return new THREE.Vector3(x, 0, z);
     }
     return state.claw
@@ -194,135 +265,56 @@ export function getRandomWalkablePosition() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  MINI-ACTIONS
-// ═══════════════════════════════════════════════════════════════════════════════
-function miniJump() {
-    return new Promise(resolve => {
-        if (!state.claw || !state.dancePhase) { resolve(); return; }
-        playJumpSFX();
-        const base = state.claw.userData.baseY ?? 0;
-        const tl = gsap.timeline({ onComplete: resolve, onInterrupt: resolve });
-        tl.to(state.claw.scale,    { y: 0.8,      duration: 0.08, ease: 'power2.in' })
-          .to(state.claw.position, { y: base + 0.5, duration: 0.18, ease: 'power2.out' })
-          .to(state.claw.scale,    { y: 1.1,      duration: 0.1 }, '-=0.1')
-          .to(state.claw.position, { y: base,     duration: 0.18, ease: 'bounce.out' })
-          .to(state.claw.scale,    { y: 1,        duration: 0.12 });
-    });
-}
-
-function miniSpin() {
-    return new Promise(resolve => {
-        if (!state.claw || !state.dancePhase) { resolve(); return; }
-        playSpinSFX();
-        const tl = gsap.timeline({ onComplete: resolve, onInterrupt: resolve });
-        tl.to(state.claw.rotation, { y: '+=6.2832', duration: 0.8, ease: 'power1.inOut' });
-    });
-}
-
-function miniAttack() {
-    return new Promise(resolve => {
-        if (!state.claw || !state.dancePhase) { resolve(); return; }
-        playAttackSFX();
-        const petalCount = 30;
-        const petals = [];
-        const group = new THREE.Group();
-        group.position.copy(state.claw.position);
-        state.scene.add(group);
-        state.tempGroups.push(group);
-
-        for (let i = 0; i < petalCount; i++) {
-            const petal = createPetalSprite('#ff365e', 0.1 + Math.random() * 0.06);
-            petal.position.set(
-                (Math.random() - 0.5) * 1.2,
-                Math.random() * 1,
-                (Math.random() - 0.5) * 1.2
-            );
-            group.add(petal);
-            petals.push(petal);
-        }
-
-        const cleanup = () => {
-            group.traverse(p => { if (p.material) p.material.dispose(); });
-            if (group.parent) state.scene.remove(group);
-            const idx = state.tempGroups.indexOf(group);
-            if (idx > -1) state.tempGroups.splice(idx, 1);
-        };
-
-        const tl = gsap.timeline({ onComplete: resolve, onInterrupt: () => { cleanup(); resolve(); } });
-        tl.to(petals.map(p => p.position), { x: 0, y: 0.2, z: 0, duration: 0.3, ease: 'power2.in' }, 0)
-          .to({}, { duration: 0.1 })
-          .to(petals.map(p => p.position), {
-                onStart() {
-                    const camPos = state.camera.position.clone();
-                    const charPos = group.position.clone();
-                    const dir = camPos.sub(charPos).normalize();
-                    petals.forEach(p => {
-                        p.userData.throwTarget = charPos.clone().add(dir.clone().multiplyScalar(2.5 + Math.random() * 1.5));
-                    });
-                },
-                x: (i) => petals[i].userData.throwTarget?.x ?? 0,
-                y: (i) => (petals[i].userData.throwTarget?.y ?? 0) + Math.random() * 1.2,
-                z: (i) => petals[i].userData.throwTarget?.z ?? 0,
-                duration: 0.5, ease: 'power2.out'
-            }, 0.4)
-          .to(petals.map(p => p.material), { opacity: 0, duration: 0.3 }, 0.5)
-          .call(cleanup);
-    });
-}
-
-function danceWobble() {
-    return new Promise(resolve => {
-        if (!state.claw || !state.dancePhase) { resolve(); return; }
-        const tl = gsap.timeline({ onComplete: resolve, onInterrupt: resolve });
-        const base = state.claw.userData.baseY ?? 0;
-        tl.to(state.claw.rotation, { z: 0.1, duration: 0.25, yoyo: true, repeat: 2, ease: 'sine.inOut' }, 0)
-          .to(state.claw.position, { y: base + 0.1, duration: 0.2, yoyo: true, repeat: 1, ease: 'power1.inOut' }, 0)
-          .to(state.claw.rotation, { y: '+=0.8', duration: 1.0, ease: 'none' }, 0);
-    });
-}
-
-const actionPool = [miniJump, miniSpin, miniAttack, danceWobble];
-
-// ═══════════════════════════════════════════════════════════════════════════════
-//  WALK SEGMENT
+//  WALK SEGMENT  (single straight move between two waypoints)
 // ═══════════════════════════════════════════════════════════════════════════════
 function walkSegment(targetPos) {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
-        const startPos = state.claw.position.clone();
-        const dx = targetPos.x - startPos.x;
-        const dz = targetPos.z - startPos.z;
-        const distance = Math.sqrt(dx * dx + dz * dz);
-        if (distance < 0.05) { resolve(); return; }
 
-        const duration = Math.max(0.5, distance * 0.75);
-        const rotY    = Math.atan2(dx, dz);
-        let rotDiff   = rotY - state.claw.rotation.y;
+        const dx = targetPos.x - state.claw.position.x;
+        const dz = targetPos.z - state.claw.position.z;
+        const distance = Math.sqrt(dx * dx + dz * dz);
+        if (distance < 0.04) { resolve(); return; }
+
+        // Speed: faster when chasing Hayabusa, slower when wandering
+        const speed    = state.chaseTarget ? 1.5 : 1.1;  // units/sec
+        const duration = distance / speed;
+
+        const rotY   = Math.atan2(dx, dz);
+        let rotDiff  = rotY - state.claw.rotation.y;
         while (rotDiff >  Math.PI) rotDiff -= Math.PI * 2;
         while (rotDiff < -Math.PI) rotDiff += Math.PI * 2;
 
         const tl = gsap.timeline({
-            onComplete: resolve,
+            onComplete:  resolve,
             onInterrupt: resolve,
             onUpdate: () => {
-                // Abort immediately if chase should be paused
-                if (state.chasePause) {
-                    tl.kill();
-                    resolve();
-                }
+                if (state.chasePause) { tl.kill(); resolve(); }
             }
         });
-        tl.to(state.claw.rotation, { y: state.claw.rotation.y + rotDiff, duration: Math.min(0.25, duration * 0.3), ease: 'power2.out' }, 0);
+
+        // Turn to face direction
+        tl.to(state.claw.rotation, {
+            y: state.claw.rotation.y + rotDiff,
+            duration: Math.min(0.2, duration * 0.25),
+            ease: 'power2.out'
+        }, 0);
+
+        // Walk bob
         tl.to(state.claw.position, {
             x: targetPos.x, z: targetPos.z,
             duration,
             ease: 'none',
             onStart: () => {
                 if (!state.claw) return;
-                gsap.to(state.claw.rotation, { z: 0.06, duration: 0.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
-                gsap.to(state.claw.position, { y: (state.claw.userData.baseY ?? 0) + 0.05, duration: 0.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+                const bobAmt = state.chaseTarget ? 0.08 : 0.05;
+                const bobDur = state.chaseTarget ? 0.16 : 0.22;
+                gsap.to(state.claw.rotation, { z: 0.06, duration: bobDur, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+                gsap.to(state.claw.position, { y: (state.claw.userData.baseY ?? 0) + bobAmt, duration: bobDur, yoyo: true, repeat: -1, ease: 'sine.inOut' });
             }
-        }, 0.15);
+        }, 0.12);
+
+        // Settle
         tl.call(() => {
             if (!state.claw) return;
             gsap.killTweensOf(state.claw.rotation, 'z');
@@ -334,70 +326,417 @@ function walkSegment(targetPos) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  WALK TO TARGET
+//  WALK TO TARGET  (A* + fallback)
 // ═══════════════════════════════════════════════════════════════════════════════
-async function walkToPoint(targetPos) {
-    if (!state.claw || !state.dancePhase) return;
+async function walkToTarget(targetPos) {
+    if (!state.claw || !state.dancePhase) return 'dead';
 
-    const startPos = new THREE.Vector3(
-        state.claw.position.x,
-        0,
-        state.claw.position.z
-    );
+    const startPos = new THREE.Vector3(state.claw.position.x, 0, state.claw.position.z);
 
-    if (lineOfSight(startPos, targetPos) && !isBlocked(targetPos.x, targetPos.z)) {
+    // Direct LOS fast path
+    if (!isBlocked(targetPos.x, targetPos.z) && lineOfSight(startPos, targetPos)) {
         await walkSegment(targetPos);
-        return;
+        return 'arrived';
     }
 
     const path = aStar(startPos, targetPos);
+
     if (!path || path.length === 0) {
-        await danceWobble();
-        return;
+        // A* totally failed — this target is unreachable, signal caller
+        return 'unreachable';
     }
 
-    for (const waypoint of path) {
-        if (!state.claw || state.dancePhase === null) return;
-        await walkSegment(waypoint);
+    for (const wp of path) {
+        if (!state.claw || state.dancePhase === null) return 'dead';
+        if (state.chasePause) return 'paused';
+        await walkSegment(wp);
+    }
+    return 'arrived';
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  MINI-ACTIONS  — ordered by "energy level" (used for context selection)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+/** Small jump with squash-and-stretch */
+function miniJump() {
+    return new Promise(resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        playJumpSFX();
+        const base = state.claw.userData.baseY ?? 0;
+        gsap.timeline({ onComplete: resolve, onInterrupt: resolve })
+            .to(state.claw.scale,    { y: 0.75, duration: 0.08, ease: 'power2.in' })
+            .to(state.claw.position, { y: base + 0.6, duration: 0.2,  ease: 'power2.out' })
+            .to(state.claw.scale,    { y: 1.15, duration: 0.1 }, '-=0.08')
+            .to(state.claw.position, { y: base, duration: 0.22, ease: 'bounce.out' })
+            .to(state.claw.scale,    { y: 1,    duration: 0.14 });
+    });
+}
+
+/** Full spin with trailing petal vortex */
+function miniSpin() {
+    return new Promise(resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        playSpinSFX();
+        spawnPetalBurst(
+            state.claw.position.clone().add(new THREE.Vector3(0, 0.3, 0)),
+            18, '#ff99cc'
+        );
+        gsap.timeline({ onComplete: resolve, onInterrupt: resolve })
+            .to(state.claw.rotation, { y: `+=${Math.PI * 2}`, duration: 0.75, ease: 'power1.inOut' })
+            .to(state.claw.rotation, { y: `+=${Math.PI * 2}`, duration: 0.6,  ease: 'power2.in' });
+    });
+}
+
+/** Gather + throw petal burst toward camera */
+function miniAttack() {
+    return new Promise(resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        playAttackSFX();
+
+        const group = new THREE.Group();
+        group.position.copy(state.claw.position);
+        state.scene.add(group);
+        state.tempGroups.push(group);
+
+        const petals = [];
+        for (let i = 0; i < 28; i++) {
+            const p = createPetalSprite('#ff365e', 0.09 + Math.random() * 0.06);
+            p.position.set((Math.random()-.5)*1.2, Math.random()*1, (Math.random()-.5)*1.2);
+            group.add(p);
+            petals.push(p);
+        }
+
+        const cleanup = () => {
+            group.traverse(o => { if (o.material) o.material.dispose(); });
+            state.scene.remove(group);
+            const idx = state.tempGroups.indexOf(group);
+            if (idx > -1) state.tempGroups.splice(idx, 1);
+        };
+
+        gsap.timeline({ onComplete: resolve, onInterrupt: () => { cleanup(); resolve(); } })
+            .to(petals.map(p => p.position), { x:0, y:0.2, z:0, duration: 0.3, ease: 'power2.in' }, 0)
+            .to(petals.map(p => p.position), {
+                onStart() {
+                    const dir = state.camera.position.clone().sub(group.position).normalize();
+                    petals.forEach(p => {
+                        p.userData.tt = group.position.clone().add(dir.clone().multiplyScalar(2.5 + Math.random() * 1.5));
+                    });
+                },
+                x: i => petals[i].userData.tt?.x ?? 0,
+                y: i => (petals[i].userData.tt?.y ?? 0) + Math.random() * 1.2,
+                z: i => petals[i].userData.tt?.z ?? 0,
+                duration: 0.55, ease: 'power2.out'
+            }, 0.35)
+            .to(petals.map(p => p.material), { opacity: 0, duration: 0.3 }, 0.5)
+            .call(cleanup);
+    });
+}
+
+/** Gentle sway / dance shimmy */
+function danceWobble() {
+    return new Promise(resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        const base = state.claw.userData.baseY ?? 0;
+        gsap.timeline({ onComplete: resolve, onInterrupt: resolve })
+            .to(state.claw.rotation, { z: 0.12, duration: 0.22, yoyo: true, repeat: 3, ease: 'sine.inOut' }, 0)
+            .to(state.claw.position, { y: base + 0.1, duration: 0.18, yoyo: true, repeat: 2, ease: 'power1.inOut' }, 0)
+            .to(state.claw.rotation, { y: `+=1.0`, duration: 1.1, ease: 'none' }, 0);
+    });
+}
+
+/** Look around — rotate slowly left and right, as if scanning */
+function lookAround() {
+    return new Promise(resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        const startY = state.claw.rotation.y;
+        gsap.timeline({ onComplete: resolve, onInterrupt: resolve })
+            .to(state.claw.rotation, { y: startY - 0.9, duration: 0.55, ease: 'sine.inOut' })
+            .to(state.claw.rotation, { y: startY + 0.9, duration: 0.9,  ease: 'sine.inOut' })
+            .to(state.claw.rotation, { y: startY,       duration: 0.45, ease: 'sine.out'   });
+    });
+}
+
+/** Bow — lean forward and snap back */
+function performBow() {
+    return new Promise(resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        const base = state.claw.userData.baseY ?? 0;
+        gsap.timeline({ onComplete: resolve, onInterrupt: resolve })
+            .to(state.claw.rotation, { x:  0.55, duration: 0.35, ease: 'power2.out' })
+            .to(state.claw.position, { y: base - 0.05, duration: 0.35 }, 0)
+            .to({}, { duration: 0.4 })
+            .to(state.claw.rotation, { x: 0, duration: 0.3, ease: 'back.out(1.4)' })
+            .to(state.claw.position, { y: base, duration: 0.3 }, '-=0.3');
+    });
+}
+
+/** Excited hop-hop — two quick small jumps */
+function excitedHops() {
+    return new Promise(async resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        const base = state.claw.userData.baseY ?? 0;
+        for (let i = 0; i < 2; i++) {
+            if (!state.claw || !state.dancePhase) break;
+            await new Promise(r => {
+                gsap.timeline({ onComplete: r, onInterrupt: r })
+                    .to(state.claw.scale,    { y: 0.8,      duration: 0.06, ease: 'power2.in' })
+                    .to(state.claw.position, { y: base + 0.35, duration: 0.14, ease: 'power2.out' })
+                    .to(state.claw.scale,    { y: 1.1,      duration: 0.08 }, '-=0.06')
+                    .to(state.claw.position, { y: base,     duration: 0.14, ease: 'bounce.out' })
+                    .to(state.claw.scale,    { y: 1,        duration: 0.1  });
+            });
+            playJumpSFX();
+            if (i < 1) await new Promise(r => setTimeout(r, 80));
+        }
+        resolve();
+    });
+}
+
+/** Spin-jump combo — the flashy one */
+function spinJumpCombo() {
+    return new Promise(resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        playSpinSFX();
+        const base = state.claw.userData.baseY ?? 0;
+        spawnPetalBurst(
+            state.claw.position.clone().add(new THREE.Vector3(0, 0.5, 0)),
+            24, '#ffaacc'
+        );
+        gsap.timeline({ onComplete: resolve, onInterrupt: resolve })
+            .to(state.claw.scale,    { y: 0.75, duration: 0.07, ease: 'power2.in' })
+            .to(state.claw.position, { y: base + 0.75, duration: 0.22, ease: 'power2.out' })
+            .to(state.claw.rotation, { y: `+=${Math.PI * 2}`, duration: 0.4,  ease: 'none' }, 0.06)
+            .to(state.claw.position, { y: base, duration: 0.24, ease: 'bounce.out' })
+            .to(state.claw.scale,    { y: 1,    duration: 0.15 });
+    });
+}
+
+/** Stretch — reach upward then settle, as if yawning/celebrating */
+function stretchUp() {
+    return new Promise(resolve => {
+        if (!state.claw || !state.dancePhase) { resolve(); return; }
+        const base = state.claw.userData.baseY ?? 0;
+        gsap.timeline({ onComplete: resolve, onInterrupt: resolve })
+            .to(state.claw.scale,    { y: 1.25, x: 0.82, z: 0.82, duration: 0.45, ease: 'power2.out' })
+            .to(state.claw.position, { y: base + 0.08, duration: 0.45 }, 0)
+            .to(state.claw.rotation, { z: Math.sin(Date.now()) * 0.08, duration: 0.35, ease: 'sine.inOut' }, 0.1)
+            .to({}, { duration: 0.25 })
+            .to(state.claw.scale,    { y: 1, x: 1, z: 1, duration: 0.35, ease: 'back.out(1.5)' })
+            .to(state.claw.position, { y: base, duration: 0.3 }, '-=0.3')
+            .to(state.claw.rotation, { z: 0, duration: 0.2 }, '-=0.2');
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  ACTION POOLS  — split by context (chasing vs wandering)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// Wander pool: calmer, more expressive, longer holds
+const WANDER_ACTIONS = [
+    { fn: danceWobble,   weight: 3 },
+    { fn: lookAround,    weight: 3 },
+    { fn: performBow,    weight: 2 },
+    { fn: stretchUp,     weight: 2 },
+    { fn: miniJump,      weight: 2 },
+    { fn: miniSpin,      weight: 1 },
+    { fn: spinJumpCombo, weight: 1 },
+];
+
+// Chase pool: energetic, quick actions between approach steps
+const CHASE_ACTIONS = [
+    { fn: excitedHops,   weight: 4 },
+    { fn: miniJump,      weight: 3 },
+    { fn: lookAround,    weight: 2 },
+    { fn: miniAttack,    weight: 1 },
+    { fn: spinJumpCombo, weight: 1 },
+];
+
+function pickWeightedAction(pool) {
+    const total = pool.reduce((s, a) => s + a.weight, 0);
+    let r = Math.random() * total;
+    for (const a of pool) {
+        r -= a.weight;
+        if (r <= 0) return a.fn;
+    }
+    return pool[0].fn;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  WANDER WAYPOINT GENERATION
+//  Picks a point with some bias: prefer different quadrants than recent visit
+// ═══════════════════════════════════════════════════════════════════════════════
+let _lastWanderQuadrant = -1;
+
+function getWanderTarget() {
+    const b = state.groundBounds;
+    const cx = (state.claw?.position.x ?? 0);
+    const cz = (state.claw?.position.z ?? 0);
+
+    // Pick a quadrant different from last
+    let quad;
+    do { quad = Math.floor(Math.random() * 4); } while (quad === _lastWanderQuadrant);
+    _lastWanderQuadrant = quad;
+
+    // Quadrant corners: NW, NE, SW, SE
+    const qx = quad < 2 ? [b.xMin, 0] : [0, b.xMax];
+    const qz = quad % 2 === 0 ? [b.zMin, 0] : [0, b.zMax];
+
+    for (let attempt = 0; attempt < 80; attempt++) {
+        const x = qx[0] + Math.random() * (qx[1] - qx[0]);
+        const z = qz[0] + Math.random() * (qz[1] - qz[0]);
+        // Require minimum travel distance so she actually moves meaningfully
+        const dist = Math.hypot(x - cx, z - cz);
+        if (dist > 3.0 && !isBlocked(x, z)) return new THREE.Vector3(x, 0, z);
+    }
+    return getRandomWalkablePosition();
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  RECOVERY — escape from any stuck / inside-obstacle position
+// ═══════════════════════════════════════════════════════════════════════════════
+async function recoverFromStuck() {
+    if (!state.claw) return;
+
+    // Walk toward the map centre which is always safe
+    const safe = new THREE.Vector3(0, 0, 3);
+    const result = await walkToTarget(safe);
+    if (result === 'unreachable') {
+        // Last resort: teleport snap to centre
+        state.claw.position.set(0, state.claw.userData.baseY ?? 0, 3);
+        groundCharacter();
     }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  MAIN AI LOOP  (respects chasePause)
+//  CONTEXTUAL DIALOGUE  (Kagura reacts to what's happening)
 // ═══════════════════════════════════════════════════════════════════════════════
+const WANDER_QUIPS = [
+    { text: "I wonder where he went~",       emotion: 'curious'  },
+    { text: "Hayabusa… show yourself! 👀",   emotion: 'playful'  },
+    { text: "So peaceful here… 🌸",          emotion: 'peaceful' },
+    { text: "The petals are dancing!",        emotion: 'happy'    },
+    { text: "I'll find you, my love! 💪",    emotion: 'excited'  },
+    { text: "Hmm… which way did he go?",     emotion: 'curious'  },
+    { text: "I feel so alive today! 🌸",     emotion: 'happy'    },
+    { text: "The shrine looks beautiful~",   emotion: 'peaceful' },
+];
+const CHASE_QUIPS = [
+    { text: "I see you!! 😤💕",              emotion: 'excited'  },
+    { text: "Come here, Hayabusa!!",          emotion: 'excited'  },
+    { text: "You can't run forever~! 💨",    emotion: 'playful'  },
+    { text: "Almost…! ALMOST!! 🏃‍♀️",        emotion: 'excited'  },
+    { text: "My petals will find you! 🌸",   emotion: 'excited'  },
+];
+
+let _quipTimer = null;
+let _lastQuipTime = 0;
+const QUIP_COOLDOWN_MS = 7000;
+
+function maybeShowQuip(isChasing) {
+    const now = Date.now();
+    if (now - _lastQuipTime < QUIP_COOLDOWN_MS) return;
+    if (Math.random() > 0.35) return; // ~35% chance per call
+
+    _lastQuipTime = now;
+    const pool = isChasing ? CHASE_QUIPS : WANDER_QUIPS;
+    const { text, emotion } = pool[Math.floor(Math.random() * pool.length)];
+    showCustomMessage(text, emotion, 2500, 1000);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  MAIN AI LOOP
+// ═══════════════════════════════════════════════════════════════════════════════
+let _consecutiveFailures = 0;
+const MAX_FAILURES = 3;
+
 async function aiLoop() {
+    _consecutiveFailures = 0;
+    _lastQuipTime = 0;
+
     while (state.dancePhase !== null) {
         if (!state.claw) break;
 
+        // ── Ending sequence ─────────────────────────────────────────────────
         if (state.dancePhase === 'ending') {
             await danceWobble();
             continue;
         }
 
-        // ── Pause logic for chase drama ─────────────────────────────────
+        // ── Chase pause (Hayabusa encounter drama) ──────────────────────────
         if (state.chasePause) {
-            // Stay frozen (no movement) but keep the loop alive
-            await new Promise(r => setTimeout(r, 100));
+            await new Promise(r => setTimeout(r, 80));
             continue;
         }
 
-        // ── Normal navigation ───────────────────────────────────────────
+        // ── Recovery: character stuck inside obstacle ────────────────────────
         if (isBlocked(state.claw.position.x, state.claw.position.z)) {
-            const safePoint = getRandomWalkablePosition();
-            await walkToPoint(safePoint);
+            await recoverFromStuck();
+            _consecutiveFailures++;
+            if (_consecutiveFailures > MAX_FAILURES) {
+                state.claw.position.set(0, state.claw.userData.baseY ?? 0, 3);
+                groundCharacter();
+                _consecutiveFailures = 0;
+            }
             continue;
         }
 
-        const target = state.chaseTarget ? state.chaseTarget : getRandomWalkablePosition();
-        await walkToPoint(target);
+        const isChasing = !!state.chaseTarget;
+
+        // ── Pick destination ────────────────────────────────────────────────
+        const target = isChasing ? state.chaseTarget.clone() : getWanderTarget();
+
+        // ── Navigate ────────────────────────────────────────────────────────
+        const result = await walkToTarget(target);
 
         if (!state.claw || state.dancePhase === null) break;
+
+        if (result === 'unreachable') {
+            _consecutiveFailures++;
+            if (isChasing) {
+                // Chase target is unreachable — clear it so we wander instead
+                // (Hayabusa teleport will set a new one shortly)
+                state.chaseTarget = null;
+            }
+            if (_consecutiveFailures >= MAX_FAILURES) {
+                await recoverFromStuck();
+                _consecutiveFailures = 0;
+            }
+            // Brief pause before retry
+            await new Promise(r => setTimeout(r, 300));
+            continue;
+        }
+
+        if (result === 'paused' || result === 'dead') continue;
+
+        // ── Reset failure counter on success ────────────────────────────────
+        _consecutiveFailures = 0;
+
+        // ── Post-walk action ────────────────────────────────────────────────
+        // Only do actions if still alive, not paused, not ending
+        if (!state.claw || state.dancePhase === null || state.chasePause) continue;
         if (isBlocked(state.claw.position.x, state.claw.position.z)) continue;
 
-        const action = actionPool[Math.floor(Math.random() * actionPool.length)];
-        await action();
+        // When chasing: show quip + do a quick energetic action occasionally
+        // When wandering: always do a richer action + more frequent quips
+        maybeShowQuip(isChasing);
+
+        const actionChance = isChasing ? 0.45 : 0.82;
+        if (Math.random() < actionChance) {
+            const pool   = isChasing ? CHASE_ACTIONS : WANDER_ACTIONS;
+            const action = pickWeightedAction(pool);
+            await action();
+        }
+
+        // ── Wander: short idle pause so she feels alive, not robotic ────────
+        if (!isChasing) {
+            const idleMs = 300 + Math.random() * 800;
+            await new Promise(r => setTimeout(r, idleMs));
+        }
     }
+
     hideSpeechBubble();
+    if (_quipTimer) { clearTimeout(_quipTimer); _quipTimer = null; }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -408,15 +747,16 @@ function stopAIInternal() {
         state.dancePhase = null;
         if (state.danceAudio) { state.danceAudio.pause(); state.danceAudio = null; }
         if (state.danceEndTimer) { clearTimeout(state.danceEndTimer); state.danceEndTimer = null; }
+        if (_quipTimer) { clearTimeout(_quipTimer); _quipTimer = null; }
         if (state.claw) {
             gsap.killTweensOf(state.claw.position);
             gsap.killTweensOf(state.claw.rotation);
             gsap.killTweensOf(state.claw.scale);
             groundCharacter();
         }
-        state.currentAnim  = null;
+        state.currentAnim    = null;
         state.activeTimeline = null;
-        state.chasePause = false;
+        state.chasePause     = false;
         hideSpeechBubble();
     }
 }
@@ -429,13 +769,13 @@ export function stopAICleanup() { stopAIInternal(); }
 export function aiModeClaw(loop = false, sequences = 1) {
     if (!state.claw) return;
 
-    if (state.activeTimeline)  { state.activeTimeline.kill();  state.activeTimeline  = null; }
-    if (state.mainDanceTL)     { state.mainDanceTL.kill();     state.mainDanceTL     = null; }
+    if (state.activeTimeline) { state.activeTimeline.kill(); state.activeTimeline = null; }
+    if (state.mainDanceTL)    { state.mainDanceTL.kill();    state.mainDanceTL    = null; }
 
     if (state.dancePhase !== null) {
         state.dancePhase = null;
-        if (state.danceAudio)   { state.danceAudio.pause(); state.danceAudio = null; }
-        if (state.danceEndTimer){ clearTimeout(state.danceEndTimer); state.danceEndTimer = null; }
+        if (state.danceAudio)    { state.danceAudio.pause(); state.danceAudio = null; }
+        if (state.danceEndTimer) { clearTimeout(state.danceEndTimer); state.danceEndTimer = null; }
         if (state.claw) {
             gsap.killTweensOf(state.claw.position);
             gsap.killTweensOf(state.claw.rotation);
@@ -444,7 +784,7 @@ export function aiModeClaw(loop = false, sequences = 1) {
         hideSpeechBubble();
     }
 
-    state.currentAnim    = 'ai';
+    state.currentAnim     = 'ai';
     state.currentSequence = 0;
     const disp = document.getElementById('seqDisplay');
     if (disp) disp.textContent = '0';
@@ -463,10 +803,10 @@ export function aiModeClaw(loop = false, sequences = 1) {
             state.dancePhase = 'ending';
             const base = state.claw.userData.baseY ?? 0;
             gsap.to(state.claw.position, { x: 0, y: base, z: 0, duration: 10, ease: 'power2.inOut' });
-            gsap.to(state.claw.rotation, { y: '+=6.2832', duration: 10, ease: 'none' });
+            gsap.to(state.claw.rotation, { y: `+=${Math.PI * 4}`, duration: 10, ease: 'none' });
             setTimeout(() => {
-                if (state.claw && state.dancePhase !== null) spawnPetalBurst(state.claw.position, 30);
-            }, 9500);
+                if (state.claw && state.dancePhase !== null) spawnPetalBurst(state.claw.position, 40);
+            }, 9400);
         }, endStart * 1000);
     });
 
