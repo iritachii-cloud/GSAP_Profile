@@ -65,9 +65,12 @@ function initScene() {
     // the two lines below.
     // renderer.toneMapping = THREE.LinearToneMapping;
     // renderer.toneMappingExposure = 1.0;
+    // renderer.outputColorSpace    = THREE.SRGBColorSpace;
+    // renderer.toneMapping         = THREE.ACESFilmicToneMapping;
+    // renderer.toneMappingExposure = 0.85;
     renderer.outputColorSpace    = THREE.SRGBColorSpace;
-    renderer.toneMapping         = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 0.85;
+    renderer.toneMapping         = THREE.LinearToneMapping;
+    renderer.toneMappingExposure = 1.0;
 
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type    = THREE.PCFSoftShadowMap;

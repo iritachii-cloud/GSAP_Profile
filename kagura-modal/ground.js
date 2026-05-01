@@ -33,7 +33,7 @@ function createGrassTexture() {
     const texture = new THREE.CanvasTexture(canvas);
     // ↓ Tells Three.js these canvas pixels are sRGB (web colors), so the
     //   renderer won't apply a second sRGB conversion that causes the
-    //   green-tint artefact on mobile GPUs.
+    //   green‑tint artefact on mobile GPUs.
     texture.colorSpace = THREE.SRGBColorSpace;
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
