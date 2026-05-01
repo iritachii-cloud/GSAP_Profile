@@ -52,8 +52,8 @@ function initScene() {
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    // renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMapping = THREE.LinearToneMapping;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    // renderer.toneMapping = THREE.LinearToneMapping;
     // 🔧 Lower default exposure – prevents greenish tint
     renderer.toneMappingExposure = config.toneMappingExposure ?? 1.0;
     renderer.shadowMap.enabled = true;
