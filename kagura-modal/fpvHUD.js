@@ -99,6 +99,7 @@ function buildHUD() {
 
     // Idle thought bubble (upper‑right)
     idleThoughtBox = createEl('div', {
+        // display: 'inline-block',
         padding: '0.6rem 0.9rem',
         background: 'rgba(20,20,30,0.85)',
         backdropFilter: 'blur(10px)',

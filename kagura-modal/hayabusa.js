@@ -79,7 +79,7 @@ function createHayabusaBubble() {
 function updateHayabusaBubblePosition() {
     if (!bubble || !hayabusaModel || !state.camera) return;
     const worldPos = hayabusaModel.position.clone();
-    worldPos.y += 1.9;
+    worldPos.y += 0.8;
     const vector = worldPos.project(state.camera);
     if (vector.z > 1) { bubble.style.opacity = '0'; return; }
     const wrapper = document.querySelector('.canvas-wrap');
@@ -171,7 +171,7 @@ function loadModel() {
                 const size = box.getSize(new THREE.Vector3());
                 const center = box.getCenter(new THREE.Vector3());
                 const maxDim = Math.max(size.x, size.y, size.z);
-                const scale = 2.4 / maxDim;
+                const scale = 1 / maxDim;
 
                 model.scale.setScalar(scale);
                 model.position.sub(center.multiplyScalar(scale));

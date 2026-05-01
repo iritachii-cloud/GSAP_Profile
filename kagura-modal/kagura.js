@@ -52,7 +52,8 @@ function initScene() {
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    // renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMapping = THREE.LinearToneMapping;
     // 🔧 Lower default exposure – prevents greenish tint
     renderer.toneMappingExposure = config.toneMappingExposure ?? 1.0;
     renderer.shadowMap.enabled = true;
@@ -94,7 +95,7 @@ function initScene() {
 
 function loadModel() {
     gltfLoader.load(
-        config.modelFile || 'kagura.glb',
+        config.modelFile || 'kagura-v1.glb',
         (gltf) => {
             const model = gltf.scene;
             const box = new THREE.Box3().setFromObject(model);
@@ -300,7 +301,7 @@ async function initApp() {
                 { id:'ai',     label:'🤖 AI Mode' },
                 { id:'reset',  label:'↩ Peace Reset' }
             ],
-            modelFile: 'kagura.glb',
+            modelFile: 'kagura-v1.glb',
             modelScaleTarget: 2.4,
             cameraFov: 38,
             cameraDistance: 5,
