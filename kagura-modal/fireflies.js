@@ -16,7 +16,9 @@ function createFireflyTexture() {
     ctx.beginPath();
     ctx.arc(8,8,2.5,0,Math.PI*2);
     ctx.fill();
-    return new THREE.CanvasTexture(canvas);
+    const _ffTex = new THREE.CanvasTexture(canvas);
+    _ffTex.colorSpace = THREE.SRGBColorSpace;
+    return _ffTex;
 }
 
 export function startFireflies() {

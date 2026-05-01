@@ -38,7 +38,9 @@ function makeCloudTexture() {
         ctx.fillRect(0, 0, size, size);
     });
 
-    return new THREE.CanvasTexture(c);
+    const _cldTex = new THREE.CanvasTexture(c);
+    _cldTex.colorSpace = THREE.SRGBColorSpace;
+    return _cldTex;
 }
 
 // Shared texture (created once)

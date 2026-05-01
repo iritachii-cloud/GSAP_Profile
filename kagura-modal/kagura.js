@@ -53,16 +53,18 @@ function initScene() {
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 
     // ── Color-space & tone-mapping ─────────────────────────────────────────
-    // ANDROID FIX: Using LinearToneMapping + SRGBColorSpace is the safest
-    // combination across all mobile GPU vendors (Mali, Adreno, PowerVR).
-    // THREE.NoToneMapping with SRGBColorSpace causes incorrect linear→sRGB
-    // conversion on many Android drivers, making procedural canvas textures
-    // (grass, water, sky, petals) appear washed out or wrong colour.
-    // LinearToneMapping with exposure=1.0 is mathematically equivalent to
-    // "no tone mapping" but routes through the correct GPU code path.
+    // ANDROID COLOR FIX:
+    // - outputColorSpace = SRGBColorSpace: correct final output for all displays
+    // - toneMapping = ACESFilmicToneMapping: most robust across Mali/Adreno/PowerVR
+    //   Android GPU drivers. LinearToneMapping can cause green-channel amplification
+    //   on some older Mali drivers due to a precision issue in the GLSL shader path.
+    //   ACES at exposure=0.8 is visually near-identical to Linear@1.0 for this scene
+    //   but uses a different GPU shader path that avoids the driver bug.
+    // - All canvas textures MUST be tagged .colorSpace=SRGBColorSpace (done in each
+    //   module) so Three.js converts them correctly to linear before shading.
     renderer.outputColorSpace    = THREE.SRGBColorSpace;
-    renderer.toneMapping         = THREE.LinearToneMapping;
-    renderer.toneMappingExposure = 1.0;
+    renderer.toneMapping         = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 0.85;
 
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type    = THREE.PCFSoftShadowMap;
