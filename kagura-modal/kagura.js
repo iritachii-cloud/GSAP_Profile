@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 import { state } from './state.js';
 import { setupEnvironment, updateEnvironment, applyTimeOfDay } from './environment.js';
@@ -16,10 +17,19 @@ import { initCameraManager, setCameraMode, updateCamera, disposeCameraManager } 
 const canvas = document.getElementById('c');
 const overlay = document.getElementById('overlay');
 const loading = document.getElementById('loading');
+const loadingText = loading.querySelector('p');
 state.cardEl = document.querySelector('.card');
 
 let config;
 let sequenceDisplay;
+
+// ── Draco loader (shared) ─────────────────────────────────────────────────
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+dracoLoader.setDecoderConfig({ type: 'js' });
+
+const gltfLoader = new GLTFLoader();
+gltfLoader.setDRACOLoader(dracoLoader);
 
 function onResize() {
     const wrap = document.querySelector('.canvas-wrap');
@@ -43,7 +53,8 @@ function initScene() {
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = config.toneMappingExposure ?? 1.2;
+    // 🔧 Lower default exposure – prevents greenish tint
+    renderer.toneMappingExposure = config.toneMappingExposure ?? 1.0;
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     state.renderer = renderer;
@@ -58,7 +69,6 @@ function initScene() {
     let lastTime = performance.now();
     function animate() {
         requestAnimationFrame(animate);
-
         const now = performance.now();
         const delta = Math.min(0.1, (now - lastTime) / 1000);
         lastTime = now;
@@ -74,7 +84,6 @@ function initScene() {
         updateEnvironment(delta);
         updateSpeechBubble();
         updateCamera();
-
         renderer.render(scene, camera);
     }
     animate();
@@ -84,7 +93,7 @@ function initScene() {
 }
 
 function loadModel() {
-    new GLTFLoader().load(
+    gltfLoader.load(
         config.modelFile || 'kagura.glb',
         (gltf) => {
             const model = gltf.scene;
@@ -113,7 +122,6 @@ function loadModel() {
 
             state.scene.add(model);
             state.claw = model;
-
             groundCharacter();
 
             const mid = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
@@ -121,15 +129,17 @@ function loadModel() {
 
             loading.classList.add('hidden');
         },
-        xhr => {
-            if (xhr.total) {
-                const pct = Math.round(xhr.loaded / xhr.total * 100);
-                loading.querySelector('p').textContent = `Cherry blossoms gathering… ${pct}%`;
+        (xhr) => {
+            if (xhr.lengthComputable) {
+                const pct = Math.round((xhr.loaded / xhr.total) * 100);
+                loadingText.textContent = `Cherry blossoms gathering… ${pct}%`;
+            } else {
+                loadingText.textContent = 'Cherry blossoms gathering…';
             }
         },
-        err => {
+        (err) => {
             console.error(err);
-            loading.querySelector('p').textContent = '❌ Kagura model missing. Place kagura.glb in the folder.';
+            loadingText.textContent = '❌ Kagura model missing. Place kagura.glb in the folder.';
         }
     );
 }

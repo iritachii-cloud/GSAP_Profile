@@ -8,7 +8,7 @@
     { "id": "ai",     "label": "🤖 AI Mode" },
     { "id": "reset",  "label": "↩ Peace Reset" }
   ],
-  "modelFile": "kagura.glb",
+  "modelFile": "kagura-v1.glb",
   "modelScaleTarget": 1,
   "cameraFov": 38,
   "cameraDistance": 5,

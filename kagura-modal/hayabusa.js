@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { state } from './state.js';
 import { getRandomWalkablePosition } from './aiMode.js';
 import { spawnPetalBurst } from './utils.js';
@@ -13,7 +14,14 @@ let canTeleport       = true;
 let teleportPending   = false;
 const TELEPORT_COOLDOWN = 2000;
 
-// ─── Regular (non‑FPV) Hayabusa speech bubble ────────────────────────────
+// ─── Draco loader for Hayabusa (shared or separate) ─────────────────────
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+dracoLoader.setDecoderConfig({ type: 'js' });
+const hayabusaGltfLoader = new GLTFLoader();
+hayabusaGltfLoader.setDRACOLoader(dracoLoader);
+
+// ─── Regular Hayabusa bubble (non‑FPV) ──────────────────────────────────
 let bubble       = null;
 let tailEl       = null;
 let textEl       = null;
@@ -71,7 +79,7 @@ function createHayabusaBubble() {
 function updateHayabusaBubblePosition() {
     if (!bubble || !hayabusaModel || !state.camera) return;
     const worldPos = hayabusaModel.position.clone();
-    worldPos.y += 0.8;
+    worldPos.y += 1.9;
     const vector = worldPos.project(state.camera);
     if (vector.z > 1) { bubble.style.opacity = '0'; return; }
     const wrapper = document.querySelector('.canvas-wrap');
@@ -104,7 +112,7 @@ function showHayabusaMessage(text, holdMs = 3500) {
     }, holdMs);
 }
 
-// ─── Cheesy lines ──────────────────────────────────────────────────────────
+// ─── Cheesy lines ────────────────────────────────────────────────────────
 const HAYABUSA_LINES = [
     "Almost, sweetheart~ Better luck next time! 💕",
     "You're getting warmer, my love! 🥰",
@@ -152,38 +160,47 @@ const KAGURA_REPLIES = [
 const HAYABUSA_FIRST = "Try to catch me if you can, Kagura~ ❤️";
 const KAGURA_FIRST   = "Ok, my love Hayabusa… I will find you! 🌸";
 
-// ─── Load model ────────────────────────────────────────────────────────────
+// ─── Load model ──────────────────────────────────────────────────────────
 function loadModel() {
     return new Promise((resolve, reject) => {
-        new GLTFLoader().load('fanny.glb', (gltf) => {
-            const model = gltf.scene;
-            const box = new THREE.Box3().setFromObject(model);
-            const size = box.getSize(new THREE.Vector3());
-            const center = box.getCenter(new THREE.Vector3());
-            const maxDim = Math.max(size.x, size.y, size.z);
-            const scale = 1 / maxDim;
-            model.scale.setScalar(scale);
-            model.position.sub(center.multiplyScalar(scale));
-            const box2 = new THREE.Box3().setFromObject(model);
-            model.position.y -= box2.min.y;
-            model.userData.baseY = model.position.y;
-            model.traverse(obj => {
-                if (obj.isMesh && obj.material) {
-                    obj.castShadow = true;
-                    obj.receiveShadow = true;
-                }
-            });
-            resolve(model);
-        }, undefined, reject);
+        hayabusaGltfLoader.load(
+            'hayabusa-v1.glb',
+            (gltf) => {
+                const model = gltf.scene;
+                const box = new THREE.Box3().setFromObject(model);
+                const size = box.getSize(new THREE.Vector3());
+                const center = box.getCenter(new THREE.Vector3());
+                const maxDim = Math.max(size.x, size.y, size.z);
+                const scale = 2.4 / maxDim;
+
+                model.scale.setScalar(scale);
+                model.position.sub(center.multiplyScalar(scale));
+                const box2 = new THREE.Box3().setFromObject(model);
+                model.position.y -= box2.min.y;
+                model.userData.baseY = model.position.y;
+
+                model.traverse(obj => {
+                    if (obj.isMesh && obj.material) {
+                        obj.castShadow = true;
+                        obj.receiveShadow = true;
+                    }
+                });
+                resolve(model);
+            },
+            (xhr) => {
+                // Optional progress – you could update a loading bar
+                // For simplicity we ignore here
+            },
+            reject
+        );
     });
 }
 
-// ─── Teleport animation ───────────────────────────────────────────────────
+// ─── Teleport animation ─────────────────────────────────────────────────
 function performTeleport(newPos) {
     teleportPending = false;
     if (!hayabusaModel || !chaseActive) return;
 
-    // Increment escape count
     state.escapeCount++;
     updateEscapeCount(state.escapeCount);
 
@@ -209,7 +226,7 @@ function performTeleport(newPos) {
       }, null, 0.4);
 }
 
-// ─── Pause + drama ────────────────────────────────────────────────────────
+// ─── Pause + drama ──────────────────────────────────────────────────────
 async function triggerCloseEncounter() {
     if (!hayabusaModel || !chaseActive || teleportPending || !canTeleport) return;
     teleportPending = true;
@@ -244,10 +261,9 @@ function teleportCheck() {
     const hayabusaPos = hayabusaModel.position.clone();
     const dist = kaguraPos.distanceTo(hayabusaPos);
 
-    // Update HUD distance
     updateDistance(dist);
 
-    if (dist < 3.0) {
+    if (dist < 2.0) {
         triggerCloseEncounter();
     }
 }
@@ -267,7 +283,7 @@ function chaseTick() {
     teleportAnimId = requestAnimationFrame(chaseTick);
 }
 
-// ─── Public API ────────────────────────────────────────────────────────────
+// ─── Public API ──────────────────────────────────────────────────────────
 export async function startHayabusaChase() {
     if (chaseActive) return;
     chaseActive = true;
