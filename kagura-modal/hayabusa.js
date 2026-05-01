@@ -2,13 +2,18 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { state } from './state.js';
-import { getRandomWalkablePosition } from './aiMode.js';
+import { getRandomWalkablePosition, playFinalCatchSequence } from './aiMode.js';
 import { spawnPetalBurst } from './utils.js';
 import { showCustomMessage } from './speechBubble.js';
 import { showCharacterMessage, updateDistance, updateEscapeCount } from './fpvHUD.js';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  SHUFFLE-DECK  — Fisher-Yates with cross-reshuffle no-repeat guarantee
+//  CONFIG
+// ═══════════════════════════════════════════════════════════════════════════════
+const MAX_ESCAPES = 20;          // after this many escapes Kagura catches him
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  SHUFFLE-DECK
 // ═══════════════════════════════════════════════════════════════════════════════
 function createDeck(items) {
     let queue = [];
@@ -42,9 +47,7 @@ function createDeck(items) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  PAIRED DIALOGUE  — Each pair is Hayabusa line + matching Kagura reply.
-//  They are drawn as pairs from a single shuffled deck so they always
-//  correspond thematically and never mix out of sequence.
+//  PAIRED DIALOGUE
 // ═══════════════════════════════════════════════════════════════════════════════
 const DIALOGUE_PAIRS = [
     {
@@ -169,11 +172,35 @@ const DIALOGUE_PAIRS = [
     },
 ];
 
-// First-encounter lines (shown on spawn, not drawn from the deck)
+// First-encounter lines
 const HAYABUSA_FIRST = "Try to catch me if you can, Kagura~ ❤️";
 const KAGURA_FIRST   = "Okay my love… just you wait. I WILL find you! 🌸";
 
-// Idle thoughts Hayabusa has while waiting (his own deck)
+// Final catch warning lines (shown at 15-19 escapes to hint at ending)
+const NEAR_END_PAIRS = [
+    {
+        hayabusa: "Hmm… you're getting really close! 😅",
+        kagura:   "I can FEEL it! This time!! 🌸💨",
+    },
+    {
+        hayabusa: "W-wait, you're actually catching up?! 😳",
+        kagura:   "Oh I'm catching up ALRIGHT!! 💪🌸",
+    },
+    {
+        hayabusa: "Maybe I should slow down… just a little~",
+        kagura:   "DON'T YOU DARE slow down on purpose!! 😤",
+    },
+    {
+        hayabusa: "I… I think she might actually get me! 💙",
+        kagura:   "Almost… ALMOST THERE!! 🏃‍♀️💨",
+    },
+    {
+        hayabusa: "Could this be the last time I run? 🥺",
+        kagura:   "Yes. YES IT IS. COME HERE!! 🌸💗",
+    },
+];
+
+// Idle thoughts Hayabusa has while waiting
 const HAYABUSA_IDLE_THOUGHTS = [
     { text: "I hope she finds me soon~ 💭",              color: '#aaddff' },
     { text: "Should I jump so she can see me? 🤔",       color: '#aaddff' },
@@ -194,6 +221,11 @@ const HAYABUSA_IDLE_THOUGHTS = [
 
 const dialogueDeck     = createDeck(DIALOGUE_PAIRS);
 const idleThoughtDeck  = createDeck(HAYABUSA_IDLE_THOUGHTS);
+const nearEndDeck      = createDeck(NEAR_END_PAIRS);
+
+// Idle thought interval: 9-15s (was 7-12s — slowed down)
+const IDLE_THOUGHT_MIN = 9000;
+const IDLE_THOUGHT_MAX = 15000;
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  MODULE STATE
@@ -205,15 +237,12 @@ let canTeleport       = true;
 let teleportPending   = false;
 const TELEPORT_COOLDOWN = 2500;
 
-// Preload cache
 let preloadedModel = null;
 let preloadPromise = null;
 
-// Idle animation loop
-let idleAnimHandle  = null;
 let idleThoughtTimer = null;
 let idleActionTimer  = null;
-let idleActionLock   = false;   // prevents overlapping idle animations
+let idleActionLock   = false;
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  DRACO / GLTF LOADERS
@@ -340,14 +369,10 @@ function showHayabusaMessage(text, holdMs = 3500) {
     }, holdMs);
 }
 
-// Idle thought — smaller, italic style in same bubble
 function showHayabusaIdleThought(thought, holdMs = 3500) {
     createHayabusaBubble();
     if (hideTimer) clearTimeout(hideTimer);
     if (typeTimer)  clearTimeout(typeTimer);
-    // Slightly dimmer for idle thoughts
-    bubble.style.opacity       = '0.88';
-    bubble.style.transform     = 'translateX(-50%) translateY(-100%) scale(0.95)';
     bubble.style.fontSize      = '0.55rem';
     textEl.style.fontStyle     = 'italic';
     typeWriteHayabusa(thought, () => {});
@@ -363,11 +388,8 @@ function showHayabusaIdleThought(thought, holdMs = 3500) {
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  HAYABUSA IDLE ANIMATIONS
-//  Run continuously while he's waiting to be caught. Each action is a
-//  GSAP timeline that resolves a Promise when complete.
 // ═══════════════════════════════════════════════════════════════════════════════
 
-/** Gentle float bob — always running as a base layer */
 function startBaseBob() {
     if (!hayabusaModel) return;
     const base = hayabusaModel.userData.baseY ?? 0;
@@ -386,7 +408,6 @@ function stopBaseBob() {
     if (hayabusaModel) hayabusaModel.position.y = hayabusaModel.userData.baseY ?? 0;
 }
 
-/** Hopeful jump — he hops as if trying to be seen */
 function idleHopefulJump() {
     return new Promise(resolve => {
         if (!hayabusaModel || !chaseActive) { resolve(); return; }
@@ -401,7 +422,6 @@ function idleHopefulJump() {
     });
 }
 
-/** Double hopeful jump — extra excited */
 async function idleDoubleHop() {
     if (!hayabusaModel || !chaseActive) return;
     await idleHopefulJump();
@@ -409,7 +429,6 @@ async function idleDoubleHop() {
     await idleHopefulJump();
 }
 
-/** Spin peek — spins 180° to look for Kagura then back */
 function idleSpinPeek() {
     return new Promise(resolve => {
         if (!hayabusaModel || !chaseActive) { resolve(); return; }
@@ -420,7 +439,6 @@ function idleSpinPeek() {
     });
 }
 
-/** Excited wiggle — shimmy side to side */
 function idleWiggle() {
     return new Promise(resolve => {
         if (!hayabusaModel || !chaseActive) { resolve(); return; }
@@ -433,7 +451,6 @@ function idleWiggle() {
     });
 }
 
-/** Look-around — slow scan left and right */
 function idleLookAround() {
     return new Promise(resolve => {
         if (!hayabusaModel || !chaseActive) { resolve(); return; }
@@ -445,7 +462,6 @@ function idleLookAround() {
     });
 }
 
-/** Stretch up — confident pose, as if showing off */
 function idleStretchUp() {
     return new Promise(resolve => {
         if (!hayabusaModel || !chaseActive) { resolve(); return; }
@@ -460,7 +476,6 @@ function idleStretchUp() {
     });
 }
 
-/** Wave — rotate slightly then bounce back — like beckoning */
 function idleWave() {
     return new Promise(resolve => {
         if (!hayabusaModel || !chaseActive) { resolve(); return; }
@@ -473,7 +488,6 @@ function idleWave() {
     });
 }
 
-/** Petal burst + spin — celebratory "over here!" move */
 function idleCelebrateSpin() {
     return new Promise(resolve => {
         if (!hayabusaModel || !chaseActive) { resolve(); return; }
@@ -486,7 +500,6 @@ function idleCelebrateSpin() {
     });
 }
 
-// Weighted idle action pool
 const IDLE_ACTION_POOL = [
     { fn: idleHopefulJump,   weight: 4 },
     { fn: idleDoubleHop,     weight: 2 },
@@ -505,10 +518,8 @@ function pickIdleAction() {
     return IDLE_ACTION_POOL[0].fn;
 }
 
-// ── Idle action loop ──────────────────────────────────────────────────────────
 async function idleActionLoop() {
     while (chaseActive && hayabusaModel) {
-        // Interval: 2.5 – 5 seconds between actions
         const waitMs = 2500 + Math.random() * 2500;
         await new Promise(r => setTimeout(r, waitMs));
         if (!chaseActive || !hayabusaModel) break;
@@ -522,22 +533,20 @@ async function idleActionLoop() {
     }
 }
 
-// ── Idle thought loop ─────────────────────────────────────────────────────────
 async function idleThoughtLoop() {
-    // Initial delay so he's not speaking the very first second
-    await new Promise(r => setTimeout(r, 4000 + Math.random() * 3000));
+    await new Promise(r => setTimeout(r, 5000 + Math.random() * 3000));
 
     while (chaseActive && hayabusaModel) {
         if (!teleportPending && !state.chasePause) {
             const thought = idleThoughtDeck.drawNext();
             if (state.cameraMode === 'fpv') {
-                showCharacterMessage('hayabusa', thought.text, 3000);
+                showCharacterMessage('hayabusa', thought.text, 3500);
             } else {
-                showHayabusaIdleThought(thought.text, 3000);
+                showHayabusaIdleThought(thought.text, 3500);
             }
         }
-        // Thoughts appear every 7–12 seconds
-        const interval = 7000 + Math.random() * 5000;
+        // Slowed down: was 7-12s, now 9-16s
+        const interval = IDLE_THOUGHT_MIN + Math.random() * (IDLE_THOUGHT_MAX - IDLE_THOUGHT_MIN);
         await new Promise(r => setTimeout(r, interval));
     }
 }
@@ -597,7 +606,69 @@ export function preloadHayabusa(onProgress, onDone) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  TELEPORT  — shrink → move → pop in with petal burst
+//  FINAL CATCH — triggers after MAX_ESCAPES
+// ═══════════════════════════════════════════════════════════════════════════════
+async function triggerFinalCatch() {
+    if (!hayabusaModel || !chaseActive) return;
+    chaseActive     = false;
+    teleportPending = false;
+    state.chasePause = true;
+
+    // Hayabusa freezes
+    gsap.killTweensOf(hayabusaModel.position);
+    gsap.killTweensOf(hayabusaModel.rotation);
+    gsap.killTweensOf(hayabusaModel.scale);
+
+    // He turns to face Kagura
+    if (state.claw) {
+        const dir  = state.claw.position.clone().sub(hayabusaModel.position).normalize();
+        const rotY = Math.atan2(dir.x, dir.z);
+        await new Promise(r => {
+            gsap.to(hayabusaModel.rotation, { y: rotY, duration: 0.4, ease: 'power2.out', onComplete: r });
+        });
+    }
+
+    // Hayabusa's surrender line
+    const catchMsg = "O-okay… you got me, Kagura~ 💙🌸";
+    if (state.cameraMode === 'fpv') {
+        showCharacterMessage('hayabusa', catchMsg, 4000);
+    } else {
+        showHayabusaMessage(catchMsg, 4000);
+    }
+
+    // Big petal burst at Hayabusa's position
+    spawnPetalBurst(
+        hayabusaModel.position.clone().add(new THREE.Vector3(0, 0.5, 0)),
+        60, '#aaddff'
+    );
+
+    await new Promise(r => setTimeout(r, 1000));
+
+    // Let Kagura run the final catch animation
+    const catchPos = hayabusaModel.position.clone();
+
+    // Hide Hayabusa during approach
+    await new Promise(r => setTimeout(r, 1500));
+    if (hayabusaModel) {
+        gsap.to(hayabusaModel.scale, { x: 0, y: 0, z: 0, duration: 0.4, ease: 'power2.in',
+            onComplete: () => {
+                if (hayabusaModel) {
+                    state.scene.remove(hayabusaModel);
+                    hayabusaModel = null;
+                }
+            }
+        });
+    }
+
+    // Clean up bubble
+    if (bubble) { bubble.remove(); bubble = null; textEl = null; tailEl = null; }
+
+    // Hand off to AI mode for the final celebration walk
+    playFinalCatchSequence(catchPos);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  TELEPORT
 // ═══════════════════════════════════════════════════════════════════════════════
 function performTeleport(newPos) {
     teleportPending = false;
@@ -606,7 +677,26 @@ function performTeleport(newPos) {
     state.escapeCount++;
     updateEscapeCount(state.escapeCount);
 
-    // Stop any idle bob so it doesn't fight the teleport scale tween
+    // Check if we've hit MAX_ESCAPES — if so, don't teleport: trigger ending
+    if (state.escapeCount >= MAX_ESCAPES) {
+        triggerFinalCatch();
+        return;
+    }
+
+    // Show near-end teasing dialogue at 15+ escapes
+    if (state.escapeCount >= MAX_ESCAPES - 5) {
+        const nearEnd = nearEndDeck.drawNext();
+        if (state.cameraMode === 'fpv') {
+            showCharacterMessage('hayabusa', nearEnd.hayabusa, 3000);
+        } else {
+            showHayabusaMessage(nearEnd.hayabusa, 3000);
+        }
+        setTimeout(() => {
+            if (!chaseActive) return;
+            showCustomMessage(nearEnd.kagura, 'excited', 2800, 1500);
+        }, 2000);
+    }
+
     gsap.killTweensOf(hayabusaModel.position, 'y');
     gsap.killTweensOf(hayabusaModel.scale);
 
@@ -622,48 +712,39 @@ function performTeleport(newPos) {
                 hayabusaModel.position.clone().add(new THREE.Vector3(0, 0.35, 0)),
                 35, '#aa44ff'
             );
-            // Resume base bob after teleport settles
             startBaseBob();
-
-            // Kagura's reply — drawn from the paired deck (already set in triggerCloseEncounter)
             canTeleport = false;
             setTimeout(() => { canTeleport = true; }, TELEPORT_COOLDOWN);
         }, null, 0.48);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  CLOSE ENCOUNTER DRAMA  — paired dialogue exchange then teleport
+//  CLOSE ENCOUNTER DRAMA
 // ═══════════════════════════════════════════════════════════════════════════════
 async function triggerCloseEncounter() {
     if (!hayabusaModel || !chaseActive || teleportPending || !canTeleport) return;
     teleportPending = true;
     canTeleport     = false;
 
-    // Pause Kagura movement
     state.chasePause = true;
 
-    // Brief dramatic pause — he turns to face her
     await new Promise(r => setTimeout(r, 800));
     if (!hayabusaModel || !chaseActive) { state.chasePause = false; return; }
 
-    // Face Kagura
     if (state.claw && hayabusaModel) {
         const dir  = state.claw.position.clone().sub(hayabusaModel.position).normalize();
         const rotY = Math.atan2(dir.x, dir.z);
         gsap.to(hayabusaModel.rotation, { y: rotY, duration: 0.3, ease: 'power2.out' });
     }
 
-    // Draw a paired dialogue exchange
     const pair = dialogueDeck.drawNext();
 
-    // Hayabusa speaks first
     if (state.cameraMode === 'fpv') {
         showCharacterMessage('hayabusa', pair.hayabusa, 3500);
     } else {
         showHayabusaMessage(pair.hayabusa, 3500);
     }
 
-    // Small excited idle action while he's taunting
     idleActionLock = true;
     setTimeout(async () => {
         if (!hayabusaModel || !chaseActive) { idleActionLock = false; return; }
@@ -671,7 +752,6 @@ async function triggerCloseEncounter() {
         idleActionLock = false;
     }, 300);
 
-    // Kagura replies after a beat
     await new Promise(r => setTimeout(r, 2000));
     if (!hayabusaModel || !chaseActive) { state.chasePause = false; return; }
 
@@ -681,13 +761,11 @@ async function triggerCloseEncounter() {
         showCustomMessage(pair.kagura, pair.kEmotion, 3000, 2000);
     }
 
-    // Let dialogue breathe
     await new Promise(r => setTimeout(r, 1800));
     state.chasePause = false;
 
     if (!hayabusaModel || !chaseActive) return;
 
-    // Find a new position far enough from Kagura
     const kaguraPos = state.claw?.position.clone() ?? new THREE.Vector3();
     let newPos;
     for (let i = 0; i < 40; i++) {
@@ -700,7 +778,7 @@ async function triggerCloseEncounter() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  PER-FRAME TICK  (runs on rAF while chase is active)
+//  PER-FRAME TICK
 // ═══════════════════════════════════════════════════════════════════════════════
 function teleportCheck() {
     if (!chaseActive || !hayabusaModel || !state.claw || !canTeleport || teleportPending) return;
@@ -710,7 +788,6 @@ function teleportCheck() {
 }
 
 function updateHayabusaFacing() {
-    // Always face Kagura, but smoothly (lerp rotation)
     if (!hayabusaModel || !state.claw || teleportPending || state.chasePause) return;
     const target = state.claw.position.clone();
     target.y = hayabusaModel.position.y;
@@ -720,7 +797,6 @@ function updateHayabusaFacing() {
     let diff = desiredRotY - hayabusaModel.rotation.y;
     while (diff >  Math.PI) diff -= Math.PI * 2;
     while (diff < -Math.PI) diff += Math.PI * 2;
-    // Only face her when she's relatively close (adds drama)
     const dist = state.claw.position.distanceTo(hayabusaModel.position);
     const lerpSpeed = dist < 6 ? 0.04 : 0.01;
     hayabusaModel.rotation.y += diff * lerpSpeed;
@@ -759,9 +835,9 @@ export async function startHayabusaChase() {
         }
     }
 
-    // Reset decks for fresh cycle
     dialogueDeck.reset();
     idleThoughtDeck.reset();
+    nearEndDeck.reset();
 
     state.escapeCount = 0;
     updateEscapeCount(0);
@@ -775,10 +851,8 @@ export async function startHayabusaChase() {
     canTeleport            = true;
     idleActionLock         = false;
 
-    // Start base idle bob
     startBaseBob();
 
-    // First encounter dialogue
     if (state.cameraMode === 'fpv') {
         showCharacterMessage('hayabusa', HAYABUSA_FIRST, 3500);
     } else {
@@ -793,14 +867,13 @@ export async function startHayabusaChase() {
         }
     }, 3800);
 
-    // Start loops
     chaseTick();
     idleActionLoop();
     idleThoughtLoop();
 }
 
 export function stopHayabusaChase() {
-    chaseActive     = false;
+    chaseActive       = false;
     state.chaseTarget = null;
     state.chasePause  = false;
     teleportPending   = false;

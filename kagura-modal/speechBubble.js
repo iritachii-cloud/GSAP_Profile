@@ -1,12 +1,9 @@
 import { state } from './state.js';
-import { showIdleThought } from './fpvHUD.js';
+import { showIdleThought, clearIdleThought } from './fpvHUD.js';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  DIALOGUE POOLS  — Kagura's idle thoughts
-//  Each pool is a full deck. Once every entry has shown once, the deck
-//  reshuffles and the cycle begins again. No consecutive repeats ever.
+//  DIALOGUE POOLS
 // ═══════════════════════════════════════════════════════════════════════════════
-
 const DAY_MESSAGES = [
     { text: "Hi, I am Kagura! 🌸",                          emotion: 'happy'    },
     { text: "My umbrella is also my weapon~ 🌂",            emotion: 'excited'  },
@@ -55,10 +52,6 @@ const NIGHT_MESSAGES = [
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  SHUFFLE-DECK UTILITY
-//  Creates a stateful deck from an array. drawNext() always returns the next
-//  item in a shuffled order, reshuffling only when the deck is exhausted.
-//  Guarantees: no consecutive repeat across reshuffles (last of old deck ≠
-//  first of new deck).
 // ═══════════════════════════════════════════════════════════════════════════════
 function createDeck(items) {
     let queue = [];
@@ -75,7 +68,6 @@ function createDeck(items) {
 
     function refill() {
         queue = shuffle(items);
-        // Avoid the last drawn item being first in the new deck
         if (lastDrawn !== null && queue.length > 1 && queue[0] === lastDrawn) {
             const swap = 1 + Math.floor(Math.random() * (queue.length - 1));
             [queue[0], queue[swap]] = [queue[swap], queue[0]];
@@ -92,7 +84,6 @@ function createDeck(items) {
     };
 }
 
-// Module-level decks — one per pool, persist across calls
 const dayDeck   = createDeck(DAY_MESSAGES);
 const nightDeck = createDeck(NIGHT_MESSAGES);
 
@@ -121,8 +112,18 @@ let messageTimer = null;
 let typeTimer    = null;
 let visible      = false;
 
+// --- Custom message state ----------------------------------------------------
+// customMessageActive: true while a custom (quip/encounter) message is showing
+// _customEndTime: timestamp when current custom message finishes (including postDelay)
+// The idle cycle will not restart until both flags are clear AND enough time has
+// passed since _customEndTime.
 let customMessageActive = false;
+let _customEndTime      = 0;        // ms since epoch
 let postCustomTimer     = null;
+
+// Idle interval config (ms)
+const IDLE_MIN_GAP = 6000;    // minimum time between idle messages
+const IDLE_MAX_GAP = 12000;   // maximum time between idle messages
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  BUILD DOM
@@ -224,44 +225,61 @@ function popOut(onDone) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+//  SCHEDULE NEXT IDLE MESSAGE
+//  Always schedules an absolute minimum gap (IDLE_MIN_GAP) from now, plus
+//  waits until after any custom message cooldown has expired.
+// ═══════════════════════════════════════════════════════════════════════════════
+function scheduleNextIdle() {
+    if (!visible) return;
+
+    const now         = Date.now();
+    const baseGap     = IDLE_MIN_GAP + Math.random() * (IDLE_MAX_GAP - IDLE_MIN_GAP);
+    // Don't fire until both the minimum gap AND the custom-message cooldown are over
+    const fireAt      = Math.max(now + baseGap, _customEndTime + IDLE_MIN_GAP);
+    const delay       = fireAt - now;
+
+    messageTimer = setTimeout(cycleMessage, delay);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 //  CYCLE LOOP  (idle thoughts)
 // ═══════════════════════════════════════════════════════════════════════════════
 function cycleMessage() {
     if (!visible || !bubble) return;
-    if (customMessageActive) return;
-
-    // FPV mode — use the HUD idle thought overlay instead of the bubble
-    if (state.cameraMode === 'fpv') {
-        const now         = performance.now();
-        const cooldownEnd = state.fpvCustomMessageEndTime + 3500;
-        const delay       = Math.max(0, cooldownEnd - now) + 500 + Math.random() * 1500;
-        messageTimer = setTimeout(() => {
-            if (!visible || state.cameraMode !== 'fpv') return;
-            const { text, emotion } = pickMessage();
-            showIdleThought(text, 4000, emotion);
-            messageTimer = setTimeout(cycleMessage, 4000 + 1000 + Math.random() * 2000);
-        }, delay);
+    // Hard guard: if a custom message is still active, reschedule instead
+    if (customMessageActive) {
+        scheduleNextIdle();
         return;
     }
 
-    // Standard bubble
+    // ── FPV mode — use HUD idle thought overlay ───────────────────────────
+    if (state.cameraMode === 'fpv') {
+        const { text, emotion } = pickMessage();
+        showIdleThought(text, 4500, emotion);
+        // Schedule next after display time + gap
+        messageTimer = setTimeout(cycleMessage, 4500 + IDLE_MIN_GAP + Math.random() * 4000);
+        return;
+    }
+
+    // ── Standard bubble ───────────────────────────────────────────────────
     const { text, emotion } = pickMessage();
     applyEmotion(emotion);
     popIn();
     typeWrite(text, () => {
         if (!visible || customMessageActive) return;
-        const hold = 2200 + text.length * 28 + Math.random() * 1000;
+        const hold = 2800 + text.length * 32 + Math.random() * 1200;
         messageTimer = setTimeout(() => {
+            if (!visible) return;
             popOut(() => {
-                if (!visible || customMessageActive) return;
-                messageTimer = setTimeout(cycleMessage, 400 + Math.random() * 600);
+                if (!visible) return;
+                scheduleNextIdle();
             });
         }, hold);
     });
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  POSITION ABOVE HEAD  (called every frame from kagura.js)
+//  POSITION ABOVE HEAD
 // ═══════════════════════════════════════════════════════════════════════════════
 function updateBubblePosition() {
     if (!bubble || !state.claw || !state.camera) return;
@@ -290,49 +308,84 @@ function updateBubblePosition() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+//  CLEAR ALL TIMERS
+// ═══════════════════════════════════════════════════════════════════════════════
+function clearAllTimers() {
+    if (messageTimer)   { clearTimeout(messageTimer);   messageTimer   = null; }
+    if (typeTimer)      { clearTimeout(typeTimer);      typeTimer      = null; }
+    if (postCustomTimer){ clearTimeout(postCustomTimer); postCustomTimer = null; }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 //  PUBLIC API
 // ═══════════════════════════════════════════════════════════════════════════════
 export function showSpeechBubble() {
     if (!bubble) createBubble();
-    visible = true;
+    visible             = true;
     customMessageActive = false;
-    clearIdleResumeTimers();
-    messageTimer = setTimeout(cycleMessage, 600);
+    _customEndTime      = 0;
+    clearAllTimers();
+    // Short initial delay before first idle message
+    messageTimer = setTimeout(cycleMessage, 2000 + Math.random() * 2000);
 }
 
 export function hideSpeechBubble() {
-    visible = false;
+    visible             = false;
     customMessageActive = false;
-    clearIdleResumeTimers();
-    if (messageTimer) { clearTimeout(messageTimer); messageTimer = null; }
-    if (typeTimer)    { clearTimeout(typeTimer);    typeTimer    = null; }
+    clearAllTimers();
     if (bubble) {
         bubble.style.opacity   = '0';
         bubble.style.transform = 'translateX(-50%) translateY(-100%) scale(0.85)';
     }
+    // Also clear FPV idle thought
+    clearIdleThought();
 }
 
+/**
+ * showCustomMessage — displays a custom (quip / encounter) message.
+ * While active it fully replaces the idle bubble.
+ * After holdMs the bubble fades; after holdMs+postDelay the idle cycle resumes.
+ *
+ * In FPV mode Kagura's chat box is used instead of the bubble.
+ */
 export function showCustomMessage(text, emotion = 'happy', holdMs = 3500, postDelay = 4000) {
-    if (!bubble) createBubble();
-    customMessageActive = true;
-    clearIdleResumeTimers();
-    if (messageTimer) { clearTimeout(messageTimer); messageTimer = null; }
-    if (typeTimer)    { clearTimeout(typeTimer);    typeTimer    = null; }
+    if (!visible) return;
 
+    // Mark custom active — blocks cycleMessage from firing
+    customMessageActive = true;
+    clearAllTimers();
+
+    // Record when the *entire* custom period (display + post-delay) will end
+    _customEndTime = Date.now() + holdMs + postDelay;
+
+    // ── FPV: show in the HUD Kagura chat box ──────────────────────────────
+    if (state.cameraMode === 'fpv') {
+        // Import lazily to avoid circular deps — fpvHUD imports speechBubble
+        // so we use state.fpvCustomMessageEndTime as the bridge
+        state.fpvCustomMessageEndTime = performance.now() + holdMs;
+        // Re-export to fpvHUD via dynamic import side-channel
+        import('./fpvHUD.js').then(m => {
+            m.showCharacterMessage('kagura', text, holdMs);
+        });
+        // Schedule idle resume after postDelay
+        postCustomTimer = setTimeout(() => {
+            customMessageActive = false;
+            scheduleNextIdle();
+        }, holdMs + postDelay);
+        return;
+    }
+
+    // ── Non-FPV: use the speech bubble ────────────────────────────────────
+    if (!bubble) createBubble();
     applyEmotion(emotion);
     textEl.textContent = text;
-    visible = true;
     popIn();
 
     messageTimer = setTimeout(() => {
         popOut(() => {
             postCustomTimer = setTimeout(() => {
                 customMessageActive = false;
-                if (state.dancePhase !== null) {
-                    messageTimer = setTimeout(cycleMessage, 500);
-                } else {
-                    hideSpeechBubble();
-                }
+                if (visible) scheduleNextIdle();
             }, postDelay);
         });
     }, holdMs);
@@ -340,8 +393,4 @@ export function showCustomMessage(text, emotion = 'happy', holdMs = 3500, postDe
 
 export function updateSpeechBubble() {
     if (bubble && visible) updateBubblePosition();
-}
-
-function clearIdleResumeTimers() {
-    if (postCustomTimer) { clearTimeout(postCustomTimer); postCustomTimer = null; }
 }

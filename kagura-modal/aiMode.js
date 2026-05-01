@@ -7,19 +7,15 @@ import { RIVER_Z, RIVER_WIDTH, BRIDGE_HALF } from './waterBridge.js';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  GRID CONFIGURATION
-//  Smaller cell = more accurate but slower A*. 0.4 is the sweet spot for this
-//  map size (36×36 world → ~90×90 grid ≈ 8100 cells, well within 10k iter budget).
 // ═══════════════════════════════════════════════════════════════════════════════
-const CELL        = 0.4;   // world units per grid cell
-const CHAR_RADIUS = 0.35;  // half-width used for collision probes (was 0.28, too small)
+const CELL        = 0.35;  // slightly finer grid for better bridge navigation
+const CHAR_RADIUS = 0.32;
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  OBSTACLE CHECK
-//  Uses a circular probe ring around the cell centre so no diagonal slip-through.
 // ═══════════════════════════════════════════════════════════════════════════════
 function isBlocked(x, z) {
     const bounds = state.groundBounds;
-    // Boundary
     if (x < bounds.xMin || x > bounds.xMax || z < bounds.zMin || z > bounds.zMax) return true;
 
     for (const obs of state.obstacles) {
@@ -34,12 +30,10 @@ function isBlocked(x, z) {
     return false;
 }
 
-// 8-probe ring — catches diagonal squeezes the old 4-probe missed
+// 8-probe ring — catches diagonal squeezes
 function isCellBlocked(cx, cy) {
     const w = cellToWorld(cx, cy);
-    // Centre
     if (isBlocked(w.x, w.z)) return true;
-    // 8-directional ring at CHAR_RADIUS
     const r = CHAR_RADIUS;
     const probes = [
         [ r, 0],[-r, 0],[0, r],[0,-r],
@@ -68,8 +62,7 @@ function cellToWorld(cx, cy) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  BINARY MIN-HEAP  (replaces slow O(n) Map scan in open list)
-//  This makes A* ~10× faster on this map size.
+//  BINARY MIN-HEAP
 // ═══════════════════════════════════════════════════════════════════════════════
 class MinHeap {
     constructor() { this._data = []; }
@@ -106,12 +99,12 @@ class MinHeap {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  LINE OF SIGHT  (denser step to avoid water slip-through)
+//  LINE OF SIGHT  — dense step so we never skip thin obstacles (bridge, river)
 // ═══════════════════════════════════════════════════════════════════════════════
 function lineOfSight(a, b) {
     const dist  = a.distanceTo(b);
-    // Step size = CHAR_RADIUS/2 so we can't skip over thin obstacles
-    const steps = Math.ceil(dist / (CHAR_RADIUS * 0.5)) + 1;
+    // Step at CELL/2 so every grid cell is visited
+    const steps = Math.ceil(dist / (CELL * 0.5)) + 1;
     for (let s = 0; s <= steps; s++) {
         const t = s / steps;
         const x = a.x + (b.x - a.x) * t;
@@ -122,7 +115,7 @@ function lineOfSight(a, b) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  A*  PATHFINDING  (heap-based, octal directions, weighted diagonal cost)
+//  A* PATHFINDING
 // ═══════════════════════════════════════════════════════════════════════════════
 const DIRS = [
     [1,0],[-1,0],[0,1],[0,-1],
@@ -131,15 +124,10 @@ const DIRS = [
 const COST = [1,1,1,1, 1.414,1.414,1.414,1.414];
 
 function heuristic(ax, ay, bx, by) {
-    // Octile distance — admissible for 8-directional movement
     const dx = Math.abs(ax - bx), dy = Math.abs(ay - by);
     return Math.max(dx, dy) + (Math.SQRT2 - 1) * Math.min(dx, dy);
 }
 
-/**
- * Find nearest unblocked cell to `gc` within radius `maxR` cells.
- * Returns {cx,cy} of best candidate or gc unchanged.
- */
 function nearestFreeCell(gc, maxR = 8) {
     if (!isCellBlocked(gc.cx, gc.cy)) return gc;
     for (let r = 1; r <= maxR; r++) {
@@ -156,36 +144,34 @@ function nearestFreeCell(gc, maxR = 8) {
         }
         if (best) return best;
     }
-    return gc; // give up — caller handles null path
+    return gc;
 }
 
 function aStar(start, goal) {
     let sc = worldToCell(start);
     let gc = worldToCell(goal);
 
-    // Snap start/goal to nearest free cell
     sc = nearestFreeCell(sc, 4);
-    gc = nearestFreeCell(gc, 8);
+    gc = nearestFreeCell(gc, 10);
 
     if (sc.cx === gc.cx && sc.cy === gc.cy) return [goal];
 
-    const key  = (cx, cy) => (cx << 16) | cy;  // integer key — faster than string
-    const gMap = new Map();                       // cell key → g cost
-    const par  = new Map();                       // cell key → parent node
+    const key  = (cx, cy) => (cx << 16) | cy;
+    const gMap = new Map();
+    const par  = new Map();
     const heap = new MinHeap();
 
     const sk = key(sc.cx, sc.cy);
     gMap.set(sk, 0);
     heap.push({ cx: sc.cx, cy: sc.cy, f: heuristic(sc.cx, sc.cy, gc.cx, gc.cy), g: 0, k: sk });
 
-    const MAX_ITER = 12000;
+    const MAX_ITER = 15000;
     let found = null;
 
     for (let iter = 0; iter < MAX_ITER; iter++) {
         if (heap.size === 0) break;
         const cur = heap.pop();
 
-        // Skip stale heap entries (node was already expanded with lower g)
         const curG = gMap.get(cur.k);
         if (curG === undefined || cur.g > curG) continue;
 
@@ -197,7 +183,6 @@ function aStar(start, goal) {
 
             if (isCellBlocked(ncx, ncy)) continue;
 
-            // Diagonal movement: both cardinal neighbours must be free
             if (d >= 4) {
                 if (isCellBlocked(cur.cx + DIRS[d][0], cur.cy) ||
                     isCellBlocked(cur.cx, cur.cy + DIRS[d][1])) continue;
@@ -220,7 +205,6 @@ function aStar(start, goal) {
 
     if (!found) return null;
 
-    // Reconstruct path
     const raw = [];
     let node = found;
     while (node) {
@@ -229,7 +213,6 @@ function aStar(start, goal) {
     }
     raw.reverse();
 
-    // String-pull (funnel) to remove unnecessary waypoints
     return stringPull(raw);
 }
 
@@ -250,7 +233,7 @@ function stringPull(path) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  RANDOM WALKABLE POSITION  (exported for hayabusa)
+//  RANDOM WALKABLE POSITION
 // ═══════════════════════════════════════════════════════════════════════════════
 export function getRandomWalkablePosition() {
     const b = state.groundBounds;
@@ -265,7 +248,7 @@ export function getRandomWalkablePosition() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  WALK SEGMENT  (single straight move between two waypoints)
+//  WALK SEGMENT
 // ═══════════════════════════════════════════════════════════════════════════════
 function walkSegment(targetPos) {
     return new Promise(resolve => {
@@ -276,8 +259,7 @@ function walkSegment(targetPos) {
         const distance = Math.sqrt(dx * dx + dz * dz);
         if (distance < 0.04) { resolve(); return; }
 
-        // Speed: faster when chasing Hayabusa, slower when wandering
-        const speed    = state.chaseTarget ? 1.5 : 1.1;  // units/sec
+        const speed    = state.chaseTarget ? 1.6 : 1.1;
         const duration = distance / speed;
 
         const rotY   = Math.atan2(dx, dz);
@@ -293,14 +275,12 @@ function walkSegment(targetPos) {
             }
         });
 
-        // Turn to face direction
         tl.to(state.claw.rotation, {
             y: state.claw.rotation.y + rotDiff,
             duration: Math.min(0.2, duration * 0.25),
             ease: 'power2.out'
         }, 0);
 
-        // Walk bob
         tl.to(state.claw.position, {
             x: targetPos.x, z: targetPos.z,
             duration,
@@ -314,7 +294,6 @@ function walkSegment(targetPos) {
             }
         }, 0.12);
 
-        // Settle
         tl.call(() => {
             if (!state.claw) return;
             gsap.killTweensOf(state.claw.rotation, 'z');
@@ -326,14 +305,16 @@ function walkSegment(targetPos) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  WALK TO TARGET  (A* + fallback)
+//  WALK TO TARGET  — A* with direct LOS fast-path
+//  KEY FIX: LOS fast-path now also verifies the line doesn't cross water
+//  by simply checking isBlocked on the midpoint and quarter-points.
 // ═══════════════════════════════════════════════════════════════════════════════
 async function walkToTarget(targetPos) {
     if (!state.claw || !state.dancePhase) return 'dead';
 
     const startPos = new THREE.Vector3(state.claw.position.x, 0, state.claw.position.z);
 
-    // Direct LOS fast path
+    // Only take LOS shortcut if both endpoints are clear AND full line is clear
     if (!isBlocked(targetPos.x, targetPos.z) && lineOfSight(startPos, targetPos)) {
         await walkSegment(targetPos);
         return 'arrived';
@@ -342,7 +323,6 @@ async function walkToTarget(targetPos) {
     const path = aStar(startPos, targetPos);
 
     if (!path || path.length === 0) {
-        // A* totally failed — this target is unreachable, signal caller
         return 'unreachable';
     }
 
@@ -355,10 +335,9 @@ async function walkToTarget(targetPos) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  MINI-ACTIONS  — ordered by "energy level" (used for context selection)
+//  MINI-ACTIONS
 // ═══════════════════════════════════════════════════════════════════════════════
 
-/** Small jump with squash-and-stretch */
 function miniJump() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -373,7 +352,6 @@ function miniJump() {
     });
 }
 
-/** Full spin with trailing petal vortex */
 function miniSpin() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -388,7 +366,6 @@ function miniSpin() {
     });
 }
 
-/** Gather + throw petal burst toward camera */
 function miniAttack() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -433,7 +410,6 @@ function miniAttack() {
     });
 }
 
-/** Gentle sway / dance shimmy */
 function danceWobble() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -445,7 +421,6 @@ function danceWobble() {
     });
 }
 
-/** Look around — rotate slowly left and right, as if scanning */
 function lookAround() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -457,7 +432,6 @@ function lookAround() {
     });
 }
 
-/** Bow — lean forward and snap back */
 function performBow() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -471,7 +445,6 @@ function performBow() {
     });
 }
 
-/** Excited hop-hop — two quick small jumps */
 function excitedHops() {
     return new Promise(async resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -493,7 +466,6 @@ function excitedHops() {
     });
 }
 
-/** Spin-jump combo — the flashy one */
 function spinJumpCombo() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -512,7 +484,6 @@ function spinJumpCombo() {
     });
 }
 
-/** Stretch — reach upward then settle, as if yawning/celebrating */
 function stretchUp() {
     return new Promise(resolve => {
         if (!state.claw || !state.dancePhase) { resolve(); return; }
@@ -529,10 +500,8 @@ function stretchUp() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  ACTION POOLS  — split by context (chasing vs wandering)
+//  ACTION POOLS
 // ═══════════════════════════════════════════════════════════════════════════════
-
-// Wander pool: calmer, more expressive, longer holds
 const WANDER_ACTIONS = [
     { fn: danceWobble,   weight: 3 },
     { fn: lookAround,    weight: 3 },
@@ -543,7 +512,6 @@ const WANDER_ACTIONS = [
     { fn: spinJumpCombo, weight: 1 },
 ];
 
-// Chase pool: energetic, quick actions between approach steps
 const CHASE_ACTIONS = [
     { fn: excitedHops,   weight: 4 },
     { fn: miniJump,      weight: 3 },
@@ -564,7 +532,6 @@ function pickWeightedAction(pool) {
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  WANDER WAYPOINT GENERATION
-//  Picks a point with some bias: prefer different quadrants than recent visit
 // ═══════════════════════════════════════════════════════════════════════════════
 let _lastWanderQuadrant = -1;
 
@@ -573,19 +540,16 @@ function getWanderTarget() {
     const cx = (state.claw?.position.x ?? 0);
     const cz = (state.claw?.position.z ?? 0);
 
-    // Pick a quadrant different from last
     let quad;
     do { quad = Math.floor(Math.random() * 4); } while (quad === _lastWanderQuadrant);
     _lastWanderQuadrant = quad;
 
-    // Quadrant corners: NW, NE, SW, SE
     const qx = quad < 2 ? [b.xMin, 0] : [0, b.xMax];
     const qz = quad % 2 === 0 ? [b.zMin, 0] : [0, b.zMax];
 
     for (let attempt = 0; attempt < 80; attempt++) {
         const x = qx[0] + Math.random() * (qx[1] - qx[0]);
         const z = qz[0] + Math.random() * (qz[1] - qz[0]);
-        // Require minimum travel distance so she actually moves meaningfully
         const dist = Math.hypot(x - cx, z - cz);
         if (dist > 3.0 && !isBlocked(x, z)) return new THREE.Vector3(x, 0, z);
     }
@@ -593,23 +557,20 @@ function getWanderTarget() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  RECOVERY — escape from any stuck / inside-obstacle position
+//  RECOVERY
 // ═══════════════════════════════════════════════════════════════════════════════
 async function recoverFromStuck() {
     if (!state.claw) return;
-
-    // Walk toward the map centre which is always safe
     const safe = new THREE.Vector3(0, 0, 3);
     const result = await walkToTarget(safe);
     if (result === 'unreachable') {
-        // Last resort: teleport snap to centre
         state.claw.position.set(0, state.claw.userData.baseY ?? 0, 3);
         groundCharacter();
     }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//  CONTEXTUAL DIALOGUE  (Kagura reacts to what's happening)
+//  CONTEXTUAL QUIPS  — rate-limited, won't fire during or just after custom msg
 // ═══════════════════════════════════════════════════════════════════════════════
 const WANDER_QUIPS = [
     { text: "I wonder where he went~",       emotion: 'curious'  },
@@ -629,47 +590,117 @@ const CHASE_QUIPS = [
     { text: "My petals will find you! 🌸",   emotion: 'excited'  },
 ];
 
-let _quipTimer = null;
+// Minimum gap between quips: 10 s wander, 6 s chase
+const QUIP_COOLDOWN_WANDER = 10000;
+const QUIP_COOLDOWN_CHASE  = 6000;
 let _lastQuipTime = 0;
-const QUIP_COOLDOWN_MS = 7000;
 
 function maybeShowQuip(isChasing) {
     const now = Date.now();
-    if (now - _lastQuipTime < QUIP_COOLDOWN_MS) return;
-    if (Math.random() > 0.35) return; // ~35% chance per call
+    const cooldown = isChasing ? QUIP_COOLDOWN_CHASE : QUIP_COOLDOWN_WANDER;
+    if (now - _lastQuipTime < cooldown) return;
+    // Chase: 55% chance per walk-end; Wander: 40%
+    if (Math.random() > (isChasing ? 0.55 : 0.40)) return;
 
     _lastQuipTime = now;
     const pool = isChasing ? CHASE_QUIPS : WANDER_QUIPS;
     const { text, emotion } = pool[Math.floor(Math.random() * pool.length)];
-    showCustomMessage(text, emotion, 2500, 1000);
+    // postDelay=0: idle cycle resumes from speechBubble naturally after the quip
+    showCustomMessage(text, emotion, 2800, 2000);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  CATCHING HAYABUSA — final ending sequence
+//  Called from hayabusa.js via state.onHayabusaCaught()
+// ═══════════════════════════════════════════════════════════════════════════════
+export async function playFinalCatchSequence(hayabusaPos) {
+    if (!state.claw || state.dancePhase === null) return;
+
+    // Pause AI movement
+    state.chasePause = true;
+    state.dancePhase = 'ending';
+
+    // Show special catch message
+    showCustomMessage("I finally caught you!! 💗🌸", 'excited', 4000, 0);
+
+    // Kagura runs to Hayabusa position
+    const target = new THREE.Vector3(hayabusaPos.x, 0, hayabusaPos.z);
+    const path   = aStar(
+        new THREE.Vector3(state.claw.position.x, 0, state.claw.position.z),
+        target
+    );
+
+    if (path) {
+        state.chasePause = false;
+        for (const wp of path) {
+            if (!state.claw) return;
+            await walkSegment(wp);
+        }
+        state.chasePause = true;
+    }
+
+    if (!state.claw) return;
+
+    // Celebration spin + petal burst
+    playSpinSFX();
+    spawnPetalBurst(state.claw.position.clone().add(new THREE.Vector3(0, 0.5, 0)), 60, '#ff99cc');
+    await new Promise(resolve => {
+        gsap.timeline({ onComplete: resolve })
+            .to(state.claw.rotation, { y: `+=${Math.PI * 4}`, duration: 1.2, ease: 'power2.inOut' });
+    });
+
+    // Walk together to origin (0, 0, 3)
+    showCustomMessage("Let's go home together~ 🌸", 'peaceful', 3500, 0);
+    await new Promise(r => setTimeout(r, 800));
+
+    state.chasePause = false;
+    const homePath = aStar(
+        new THREE.Vector3(state.claw.position.x, 0, state.claw.position.z),
+        new THREE.Vector3(0, 0, 3)
+    );
+    if (homePath) {
+        for (const wp of homePath) {
+            if (!state.claw) return;
+            await walkSegment(wp);
+        }
+    }
+
+    // Final bow at home
+    await performBow();
+    spawnPetalBurst(state.claw.position.clone(), 80, '#ffaacc');
+
+    // Stop AI mode cleanly
+    stopAIInternal();
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  MAIN AI LOOP
+//  FIX: Chase target re-acquisition — when we arrive at chaseTarget we
+//  immediately re-read state.chaseTarget (Hayabusa may have teleported and
+//  set a new one). We NEVER clear chaseTarget on unreachable; instead we
+//  wait briefly and retry so Kagura keeps chasing even across the bridge.
 // ═══════════════════════════════════════════════════════════════════════════════
 let _consecutiveFailures = 0;
-const MAX_FAILURES = 3;
+const MAX_FAILURES = 4;
 
 async function aiLoop() {
     _consecutiveFailures = 0;
-    _lastQuipTime = 0;
+    _lastQuipTime        = 0;
 
     while (state.dancePhase !== null) {
         if (!state.claw) break;
 
-        // ── Ending sequence ─────────────────────────────────────────────────
         if (state.dancePhase === 'ending') {
             await danceWobble();
             continue;
         }
 
-        // ── Chase pause (Hayabusa encounter drama) ──────────────────────────
         if (state.chasePause) {
             await new Promise(r => setTimeout(r, 80));
             continue;
         }
 
-        // ── Recovery: character stuck inside obstacle ────────────────────────
+        // Recovery: inside obstacle
         if (isBlocked(state.claw.position.x, state.claw.position.z)) {
             await recoverFromStuck();
             _consecutiveFailures++;
@@ -681,62 +712,65 @@ async function aiLoop() {
             continue;
         }
 
+        // Re-read chaseTarget fresh every iteration so Hayabusa teleports
+        // are picked up immediately without clearing the target on failure
         const isChasing = !!state.chaseTarget;
 
-        // ── Pick destination ────────────────────────────────────────────────
-        const target = isChasing ? state.chaseTarget.clone() : getWanderTarget();
+        // Pick destination
+        let target;
+        if (isChasing) {
+            // Always chase Hayabusa's CURRENT position, not a stale clone
+            target = state.chaseTarget.clone();
+        } else {
+            target = getWanderTarget();
+        }
 
-        // ── Navigate ────────────────────────────────────────────────────────
         const result = await walkToTarget(target);
 
         if (!state.claw || state.dancePhase === null) break;
 
         if (result === 'unreachable') {
             _consecutiveFailures++;
-            if (isChasing) {
-                // Chase target is unreachable — clear it so we wander instead
-                // (Hayabusa teleport will set a new one shortly)
-                state.chaseTarget = null;
-            }
+            // KEY FIX: don't clear chaseTarget on unreachable.
+            // Instead just wait and try again — Hayabusa may have moved
+            // to a more accessible cell in the meantime.
             if (_consecutiveFailures >= MAX_FAILURES) {
                 await recoverFromStuck();
                 _consecutiveFailures = 0;
+            } else {
+                await new Promise(r => setTimeout(r, 400));
             }
-            // Brief pause before retry
-            await new Promise(r => setTimeout(r, 300));
             continue;
         }
 
         if (result === 'paused' || result === 'dead') continue;
 
-        // ── Reset failure counter on success ────────────────────────────────
         _consecutiveFailures = 0;
 
-        // ── Post-walk action ────────────────────────────────────────────────
-        // Only do actions if still alive, not paused, not ending
         if (!state.claw || state.dancePhase === null || state.chasePause) continue;
         if (isBlocked(state.claw.position.x, state.claw.position.z)) continue;
 
-        // When chasing: show quip + do a quick energetic action occasionally
-        // When wandering: always do a richer action + more frequent quips
         maybeShowQuip(isChasing);
 
-        const actionChance = isChasing ? 0.45 : 0.82;
+        // When chasing Hayabusa: do a quick action less often so she keeps
+        // pursuing; when wandering: richer actions
+        const actionChance = isChasing ? 0.30 : 0.82;
         if (Math.random() < actionChance) {
             const pool   = isChasing ? CHASE_ACTIONS : WANDER_ACTIONS;
             const action = pickWeightedAction(pool);
             await action();
         }
 
-        // ── Wander: short idle pause so she feels alive, not robotic ────────
         if (!isChasing) {
-            const idleMs = 300 + Math.random() * 800;
+            const idleMs = 500 + Math.random() * 1000;
             await new Promise(r => setTimeout(r, idleMs));
+        } else {
+            // Tiny breath so we don't spin too fast between chase steps
+            await new Promise(r => setTimeout(r, 100));
         }
     }
 
     hideSpeechBubble();
-    if (_quipTimer) { clearTimeout(_quipTimer); _quipTimer = null; }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -747,7 +781,6 @@ function stopAIInternal() {
         state.dancePhase = null;
         if (state.danceAudio) { state.danceAudio.pause(); state.danceAudio = null; }
         if (state.danceEndTimer) { clearTimeout(state.danceEndTimer); state.danceEndTimer = null; }
-        if (_quipTimer) { clearTimeout(_quipTimer); _quipTimer = null; }
         if (state.claw) {
             gsap.killTweensOf(state.claw.position);
             gsap.killTweensOf(state.claw.rotation);

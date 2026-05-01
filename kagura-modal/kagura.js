@@ -53,8 +53,15 @@ function initScene() {
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 
     // ── Color-space & tone-mapping ─────────────────────────────────────────
+    // ANDROID FIX: Using LinearToneMapping + SRGBColorSpace is the safest
+    // combination across all mobile GPU vendors (Mali, Adreno, PowerVR).
+    // THREE.NoToneMapping with SRGBColorSpace causes incorrect linear→sRGB
+    // conversion on many Android drivers, making procedural canvas textures
+    // (grass, water, sky, petals) appear washed out or wrong colour.
+    // LinearToneMapping with exposure=1.0 is mathematically equivalent to
+    // "no tone mapping" but routes through the correct GPU code path.
     renderer.outputColorSpace    = THREE.SRGBColorSpace;
-    renderer.toneMapping         = THREE.NoToneMapping;
+    renderer.toneMapping         = THREE.LinearToneMapping;
     renderer.toneMappingExposure = 1.0;
 
     renderer.shadowMap.enabled = true;
@@ -109,7 +116,6 @@ function makeProgressBar() {
     return bar;
 }
 
-// ── Secondary "preloading Hayabusa" indicator shown below the main bar ────
 function makeSecondaryBar() {
     const wrap = document.createElement('div');
     wrap.id = 'hayabusaPreloadBar';
@@ -166,10 +172,6 @@ function loadModel() {
 
             loading.classList.add('hidden');
 
-            // ── Silently preload Hayabusa in the background ───────────────
-            // 800 ms delay lets the main render loop settle first, then we
-            // kick off the Hayabusa GLB fetch while the user interacts with
-            // Kagura.  By the time they click AI Mode the model is cached.
             setTimeout(() => {
                 const hBar = makeSecondaryBar();
                 preloadHayabusa(
