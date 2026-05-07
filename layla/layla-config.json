@@ -1,0 +1,42 @@
+{
+    "particleBackground": [
+        "⚙️",
+        "🔩",
+        "⚡",
+        "🔧",
+        "💥"
+    ],
+    "particleCount": 32,
+    "animations": [
+        {
+            "id": "jump",
+            "label": "⚡ Thunder Leap"
+        },
+        {
+            "id": "spin",
+            "label": "🌀 Storm Vortex"
+        },
+        {
+            "id": "attack",
+            "label": "💥 Cannon Beam"
+        },
+        {
+            "id": "ai",
+            "label": "🤖 Family Chase"
+        },
+        {
+            "id": "reset",
+            "label": "↩ Calm Reset"
+        }
+    ],
+    "modelFile": "models/layla.glb",
+    "modelScaleTarget": 1.0,
+    "cameraFov": 38,
+    "cameraDistance": 5,
+    "orbitLimits": {
+        "min": 1,
+        "max": 12
+    },
+    "shadowMapSize": 2048,
+    "toneMappingExposure": 1.0
+}

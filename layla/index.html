@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Layla's Workshop – Energy Cannon Chronicles</title>
+    <link rel="stylesheet" href="layla.css">
+    <!-- Favicon (create your own or use a placeholder) -->
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+
+    <!-- Preload large assets – tells browser to start fetching early -->
+    <link rel="preload" href="models/layla.glb" as="fetch" crossorigin>
+    <link rel="preload" href="models/nolan.glb" as="fetch" crossorigin>
+    <link rel="preload" href="models/lillian.glb" as="fetch" crossorigin>
+    <link rel="preload" href="models/clint.glb" as="fetch" crossorigin>
+    <link rel="preload" href="sounds/theme.mp3" as="fetch" crossorigin>
+
+    <!-- Open Graph / Social sharing -->
+    <meta property="og:title" content="Layla's Workshop – Energy Cannon Chronicles">
+    <meta property="og:description" content="Charge your cannon, chase your family, and light up the tinkerer's world.">
+    <meta property="og:image" content="icons/favicon.png">
+    <meta property="og:url" content="https://yourdomain.com/layla/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#0a0a2a">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- Import map for Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <!-- Service Worker registration (caching) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js', { scope: './' })
+                    .then(reg => console.log('[SW] registered:', reg.scope))
+                    .catch(err => console.warn('[SW] registration failed:', err));
+            });
+        }
+    </script>
+
+    <!-- Main module (defer until page is ready) -->
+    <script type="module" src="layla.js"></script>
+</head>
+<body>
+
+<!-- Animated floating particles background (CSS) -->
+<div class="particles-bg" id="particlesBg"></div>
+
+<!-- Open modal button -->
+<button class="open-btn" id="openBtn">⚡ Power Up ⚡</button>
+
+<!-- Modal overlay with 3D canvas -->
+<div class="overlay" id="overlay">
+    <div class="card">
+        <button class="close-btn" id="closeBtn">✕</button>
+        <h2>⚡ Layla – Energy Cannon Forge ⚡</h2>
+        <div class="canvas-wrap">
+            <canvas id="c"></canvas>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Charging capacitors…</p>
+            </div>
+        </div>
+        <div class="btns"></div>
+        <p class="hint">⚡ Drag to orbit · Scroll to zoom ⚡</p>
+    </div>
+</div>
+
+</body>
+</html>
