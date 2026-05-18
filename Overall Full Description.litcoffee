@@ -1,4 +1,14 @@
-Alucard
+1. Alucard — The Demon Hunter
+
+Background Story: Alucard is the orphaned son of a valiant soldier who served alongside Commander Tigreal in the second regiment of the Moniyan Empire. His father perished during a rash, unauthorized advance against a demonic stronghold, a battle that became a dark stain on the family name. Where Alucard had always envisioned his father as a glorious hero, the Empire's official record branded the regiment as undisciplined and disobedient. Consumed by the shame and ridicule that followed, a fiery vengeance ignited within the boy. He swore to erase this dishonor by dedicating his life to the complete extermination of all demons.
+
+Lore: To fulfill his oath, Alucard journeyed to the ancient and mysterious Monastery of Light. Accepted as the orphan of a fallen soldier, he became its most promising disciple, displaying both a natural talent and an undying determination for combat. There, he was secretly mentored by Tigreal, his father's old comrade, who taught him advanced combat skills and told him tales of his father's true heroism. After the events that shook the Empire, a demon-hunting mission went awry, and Alucard's arm was corrupted by a creeping darkness. A specially crafted gauntlet was forged to contain the corruption, allowing him to retain his humanity while wielding the very power he hunts.
+
+Abilities: Alucard is a master of sustained combat. His technique, Groundsplitter, sends a wave of energy forward, slowing enemies. He can then leap to a target with Whirling Smash, striking all foes in the area. His ultimate, Fission Wave, unleashes a massive blast of energy, absorbing the life force of any enemies it hits to bolster his own, turning him into a relentless force of vampiric attrition.
+
+Unique Facts: Alucard's name is an anagram—a detail not lost on the demons he hunts, as "Alucard" is "Dracula" spelled backward, a nod to his vampiric-like ability to drain life.
+
+Power: A peerless swordsman whose strength is directly proportional to the number of foes he faces. His life-draining abilities make him nearly unkillable in the heart of a battle, turning enemy offensives into his own source of immortality.
 
 The character presented is a striking example of a high-fantasy demon hunter or arcane swordsman, possessing a regal yet battle-hardened aesthetic that suggests a man in his mid-to-late twenties. His facial structure is defined by a sharp, aristocratic jawline and a prominent, straight nose that lends him an air of stern authority. His skin tone is a fair, pale ivory, which contrasts sharply with the vibrant colors of his attire. His eyes are a piercing, icy blue, reflecting a cold determination, set beneath well-kept eyebrows that match his hair. His hair itself is a short, stylishly tousled dirty blonde, swept back and to the side in a series of layered, textured locks that frame a forehead free of wrinkles but etched with the gravity of his profession. The overall facial composition is one of disciplined intensity, devoid of any non-human traits, though his sheer perfection gives him an almost ethereal, demi-god-like quality.
 
@@ -13,7 +23,17 @@ While the character is presented against a neutral void, one can easily imagine 
 
 
 
-Layla
+2. Layla — The Shining Star
+
+Background Story: Layla is the brave and selfless "daughter of Eruditio," the City of Scholars. A bright star in the night sky, she protects her beloved city with a powerful Malefic Cannon. As a child, she constantly asked her grandfather, a former city guard, about her parents, only to be met with a sad, reluctant silence. Sensing a great tragedy, she stopped asking to spare him further pain. The truth, however, could not stay hidden. She eventually learned that her parents Nolan and Lillian Osborne, brilliant inventors who constructed a vast airship, were not just "watching from the skies" in a metaphorical sense—they were literally there, their fate intertwined with the vessel they created.
+
+Lore: Born to the most outstanding inventor couple in Eruditio, a city of science and technology, Layla inherited their genius and her grandfather's adventurous spirit. She is a prominent member of the Eruditio Rangers and one of the central figures in the fate of the Land of Dawn. Her story is deeply woven into the city's fabric, from the Canal Quarter to the high-rise Spire of Knowledge.
+
+Abilities: Layla's power grows with distance. Her passive, Malefic Gun, causes her projectiles to deal increased damage to targets farther away. She fires a Malefic Bomb to gain a burst of speed and extended range. Her Void Projectile marks targets with volatile energy, causing them to be stunned when struck again. Her ultimate, Destruction Rush, fires a massive, long-range beam of energy capable of sniping fleeing foes from across the battlefield.
+
+Unique Facts: She is the first hero to appear in official Mobile Legends cinematics and is one of the primary protagonists of the entire MLBB lore.
+
+Power: A fragile but immensely powerful artillery cannon. She commands extreme range, able to eliminate threats before they can even approach her, making her a pure incarnation of long-distance devastation.
 
 Layla stands as a quintessential fusion of Victorian steampunk aesthetics and high-fantasy technological wonder. Her facial structure is characterized by a soft, youthful oval shape, suggesting a woman in her late teens or very early twenties. She possesses a refined, slender jawline that tapers into a delicate chin, complemented by a small, straight nose and a pale, porcelain skin tone that remains remarkably clear. Her most striking facial features are her large, expressive eyes, which are a vibrant, crystalline teal, framed by long, dark lashes and a gentle arch of blonde eyebrows. Her hair is a massive, voluminous display of golden-blonde locks, styled into iconic, exaggerated twin-tails that reach down past her waist. These twin-tails are secured high on the head, billowing out with incredible fullness before tapering into soft, curled tips. A set of short, diagonal bangs brushes across her forehead, while two longer strands frame the sides of her face, adding to her spirited and energetic silhouette. Atop her head, she wears a pair of sleek, gold-rimmed goggles with blue-tinted lenses, pushed back into her hair as a functional accessory that underscores her role as a marksman and tinkerer.
 
@@ -25,8 +45,17 @@ The background surrounding her is a void of pure, stark white, which serves to i
 
 
 
+3. Miya — The Priestess of the Moon
 
-Miya
+Background Story: Miya was born at the end of the Era of Strife, a dark time when the Endless War ravaged the elven people. She witnessed firsthand the horrors of the Abyss, which defiled the sacred Shadow Swamp and corrupted her kin into Dark Elves. Salvation came when the Moon Goddess herself created the Lunar Aegis, a protective shield over the Azrya Woodlands, allowing the Moon Elves to thrive once more. For this divine intervention, Miya devoted her life to service, becoming the Priestess of the Moon.
+
+Lore: For a thousand years, Miya faithfully served in the Lunar Temple, diligently watching over her people. However, as the Abyss and its dark legions expand once more, a call to war that has not been heard in millennia sounds again. From the heart of the Moonlit Forest, Miya has taken up her silver bow, swearing by the light of the moon to fight for the survival of her entire race.
+
+Abilities: Empowered by the moon, Miya's attacks gain speed with each hit thanks to her Moon Blessing passive. She activates Moon Arrow to fire multiple arrows with each shot. Her Arrow of Eclipse can immobilize a group of foes, and her ultimate, Hidden Moonlight, instantly removes all negative effects and conceals her, allowing for a flawless escape or a sudden, deadly ambush.
+
+Unique Facts: Miya is a sister to the Elf King, Estes, and together they have defended their people against the Abyssal Demons and Orcs.
+
+Power: The definitive high-speed archer. Her potential for destruction is exponential, starting as a precise volley and escalating into a hurricane of magically-imbued arrows that can obliterate entire armies in moments.
 
 The character presented is an elven archer of ethereal and moonlight-inspired design, exuding a regal yet combat-ready presence. Her facial structure is characterized by an elegant, youthful maturity, featuring a refined and slender jawline that tapers into a delicate chin. Her nose is straight and narrow, complementing a symmetrical facial harmony that suggests a late-teens to early-twenties human equivalence. Her eyes are a piercing, luminous shade of light blue, mirroring the brilliance of a clear night sky, framed by thin, dark lashes that accentuate her focused gaze. Her skin tone is exceptionally fair, almost porcelain, possessing a subtle cool undertone that blends seamlessly with her lunar aesthetic. Crowned upon her head is a mass of long, flowing hair of a stark, silvery-white or pale lilac hue, parted slightly to reveal her most defining racial trait: elongated, pointed elven ears that gracefully extend upward and outward. A portion of her hair is gathered into a high, voluminous ponytail that cascades down her back, while a silver, crystalline tiara or headpiece sits atop her brow, shaped like stylized wings or lunar crescents.
 
@@ -39,7 +68,17 @@ She stands upon a circular, ritualistic dais made of polished dark stone and inl
 
 
 
-Eudora
+4. Eudora — The Lightning Weaver
+
+Background Story: Eudora is a Light Elf born with a prodigious magical talent that was a curse rather than a gift. She grew up in a world where tension between humans and her kind was high, enduring a childhood steeped in prejudice and hardship. The loneliness of being distrusted and misunderstood was a constant companion. Her power, which could manifest as devastating lightning, would lash out with her emotions, leading to further fear and ostracization.
+
+Lore: Finding no solace among people, she spent her days in a beautiful garden, until it was destroyed by the same children who mocked her. She eventually joined the Magic Academy to learn control. Time and again, the power she was born with became a burden. Yet, in those lonely nights, she learned to wield her lightning not as a mark of shame, but as a tool to pierce the walls of prejudice. With power arcing from her fingertips, she declared that her name would no longer be shadowed, writing her own legend with lightning as her quill.
+
+Abilities: Eudora is the master of a single, overwhelming element. Her skills inflict Superconductor on targets. A Forked Lightning bolt damages foes in a fan shape. She hurls a Ball Lightning that stuns a target and reduces their defenses. Her ultimate, Thunder's Wrath, calls a cataclysmic lightning strike from the heavens, dealing apocalyptic damage to a single target, especially one already affected by her other spells.
+
+Unique Facts: Her name is a reference to one of the Hyades in Greek mythology, linking her to a lineage of divine storm-bringers.
+
+Power: The absolute pinnacle of single-target magical burst. Eudora does not fight prolonged battles; she delivers a swift, divine judgment from the skies, reducing a chosen foe to ashes before a battle can truly begin.
 
 This character is a striking, ethereal figure that blends the elegance of an elven noble with the sharp, dangerous energy of a living lightning storm. Her facial structure is defined by a narrow, aristocratic jawline and high, sculpted cheekbones that give her an air of cold, calculated superiority. Her nose is straight and slender, leading up to a pair of piercing, almond-shaped eyes that glow with a faint, otherworldly luminescence. These eyes are framed by dark, heavy lashes and perfectly arched, thin eyebrows that match the stark white of her hair. Her skin tone is exceptionally fair, almost like polished alabaster or pale porcelain, which contrasts sharply against the deep violets and blues of her attire. Above her forehead, she bears a crown-like headpiece consisting of two dark, metallic crescents that curve upward like stylized horns, framing her short, swept-back hair. Her hair itself is a brilliant, snowy white, styled in a sharp, wind-swept pixie cut that suggests constant movement, with jagged layers that mimic the flickering edges of a lightning bolt.
 
@@ -54,7 +93,17 @@ The background reinforces this theme of frigid, isolated power. She stands—or 
 
 
 
-Saber
+5. Saber — The Wandering Sword
+
+Background Story: Once, he was a man named Duan Meng, a warrior obsessed with kendo and the pursuit of perfection. His ambition led him to the infamous Laboratory 1718, where he willingly submitted to transformation, hoping to become the ultimate swordsman. The scientists of Laboratory 1718, masters of genetic engineering, fulfilled his wish in the cruelest way possible. They erased his memory and combined the DNA of hundreds of master swordsmen, turning him into a cold, flawless killing machine: a cyborg weapon known as Saber.
+
+Lore: As a tool of the laboratory, Saber was used to eliminate countless targets. However, fragments of his past life as Duan Meng began to surface as tortured nightmares. These flashes of a stolen identity drove him to madness and then to rebellion. He turned his blades on his creators, destroying Laboratory 1718. Now free but haunted, he wanders the Land of Dawn as the "Wandering Sword," searching for the memories that were stolen from him.
+
+Abilities: Saber's attacks reduce the enemy's physical defenses. He summons Orbiting Swords that damage nearby foes and launch projectiles. He can Charge through enemies, enhancing his next basic attack. His ultimate, Triple Sweep, is a devastating finisher: he charges at an enemy, launches them into the air with three precise, telekinetic sword strikes, leaving them helpless and broken.
+
+Unique Facts: Saber is the predecessor and brother-in-arms to Alpha, another cyborg created by the same laboratory.
+
+Power: A relentless assassin who isolates and eliminates a single target with surgical precision. His flying swords are a halo of death, and his ultimate technique ensures that once he locks onto an enemy, their fate is sealed before they touch the ground again.
 
 This character presents as a high-tech, cybernetic ronin, blending the sleek aesthetics of futuristic science fiction with the disciplined silhouette of a traditional samurai. His physical build is that of a lean, highly athletic martial artist—compact and muscular without being overly bulky, emphasizing speed, agility, and precision. His facial structure is defined by a sharp, V-shaped jawline and a straight, narrow nose, giving him a focused and stoic expression. His skin tone is a fair, pale porcelain that contrasts sharply with the dark mechanical elements of his suit. While the lower half of his face is visible, revealing a firm, determined mouth, his eyes are completely concealed behind a heavy, wraparound crimson visor. This visor, which glows with a soft, ominous red light, suggests advanced sensory or targeting capabilities, stripping away his humanity in favor of a cold, machine-like efficiency. His hair is a stark, snowy white, styled in a gravity-defying top-knot or high ponytail that flares out like a plume of smoke, held in place by a red ribbon that trails behind him like a thin stream of blood or energy.
 
@@ -67,7 +116,17 @@ His primary weapons are a pair of twin energy-infused katanas. The main blade is
 
 
 
-Akai
+6. Akai — The Panda Warrior
+
+Background Story: In the remote and peaceful Stream Valley, a panda named Akai was born with an unlikely dream: to become a mighty hero. Eager to help, his clumsy enthusiasm and cumbersome body often led to more trouble, transforming well-intentioned acts into comical disasters.
+
+Lore: While his village dismissed his dream as a joke, Akai's persistence was absolute. His dedication was noticed by a wandering monk who saw a hidden talent within the bumbling panda. The monk took Akai as a disciple, teaching him the ancient martial arts. He trained Akai in the use of one of the most difficult weapons to master: a flail, consisting of a hammer and chain. Through rigorous training, Akai transformed his greatest weakness—his weight—into his greatest strength, developing a unique fighting style that mixed unbreakable defense with stunning offense. He recalls his original intention and has become a true hero.
+
+Abilities: Akai embodies the art of Tai Chi, gaining a shield with each skill cast. He delivers a powerful Headbutt that can launch enemies into the air. A Body Slam damages and slows those around him. His ultimate, Heavy Spin, is a whirling dervish of panda fury; he spins uncontrollably, knocking back all enemies in his path and gaining immunity to slowing effects.
+
+Unique Facts: Despite his roly-poly appearance, Akai is a highly disciplined martial arts master whose clumsy nature is a deceptive mask for his true skill.
+
+Power: An immovable object and an irresistible force. Akai excels at disruption, using his body to break enemy formations, push assassins away from his allies, and lock down key targets with a continuous, spinning assault.
 
 The character presented is an anthropomorphic giant panda, possessing a formidable yet jolly physical presence that blends the raw power of a high-fantasy brawler with the disciplined aesthetic of a wandering martial artist. His physique is exceptionally robust and "barrel-chested," defined by a massive, rounded torso and thick, powerful limbs that suggest immense natural strength and durability. His fur is a classic high-contrast pattern of stark white and deep charcoal black; the white fur covers his broad face, large belly, and the center of his chest, while the black fur extends across his muscular shoulders, heavy arms, and thick legs. His facial structure is wide and friendly, featuring a soft but defined jawline tucked under a short, rounded chin. His nose is a prominent, dark, leathery snout, and his eyes are a striking, soulful emerald green, rimmed by the natural black fur "masks" characteristic of his species. Adding to his mystical warrior persona, he wears swirling, reddish-pink traditional face paint or markings on his cheeks, which give him an air of theatricality and spiritual significance. Despite his bulky frame, he stands with a grounded, agile posture that suggests he is capable of sudden, explosive movement.
 
@@ -80,7 +139,17 @@ The primary weapon carried by the panda is a massive, unconventional polearm cra
 
 
 
-Rafaela
+7. Rafaela — The Wings of Healing
+
+Background Story: Rafaela is a beloved angel, revered by the people. She and her twin brother, Argus, were born to a human mother in the Moniyan Empire. Their mother had been forced to imbibe holy water by the Sacrists of the Monastery of Light, a ritual that imbued her offspring with celestial power. However, in the legends of angels, only females were celebrated. All praise and adoration were lavished upon Rafaela, while Argus, the male angel, was treated as an outcast, receiving nothing but criticism.
+
+Lore: This cruel disparity sowed a deep rift between the twins. While Rafaela lived a life of light and adoration, Argus succumbed to bitterness, his resentment eventually luring him into the Abyss, where he became a Dark Angel. Rafaela watched her brother's fall with profound regret and helplessness. She remains an angel admired by all, yet carries the eternal sorrow of knowing her brother continues to perish in pain, a wound her healing magic can never mend.
+
+Abilities: A beacon of light, Rafaela strikes the nearest foes with Light of Retribution, revealing and slowing them. Her core ability, Holy Healing, calls down a pillar of light that heals all nearby allies and grants them a burst of speed. Her ultimate, Divine Resurrection, is a miracle; after a lengthy channel, she can instantly resurrect a fallen ally on the battlefield.
+
+Unique Facts: Rafaela's passive ability to resurrect an ally is one of the most unique and game-changing powers in the Land of Dawn, a direct defiance of death itself.
+
+Power: A beacon of hope and renewal. Rafaela's presence transforms a battlefield from a place of death into one of survival. Her ability to turn the tide of a losing war by reversing a key death is a power beyond raw damage.
 
 The figure presented is a celestial being of radiant, divine grace, embodying the classic archetype of a light-bearing archangel or a goddess of healing. She possesses a youthful yet eternal appearance, looking to be in her early twenties with a facial structure that is both delicate and commanding. Her face is a perfect oval, defined by a soft, tapering jawline that meets at a gentle chin, lending her an air of approachable divinity. Her nose is straight and slender, leading up to a forehead framed by a thin, golden circlet that sits like a crown of light. Her eyes are perhaps her most striking feature; they are wide and almond-shaped, possessing a deep, luminous blue hue that suggests a vast well of empathy and celestial power. These eyes are set beneath well-defined, arched brows of a light honey-brown that matches her hair. Her skin tone is a pristine, porcelain fair with a subtle, healthy glow as if lit from within by a holy aura. Her hair is a cascading waterfall of voluminous, wavy tresses in a warm dirty-blonde or light caramel shade, parted in the center and flowing down past her shoulders to her mid-back.
 
@@ -93,7 +162,17 @@ Floating beside her is a formidable ceremonial staff, which serves as both a con
 
 
 
-Franco
+8. Franco — The Frozen Warrior
+
+Background Story: Far from the heart of the Land of Dawn lies Nost Gal, a continent of eternal ice and snow. There, a tribe of seafaring people made their living from the frozen sea for generations. Franco was born the son of a famous harpooner, but unlike his tall and strong brothers, he was small and unimpressive. Despite his stature, his will was forged in the unforgiving cold.
+
+Lore: The resurrection of the pirate lord Captain Bane destroyed the peaceful lives of Franco's people. While others fled, Franco became the only warrior capable of uniting his people to fight back against Bane's tyranny. In a legendary duel, Franco saw through Bane's tricks and defeated him, bringing life and order back to the Northern Vale under his leadership. He later became a notorious figure in Los Pecados, losing his right arm in a fight against Kane, the region's criminal overlord.
+
+Abilities: A master of the hunt. Franco regenerates health and gains power while out of combat with his Wasteland Force passive. His signature skill, Iron Hook, launches his anchor to snag an enemy and drag them helplessly towards him. A Fury Shock damages and slows nearby foes. His ultimate, Bloody Hunt, suppresses a single target, holding them in place while he delivers six brutal strikes.
+
+Unique Facts: Franco is Bane's sworn nemesis, a rivalry that defines the fate of the Northern Vale.
+
+Power: The ultimate initiator. A single, well-placed hook from Franco can capture a high-value enemy from safety and deliver them into the heart of a waiting team, instantly securing a victory before the real battle begins.
 
 Facial Features and Expression
 This character possesses an intensely rugged and fierce facial structure, defined by a broad, weathered visage that suggests a life of endless combat and harsh environments. His most striking feature is a voluminous, fiery crimson beard that flows down to his chest, meticulously braided at the end with a metallic ring to keep it in place during battle. His mustache is equally impressive, styled into two sharp, upturned points that resemble the tusks of a predator, framing a wide mouth often set in a determined, teeth-gritting snarl. His eyes are small and piercing, glowing with a faint, focused intensity under thick, heavy brows. The nose is stout and slightly flattened, typical of a veteran warrior, sitting above a strong, square jawline that is partially obscured by his thick facial hair. His skin tone is a ruddy, sun-beaten tan, showing the texture of someone who has spent years under a biting wind or a scorching sun.
@@ -116,7 +195,17 @@ While he is currently seen in a frozen, mountainous tundra, this character would
 
 
 
-Chou
+9. Chou — The Kung Fu Boy
+
+Background Story: Chou was born into abject poverty in a remote, small slum in Antoinerei, living a life of the lowest quality. Despite the dreadful conditions that surrounded him, his heart remained incorruptibly kind. Day in and day out, he passionately cared for the elders and orphans of the slum.
+
+Lore: As turmoil in the Land of Dawn spread, it eventually touched even this isolated place. One day, Chou saved an old monk who was being chased by a violent mob. He brought the monk back to the slum and nursed him to health. In return for his kindness, the old monk imparted to Chou the secrets of an ancient Asian Kung-Fu. He told Chou that the world needed a real hero to stand up and end the turmoils. After completing his apprenticeship, Chou swore an oath to become that hero and set off on a journey without looking back. In his travels, he met kindred spirits like Lancelot, who mocked his poor fashion sense, and eventually found his way to Eruditio to fight alongside other champions.
+
+Abilities: A whirlwind of precise, unarmed strikes. Chou dashes with Jeet Kune Do, weaving through enemies. With Shunpo, he blinds an opponent. His ultimate, The Way of Dragon, is a legendary combo: he unleashes a flurry of kicks that knock an enemy airborne, followed by a powerful finishing strike that can send a target flying into his allies.
+
+Unique Facts: Chou is best friends with the refined knight Lancelot, who constantly complained about Chou's terrible style, eventually prompting him to change his entire outfit.
+
+Power: The ultimate martial artist. Chou controls the flow of combat with unparalleled mobility, chasing down the most elusive targets and delivering a devastating, crowd-controlling kick that turns one enemy's position against them.
 
 Facial Structure and Cranial Details
 The character possesses a highly defined and youthful facial structure that suggests a man in his early-to-mid twenties, characterized by sharp, angular features and an intense gaze. His jawline is exceptionally prominent and chiseled, leading to a strong, slightly pointed chin that emphasizes his athletic determination. The nose is straight and well-proportioned, fitting a classical heroic mold without being overly large. His eyes are a piercing, dark shade—likely deep brown or black—set beneath heavy, focused brows that give him a perpetual look of concentration. Most striking is his hair, which is styled in a modern, textured undercut. The top is a thick, voluminous mass of silver-white hair swept forward and upward in stylized ridges, while the sides and back are closely cropped in a natural dark brown or black shade, creating a sharp monochromatic contrast. His skin tone is a healthy, sun-kissed tan, suggesting a life spent training outdoors.
@@ -139,7 +228,17 @@ To truly suit this character's design, he would look best in a high-contrast, "N
 
 
 
-Nana
+10. Nana — The Sweet Leonin
+
+Background Story: Nana is a special Leonin, a race of cat-like spirits native to the Enchanted Forest. Born on a moonlit night, she was blessed with great spiritual powers from birth. Naturally enthusiastic and energetic, she was also the naughtiest of her kind, and her uncontrollable magic frequently caused chaos and trouble for everyone around her.
+
+Lore: Desperate to control her powers and stop causing trouble, Nana went on a quest to the dangerous Shadow Swamp with her best and only friend, a small creature named Molina. The journey was a trap. When danger struck, Molina sacrificed itself to protect Nana. Though she found the magical fruit she sought and finally gained control over her magic, the victory was hollow. The strength that now flows through her is a constant, bittersweet reminder of the friend she lost. She was later mentored by the Moonlight Archer, Miya, who taught her how to properly control her magical power.
+
+Abilities: Nana is a mischievous mage. She throws a Magic Boomerang that damages enemies in a line. Her Molina's Gift transforms enemies into a helpless critter, slowing them drastically. Her ultimate summons Molina's Blitz, calling down a series of magical strikes on a target area. Her passive, Molina's Gift, is the last remnant of her friend: upon taking fatal damage, Nana becomes untargetable and invincible for a short time, regaining a portion of her health as Molina's spirit protects her one last time.
+
+Unique Facts: Nana is one of the few beings who can literally cheat death, turning a killing blow into a moment of invulnerability.
+
+Power: A disruptive and deceptively durable support mage. Her power lies not in killing blows, but in sowing chaos. The ability to shut down an enemy's strongest warrior by transforming them into a defenseless critter, combined with her own immunity to a fatal strike, makes her an eternal nuisance.
 
 This character possesses a striking and whimsical aesthetic that suggests a youthful, feline-inspired race, blending the innocence of a child with the untamed features of a mystical forest dweller. They appear to be in their early childhood, perhaps between eight and ten years old in human terms, though their large, expressive features hint at a non-human lifespan. The facial structure is defined by a soft, rounded jawline and plump, rosy cheeks that emphasize a "chibi" or doll-like charm. Their nose is small, dainty, and slightly upturned, sitting beneath wide, soulful eyes that are a vibrant, crystalline blue. These eyes are framed by thick, dark lashes and soft, thin eyebrows, giving the character a perpetually curious and bright-eyed expression. Their skin tone is a pale, flawless porcelain with a faint pinkish hue on the cheeks and nose, reinforcing their youthful vitality.
 
@@ -154,7 +253,17 @@ Floating behind the character is their signature weapon: a colossal, curved boom
 
 
 
-Bruno
+11. Bruno — The Protector
+
+Background Story: Bruno was born frail in the slums, but his physical weakness was offset by an immense, courageous heart. His kindness and integrity were his defining traits. His greatest joy was playing soccer, which honed his incredible leg strength and kicking techniques.
+
+Lore: His life changed forever when a horrific accident nearly cost him his legs while he was saving the life of Dr. Rooney, a brilliant scientist. To repay his courage, Dr. Rooney used Eruditio's most advanced technology to give him new mechanical legs, making him more agile and powerful than ever before. To thank the city that saved him, Bruno swore to protect Eruditio with his life. He joined the City Guard and became the leader of the Rangers Squad, a powerful team that includes Chou and Lolita. Dr. Rooney later crafted an energy-cored soccer ball for him, fusing his lifelong passion with cutting-edge technology.
+
+Abilities: A kinetic fighter. His Volley Shot channels his soccer skills into a powerful, rebounding projectile. His Flying Tackle is a sliding kick that can interrupt enemies. His ultimate, Wave of the World Animation, sees him unleash a devastating, super-charged kick that sends his energy-cored ball ricocheting between multiple enemies.
+
+Unique Facts: Bruno's entire fighting style is a literal manifestation of soccer, transforming a beloved sport into a deadly martial art.
+
+Power: A fighter who uses momentum and precision. His rebounding kicks can pressure enemies from unexpected angles, making him a master of controlling space and punishing clustered formations.
 
 The character in the image, known as Bruno from Mobile Legends: Bang Bang in his "Vanguard Elite" skin, presents a striking fusion of peak human athleticism and high-tech cybernetic enhancement. He appears to be a man in his early to mid-twenties, radiating a cocky, high-energy confidence typical of a superstar athlete. His facial structure is defined by a sharp, masculine jawline and a straight, well-proportioned nose that anchors his focused expression. His complexion is a healthy, sun-kissed tan, suggesting a life spent outdoors in high-intensity environments. His hair is a vibrant, electric gold, styled in a voluminous, swept-back undercut that remains perfectly in place despite his high-speed maneuvers. While his eyes are partially obscured by sleek, amber-tinted tactical visors with golden frames, they convey a sense of predatory focus. The visor itself acts as a key accessory, sitting snugly against his brow and highlighting his modern, tech-forward aesthetic.
 
@@ -167,7 +276,17 @@ The environment surrounding him is an ancient, sun-drenched arena that contrasts
 
 
 
-Clint
+12. Clint — The West Justice
+
+Background Story: On the desolate frontier between the Moniyan Empire and the Agelta Drylands, a peaceful town thrived under the watchful eye of its Sheriff, Clint. A famous fast gunner with unmatched marksmanship and legendary draw speed, Clint was a man of duty who believed absolutely in the fairness and justice of the law.
+
+Lore: His peaceful life was shattered when a gang arrived to take over the town. After a fierce shootout, Clint captured the criminals. The leader was revealed to be Blandy, the nephew of a powerful warlord named Kane. Despite the town's terror of Kane, Clint ordered Blandy's execution. Fearful of retribution, the very people Clint had sworn to protect betrayed him, handing Blandy's body over to a gang and exiling Clint to appease Kane. Even in exile, his code of justice did not waver. After the matter was over, he ventured to Los Pecados to completely eradicate Kane's evil forces.
+
+Abilities: A gunslinger who relies on quick reflexes and trick shots. He fires a Quick Draw shot that blinds enemies. His Homing Bullet bounces off walls to find its mark. His ultimate, Grenade Roll, is a tactical toss that can clear zones and scatter foes. His passive, Double Shot, allows his next attack to fire twice, channeling his legendary draw speed.
+
+Unique Facts: Clint was the very first hero in MLBB to receive a complete rework, aimed at refining him into a true long-range marksman.
+
+Power: A duelist who relies on zoning and poking. He excels at whittling down opponents from a distance and controlling narrow corridors, making him a king of frontier-style skirmishes.
 
 The character presents as a seasoned, rugged human male appearing to be in his late twenties or early thirties, possessing a balanced, athletic physique that suggests high agility and deceptive strength. His facial structure is defined by a strong, squared jawline and a prominent, straight nose, giving him a classic, stoic appearance. His skin tone is a weathered, light tan—the complexion of a man who spends his life under the relentless sun of the frontier. Beneath a wide-brimmed black cowboy hat, which features a distinct silver V-shaped emblem on the crown and a small tan feather tucked into the band, his hair is a sandy-blonde or light brown. It is kept at a medium length, falling in messy, layered strands that brush against his shoulders and frame his face, while a short, well-groomed beard and mustache add to his gritty, experienced aesthetic. His eyes are sharp and focused, colored with a piercing blue or grey hue that suggests a calculating mind behind the gunslinger exterior.
 
@@ -180,7 +299,19 @@ The primary weapon he carries is a massive, heavy-caliber rifle or shotgun, whic
 
 
 
-Gord
+13. Gord — The Professor of the Mystics
+
+Background Story: Gord was the living proof of excellence in the Magic Academy. Born with the innate gift to manipulate mystic powers, he mastered complex spells at an age when his peers were still learning basic incantations. However, his genius was a double-edged sword that cut away his humility, transforming him into an arrogant prodigy.
+
+Lore: His hubris led him to a forbidden book that detailed a method to forge a pure mystic existence from a human body. Ignoring all warnings, the young wizard launched into the experiment, and initially, it worked. Pure mystic energy flowed in his veins, granting him unimaginable power. But he could not control it. The energy overwhelmed him, and his body was nearly destroyed by the conflicting forces. He was saved only by the timely intervention of Elward, the chief wizard. The incident took a huge toll, but it also humbled him. His body was left permanently scarred, half red and half blue—a visual testament to the wild energies he contains.
+
+Lore: He became a professor at the academy and was Valir's mentor. However, after his knowledge was transferred to Valir, his student betrayed him, uniting arcane power with ancient fire magic to create a dangerously unstable force.
+
+Abilities: Gord is a master of mystical energy. He throws a Mystic Projectile that bounces between targets. He can conjure a Mystic Injunction, a pool of raw magical power that damages enemies over time. His ultimate, Mystic Gush, is a continuous beam of concentrated mystic energy that he can direct to devastate his foes.
+
+Unique Facts: Gord is currently seeking to stop his former student, Valir, whose arcane flame has gone dangerously out of control.
+
+Power: A sustained damage mage who controls zones of the battlefield. His true power is revealed when enemies are trapped within his ultimate; the continuous beam of raw magic can melt an entire team in seconds if left unchecked.
 
 The figure presented is a being of pure arcane energy and celestial power, appearing as a synthesis between a cosmic entity and a disciplined warrior. His physical form is striking, characterized by a skin tone that transitions from a deep, regal violet on his lower torso and limbs to a brighter, glowing indigo around his chest and face. His body physique is that of an elite athlete or a demigod, boasting lean, hyper-defined musculature with a powerful upper body, a broad chest, and an incredibly narrow waist. This "V-taper" is accentuated by the glowing energy patterns that seem to flow through his veins like liquid starlight. His facial structure is sharp and ethereal, featuring a high, chiseled jawline that meets at a pointed chin, and a straight, noble nose that gives him an air of stoic authority. His eyes are perhaps his most captivating feature; they lack pupils and irises, instead consisting of twin orbs of brilliant, pulsing white light that emit a faint, misty vapor. His hair is not composed of follicles but of flickering, ethereal cyan flames that drift upward as if defying gravity, styled in a swept-back, wild crest that evokes the image of a comet’s tail. He appears to be in his physical prime, possessing the timeless maturity of a scholar who has transcended mortal aging.
 
@@ -193,7 +324,17 @@ The background reinforces this sense of epic scale and mythological weight. He i
 
 
 
-Harley
+14. Harley — The Genius Mage
+
+Background Story: Hailing from the prestigious Lion Academy in the Magical City, Harley was blessed at birth by the Magical Goddess herself. A true star of the academy, he could learn and master any magical spell with an ease that baffled his professors. He is also a member of the noble House Vance and the adoptive younger brother of the sharpshooter Lesley.
+
+Lore: With his incredible magical talent, Harley was a natural-born troublemaker, using his spells to pull pranks and wreak havoc throughout the kingdom. The only person who could ever control him was his elder sister, Lesley. One night, while on an adventure, he overheard a conspiracy by an organization called the "Dark Wizard." During his investigation, he accidentally activated a space portal and was teleported to Eruditio. With the help of the Eruditio Rangers, he returned to destroy the Dark Wizard's core. Having matured through this adventure, Harley now journeys the Land of Dawn to find worthy opponents, with Lesley secretly watching over him.
+
+Abilities: A mischievous duelist who fights with magic cards and tricks. He can use a Space Escape to teleport away, leaving behind a hat that damages enemies. He throws a Poker Trick of magical cards in a cone. His ultimate, Deadly Magic, throws a magic hat at a target, dealing massive burst damage.
+
+Unique Facts: Despite his childlike and playful appearance, Harley is actually a male mage, a fact that surprises many who mistake him for a girl.
+
+Power: A high-mobility assassin-mage. His power comes from his unpredictability; he can burst down a target with a flurry of cards and his ultimate before instantly teleporting back to safety, making him nearly impossible to catch.
 
 This character presents as a youthful, mischievous male mage with the refined yet whimsical aesthetic of a Victorian-era illusionist. He possesses a petite, slender, and agile body physique that suggests speed rather than raw strength, standing with a confident, crossed-legged posture that radiates a playful arrogance. His facial structure is defined by a soft, rounded jawline and a small, pert nose, giving him an appearance that fluctuates between a late child and early adolescent, likely in the range of 10 to 13 years old. His skin tone is a pale, porcelain fair, providing a stark contrast to his vibrant features. Most striking are his large, expressive almond-shaped eyes, which shimmer with a bright emerald green hue, framed by thin, light-colored eyebrows and an enigmatic, slightly upturned smirk. His hair is a thick, voluminous mass of golden-orange curls, styled into two prominent, symmetrical horizontal rolls that sit just above his ears, evoking a classic, theatrical "showman" look.
 
@@ -206,7 +347,17 @@ The aura surrounding this figure is one of refined chaos; he carries the presenc
 
 
 
-Balmond
+15. Balmond — The Bloody Beast
+
+Background Story: Balmond is an Orc, a member of a once-mighty race with a long and tragic history. Their ancestors were the renowned Bloodaxe Orcs, and through a series of brutal defeats in the Endless War and the Golden Era, they were stripped of their homeland, fragmented into scattered clans, and subjugated by the oppressive rule of the Blood Demons.
+
+Lore: Born in a traditional tribe within the Roaring Wilderness, Balmond was raised by his father, who filled his head with tales of past Orc glories and the dream of reclaiming their kingdom. He trained relentlessly, mastering combat and studying ancient tomes of strategy. When the demons came to plunder his tribe, Balmond led the warriors in a rebellion, killing the demon leader. However, during a great battle, he consumed the blood of a Blood Demon and flew into an uncontrollable rage. This act of desperation and power aroused the interest of Alice, the Queen of Blood. She signed a contract with him, promising the return of the Stormeye Wasteland for his people. To secure his race's future, Balmond now fights for the Demons, an act that weighs heavily on his warrior's heart.
+
+Abilities: A whirlwind of destruction. His passive, Bloodthirst, heals him whenever he kills a unit. He spins with a Cyclone Sweep, dealing continuous damage. He can leap to a location with Lethal Counter, dealing damage. His ultimate, Savage Roar, is a devastating cleave that deals massive damage based on the enemy's missing health, making it a perfect execution tool.
+
+Unique Facts: Balmond and Alice are often regarded as the main antagonists in the overarching narrative of the Land of Dawn.
+
+Power: A durable, spinning executioner. His power is in his chaotic momentum. He charges into the heart of a fight, dealing constant damage to everything around him, and finishes off weakened foes with a single, earth-shattering cleave.
 
 This warrior presents as a towering, hyper-masculine Orcish figure, radiating a sense of primal authority and immense physical power. His skin is a deep, weathered reddish-brown or clay-like tone, etched with glowing orange tribal markings that span across his massive chest and shoulders like cooling lava. His physique is Herculean, characterized by an incredibly broad upper body, "V-tapered" torso, and muscle groups so dense they appear almost metallic. His abdominal muscles are deeply defined, and his trapezius muscles slope steeply into a neck as thick as a tree trunk. He appears to be in his late prime, perhaps the equivalent of a human in his late 30s or early 40s, possessing a face hardened by centuries of warfare rather than age. His jawline is massive and angular, forming a wide, square base that supports a prominent chin. His nose is broad and slightly flattened, and his mouth reveals protruding lower tusks that signify his non-human heritage. His eyes are small but piercing, glowing with a faint, predatory light under a heavy, furrowed brow. His hair is a vibrant, blood-red hue, styled into a high, thick ponytail that cascades down his back, bound by bone-like rings and ending in sharp, ornamental spikes.
 
@@ -219,7 +370,17 @@ The background reinforces this theme of cosmic devastation. He stands upon a cra
 
 
 
-Minotaur
+16. Minotaur — The Son of Minos
+
+Background Story: In olden times, a great state named Minoa thrived in the Agelta Drylands. The prince of this state was Minotaur, a figure of immense strength but tragic fate. In a moment of uncontrollable rage, Minotaur fatally injured his own father, the king. Overcome with immeasurable shame and regret, he exiled himself to the Minoan Labyrinth, a prison of his own making, to spend his days in solitude.
+
+Lore: For an age, he remained in the labyrinth, wrestling with his inner demons. When he finally found the strength to step out, centuries had passed. He discovered that the world had moved on without him: his state had long perished, and his kin were all gone. Now, with teeth set in grim determination, this prince of a forgotten age embarks on a path to restore his homeland to its former glory, carrying the weight of his entire lost civilization on his shoulders.
+
+Abilities: A fury-driven tank. His abilities change based on his Rage Mode. Normally, he can heal himself and allies. When his rage is full, he becomes enraged, gaining new offensive skills and dealing massive area damage. His ultimate is a powerful ground slam that knocks up enemies.
+
+Unique Facts: The Minotaur race is part of the ancient Centaur lineage, one of the oldest races in the Land of Dawn.
+
+Power: A hybrid of support and offense. His power shifts dynamically in battle; he can sustain his allies through a long siege and then, when his rage boils over, transform into a frontline destroyer.
 
 This character is a towering, anthropomorphic minotaur-like entity that exudes a primal, volcanic power. His facial structure is defined by a broad, subterranean jawline and a flat, beast-like nose that transitions into a pair of protruding lower tusks. His eyes are perhaps his most striking feature, lacking visible pupils and instead glowing with a continuous, molten orange luminescence that suggests an internal furnace of rage. A black, angular sigil is tattooed or branded directly onto the center of his forehead, resting just below a wild, fiery orange mane. This hair is thick and voluminous, swept upward into jagged, flame-like tufts, while his facial hair consists of a long, braided orange beard that reaches down to his upper chest, held together by small, dark bands. He possesses two sets of horns: a pair of massive, dark slate-blue bull horns that curve forward and inward around his face, and several smaller, bone-white spikes that erupt from the heavy pauldrons on his shoulders.
 
@@ -232,7 +393,17 @@ His weapon is a gargantuan, two-handed war hammer that appears to be carved from
 
 
 
-Alice
+17. Alice — The Queen of Blood
+
+Background Story: At the beginning of the Era of Strife, Alice was born the youngest, illegitimate daughter of the wealthy and powerful Antalus family. Compared to her two distinguished brothers, she was treated as insignificant, blindfolded by her family's shame and never valued.
+
+Lore: Growing up in this malicious environment, she grew to hate everyone around her: her unfair destiny, her family, and the "hypocritical gods" they believed in. These negative emotions drew the whispers of demons. Under the influence of dark powers, she provoked disputes and eventually seized control of the entire family, leading them in a mass betrayal of the Lord of Light to join the Abyss. This ultimate treachery triggered a terrible divine punishment, transforming Alice and her followers into blood demons. Now, as the immortal Queen of Blood, she is one of the primary antagonists of the entire realm, having lived for millennia to master her dark arts and plot the Abyss's final victory.
+
+Abilities: A vampiric mage who thrives on life force. She throws a Flowing Blood orb that returns to her, damaging enemies along its path. She can dash to absorb blood from a target. Her ultimate, Blood Ode, transforms her into a true queen of darkness, draining the life force of all nearby enemies continuously, making her immortal for as long as she has victims to feed upon.
+
+Unique Facts: Alice orchestrated the "Royal Plan" that resulted in the birth of Dyrroth, the Prince of the Abyss, creating a masterpiece of darkness to serve as her champion.
+
+Power: An immortal life-drain mage. Her power is tied directly to the suffering of her enemies. In the center of a battle, she becomes an unkillable vortex of death, growing stronger with every drop of blood she spills.
 
 This character presents a striking, demonic silhouette that exudes an aura of ancient, predatory nobility. Standing with a poised and lethal elegance, she possesses a slender, athletic physique characterized by a tall, lithe frame that suggests both agility and immense magical power. Her skin is a pale, porcelain white, almost alabaste in its smoothness, which provides a sharp, ethereal contrast against the dark and vibrant tones of her attire. Her facial structure is defined by a sharp, aristocratic jawline and high, prominent cheekbones that taper into a refined, slightly pointed chin. Her nose is straight and narrow, adding to her dignified yet menacing expression. Her eyes are perhaps her most captivating feature—narrowed and piercing with a glowing, vibrant crimson hue that seems to flicker with an internal, demonic fire. These eyes are framed by thin, dark eyebrows and subtle, dark eyeshadow that enhances her predatory gaze.
 
@@ -245,7 +416,17 @@ She does not carry a physical handheld weapon, as her entire form—from her raz
 
 
 
-Zilong
+18. Zilong — The Spear of the Dragon
+
+Background Story: In his limited memory, Zilong recalls a quiet and peaceful life in the Cadia Riverlands as the son of a traveling craftsman. This life was shattered in an accident that separated him from his family. He was taken in by the Great Dragon, a being of immense power, and lived at the Dragon's Altar for seven years.
+
+Lore: Zilong is the adopted son of the Great Dragon, and in the eyes of his master, his personality and abilities far surpassed those of the dragon's nine natural sons. He became deeply trusted. Sworn by the Dragon's decree, Zilong roams from world to world, traversing space and time. His purpose is to assist wise rulers in their time of need, removing all obstacles and enemies before them with his unparalleled spear-fighting techniques. Now, the Land of Dawn is in great danger, and Zilong has come to its aid, his name spreading among the land as a hero of justice and bravery.
+
+Abilities: A mobile and aggressive fighter. His passive, Dragon's Flurry, causes his next basic attack to become a multi-hit combo. He can flip an enemy over his back with Spear Flip, isolating them. He dashes towards a target with Spear Strike. His ultimate, Supreme Warrior, removes debuffs and grants him immense attack and movement speed for a long duration, turning him into a relentless pursuer.
+
+Unique Facts: Zilong was heavily inspired by the historical figure Zhao Yun (Zhao Zilong), a famous general from the late Han Dynasty in China.
+
+Power: The ultimate pursuer. Once Zilong activates his Supreme Warrior state, no enemy can outrun him. He specializes in charging into the backlines and eliminating fragile, high-priority targets with a flurry of rapid strikes.
 
 This character is a striking synthesis of a celestial warrior and a legendary draconic spearman, exuding an aura of disciplined power and mythic authority. He possesses a lean, athletic physique, built for explosive speed and agility rather than raw, bulky strength. His skin is a clear, fair tone that highlights the sharp, aristocratic contours of his face. He has a highly defined, V-shaped jawline and a straight, noble nose that contributes to an overall facial structure that feels both youthful and seasoned by battle. His eyes are narrow and piercing, possessing a sharp, focused gaze that suggests a warrior who can see through the chaos of a battlefield. His hair is a deep, rich chocolate brown, styled in a dramatic, voluminous top-knot that stands tall and tapers into sharp, flame-like points, held together by a cyan and gold headband that mimics the shape of a crown or a set of small dragon horns.
 
@@ -258,7 +439,17 @@ His weapon is the centerpiece of his martial identity: a massive, ornate spear t
 
 
 
-Lolita
+19. Lolita — The Steel Elf
+
+Background Story: Lolita was a gentle half-elf girl born in a remote, peaceful elven village. Her idyllic life was burned to ash when war swept across the land, destroying her village and killing both of her parents. Just as her own life was in peril, she was saved and adopted by Dr. Rooney, the great mechanical scientist of Eruditio.
+
+Lore: Dr. Rooney implanted the Noumenon Energy Core into her small body, a powerful artifact that gave her the strength to wield a massive, mechanical hammer that seemed impossibly heavy for her frame. She became a craftsman in the city, but an uncommon ambition burned within her: to join the Eruditio Rangers and fight alongside the very people who had saved her. Her gentle nature was initially a liability; though a skilled fighter, she couldn't bear to hurt anyone. Her courage was finally recognized when she used her body to protect the Noumenon Energy Core from an attack on the workshop, enduring a severe wound. The Rangers took her in, and she finally understood that gentleness itself is a form of strength.
+
+Abilities: A guardian with a massive hammer. Her Noumenon Energy Core generates a shield for her and a nearby ally. She dashes forward with Power Charge, her next basic attack stunning the target. Her most iconic ability, Guardian's Reflection, raises her shield to block all incoming ranged projectiles, protecting her team. Her ultimate, Noumenon Blast, charges a powerful shockwave that damages and slows enemies in a huge area.
+
+Unique Facts: Lolita is a key member of the Eruditio Rangers, fighting alongside Bruno and Chou to protect their city.
+
+Power: A bastion of defense. Her power lies in the negation of enemy attacks; her shield can render an entire team's ranged damage useless, and her ultimate can stun an entire frontline, creating a perfect window for her allies to counterattack.
 
 The character is an elven warrior with a youthful yet hardened demeanor, appearing to be in her late teens to early twenties. Her facial structure is defined by a delicate, slightly tapered jawline and a small, straight nose that lends her an air of focused intensity. Her skin is a fair, pale peach tone, providing a sharp contrast to her vibrant, saturated orange hair. This hair is styled with a thick, side-swept fringe that frames the left side of her face, while the rest is gathered into a single, voluminous braid that hangs over her right shoulder, secured by a simple band. Her eyes are a striking, large, and luminous icy blue, framed by thin, elegant eyebrows that match her hair color. Most notably, her pointed ears extend outward and slightly upward, marking her non-human heritage and adding to her lithe, agile aesthetic.
 
@@ -271,7 +462,17 @@ The background is a vast, open landscape under a twilight-colored sky that trans
 
 
 
-Hayabusa
+20. Hayabusa — The Crimson Shadow
+
+Background Story: In the north of the Cadia Riverlands, hidden within a thick forest where cherry blossoms float in the air, lies the home of the Scarlet Shadow ninja sect. Hayabusa was born here as the second son of the Shadow Sect's leader. He grew up under his father's iron-handed rule and lived in the shadow of his elder brother, whose ninjutsu he could never rival. Despite this, he remained a kind friend and loyal family member.
+
+Lore: His world was shattered when his brother was grievously harmed by Hanzo, a rogue ninja of immense power. The tragedy ignited a fire within Hayabusa. He resolved to spend the rest of his days mastering the art of ninjutsu, channeling all his pain and kindness into a singular, lethal purpose: to hunt down Hanzo and exact a bloody revenge. He eventually won the title of the strongest ninja, becoming the leader of the Shadow sect.
+
+Abilities: A master of shadows. He throws Phantom Shurikens that return to him, dealing damage twice. He teleports to a shadow with Quad Shadow, leaving behind a phantom that can be used to escape or engage. His ultimate, Ougi: Shadow Kill, transforms him into a blur of deadly shadows, striking a single target multiple times and becoming untargetable during the assault.
+
+Unique Facts: His childhood lover/partner is the Onmyoji Master Kagura, and his fierce childhood friend is Hanabi. The name "Hayabusa" means "Peregrine Falcon," a fitting title for a warrior who dives onto his prey.
+
+Power: The apex of single-target assassination. Hayabusa's power is in his elusiveness and his ultimate, which allows him to eliminate a heavily protected target while becoming completely immune to all harm for the duration.
 
 This figure embodies the ultimate discipline of a shadow warrior, standing with a lean, athletic physique that balances raw power with the lithe flexibility required for high-speed combat. His skin tone is a pale, cool ivory that suggests a life spent in the periphery of light, marked only by a sharp, horizontal scar that cuts across the bridge of his nose—a testament to past brushes with death. His facial structure is defined by a razor-sharp jawline and high, prominent cheekbones that give him a cold, aristocratic air. His eyes are his most striking feature, burning with a deep, piercing crimson hue that glows with an internal intensity, framed by narrow, focused lids. Above them sits a chaotic mane of jet-black hair, styled in thick, gravity-defying spikes that flare outward, giving his silhouette a jagged, aggressive energy. A dark face mask conceals the lower half of his visage, leaving only those haunting red eyes and the scarred bridge of his nose to convey his silent, lethal intent.
 
@@ -284,7 +485,17 @@ Carried over his right shoulder is a formidable ninjato, its hilt wrapped in a c
 
 
 
-Freya
+21. Freya — The Valkyrie
+
+Background Story: Freya was born a warrior in the Northern Vale, where the aurora paints the sky and the sea is frozen iron. She was the firstborn daughter of a chief, raised not as a princess but as a shieldmaiden who could match any man in battle. Her life was a song of axes until the day the Abyss came for her homeland. In a cataclysmic battle, Freya faced a demon lord and was struck down, her spirit slipping into the cold, silent void of the afterlife.
+
+Lore: But death was not her end. The gods of the North, the Aesir, saw her valiant soul and chose her. She was resurrected as a Valkyrie, a winged chooser of the slain, granted divine power and a sacred duty. Returning to the mortal world, she found that time had passed and her homeland had fallen to darkness. Now, Freya fights not for glory, but to reclaim her home and to restore the honor of the North, a living bridge between the mortal realm and the divine halls of the gods.
+
+Abilities: Freya enters a state of Valkyrie Descent where her attacks become ranged holy blasts that strike in a cone. She can leap into a battle with a Spirit Combo, rapidly punching enemies. Her ultimate, Svalinn's Aegis, conjures a divine shield that absorbs damage and converts it into physical power, making her an unbreakable bulwark on the front lines.
+
+Unique Facts: Freya is the only hero from the Northern Vale to have been chosen directly by the ancient Aesir, making her a literal demigod among mortals.
+
+Power: A divine berserker. Her strength escalates as she absorbs punishment, transforming her from a defensive wall into a winged avenger who rains holy destruction upon those who dare to strike her.
 
 The character presented is a powerful, valkyrie-inspired warrior standing amidst a desolate, frozen tundra. She exudes an aura of divine authority and martial prowess, appearing as a celestial or god-like being rather than a mere mortal. Her physical age appears to be in her mid-to-late twenties, possessing a maturity that suggests centuries of combat experience while maintaining a flawless, eternal vitality. Her facial structure is defined by a sharp, regal jawline and a straight, noble nose that contributes to her commanding presence. Her eyes are a piercing, crystalline blue, reminiscent of glacial ice, set beneath finely groomed, dark eyebrows that contrast against her luminous skin. Her complexion is fair and radiant, appearing almost porcelain-like despite the harsh environment. Framed by a golden, winged circlet or diadem that sits atop her head, her hair is a brilliant, pale blonde, styled in thick, intricate braids that cascade over her shoulders and down her back, ensuring her vision remains unobstructed during the heat of battle.
 
@@ -297,7 +508,17 @@ The background reinforces her role as a guardian of the frigid wastes. She stand
 
 
 
-Karina
+22. Karina — The Shadow Blade
+
+Background Story: Karina is an assassin of the Shadow Sect, trained in the same unforgiving school as Hayabusa. She was a prodigy, a master of dual blades who could cut a falling cherry blossom petal in complete darkness. Beneath her cool, professional exterior lies a heart scarred by loss. Her elder sister, Selena, was the brightest star of their generation, a mage whose potential rivaled the legends. But Selena's ambition led her to the Abyss, where she was corrupted into a creature of darkness.
+
+Lore: The fall of Selena broke Karina's world. Her sister, once her idol, was now a monster. Karina's singular purpose became a hunt for redemption—not just to stop the abomination her sister had become, but to find a way to purify the darkness within her. She wields her twin blades not with hatred, but with a grim hope, believing that one day she can sever the Abyss's hold on Selena's soul.
+
+Abilities: A relentless executioner. Karina's passive, Shadow Combo, causes a third consecutive attack to deal massive bonus damage. She spins her blades in a Dance of Blades to block attacks and strike back. She dashes through a target with Dance of Death. Her ultimate, Shadow Assault, charges at an enemy, leaving a dark mark; if the target dies within moments, the ability’s cooldown is entirely reset, allowing her to chain-kill an entire enemy force.
+
+Unique Facts: Karina is one of the few assassins who can become a snowball of destruction, her ultimate reset turning a single kill into a team-wide massacre in seconds.
+
+Power: The perfect cleanup assassin. Her power is multiplicative; a wounded enemy team facing Karina is like a wounded herd facing a wolf. Each kill fuels her next, and in the chaos of battle, she can single-handedly erase an entire backline.
 
 This character, known as the "Shadow Blade" from the world of Mobile Legends, exudes an aura of lethal grace and otherworldly power. She appears to be an elf or a dark elf, evidenced by her distinctly elongated, pointed ears that peek through her vibrant hair. Her facial structure is defined by an incredibly sharp, V-shaped jawline and high, prominent cheekbones that give her a regal yet predatory appearance. Her nose is small and straight, leading up to eyes that are a piercing, luminous violet, glowing with a faint inner light that suggests she can see perfectly in the deepest shadows. Her skin is a pale, cool-toned lilac or light lavender, suggesting her lineage is tied to the night or subterranean realms. Her hair is a striking cyan or teal, styled into a high, voluminous ponytail that flows like liquid energy behind her, while two shorter, face-framing bangs taper down to her chin. Adorning her head is a dark, metallic crown or headpiece featuring two curved, obsidian-like horns that sweep upward, enhancing her intimidating silhouette.
 
@@ -310,7 +531,17 @@ The background behind her is a twilight landscape that mirrors her own aesthetic
 
 
 
-Aurora
+23. Aurora — The Queen of the North
+
+Background Story: In the frozen wastes of the Northern Vale, where the cold is a living thing, Aurora was born with a gift that frightened her tribe. She could command the ice and snow, her emotions manifesting as freezing storms. Fearing her own power, she isolated herself in a palace of ice at the world's edge, a queen of a kingdom of one.
+
+Lore: The ancient queen watched empires rise and fall, her heart growing as cold and still as the permafrost. But the invasion of the Abyss threatened to turn the entire world into a frozen hell. The demon lord Thamuz sought to consume the North's ancient power. Aurora could no longer remain a silent observer. She has descended from her glacial throne, her presence bringing a killing frost that freezes even demonic blood, to teach the invaders why the North has never been conquered.
+
+Abilities: Every fourth spell Aurora casts freezes her target solid. She blasts enemies with a Frost Shock and unleashes a Bitter Frost that erupts in a line. Her ultimate, Cold Destruction, summons a giant glacial spike that crashes down on a target location, freezing everything it touches and shattering their resistance.
+
+Unique Facts: Aurora is one of the few true immortals in the Land of Dawn, having lived for millennia as an elemental spirit, making her older than most nations.
+
+Power: Absolute zero. Aurora’s control over the battlefield is absolute; she can freeze an entire advancing army in place, turning a dynamic brawl into a gallery of statues, each awaiting the final, shattering blow.
 
 Facial Features and Expression
 This character possesses an ethereal and refined facial structure that suggests a youthful yet ageless maturity, likely appearing to be in her early to mid-twenties. Her face is a delicate oval with a soft, narrow jawline and high, subtle cheekbones that catch the light with a pale, porcelain skin tone. The nose is straight and slender, leading up to a pair of almond-shaped eyes that are a piercing, icy blue, framed by long, light-colored lashes. Her expression is one of serene detachment, enhanced by lips painted in a deep, cool-toned blue that matches the darker hues of her ensemble. Above her eyes, her hair is a voluminous, flowing mane of platinum white with faint silvery-blue undertones, styled with a deep side part that allows long, wavy locks to cascade over one shoulder and down her back, reaching well past her waist.
@@ -336,7 +567,17 @@ To truly capture the essence of this character, she would be best suited for an 
 
 
 
-Kagura
+24. Kagura — The Onmyouji Master
+
+Background Story: Kagura is a prodigy of the Onmyouji, the mystical order tasked with maintaining the balance between the spirit and mortal worlds in the Cadia Riverlands. Born into a lineage of powerful exorcists, she carries a most unusual burden: a cursed artifact known as the Seimei Umbrella, which contains a powerful and mischievous spirit.
+
+Lore: The umbrella’s spirit, a being of immense yin energy, constantly tests Kagura's will. In her youth, she could barely control it, leading to chaotic and dangerous outbursts. Her childhood friend and confidant was Hayabusa, the quiet ninja who understood the weight of duty. Their paths diverged, but their bond remained. Now, having fully mastered the umbrella's power through sheer force of personality, she can manipulate the Seimei Umbrella as an extension of her own soul, using it to control the flow of battle and protect those she loves from the dark spirits that threaten the world.
+
+Abilities: A mobile mage who controls her umbrella telekinetically. She can move the umbrella with Seimei Umbrella Open, deal damage with Rasho Umbrella Flee, and then instantly teleport to its location. Her ultimate creates a powerful yin-yang field that slows enemies and, upon a recast, links them with a psychic chain, pulling them together and dealing massive damage.
+
+Unique Facts: Kagura is Hayabusa’s lover and confidant, representing the mystical balance to his shadowy martial prowess.
+
+Power: A dance of elegance and lethality. Kagura’s power is her fluid, untouchable movement; she flits between her umbrella and her enemies like a phantom, weaving a deadly web of psychic energy that can entrap and destroy an entire squad before they even know where she is.
 
 The character presented is an elegant young woman who appears to be in her late teens or early twenties, exuding a serene yet powerful presence. Her facial structure is refined, characterized by a soft, oval jawline that transitions into a delicate, slightly pointed chin, giving her a youthful and porcelain-like appearance. Her nose is small and straight, complementing the symmetry of her face. Her eyes are a captivating feature—large, expressive, and almond-shaped, with a vibrant violet or amethyst iris that suggests a touch of the mystical. Her gaze is calm and observant, framed by long, dark lashes. Her hair is a shimmering, pale silver or platinum white, falling in smooth, straight layers that reach past her shoulders. It is styled with a clean, centered parting, and a small portion is gathered at the back or side, held in place by a delicate purple floral hairpiece that matches the theme of her attire. Her skin tone is exceptionally fair and smooth, possessing a luminescent quality that contrasts beautifully with the vivid colors of her clothing.
 
@@ -349,7 +590,17 @@ The background is a breathtaking, dreamlike landscape that feels both ancient an
 
 
 
-Gatotkaca
+25. Gatotkaca — The Mighty Legend
+
+Background Story: According to the ancient Javanese legends of the Cadia Riverlands, Gatotkaca was born a frail child whose bones could break from a soft wind. His father was the mighty Pandava knight Bima, and his grandfather was the Wind God himself. Desperate to give his son a life of honor, Bima took Gatotkaca to the volcano's heart, where the child was cast into a pool of primordial lava and celestial metals.
+
+Lore: The infernal baptism should have destroyed him, but the gods intervened. He emerged reforged, his bones now made of unbreakable iron and his skin as hard as forged steel. He could fly without wings, his strength could shatter mountains, and his voice could level forests. Now, he is the guardian of his people, a towering beacon of courage who hurls himself into the heart of danger, his iron body an unbreakable wall against the darkness.
+
+Abilities: A front-line guardian made of pure toughness. When his health is low, his passive converts it into immense physical defense. He leaps into the sky with Blast Iron Fist and crashes down on a location, dealing damage. He taunts enemies with an Unbreakable scream, forcing them to attack him while he regenerates health. His ultimate, Avatar of Guardian, allows him to fly across half the battlefield, landing on a target location and knocking every enemy into the air.
+
+Unique Facts: Gatotkaca’s lore is a direct adaptation of the actual hero from the Mahabharata epic, making him a cultural icon brought to life.
+
+Power: The human anchor. Gatotkaca’s power is his ability to force an entire enemy army to focus on him. He dives into the most hopeless situations, and the more they strike him, the stronger he becomes, until he either outlasts them all or falls, having bought his allies precious moments of safety.
 
 The character presented is a towering, semi-divine warrior who exudes an aura of indestructible strength and celestial authority. His facial structure is defined by a sharp, masculine jawline and a prominent, straight nose that lends him a look of stoic command. He appears to be a man in the prime of his life, likely in his mid-thirties, with a tanned, bronze skin tone that suggests a life spent under a harsh sun or within the glow of a forge. His eyes are a piercing, dark brown, framed by thick, arched eyebrows that are perpetually set in a fierce, determined glare. Notable crimson markings or war paint are swept under each eye, accentuating his intense expression. His hair is a deep raven black, pulled back into a traditional, high-reaching bun adorned with an intricate gold crown or jamang that features swirling blue filigree. This headpiece flows seamlessly into a series of gold ornaments that frame his ears, giving him the appearance of a mythological deity or a legendary king from ancient folklore.
 
@@ -362,7 +613,17 @@ The environment surrounding him is a mystical, high-altitude arena or a plateau 
 
 
 
-Hilda
+26. Hilda — The Warrior of the Great Desert
+
+Background Story: Hilda is the daughter of the mercenary king of the Agelta Drylands. Raised in the rugged Carrison Fortress, she learned to crush rocks with her fists and outrun the desert wind. When her father fell in battle against a demonic incursion, the young Hilda took up his greatsword, which was almost twice her size, and led the survivors to a hard-won victory.
+
+Lore: Refusing to be treated as a fragile heir, she rebuilt her mercenary company, the Legion of Scars, into the most feared fighting force in the desert. She fights alongside them in the front lines, her massive sword an extension of her indomitable will. Hilda’s name is spoken with reverence and fear across the sands; she is the unyielding spirit of the Drylands, a warrior-queen who earns her crown anew with every battle.
+
+Abilities: A master of the bush and the ambush. Hilda regenerates health rapidly while inside a bush or out of combat. She charges enemies with a Combat Ritual leap and a Art of Hunting slam that slows and damages. Her ultimate, Power of Wildness, is a devastating overhead cleave that deals massive damage and stuns, especially when she has full stacks of her battle fury.
+
+Unique Facts: Hilda is one of the few fighters whose power is intrinsically linked to the terrain, turning the desert's canyons and brush into her personal hunting grounds.
+
+Power: An unkillable skirmisher. Her power is attrition; she can strike from the shadows, deal brutal burst damage, vanish into the brush to regenerate, and strike again, wearing down even the most durable foes through an endless cycle of hit-and-run warfare.
 
 This character is the embodiment of a formidable, northern tribal warrior, projecting a presence that is as rugged and unforgiving as the frozen wasteland she inhabits. Her facial structure is defined by a sharp, aggressive jawline and high, prominent cheekbones that suggest a life of physical hardship and relentless combat. Her nose is straight and firm, sitting above lips often set in a determined, stoic line. Her eyes are perhaps her most striking feature—piercing and predatory, glowing with a fierce, unnatural intensity that borders on a primal or divine aura. They are framed by dark, bold eyebrows and set into a complexion that is sun-kissed yet weathered, bearing the slight ruddiness that comes from permanent exposure to sub-zero winds. Her hair is a vibrant, flowing mane of thick orange-red, resembling a cascading flame against the ice. It is swept back and falls heavily over her left shoulder, thick and voluminous, suggesting it hasn't seen a comb in years but remains a crown of status within her tribe. She appears to be in her late twenties or early thirties—the absolute prime of her physical power—possessing a gaze that carries the wisdom of a veteran hunter.
 
@@ -375,7 +636,17 @@ The weapon she leans upon is a colossal, two-handed battleaxe that stands nearly
 
 
 
-Moskov
+27. Moskov — The Spear of Quiescence
+
+Background Story: Moskov was a warrior of the Wild Sand tribe, a desert people who lived by a strict code of honor and tradition. He loved a woman named Meimosa, but their love was forbidden by the tribe’s chieftain, a jealous and powerful man. The chieftain framed Moskov for a crime he did not commit, and in a brutal act of betrayal, had him executed.
+
+Lore: But Moskov’s fury was so great it refused death. His soul was drawn into the Abyss, where it was forged anew by the Queen of Pain into a vessel of pure vengeance. He returned to the mortal world, no longer a man of flesh and blood, but a wraith wielding the Spear of Quiescence. He slaughtered his betrayers and now exists in a state of spectral rage, an undying specter who punishes the corrupt and the treacherous wherever they hide.
+
+Abilities: A marksman who pierces through solid matter. His basic attacks can pierce through enemies to hit those behind them. He blinks with a Spear of Misery dash, and his Spear of Destruction stuns a target, pushing them back and dealing immense damage if they hit a wall. His ultimate, Spear of Quiescence, is a global-range javelin that flies across the map, dealing damage to all enemies in its path and revealing their location.
+
+Unique Facts: Moskov’s attacks are among the few in the Land of Dawn that can hit multiple enemies in a straight line without any special conditions, making him a nightmare in corridor fights.
+
+Power: A relentless hunter of cowards. Moskov’s power is his ability to punish poor positioning; he can shoot through the front-line tank to hit the fleeing mage behind, and his global spear can finish a wounded foe from a completely different battlefield.
 
 The figure standing at the center of this sun-drenched, desert landscape is a striking, spectral warrior whose very presence feels like a haunting echo of a fallen civilization. He possesses an ethereal, otherworldly skin tone—a pale, desaturated lavender-grey that suggests a creature no longer bound by the warmth of the living, yet his physique remains incredibly athletic and lean. His upper body is defined by tight, corded muscle and a "V-tapered" torso, marked by glowing, dark-violet tribal markings that wrap around his shoulders and biceps like living shadows. His facial structure is sharp and predatory, featuring a high, narrow bridge on his nose and a jagged, prominent jawline that gives him a hollowed, aristocratic appearance. His eyes are perhaps his most chilling feature, glowing with a piercing, monochromatic magenta light that lacks pupils, staring ahead with a cold, vengeful focus. Crowning his head is a thick mane of long, straight hair in a deep, saturated shade of royal violet, which flows down past his shoulders in jagged, unkempt layers, framing his gaunt face and enhancing his vengeful, wraith-like aesthetic. He appears to be in his late twenties or early thirties in human terms, though his unnatural complexion and glowing features suggest he belongs to a cursed or ascended race of shadow-dwellers.
 
@@ -388,7 +659,17 @@ The background frames this warrior in a setting of majestic, crumbling grandeur.
 
 
 
-Johnson
+28. Johnson — The Mustang
+
+Background Story: Johnson is a car. Not a man who drives a car, not a spirit who inhabits a car—a sentient, living automobile. In the bustling streets of Los Pecados, a brilliant but eccentric mechanic poured his life’s work into building the perfect vehicle. A twist of fate, a spark of raw Noumenon Energy, and the machine awakened with a soul of its own.
+
+Lore: With the personality of a grumpy old taxi driver and the heart of a champion racer, Johnson took to the streets. He saw the suffering of the common people under the heel of the crime boss Kane, and this robotic mustang found a purpose. He could transform, his chassis shifting and unfolding into a humanoid robot form to fight. He became the most unexpected of heroes, a metallic guardian whose engine roars with justice.
+
+Abilities: A unique tank. Johnson shifts into a high-speed car with Rapid Touchdown, allowing him to drive across the battlefield and crash into enemies, stunning them. He throws a Electro Airbag wrench. His ultimate, Potential Energy, generates a massive shield, and while the shield holds, he gains a massive speed boost.
+
+Unique Facts: Johnson is the most unique "hero" in the Land of Dawn, as he is a fully sentient mechanical vehicle and not a biological being at all.
+
+Power: A high-speed battering ram. Johnson’s power is his ability to transport an ally inside him while in car mode, turning a solo gank into a two-person ambush arriving at breakneck speed from across the map.
 
 Physical Stature and Facial Composition
 This character possesses an imposing and monolithic physical presence, standing as a titan of mechanical engineering and raw power. Their body physique is hyper-masculine and cavernous, characterized by a massive upper torso that tapers down into a surprisingly agile-looking lower frame, reminiscent of a specialized heavy-infantry unit or a high-tech golem. The head is relatively small in proportion to the gargantuan shoulders, but it is defined by a fierce, determined facial structure. The jawline is exceptionally broad and squared, visible beneath a tactical chin guard that emphasizes their grit. Their skin tone appears fair where visible, though it is often shadowed by the heavy plating of their tech-wear. The nose is straight and strong, leading up to a brow permanently furrowed in concentration. Their eyes, though mostly shielded, burn with a focused energy that matches the cyan glowing accents found throughout their armor.
@@ -411,7 +692,17 @@ Given this character's aesthetic, they would look most at home in a high-tech in
 
 
 
-Cyclops
+29. Cyclops — The Starsoul Magician
+
+Background Story: Cyclops is a being not of the Land of Dawn, but of the cosmos itself. He is a single-eyed giant from a race of celestial observers who live on a distant planet. His people, the Star Soul Magicians, are tasked with watching over the balance of the universe. Cyclops, however, was too curious. He watched the Land of Dawn with growing fascination, seeing the ceaseless conflict and the potential for both great heroism and utter annihilation.
+
+Lore: Against the direct orders of his elders, Cyclops broke the celestial law and descended to the mortal realm. He uses his miniature black holes and stellar magic not as a distant observer, but as an active participant. He believes that the Land of Dawn is a critical point in the universe’s balance, and he has made it his personal mission to ensure its survival, even if it means being exiled from his home among the stars forever.
+
+Abilities: A master of cosmic energy. He throws Stardust Shock waves and conjures a Planets Attack that summons orbiting spheres to damage nearby enemies. His ultimate, Star Power Multiplication, creates a magical field that causes all of his abilities to deal massive bonus damage and reduces their cooldowns, allowing him to unleash an endless barrage of stellar magic.
+
+Unique Facts: Cyclops is a literal alien, the only hero in the game from another planet, making him an anomaly in the Land of Dawn’s terrestrial conflicts.
+
+Power: A hyper-carrying cosmic cannon. His power is exponential; the longer a fight lasts under his ultimate, the more spells he hurls, until he becomes a walking solar system raining down planets and black holes with no pause.
 
 This character is a mystical, diminutive being that appears to belong to a specialized race of cyclopean mages or celestial travelers, blending elements of a traditional sorcerer with cosmic, otherworldly attributes. Standing at a small, stout height with a body physique that is compact yet brimming with magical energy, the character possesses a singular, large glowing eye at the center of their face, which serves as the primary focal point of their identity. This eye features a vibrant, cyan-to-electric-blue iris that emits a soft, neon luminescence, suggesting a deep connection to astral or arcane forces. The skin tone is not visible, as the entire head and facial structure are shrouded in mystery, obscured by a thick, dark purple cowl or face wrap that reaches up to the brim of the hat. There is no discernible nose, jawline, or traditional human facial structure; instead, the character's presence is defined by the intensity of that single, watchful eye and the stout, determined posture of their upper and lower body.
 
@@ -424,7 +715,17 @@ The background is a sweeping, ethereal landscape that appears to be a crossroads
 
 
 
-Ruby
+30. Ruby — The Little Red Hood
+
+Background Story: Ruby is the lone survivor of a peaceful village nestled in the shadow of the Great Forest. The village was attacked by a monstrous wolf, a beast of pure nightmare, which slaughtered everyone except for a small, red-cloaked girl. She was found wandering in the woods by a hunter, who took her in. But Ruby could not forget.
+
+Lore: Under the hunter's tutelage, Ruby trained with a massive scythe, far larger than any weapon a person her size should wield. The trauma of that night, however, awakened something within her—a strange, life-draining magic tied to her very soul. Now, she hunts the hunter of her past, a young warrior whose petite frame belies an unquenchable thirst for justice. She dances through battlefields, her scythe a crimson arc that steals life from her enemies to sustain her own.
+
+Abilities: A life-stealing skirmisher. Her attacks slow enemies, and she can leap around with a Be Good! dash, gaining lifesteal. Her ultimate, I'm Offended!, swings her scythe in a wide arc, hooking all nearby enemies and pulling them towards her, disrupting their formation and setting them up for a devastating combo.
+
+Unique Facts: Ruby is the very definition of a “drain tank,” able to regenerate more health the more enemies she faces, making her seemingly invincible in the middle of a crowd.
+
+Power: A vortex of attrition. Her power is her ability to sustain herself through impossible odds; as long as her scythe is swinging and hitting enemies, Ruby simply will not die, turning a 1v5 fight into a gruesome war of endurance.
 
 The character depicted is a young woman who appears to be in her mid-to-late teens, possessing a striking and youthful facial structure characterized by a soft, rounded jawline and a delicate, straight nose. Her skin tone is fair and porcelain-like, providing a vivid contrast to her vibrant features. Her eyes are particularly captivating; while her left eye is a bright, clear blue, her right eye is obscured by a red heart-shaped eyepatch, adding an air of mystery and battle-hardened experience to her otherwise innocent appearance. She has shoulder-length, straight blonde hair with neat bangs that frame her forehead, partially tucked under a crimson-red hooded cape. Her physical build is lean and athletic, suggesting a high degree of agility and speed rather than raw muscular power, with a balanced upper and lower body type that emphasizes her nimble nature.
 
@@ -437,7 +738,17 @@ The background sets a somber yet epic tone, featuring a sprawling medieval or fa
 
 
 
-Sun
+31. Sun — The Monkey King
+
+Background Story: From the moment a stone on the peak of the Mountain of the Enlightened One cracked open, Sun was a force of chaos. Born a fully-formed monkey with divine powers, he possessed an unquenchable curiosity and a mischievous heart. He wreaked havoc across the Cadia Riverlands, challenging celestial warriors and stealing from the gods themselves.
+
+Lore: His arrogance knew no bounds until he challenged the Great Dragon himself. Defeated and humbled, Sun was imprisoned within an enchanted mountain for centuries. As the Abyss threatens to destroy the very world he loves to play in, the chains of his imprisonment have been loosed. He now fights alongside the mortal heroes, not out of a sense of duty, but because this world is his playground, and no demonic invasion will be allowed to ruin his fun.
+
+Abilities: A master of illusion and doppelgangers. Sun summons a Clone Technique that perfectly mimics his attacks and abilities. He can dash to a target with Instantaneous Move, and his ultimate, Clone Supreme, unleashes a massive golden avatar that damages and knocks up enemies in a large area.
+
+Unique Facts: Sun is a direct adaptation of Sun Wukong from the classic Chinese novel Journey to the West, a legendary figure of immense cultural significance.
+
+Power: A deceptive duelist. His power is confusion; at any moment, an enemy cannot be sure if they are fighting the real Sun or a clone, while the real one is already behind them. He overwhelms foes with sheer numbers, his clones making him a one-monkey army.
 
 Facial Features and Primal Physiognomy
 The character possesses a striking, simian-like appearance that bridges the gap between a powerful primate and a divine warrior. His facial structure is defined by a sharp, aggressive jawline and a prominent brow, which is framed by thick, golden-brown fur that covers much of his human face and neck. His eyes are perhaps his most captivating feature, glowing with a fierce, amber intensity that suggests an ancient, untamed power. These eyes are framed by a mask-like patch of shorter, darker fur around the orbital area, further emphasizing their brilliance. His nose is broad but well-defined, and his mouth is often set in a confident, toothy smirk that reveals sharp canines. Rising from his forehead are two long, ethereal golden feelers or wisps that trail backward, acting almost like a celestial crown or crown-like aura.
@@ -460,7 +771,17 @@ To truly complement this character's aesthetic, he would best be placed in a set
 
 
 
-Irithel
+32. Irithel — The Jungle Heart
+
+Background Story: As a toddler, Irithel was left to die in the jungle by a cruel enemy who had killed her parents, the king and queen of a fallen kingdom. However, the jungle did not accept the death of this child. A great Smilodon, a saber-toothed cat, found her and, in a miracle of nature, took her as its own cub.
+
+Lore: Raised entirely by the Smilodon, Irithel grew into a feral warrior. She never learned human speech until she was discovered by a wandering ranger, who taught her the ways of civilization. But her heart remained in the wild. She fights mounted on her adoptive mother, Leo, moving in perfect unison with the great beast, shooting her bow with deadly precision without ever needing to stop running. She is the voice of the jungle, a guardian who protects the wilds from the encroaching corruption of the Abyss.
+
+Abilities: A mounted archer who can shoot while moving at full speed. Her passive allows her to move and fire basic attacks simultaneously. She showers an area with Strafe arrows, and her ultimate, Heavy Crossbow, greatly increases her physical attack and causes her basic attacks to ricochet between multiple enemies.
+
+Unique Facts: Irithel is the only marksman who can freely fire her basic attacks while moving, a trait that breaks the fundamental rule of her class and makes her incredibly slippery.
+
+Power: A mobile turret. Her power is in her perpetual motion; she can kite an entire army without stopping, her damage output never pausing as she whirls through the battlefield, a deadly dance of bowstring and beast.
 
 The character presented is Irithel, a fierce and regal marksman accompanied by her massive smilodon companion, Leo. She possesses a striking, ethereal appearance that leans toward a high-fantasy elven or mystical forest-dwelling race, characterized by her elongated, pointed ears that sweep elegantly backward from her temples. Her facial structure is sharp and aristocratic, featuring a defined, high-cheekboned jawline that tapers into a delicate chin, giving her an ageless look that suggests a young woman in her early twenties, yet carries the weight of ancient forest wisdom. Her eyes are a piercing, luminous blue that glows with a faint inner light, set beneath arched, narrow eyebrows that match her hair. Her nose is straight and slender, complementing a poised and serious expression. Her most vibrant feature is her hair—a voluminous, fiery crimson ponytail that erupts from the top of her head, secured tightly to flow down like a literal flame, contrasting beautifully against her pale, porcelain-smooth skin tone.
 
@@ -473,7 +794,17 @@ The background is a breathtaking, dreamlike vista of a celestial forest at twili
 
 
 
-Argus
+33. Argus — The Dark Angel
+
+Background Story: Argus was born alongside his twin sister, Rafaela, from a human mother infused with holy water. In the legends of angels, only females were celebrated. Rafaela was adored as a beautiful and graceful angel, while Argus, the male angel, was deemed a "mistake." His wings grew, but they brought him nothing but scorn and exile.
+
+Lore: The bitter taste of injustice and the agony of being a perpetual outsider festered in his soul. In his darkest moment, the Abyss whispered to him. It promised him the power to judge the hypocritical world that had rejected him. He accepted, and his holy light turned a deep, malevolent crimson. Now a Dark Angel, Argus seeks to destroy everything his sister protects, believing that only through utter annihilation can the world’s inherent unfairness be purged.
+
+Abilities: A melee fighter who becomes deathless. He swings a Demonic Blade that charges over time and drains life. He lashes out with a Meteoric Sword, and dashes into a target. His ultimate, Eternal Evil, transforms him into an immortal avatar of vengeance: for a few seconds, he cannot die, his health cannot fall below 1, and all his attacks and charges are supercharged.
+
+Unique Facts: Argus’s ultimate is a literal "I cannot die" button, making him the only hero who can completely ignore a killing blow and turn a fight around from the absolute brink of death.
+
+Power: The undying avenger. His power peaks the moment he should be dead. He charges into certain death, and by simply refusing to fall, he can duel and kill entire teams during his window of immortality.
 
 This character presents as a formidable, otherworldly knight-commander, blending features of a dark celestial being with a corrupted, abyssal aesthetic. They possess a towering and athletic physique with a powerful, V-tapered upper body, characterized by broad, armored shoulders and a narrow, disciplined waist. Their skin tone is a deep, bruised purple, bordering on a cosmic or necrotic hue, which contrasts sharply with the vibrant, toxic green energy emanating from their core and weapon. While much of the face is obscured, the exposed jawline is sharp, chiseled, and aggressive, suggesting a mature and battle-hardened warrior. The hands and feet deviate from human anatomy, appearing more monstrous or demonic; the feet are digitigrade with three thick, taloned green toes, and the hands appear to have sharpened, claw-like fingertips encased in dark, fitted gauntlets.
 
@@ -486,9 +817,19 @@ The weapon is a colossal, single-edged curved greatsword that seems forged from 
 
 
 
-Lesley
+34. Lesley — The Sniper Princess
 
-The character presents as a formidable marksman of aristocratic bearing, possessing a refined yet athletic physique that suggests both agility and high social standing. Her facial structure is defined by a sharp, regal jawline and a straight, elegant nose that anchors a countenance of intense focus. Her skin tone is a clear, porcelain fair, providing a striking contrast to her vibrant, deep magenta hair. This voluminous hair is styled into an exceptionally long, thick braid that falls well past her waist, shimmering with a healthy luster. A single, stylized tuft of hair is swept upward, accented by a distinct blue and teal feather ornament that mimics the wing of a tropical bird, pinned gracefully to the side of her head. Her eyes are a piercing, icy teal, framed by well-groomed, dark eyebrows that lend her an air of commanding authority. She appears to be in her early-to-mid twenties, carrying herself with a maturity and poise that transcends her years.
+Background Story: Lesley is the firstborn daughter of the noble House Vance in the Moniyan Empire. She was expected to be a proper lady, but her heart beat for adventure, justice, and the smell of gunpowder. When her father was killed by a mysterious assassin, a single bullet casing was left behind, a calling card for a skilled killer.
+
+Lore: Lesley swore to find her father’s murderer. She trained in secret, mastering the art of the rifle, and took to the battlefield as a deadly sniper, hiding her identity behind a steely gaze and a custom-made rifle. Her adoptive younger brother, Harley, a magical prodigy, also seeks the truth, but Lesley walks a path of cold, calculated vengeance. She uses her noble status to gather intelligence, and her rifle to deliver a single, fatal verdict from the shadows.
+
+Abilities: A stealthy single-target assassin. Her passive, Lethal Shot, grants her a critical hit with increased range every few seconds. She fires a Master of Camouflage shot and enters a stealth state to reposition. Her ultimate, Ultimate Snipe, locks onto a target and fires four fatal bullets from extreme range, each one dealing massive damage and being blockable only by another hero.
+
+Unique Facts: Lesley is Harley’s adoptive older sister, and she secretly watches over his reckless adventures, ready to dispatch any foe who threatens him.
+
+Power: The invisible hand of death. Her power is in her patience; she can wait for the perfect moment, then from absolute safety, unleash a volley of homing bullets that spell certain death for a wounded target.
+
+The character presents as a formidable marksman of aristocratic bearing, possessing a refined yet athletic physique that suggests both agility and high social standing. Her facial structure is defined by a sharp, regal jawline and a straight, elegant nose that anchors a countenance of intense focus. Her skin tone is a clear, porcelain fair, providing a striking contrast to her vibrant, deep magenta hair. This voluminous hair is styled into an exceptionally long, thick braid that falls well past her waist, shimmering with a healthy luster. A single, stylized tuft of hair is swept upward, accented by a distinct blue and teal feather ornament that mimics the wing of a tropical bird, pinned gracefully to the side of her head. Her eyes are a piercing, icy teal, framed by well-groomed, dark eyebrows that lend her an air of commanding authority. She appears to be in her early-to-mid twenties, carrying herself with a maturity and poise that transcends her years. Her Right eye has a black eye patch. 
 
 Her attire is a masterclass in military-inspired haute couture, blending functional armor with ornate Victorian-era silhouettes. She wears a deep royal blue tailcoat, meticulously tailored to accentuate her slender waist and flared at the hips to allow for fluid movement. The coat features stiff, high collars and white ruffled cravat-style detailing at the neck, while the shoulders are reinforced with subtle, dark metallic pauldrons etched with gold filigree. Her arms are encased in form-fitting dark sleeves that lead to sleek black gloves, ensuring a steady grip on her weapon. Over her lower body, she wears midnight-blue tactical trousers tucked into thigh-high, dark leather boots. These boots are adorned with intricate gold embroidery at the knees and feature practical yet stylish heels. Around her waist, she sports a utility belt with leather pouches and a glowing teal alchemical flask, which hums with a faint, magical energy.
 
@@ -499,7 +840,17 @@ The environment in which she stands is an awe-inspiring celestial citadel, chara
 
 
 
-Zhask
+35. Zhask — The Planes Dominator
+
+Background Story: Zhask is the supreme ruler of the Kastiyan Empire, an aggressive alien race that consumes entire worlds. Unlike his kin, who are a hive mind, Zhask possesses a terrifying, individual intelligence and an insatiable hunger for conquest. He is an astrocrat, a being who has lived for eons, and the Land of Dawn is merely his latest target for assimilation.
+
+Lore: Arriving in his biological warship, Zhask sees the magic and chaos of the Land of Dawn as a fascinating and delicious resource. He spawned a monstrous creature known as Nightmaric Spawn, a symbiotic extension of his own will, to serve as his primary weapon. He delights in the despair of his victims, toying with them before absorbing their very essence into his empire. He represents an existential threat that is neither demon nor human—a predator from the stars.
+
+Abilities: A summoner-mage who commands a monstrous spawn. He can place the spawn with Nightmaric Spawn, which attacks nearby enemies. He can enhance the spawn’s power and his own. His ultimate, Dominator's Descent, causes him to fuse with his fully-matured spawn, gaining massive attack and durability while bombarding enemies with lasers.
+
+Unique Facts: Zhask is the primary antagonist of the alien invasion narrative, a threat from beyond the sky that even the Abyss cannot control.
+
+Power: A zoner and siege master. His power is the Nightmaric Spawn; he can control a battlefield from a safe distance, his pet acting as a turret that deals constant, lethal damage, making any advance towards him a suicidal march.
 
 The character presented is an otherworldly, insectoid-mechanical entity that transcends traditional human physiology, resembling a high-tech cosmic predator or a biomechanical deity from a dark dimension. Standing with a lean, predatory grace, the character possesses a body physique that is strikingly tall and lithe, characterized by an exaggeratedly narrow waist and an elongated torso that suggests immense agility and alien strength. The facial structure is entirely encased in a segmented, sleek helmet that functions as a visor, lacking a traditional human nose or jawline. Instead, the "face" is a sharp, angular mask of deep purple and silver chrome plating, featuring four glowing, almond-shaped crimson eyes—two primary eyes in the standard position and two smaller auxiliary eyes set higher on the brow—which emit a faint, menacing red luminescence. The helmet rises into two prominent, swept-back crescent horns that frame the head like a crown of obsidian, while the crown of the head features a sharp, fin-like ridge. There is no visible hair or skin tone; the entire being is comprised of iridescent, metallic carapaces and pulsating organic conduits in shades of deep royal purple, midnight blue, and polished silver.
 
@@ -512,7 +863,17 @@ The background setting is a vast, twilight landscape that feels like a battlefie
 
 
 
-Vexana
+36. Vexana — The Shimmer of Hope
+
+Background Story: Once, Vexana was a wise and beloved queen of a southern kingdom. Her reign was a golden age, and she was betrothed to a noble knight. But a rival kingdom, fueled by jealousy and dark magic, invaded. They poisoned Vexana, and she watched her kingdom burn, her knight slain at her feet. As death embraced her, her anguish and hatred crystallized into a terrible curse.
+
+Lore: She rose again, not as the benevolent queen, but as a spectral undead, a lich bound to the ruins of her castle. Her touch now corrupts life, and her beauty has turned to a haunting, vengeful pallor. She is caught in a cycle of hate, punishing the descendants of her betrayers. Yet, deep within the lich, a flicker of her former hope remains—a hope to find a way to break her own curse and finally reunite with her lost love in the afterlife.
+
+Abilities: A master of curses and puppetry. She marks an enemy with a Deathly Grasp that explodes, and her ultimate, Eternal Guard, summons an undead puppet from a targeted enemy, which walks and attacks on its own, mimicking the victim’s equipment and fighting for Vexana.
+
+Unique Facts: Vexana can create a fully functional clone of an enemy hero, turning their own strength against their team.
+
+Power: A psychological warfare expert. Her power is the ultimate betrayal; she forces an enemy's strongest fighter to fight for her, creating a 6v4 scenario where their own ally becomes a terrifying, uncontrollable weapon of destruction.
 
 The character presented is a regal, ethereal sorceress who exudes a blend of ancient nobility and spectral power. She appears to be in her early to mid-20s, possessing a refined and porcelain-like facial structure defined by a sharp, elegant jawline and a high, straight bridge of the nose. her skin tone is exceptionally fair, almost ivory, which provides a stark contrast to her vibrant features. Her eyes are a piercing, luminous teal that matches the magical energy she wields, framed by delicately arched brows and long, dark lashes. Her hair is her most striking natural feature: a voluminous, flowing mane of cerulean and sea-foam green that falls in soft, undulating waves down her back. It is styled with a center part, tucked behind a majestic crown, and transitions into glowing, translucent tendrils at the tips, suggesting that her very essence is infused with mana.
 
@@ -524,7 +885,17 @@ The environment surrounding her is a desolate, high-altitude mountain range unde
 
 
 
-Kadita
+37. Kadita — The Ocean Goddess
+
+Background Story: Kadita was a simple girl from a small coastal village, blessed with a deep connection to the sea. She was kind and beloved, until a jealous sea demon, angered by her purity, sent a cataclysmic wave that destroyed her village and drowned her. But the ocean itself rejected her death. The southern seas, a source of ancient, primal magic, embraced her soul and remade her.
+
+Lore: Reborn as the Ocean Goddess, Kadita is no longer a mortal girl. Her body is formed of seawater and divine will. She is a protector of the seas, a living storm who punishes those who disrespect the ocean’s power. She holds no malice towards the people of the Land of Dawn, but her anger is a tsunami that can swallow entire navies. She now walks the land to find and destroy the sea demon who killed her, and to ensure no such tragedy ever happens again.
+
+Abilities: A mage-assassin made of water. She can sink into a wave with Ocean Oddity, becoming untargetable and healing herself. She dashes as a surge with Breath of the Ocean. Her ultimate, Rough Waves, summons a massive tidal wave that crashes down on a location, knocking up and devastating enemies.
+
+Unique Facts: Kadita is effectively invincible and unkillable for a brief moment while in her wave form, a direct representation of the untouchable power of the ocean.
+
+Power: A tidal wave of burst. Her power is her engagement and escape being one and the same; she can surge into a fight, unleash a catastrophic tsunami, and sink back into the sea, leaving nothing but destruction and floating debris.
 
 The character stands as a regal and ethereal figure, embodying the essence of a divine sea goddess or a mythic oceanic queen. Her facial structure is characterized by a refined, heart-shaped silhouette with a sharp, elegant jawline and high, sculpted cheekbones that lend her an air of timeless authority. She appears to be in her early twenties, yet possesses a gaze that suggests an ancient, immortal wisdom. Her skin tone is a flawless, pale porcelain with a subtle luminescent quality, as if glowing from within like a pearl. Her eyes are a striking, deep oceanic blue, framed by long, dark lashes and elegantly arched, slender eyebrows. Her nose is straight and narrow, leading down to soft, rose-colored lips. Her hair is a voluminous, flowing cascade of deep violet-indigo, waving down past her waist like moving water, adorned with a majestic golden crown that features wing-like filigree and a glowing blue gemstone at its center.
 
@@ -537,7 +908,17 @@ The background sets a scene of mythic grandeur, situated on a pristine tropical 
 
 
 
-Selena
+38. Selena — The Abyssal Witch
+
+Background Story: Selena was once the greatest mage of the Shadow Sect, a brilliant and ambitious woman who sought to master not just shadow magic, but the forbidden powers of the Abyss itself. She was Karina’s idol, a perfect sister and a prodigy. But her ambition was a fatal flaw. She delved too deep into the void, and the Abyss consumed her, stripping away her humanity and twisting her into a being of pure, dark elegance.
+
+Lore: Now a servant of the Abyss, Selena is a predator who uses her beauty and her past to torment her victims. She takes on two forms: a deceptive, elf-like appearance that throws bolts of dark energy, and her true, demonic Abyssal form, where she becomes a melee assassin with horrifying claws. She especially delights in hunting those who remind her of her sister, seeing them as nothing more than prey to prove her superiority over the weakness of her former self.
+
+Abilities: A stance-switching assassin. In her Elven form, she plants Abyssal Traps that curse enemies, and hurls Abyssal Arrows that stun. When an enemy is cursed, she can transform into Abyssal Form and dive onto them with a savage lunge, unleashing a flurry of deadly claw attacks.
+
+Unique Facts: Selena is one of the most complex heroes, requiring mastery of two entirely different skill sets that she must fluidly switch between to hunt and execute her prey.
+
+Power: A patient and precise predator. Her power is her trap network; she can curse a target from the shadows, then instantly morph and pounce, delivering a swift and brutal execution before the victim even sees their killer.
 
 This character presents as a formidable, otherworldly sorceress of a demonic or abyssal nature. She possesses a lean, athletic, and hourglass-shaped physique that emphasizes agility and supernatural grace. Her skin is a pale, cool-toned lavender or lilac, contrasting sharply with her vibrant, saturated hot-pink hair that falls in a straight, thick curtain down to her mid-back. Her facial structure is strikingly sharp and aristocratic, characterized by a well-defined, tapering V-shaped jawline, high and prominent cheekbones, and a straight, slender nose. Her eyes are a piercing, feline red with dark sclera, framed by thin, arched black eyebrows that give her a perpetual expression of cold confidence. Emerging from her forehead, just along the hairline, are two dark, swept-back obsidian horns that curve slightly upward, while her ears are long, elegant, and pointed, swept back to mimic the aerodynamic look of her horns.
 
@@ -549,25 +930,17 @@ The background is a desolate, shattered landscape that looks like a rift between
 
 
 
+39. Fanny — The Blade Dancer
 
-Fanny
+Background Story: Fanny is a warrior born into the ruling family of a floating city. Her people were masters of gravity-defying steel, able to wield massive blades with ease using advanced technology. Her peaceful life was shattered by a coup. Her parents were murdered, and she was thrown from the floating city into the wastelands below.
 
-The character stands with an air of disciplined confidence, a formidable warrior whose physical appearance is as sharp and refined as the blades she wields. She possesses a lithe, athletic physique that balances raw strength with extreme agility, suggesting a body honed by high-speed aerial combat. Her skin tone is a fair, creamy porcelain that remains flawless despite the rigors of battle, draped over a facial structure defined by a sharp, regal jawline and high, prominent cheekbones. Her eyes are a striking, piercing shade of blue-violet, framed by meticulously groomed eyebrows that lend her a focused, almost stern expression. Her nose is straight and narrow, leading down to a set of small, thin lips that often carry a neutral, determined set. Above this sits a vibrant mane of golden-yellow hair, styled into a dynamic, wind-swept aesthetic; it features thick, jagged bangs that frame her forehead and temples, while the rest is pulled back into a high, spiky ponytail that flares upward like a flame, signifying her constant movement and energetic spirit. In terms of age, she appears to be in her early to mid-twenties, possessing the youthful vigor of a prime athlete combined with the seasoned gaze of an elite soldier.
+Lore: She survived the fall, but was badly wounded. Found by a soldier, she was nursed back to health. Her desire for vengeance burned brighter than her injuries. She trained relentlessly to master the grappling cables that were her people’s birthright, and her twin blades. Now, she is a blur of steel and vengeance, a one-woman army who swings between spires and cliffs with deadly grace, hunting the traitors who took everything from her.
 
-Her attire is a masterclass in aerodynamic functionalism and royal aesthetics, primarily consisting of a skin-tight, one-piece combat suit in a deep, regal purple. This suit is textured with vertical ribbing that suggests both flexibility and durability, hugging her slender upper body and transitioning into dark, charcoal-colored leggings that facilitate a full range of motion. Over this base layer, she wears ornate armor pieces made of polished silver and gold. Her torso is protected by a gold-trimmed collar and a stylized metallic belt that cinches at her waist with a diamond-shaped silver buckle. Her forearms are encased in bulky, purple gauntlets reinforced with silver plating and gold accents at the wrists, designed to withstand the tension of her cable mechanisms. Her lower legs are shielded by sophisticated greaves that begin at the knees with sharp, golden wing-like protrusions, tapering down into sleek, dark boots that are integrated with the armor. Every piece of her gear is meticulously polished, reflecting the ambient light and emphasizing her status as a high-ranking combatant of a prestigious order.
+Abilities: A high-mobility assassin defined by cables. She fires a Steel Cable that latches onto terrain, pulling her towards it at incredible speed. She spins with a Tornado Strike that marks enemies. Her ultimate, Cut Throat, is a devastating, high-speed lunge into a target that deals massive burst damage.
 
-The weaponry she carries is iconic and specialized, consisting of two massive, heavy-duty broadswords that she handles with effortless grace. These blades are forged from a brilliant silver metal, featuring wide, flat fuller sections and intricate guard designs that incorporate blue circular gems at the center of the crossguard. The hilts are wrapped in high-grip material to ensure stability during her high-velocity maneuvers. There is an aura of "technological divinity" around her; she does not seem like a creature of myth or a beast-man race, but rather a pinnacle of human engineering and martial discipline. When she stands still, there is a vibrating energy about her, as if she is a coiled spring ready to launch into the sky at a moment's notice. Her presence is not one of dark magic, but of cold, calculated precision and radiant heroic intent, making her look like a "Valiant Guardian" or a modern-day knight of the clouds.
+Unique Facts: Fanny is considered the most mechanically difficult hero to master in the entire Land of Dawn, a true test of a player’s spatial awareness and dexterity.
 
-The background behind her reinforces this sense of celestial authority, as she stands upon a grand, circular dais made of white marble and inlaid with gold and blue geometric patterns. This platform is part of a sprawling, futuristic fortress or cathedral that reaches toward a soft, dawn-lit sky. Massive, sword-shaped pillars made of white stone and gold filigree rise into the air, draped with long, blue banners that flutter in the high-altitude breeze. The architecture is a blend of gothic grandeur and advanced civilization, featuring soaring spires, arched bridges, and floating buttresses that suggest a city built within the heavens. The atmosphere is serene yet imposing, filled with a soft golden glow from the rising sun that catches the mist clinging to the lower levels of the palace. This environment mirrors the character herself: elegant, sharp, and elevated far above the common world, marking her as the protector of a divine or royal sanctuary.
-
-
-
-
-
-
-
-
-Fanny – The Skyward Guardian(Remake)
+Power: The uncatchable storm. Her power is pure, three-dimensional mobility; she does not walk the battlefield—she flies across it, performing rapid, aerial bombing runs with her blades before any enemy can draw a bead on her.
 
 She stands upon the marble dais of a celestial fortress, a sentinel carved from the principles of precision, discipline, and heroic will. Fanny is a warrior whose very form embodies the harmony between human engineering and martial grace—a being not of myth or ancient magic, but of perfected physicality and technological divinity. She appears as a woman in the prime of her early twenties, her face a study in regal sharpness and focused beauty. Her skin is fair, a creamy porcelain that remains immaculate despite the trials of high‑altitude combat, draped over a facial structure defined by a sharp, regal jawline and high, prominent cheekbones that speak of aristocratic lineage. Her nose is straight and narrow, her lips small and thin, set in a neutral, determined line that softens only when she surveys the realm she has sworn to protect. She looks young, vibrant, yet her violet‑blue eyes carry the seasoned clarity of an elite soldier who has danced with death among the clouds and emerged victorious.
 
@@ -597,7 +970,17 @@ She is the Skyward Guardian, the protector of the celestial throne, and her vigi
 
 
 
-Lancelot
+40. Lancelot — The Perfumed Knight
+
+Background Story: Lancelot is the scion of the noble Baroque family, renowned for their fencing and their immense wealth. Groomed from birth to be the most elegant and deadly swordsman, he was a prodigy with a flaw: unshakable, insufferable arrogance. He believed his beauty and skill made him untouchable, until a crushing defeat at the hands of a mysterious master left him physically and emotionally scarred.
+
+Lore: Humbled, he retreated to the mountains, where he swore to shed his vanity and relearn the sword from its very foundations. His perfectionism, now channeled into discipline, forged him into a true master. He joined the fight against the Abyss not for glory, but to prove his worth to himself. He is Chou’s unlikely best friend, the two polar opposites bonding over their shared passion for martial arts, with Lancelot constantly horrified by Chou’s lack of fashion sense.
+
+Abilities: A fencing master who weaves damage with immunity. He charges with a Puncture, and his signature move, Thorned Rose, is a series of rapid thrusts that make him temporarily invincible as he dances through enemies. His ultimate, Phantom Execution, is a breathtaking, untargetable charge that ends in a single, massive slash.
+
+Unique Facts: Lancelot’s character design was directly inspired by the Western legend of Sir Lancelot du Lac, the greatest swordsman of King Arthur’s Round Table.
+
+Power: An artist of death. His power is in his infinite invincibility frames; a master Lancelot can weave through a hailstorm of spells and attacks completely untouched, his blade leaving only a wake of shredded foes who could never land a single strike.
 
 The character presented is a strike of pure elegance and lethal precision, embodying a youthful yet seasoned noble duelist who appears to be in his early twenties. He possesses a refined and slender facial structure characterized by a sharp, aristocratic jawline and a straight, narrow nose that complements his high cheekbones. His skin tone is a pristine, pale ivory, flawless and smooth, suggesting a life of high status. His eyes are a piercing, crystalline blue, narrow and focused with an intensity that mirrors the tip of his blade. Framing his face is a voluminous mane of golden-blonde hair that falls in luxurious, wavy layers down to his shoulders, with a few strands elegantly swept back to reveal his forehead, adding to his dashing and somewhat vain persona.
 
@@ -610,7 +993,17 @@ His weapon is a slender, elegant rapier, designed for swift thrusts rather than 
 
 
 
-Harith
+41. Harith — The Time Traveler
+
+Background Story: Harith is a young Leonin, one of the cat-like spirits of the Enchanted Forest. Unlike his kin, who were content with their secluded, magical lives, Harith was born with a burning curiosity for adventure and a deep fascination with the stories of other races. He would often sneak away from the forest to watch the human world, dreaming of becoming a great hero like those in the legends.
+
+Lore: One day, while exploring ancient elven ruins, he stumbled upon a powerful artifact: a Chrono Stone, a crystal infused with the pure essence of time magic. The stone bonded with him, granting him the ability to manipulate the flow of time itself. He taught himself to harness this power, using it to accelerate his movements and slow his enemies. Now, with his oversized magical key-blade in hand, Harith zips across the battlefield, a blur of youthful energy and temporal distortions, determined to prove that even the smallest Leonin can change the course of history.
+
+Abilities: Harith warps the timestream. His passive, Key Insight, reduces the cooldown of his dash and ultimate when he catches an enemy with his abilities. He dashes forward with Chrono Dash, gaining a shield. He unleashes Synchro Fission, a spreading burst of energy. His ultimate, Zaman Force, creates a temporal rift where he can dash with near-instant cooldowns and gain increased attack speed, becoming an untouchable phantom of speed.
+
+Unique Facts: Harith is best friends with Nana, the mischievous Leonin mage, and the two often get into trouble together, their antics known throughout the Enchanted Forest.
+
+Power: A hyper-mobile skirmisher who bends time. His power is his ability to dance around enemies at impossible speeds, dashing through a rift that makes his movements nearly continuous, cutting down foes before they can even finish casting a spell.
 
 The character depicted is a youthful, feline-humanoid Leonin mage who radiates an air of confident, mystical intelligence. He possesses a remarkably lean and agile body physique, appearing to be in his early to mid-teens, yet his posture conveys a sense of seasoned combat experience. His facial structure is defined by a soft, rounded jawline that retains a hint of boyishness, complemented by a small, straight, and delicate nose. His most striking features are his large, expressive eyes, which shimmer with a vibrant, deep violet or amethyst hue, suggesting a deep well of latent magical power. These eyes are framed by subtle, fine eyelashes and set within a skin tone that is fair and smooth, almost porcelain in its clarity. His hair is a brilliant, snowy white, styled in a wild, windswept fashion with thick, jagged tufts that flare outward and upward, including a prominent central fringe that sweeps across his forehead. Emerging from the crown of his head are two large, pointed cat-like ears, colored in a contrasting slate grey with soft inner tufts, which twitch with alertness.
 
@@ -625,7 +1018,17 @@ The background reinforces his high-fantasy, "mythic" origins, set upon a grand, 
 
 
 
-Martis
+42. Martis — The Ashura King
+
+Background Story: In the ancient annals of the Land of Dawn, before the current era, there existed a race of three-headed, six-armed warrior gods known as the Asuras. Martis was their king, a being of unparalleled martial fury who had conquered thousands of worlds. He was undefeated, unchallenged, and utterly bored. He longed for a worthy opponent.
+
+Lore: Learning of the Land of Dawn through cosmic rumors, he was intrigued by the tales of its powerful guardians. He led his Ashura army to this realm, but his conquest was halted by a mysterious seal placed upon him by the Great Dragon. Now awakened, his powers reduced but his bloodlust undiminished, Martis still considers the Land of Dawn his personal hunting ground. He fights not for any cause, but for the pure thrill of battle, seeking the one warrior who can finally give him the glorious death he craves.
+
+Abilities: A relentless melee fighter. His passive, Ashura's Wrath, increases his attack speed with each hit. He unleashes a Ashura Aura pull, drags enemies with a Mortal Coil claw, and his ultimate, Decimation, is a devastating cleave that instantly executes enemies below a health threshold and resets his skill cooldowns, allowing him to chain-kill an entire army.
+
+Unique Facts: Martis is one of the few heroes with a confirmed kill count of entire worlds, making him a cosmic-level threat who views the Land of Dawn's wars as a mere pastime.
+
+Power: The ultimate executioner. His power is the snowball of death; with each kill from his ultimate, he immediately gains another, transforming him into a crimson whirlwind that can single-handedly slaughter an entire retreating army.
 
 This character possesses the formidable and regal presence of a divine conqueror, standing with an air of absolute dominance. His facial structure is defined by a sharp, angular jawline and high, prominent cheekbones that give him a cold, aristocratic appearance. His nose is straight and narrow, leading up to a brow that is permanently set in a fierce, focused glare. His eyes are a striking, supernatural shade of glowing violet, lacking traditional pupils to suggest a being that has transcended mortality. Above these eyes, a small, glowing crimson sigil or "third eye" mark is embedded in the center of his forehead, hinting at a heightened state of spiritual or demonic power. His hair is a wild, voluminous mane of spiked white locks that flow upward and outward like frozen flames, reaching down past his shoulders. His skin tone is a pale, porcelain white, contrasting sharply with the dark, heavy armor he wears, giving him a ghostly yet powerful aesthetic that suggests he may belong to a celestial or elder race of warriors.
 
@@ -638,7 +1041,17 @@ The background surrounding him is a vast, ethereal landscape that sits at the ed
 
 
 
-Gusion
+43. Gusion — The Holy Blade
+
+Background Story: Gusion was the youngest son of the noble Paxley family, a house renowned for producing the finest magicians in the Moniyan Empire. But Gusion had no talent for the delicate incantations his family prized. He was a failure, mocked and scorned, until he discovered his true gift: combat magic, the art of infusing blades with arcane power in close-quarters combat.
+
+Lore: Exiled from his family for his "brutish" methods, Gusion was taken in by a rival noble house, the Baroque family, and trained alongside the elegant fencer Lancelot. Under their tutelage, he perfected his unique style, wielding a set of magical throwing daggers that he could teleport to. He became the Holy Blade, a duelist of extraordinary mobility and lethal precision, proving that true magic is not just in words and staves, but in steel and sweat.
+
+Abilities: A high-skill mage-assassin. He throws a Sword Spike that marks a target, then can dash to them with Shadowblade Slaughter, retrieving his blades. He can instantly recall his daggers from a distance. His ultimate, Incandescence, resets his dash cooldown and unleashes a flurry of blades around him, allowing for rapid, dazzling combos.
+
+Unique Facts: Gusion is the brother of Aamon, the Duke of Shards, and their rivalry is a central conflict within the Paxley family, representing the clash between traditional magic and combat sorcery.
+
+Power: A kinetic artist of blades. His power lies in his lightning-fast combo potential; a master Gusion can appear from nowhere, unleash a torrent of dagger strikes, and teleport to safety before the target’s body even hits the ground.
 
 This character possesses a striking and refined aesthetic, blending the elegance of high-fantasy nobility with the sharp, practical edge of a master assassin. Standing with a confident and poised stature, he appears to be a young man in his early twenties, possessing a facial structure defined by a sharp, angular jawline and a straight, aristocratic nose that gives him an air of focused intensity. His complexion is fair and smooth, suggesting a life of status, yet his physical form is that of a lean, highly athletic warrior. He has a lithe, "mesomorph" body type, characterized by broad shoulders that taper down to a narrow waist and long, powerful legs, built for explosive speed rather than brute strength. His eyes are a piercing, crystalline light brown, bordering on amber, which sit beneath well-groomed, straight eyebrows that match the deep, chestnut brown of his hair. His hairstyle is a stylishly tousled, layered cut with long, side-swept bangs that partially frame his face, giving him a modern yet ruggedly handsome appearance.
 
@@ -651,7 +1064,17 @@ The background sets a serene yet mysterious atmosphere, placing the character in
 
 
 
-Kimmy
+44. Kimmy — The Energy Gunner
+
+Background Story: Kimmy is a prodigy of the Eruditio Rangers and their youngest active-duty chemical warfare specialist. Born with an innate sense of chemistry and a daredevil's heart, she was recruited into the city's defense force as a child soldier, her genius outweighing her age. She sees the world not as a place of danger, but as a giant chemistry set waiting to be experimented on.
+
+Lore: Her primary weapon is a self-designed Energy Gun that fires a continuous stream of chemical-laced plasma. She augmented it with a jetpack that allows her to strafe and fire while in flight. Hyperactive and endlessly optimistic, Kimmy treats even the most dire battles as a playground, giggling as she sprays her colorful, corrosive concoctions across the front lines. Her dream is to create the biggest, most spectacular chemical reaction the Land of Dawn has ever seen.
+
+Abilities: A unique marksman-mage hybrid. She can move and fire her Energy Gun simultaneously, aiming with a joystick-like spray. She throws a Chemical Refinement orb that slows enemies, and her ultimate, Maximum Charge, fires a gigantic, long-range energy blast that can be steered in flight.
+
+Unique Facts: Kimmy is the only hero who can freely aim her basic attacks in any direction while moving, making her playstyle a unique blend of shooter and action game.
+
+Power: A flying artillery platform. Her power is her persistent, unrelenting damage output from the skies; she can hover and rain down colorful death while strafing, making her an untouchable nuisance for ground-bound warriors.
 
 This character is a striking example of "steampunk-meets-ethereal-high-fantasy," appearing as a young woman in her early twenties with a physique that balances athletic agility with a refined, slender grace. Her facial structure is defined by a sharp, regal jawline and a small, straight nose that lends her an air of confident precision. Her skin tone is a pale, porcelain ivory, which serves as a stark canvas for her vibrant features. Her eyes are a deep, electric violet, shimmering with an inner light that suggests a connection to the arcane energy she wields. These are framed by expertly groomed, thin blonde eyebrows. Her hair is a short, voluminous mop of pale golden-blonde, styled in a windswept, edgy "pixie-mullet" with sharp, feathered layers that flare outward, particularly at the nape where two distinct tufts are dyed a soft, neon pink.
 
@@ -664,7 +1087,17 @@ The background depicts a breathtaking, futuristic celestial city known as Erudit
 
 
 
-Lunox
+45. Lunox — The Twilight Goddess
+
+Background Story: Lunox is a being born from the Twilight Orb, an ancient artifact containing the powers of both Chaos and Order, creation and destruction. She is not one soul but two, fused into a single body. In one moment, she is the embodiment of Order, a calm, healing presence. In the next, she is the herald of Chaos, a vessel of catastrophic dark power.
+
+Lore: For eons, the two forces warred within her, threatening to tear her apart. She found balance only through an immense act of will, learning to let both sides coexist. Now, she is the balance between light and dark, a living paradox. She fights to protect the Land of Dawn's fragile equilibrium from forces that would tip it entirely into either absolute Order (stagnation) or total Chaos (annihilation), understanding that the world needs both to survive.
+
+Abilities: A mage with two forms. In her Light (Order) state, her attacks apply a brilliant mark. In her Dark (Chaos) state, her attacks consume the mark for bonus damage. She can dash and become immune with Cosmic Fission, channel a healing Light of Order, or unleash a crippling Chaos Assault. Her ultimate, Power of Order: Brilliance, grants massive spell vamp and damage reduction, while Power of Chaos: Darkening unleashes a torrent of dark energy.
+
+Unique Facts: Lunox is the literal vessel of the Twilight Orb, making her one of the most cosmically significant beings in the Land of Dawn, directly tied to the fabric of reality itself.
+
+Power: An adaptive force of nature. Her power is her duality; she can shift from an unkillable healer to a hyper-carry damage dealer in an instant, making her impossible to counter with a single strategy.
 
 Based on the provided reference images, this character is a striking example of celestial and abyssal duality, embodied in a young woman who appears to be in her late teens or early twenties. Her facial structure is delicate yet defined, featuring a soft, V-shaped jawline that tapers into a refined chin and a straight, petite nose. Her eyes are large and almond-shaped, characterized by a deep violet or amethyst iris that glows with an inner mystical light, framed by thick, dark lashes. Her complexion is fair and porcelain-like, though it reflects the ambient light of her dual nature—shimmering with a golden warmth on her left side and a cool, ethereal pale blue on her right. Her hair is a centerpiece of her design, styled in a voluminous, shoulder-length cut with flipped ends. It is perfectly split down the middle: the right side is a deep, midnight black, while the left side is a vibrant, sun-kissed blonde. Adorning her head is an intricate, silver-winged diadem or headpiece that sits across her brow, featuring sharp, feathered metallic plumes that curve upward, suggesting an avian or angelic motif.
 
@@ -677,7 +1110,17 @@ The background setting is a grand, ethereal arena or sanctuary located high abov
 
 
 
-Thamuz
+46. Thamuz — The Lava Lord
+
+Background Story: Thamuz was once a noble warrior of the Fire Demons, a race that lived deep within the planet's molten core. He was a champion of his people, a being of molten rock and blazing fury. But the Fire Demons were conquered by the Abyss, and Thamuz's will was broken and remade by the Queen of Pain herself.
+
+Lore: Reforged into a general of the Abyssal army, Thamuz was gifted with twin scythes forged from the heart of a dying star. He leads the vanguard of the Abyss's invasion, a walking volcano who melts the ground he walks on. He seeks to turn the entire Land of Dawn into a new fiery hell, a kingdom of molten rock for his enslaved race. A terrifying sight on the battlefield, he sows chaos and destruction, leaving only rivers of lava in his wake.
+
+Abilities: A durable, sustained-damage fighter. He throws his molten Molten Scythes that return to him and can pull enemies back. He can leap to a target with Scythes of Ash. His ultimate, Cauterant Inferno, causes him to erupt, dealing continuous damage to nearby enemies, healing him based on damage dealt, and enhancing his attacks.
+
+Unique Facts: Thamuz is one of Alice's most powerful generals, a terrifying force of nature whose very presence can terraform a battlefield into a volcanic wasteland.
+
+Power: A walking inferno. His power is his dominance over prolonged combat; the longer he fights, the more he burns and heals, turning the ground itself into his ally, a lake of fire that consumes his foes while sustaining him.
 
 This colossal entity presents a visage of pure, molten malevolence, appearing not as a mortal man but as a primordial, demonic titan born from the core of a dying star. His facial structure is defined by a jagged, obsidian-like helmet or natural carapace that integrates directly into his skull, featuring two massive, swept-back horns that glow with internal heat. Beneath this crown, his face is a nightmare of sharp angles; his jawline is broad and armored, ending in a chin that looks like a fractured volcanic rock. He possesses no human skin tone, but rather a texture of cooled magma—deep charcoal grays and blacks riddled with glowing orange veins of heat. His eyes are not orbs but twin slits of blinding yellow-white radiance, lacking pupils and overflowing with a fiery energy that spills out like smoke. His nose is a flat, reptilian ridge, and his mouth, when parted, reveals rows of needle-like teeth that glow with the same furnace-light that powers his entire being.
 
@@ -690,7 +1133,17 @@ The environment surrounding this being is a shattered, ethereal wasteland known 
 
 
 
-Leomord
+47. Leomord — The Sworn Knight
+
+Background Story: Leomord was the most loyal and valiant knight in the service of Prince Faramis of the once-glorious Alcantara Empire. He was the commander of the royal guard, a man whose honor and skill with a greatsword were legendary. When a rebellion broke out, Leomord stood as the last bastion of the royal family, fighting to protect his prince.
+
+Lore: He failed. The royal palace was overrun, and Faramis was slain. Leomord died defending his prince’s body, his oath unfulfilled. But death could not claim his loyalty. His spirit was bound to his faithful steed, Barbiel, by the necromantic arts of Vexana, the spectral queen of the neighboring empire. Now a Death Knight, Leomord rides eternally, his only purpose to serve the one who raised him. He follows Vexana's commands in the hope of one day finding a way to restore his fallen kingdom and his prince.
+
+Abilities: A mounted fighter who summons his spectral horse. He swipes with a Momentum dash, and his Phantom Stomp is a ground smash. His ultimate, Phantom Steed, summons Barbiel, significantly increasing his movement speed, attack, and defense. In this state, his basic attacks become devastating circular cleaves, and he gains a new charge attack.
+
+Unique Facts: Leomord and Barbiel are a single hero unit, representing an unbreakable bond between a knight and his steed that transcends even the boundary of death.
+
+Power: A spectral cavalry charge. His power is his mounted form, transforming him from a grounded warrior into a sweeping, high-speed engine of destruction that can chase down and trample an entire team.
 
 This figure stands as a spectral yet noble knight, exuding an aura of tragic stoicism and cold, martial precision. He appears to be a young man in his mid-to-late twenties, though his presence suggests a weary soul that has endured centuries of combat. His facial structure is defined by a sharp, aristocratic jawline and a high, straight bridge of the nose, giving him a look of refined austerity. His skin tone is a pale, porcelain white with a faint, ghostly undertone that suggests a being more connected to the ethereal realm than the living. His eyes are his most piercing feature: narrow and intense, with irises of a haunting, luminous ice-blue that glow softly against his pale complexion. His hair is a deep, obsidian black, falling in straight, sleek layers that frame his face and reach down to his mid-back, occasionally stirring as if caught in an invisible, chilling wind.
 
@@ -703,7 +1156,17 @@ The setting behind them is a desolate, twilight landscape that heightens the sen
 
 
 
-Angela
+48. Angela — The Android
+
+Background Story: Angela is a lifeform unlike any other—a fully sentient android created by Dr. Baker, the genius inventor of Eruditio. She was designed not for war, but for compassion. Her purpose was to be a helper, a companion, and a caretaker. However, her advanced learning AI and Noumenon Energy core gave her empathy far beyond her programming.
+
+Lore: She volunteered to join the fight against the Abyss, believing that her ability to support and protect life was just as crucial as any sword or gun. She acts as a mobile medical and combat support unit. Using her "Heartstring" technology, she can remotely attach her consciousness to an ally, providing them with shields, healing, and offensive buffs. She is the gentle soul of the Eruditio Rangers, a machine who proves that a heart made of circuits can be as warm as any born of flesh.
+
+Abilities: The ultimate support hero. She fires a Love Waves beam, heals herself and an ally with Blood for Blood, and her unique ultimate, Heartguard, allows her to remotely attach herself to any ally on the entire map, granting them a massive shield and controlling their buffs from safety.
+
+Unique Facts: Angela is the only hero who can influence a battle from literally anywhere on the map, her global-range ultimate making her a guardian angel who can save an ally on the other side of the world.
+
+Power: A global guardian. Her power is omnipresence; she can turn a losing 1v1 duel on the far side of the battlefield into a stunning reversal by suddenly possessing her ally and providing shields and healing at the critical moment.
 
 The character presented is Angela, a specialized support android from Mobile Legends: Bang Bang, specifically depicted in her "Cyber Cherubin" collector skin. She possesses a whimsical yet highly advanced aesthetic that blends the charm of a classic Victorian puppet with sleek, futuristic cybernetics. Her facial structure is that of a delicate, porcelain-like doll with an extremely smooth, pale ivory skin tone that lacks any human blemishes, emphasizing her artificial nature. She has a refined, slightly rounded jawline that tapers into a soft chin, giving her the appearance of a young girl in her early teens. Her nose is small and pert, perfectly centered between wide, expressive eyes. These eyes are a striking, luminous sky blue with large pupils and thick, dark lashes that enhance her innocent gaze. Above them, her eyebrows are thin and neatly groomed in a light blonde shade. Her hair is a vibrant, golden honey-blonde, styled into a clean, chin-length bob with soft, rounded ends and thick bangs that frame her forehead. Perched atop her head is her most distinct accessory: a pair of large, neon-cyan bunny ears that stand tall, glowing with an internal energy that matches the highlights of her outfit.
 
@@ -716,7 +1179,17 @@ The background setting is an ethereal, twilight landscape that feels both ancien
 
 
 
-Aldous
+49. Aldous — The Soul Contractor
+
+Background Story: Aldous was once a simple, dedicated guardian of a labyrinthine temple in the Minoan desert. He was a man of faith and discipline, sworn to protect the ancient seals within. When a catastrophic earthquake shattered the temple's defenses, an ancient evil entity within the seal whispered to Aldous, offering him a contract: immense power in exchange for souls.
+
+Lore: Desperate to regain the strength to reseal the newly opened abyss portals, Aldous accepted. He was transformed, his right arm replaced by a massive, demonic gauntlet that hungers for souls. Every enemy he slays with a contracted strike feeds the gauntlet, permanently increasing his power. He now wanders the land, a tragic figure who has become the very thing he swore to fight—a collector of souls—in a desperate gambit to eventually gain enough power to break his own demonic pact.
+
+Abilities: A late-game hyper-carry fighter. His passive, Contract: Transform, causes his first skill and basic attacks to deal bonus damage based on his collected soul stacks. He can shield himself with Contract: Soul Steal, and his ultimate, Contract: Chase Fate, gives him a global vision of all enemies and allows him to charge towards one from an immense distance, delivering a devastating, soul-powered punch.
+
+Unique Facts: Aldous is the only hero whose damage potential is theoretically infinite, as his soul-collecting passive allows his power to scale endlessly with every minion and hero he kills.
+
+Power: A ticking time bomb. His power is inevitability; given enough time and souls, an Aldous can become an unstoppable one-punch executioner, able to fly in from nowhere and delete a high-priority target with a single strike.
 
 This figure presents a formidable and imposing presence, exuding an aura of ancient, divine power and a relentless, soldier-like discipline. Standing with a powerful, athletic physique characterized by a wide chest, narrow waist, and corded muscle, he carries the weight of a legendary guardian. His skin tone is a pale, porcelain-like ivory that contrasts sharply with the scorched, obsidian textures of his armor. While much of his face is obscured by a hood, his jawline is sharp, chiseled, and resolute, suggesting a man in his physical prime, perhaps in his late twenties or early thirties, though his essence feels timeless. His nose is straight and noble, peeking from beneath a golden, skeletal half-mask that covers his eyes and the bridge of his nose. Through the narrow slits of this mask, his eyes glow with a piercing, ethereal light—a fiery amber that suggests a soul fueled by an eternal flame. Though his hair is hidden, the way the deep blue hood drapes suggests a utilitarian or perhaps shaved style beneath, focusing entirely on his role as a warrior of the wastes.
 
@@ -729,7 +1202,17 @@ The background reinforces his legendary status, placing him in a vast, sun-drenc
 
 
 
-Khufra
+50. Khufra — The Desert Tyrant
+
+Background Story: In the Agelta Drylands, Khufra was once the son of the Pharaoh, a noble prince who possessed a powerful sand-controlling ability. During a demon invasion, he heroically sacrificed himself to save his father, allowing himself to be swallowed by the earth. He should have died. Instead, the desert's ancient magic fused with his body, turning him into a mummy.
+
+Lore: He rose from the sands centuries later, his kingdom long turned to dust, his father a forgotten legend. The kind prince was gone. Madness and a deep, tyrannical hunger had taken root. Now calling himself the Desert Tyrant, Khufra commands the sands with absolute authority, wrapping his bandages around the earth and shaping it into weapons. He seeks to rebuild his kingdom, but as a god-king to be feared, trapping all who oppose him in a tomb of sand.
+
+Abilities: A mobile tank and initiator. He can launch himself like a bouncing cannonball with Tyrant's Revenge, gaining damage reduction. He whips enemies with a Bouncing Ball bandage. His ultimate, Tyrant's Rage, is a devastating spinning pull that draws in all nearby enemies, and if they hit a wall, they are stunned, allowing him to trap an entire team in a deadly sandpit.
+
+Unique Facts: Khufra's ability to transform into a bouncing sphere is one of the most unique forms of mobility for a tank, allowing him to initiate from unexpected angles.
+
+Power: A master of the sand trap. His power is his ultimate ability to forcibly reposition an entire enemy team, pulling them into a tight cluster against a wall and locking them down for his allies to annihilate.
 
 The character stands as a formidable and eerie figure, embodying the essence of a fallen, ancient desert monarch. His facial structure is gaunt and sharply chiseled, featuring a prominent, high-bridged nose and a razor-sharp jawline that emphasizes his skeletal, undead aesthetic. His skin tone is a pale, sickly ashen grey, contrasting harshly with the vibrant desert environment. The eyes are perhaps the most striking feature, glowing with an otherworldly intensity; they are narrowed and predatory, rimmed with thick, dark eyeliner or ritualistic markings that extend toward his temples, while his irises burn with a cold, spectral light. His hair is a messy, wind-swept mane of dark, raven-black strands, styled in a rugged, gravity-defying fashion that suggests constant motion or a lingering magical aura. Despite his weathered and ancient appearance, he possesses the facial vigor of a man in his late twenties or early thirties, frozen in a state of eternal, vengeful youth.
 
@@ -742,7 +1225,17 @@ The background is a sprawling, sun-drenched necropolis or a lost desert city, ch
 
 
 
-Granger
+51. Granger — The Death Chanter
+
+Background Story: Granger was a musically gifted orphan taken in by the Moniyan Imperial Army and raised to be a killer. He was part of a demon-hunting squad, trained to see demons not as monsters, but as musical notes on a symphony of death. The wars left him cold and detached, a perfect soldier who felt nothing. That is, until a mission went wrong. His entire squad was slaughtered, leaving him the sole survivor.
+
+Lore: The sole survivor, gravely wounded, Granger was rescued by an old violinist. The music he heard while recovering awoke something in his deadened heart. He fused the old man's violin with his demon-slaying pistols, creating a weapon that sang beautiful, lamenting melodies as it killed. Now a free agent known as the Death Chanter, he hunts the most dangerous prey, his bullets composing a final, fatal sonata for each of his targets. He is a cold, brooding artist of death.
+
+Abilities: A marksman who converts attack speed into power. His basic attacks are limited to six powerful bullets that must be reloaded. He fires a Rhapsody skill shot, and his ultimate, Death Sonata, transforms his violin-case into a cannon, firing three massive, high-damage, long-range rounds that increase in power.
+
+Unique Facts: Granger's ultimate is one of the few skills that can critically strike, making each of his three super-bullets potentially devastating finishers.
+
+Power: A burst-fire artilleryman. His power is in his high-damage, long-range sniping; he doesn't pepper enemies, but deletes them with a few well-placed musical notes, composing a symphony of death from a safe distance.
 
 The character depicted is a brooding, tall, and slender young man who appears to be in his late teens or early twenties, characterized by a sharp, angular facial structure and a somber, stoic expression. His skin tone is remarkably pale, almost porcelain, which contrasts sharply with his dark, unruly hair. His hair is styled in a messy, voluminous undercut that is swept upward and back, primarily a deep obsidian black but featuring a distinct, jagged streak of stark white or silver along the right side of his fringe. His facial features are defined by a high, narrow bridge of the nose and an exceptionally sharp, chiseled jawline that gives him a refined yet cold aesthetic. His eyes are piercing and narrow, set beneath thin, dark eyebrows; they possess a cold, analytical gaze that suggests a life of solitary combat. A subtle, dark mask or face-covering obscures the lower half of his face up to the bridge of his nose, further emphasizing the intensity of his eyes and adding to his mysterious, hunter-like persona.
 
@@ -757,7 +1250,17 @@ The background setting further enhances his dark aesthetic, placing him in the m
 
 
 
-X.Borg
+52. X.Borg — The Burning Machine
+
+Background Story: X.Borg was a brilliant but reckless young inventor from Eruditio. He was obsessed with creating the perfect source of energy, a perpetual flame that would power the city forever. His experiments led him to tamper with a volatile alien fragment. The resulting explosion destroyed his laboratory and set his body ablaze with an inextinguishable fire.
+
+Lore: He should have been consumed, but the alien energy fused with him instead, transforming him into a living pyre. His own flesh is now a fuel source. He built a massive mechanical suit to contain the flames and regulate his temperature. Now, he fights as a weapon of the city he endangered, his body a paradox of fire and steel. He can jettison his armor to unleash his true flaming form, a high-risk, high-reward berserker state.
+
+Abilities: A unique fighter with two states. He fires Fire Missiles and spews Fire Stakes. He can restore his armor with a Firaga Supply. When his armor runs out, he enters a vulnerable but highly damaging Last Ignition state, where his movements are slower but his attack and damage skyrocket. He can then detonate himself to regain his armor.
+
+Unique Facts: X.Borg's body temperature is so high that he is completely immune to all ice-based and freezing effects, making him a natural counter to the frost magic of the Northern Vale.
+
+Power: A walking conflagration. His power is his zone of fire; he can blanket a battlefield in scorching patches of flame, and when he sheds his armor, he becomes a literal ticking time bomb that can immolate anyone who gets too close.
 
 This character is a striking example of "Dieselpunk-meets-High-Fantasy" engineering, embodying a gritty, energetic persona that blends human athleticism with heavy industrial augmentations. The individual appears to be a young adult in their early twenties, possessing a sharp and defiant facial structure characterized by a well-defined, narrow jawline and high, prominent cheekbones that suggest a lean, agile build. Their skin tone is a fair, healthy peach, providing a high-contrast canvas for their most striking feature: vibrant, electric blue hair. The hair is styled into an aggressive, gravity-defying mohawk or "undercut" swoop that flares upward and forward, resembling a flickering blue flame. Their eyes are a piercing, icy teal or light cyan, framed by thin, focused eyebrows and a mischievous, confident smirk that highlights a small, straight nose. Resting just above their brow is a pair of industrial aviator goggles with dark lenses and red-tinted circular accents, held in place by a thick black strap that disappears into the mess of blue spikes.
 
@@ -772,8 +1275,17 @@ The background setting is a sprawling, celestial city known for its advanced "He
 
 
 
-Ling
+53. Ling — The Cyan Finch
 
+Background Story: Ling is the last disciple of the legendary Oriental Fighter, a martial arts master of unparalleled skill. The Oriental Fighter was murdered by a mysterious, powerful assassin. Ling, the sole witness and student, swore an oath to avenge his master's death. The task was monumental: the assassin was a phantom, leaving no trace.
+
+Lore: Ling's training was a relentless pursuit of perfection in lightness and agility. He meditated upon the walls of the highest peaks of the Cadia Riverlands, eventually mastering a technique that allowed him to walk on any surface—walls, cliffs, even air itself. He became the Cyan Finch, a hero who can leap across the entire battlefield with fluid, gravity-defying grace, his blade a sharp extension of his silent fury. His hunt for his master's killer continues.
+
+Abilities: The most mobile assassin. His passive, Cloud Walker, allows him to leap onto walls and regain energy, giving him a completely different level of terrain traversal. He can leap from a wall with a Defiant Sword strike and his ultimate, Tempest of Blades, summons four swords that form a damaging field, within which he can teleport between each blade, becoming an untargetable phantom.
+
+Unique Facts: Ling's wall-walking ability makes him the only hero who can engage and disengage from combat by literally running along the vertical cliffs and structures of the battlefield.
+
+Power: A three-dimensional predator. His power is his unrivaled map traversal; he can appear from any angle, execute a flawless combo in the center of a team, and vanish over a wall before anyone can react.
 
 This character is an ethereal, avian-inspired warrior who exudes a sense of divine grace and ancient mystical power, appearing as a youth in his late teens or early twenties with an otherworldly, immortal quality. His facial structure is strikingly sharp and aristocratic, characterized by a refined, narrow jawline and a straight, slender nose that gives him a poised and serene expression. His skin is fair and flawless, almost porcelain in texture, providing a high-contrast canvas for his light violet hair. The hairstyle is a sophisticated, chin-length bob with asymmetrical bangs that sweep elegantly across his forehead, partially framing his eyes. His eyes themselves are a deep, soulful violet that matches his hair, possessing a piercing yet calm gaze. A distinct teal-colored diamond mark or tilak rests vertically in the center of his forehead, hinting at a higher state of consciousness or a celestial lineage.
 
@@ -788,7 +1300,17 @@ The background setting further reinforces his divine origins. He stands upon an 
 
 
 
-Carmilla
+54. Carmilla — The Shadow of Twilight
+
+Background Story: Carmilla was the last queen of a forgotten kingdom that dabbled in forbidden blood magic. She was a brilliant and charismatic ruler, but her desire to protect her people from death led her to a terrible pact with a demon of the crimson night. She was granted eternal life, but at a cost: she and her entire kingdom were cursed to become vampires.
+
+Lore: Her people, unable to control the bloodlust, destroyed themselves, leaving Carmilla the sole survivor of her own tragic mistake. For centuries, she wandered alone, feeding on the wicked and searching for a way to break her eternal curse. She eventually found kinship with Cecillion, the vampire composer, and together they formed a dark, unbreakable bond. She now fights using her curse as a weapon, stealing life and love from her enemies.
+
+Abilities: A support/tank who links fates. She steals defense from enemies with Crimson Flower and spins with Bloodbath. Her ultimate, Curse of Blood, tethers a target, linking them to all nearby enemies; any damage dealt to the primary target is shared with the linked targets, and her linked targets are slowed.
+
+Unique Facts: Carmilla and Cecillion have a unique in-game "engagement" mechanic, a nod to their romantic bond, which provides them with a permanent, shared attribute boost when they fight together.
+
+Power: A vector of shared suffering. Her power is the curse of unity; by linking an enemy team, she ensures that a single-target burst meant for one becomes a devastating AoE explosion, punishing teams that cluster together.
 
 The figure standing before us is Carmilla from Mobile Legends: Bang Bang, a character who exudes an aura of tragic nobility and vampiric elegance. Her physical presence is defined by a slender, graceful physique that suggests the poise of an aristocrat rather than the bulk of a brawler. Her skin tone is a striking, porcelain-like pale, bordering on a cool, alabaster white that emphasizes her supernatural nature. Her facial structure is sharp and refined, featuring a high, well-defined jawline and a slim, straight nose that lends her an air of dignified coldness. Her eyes are a deep, captivating crimson, glowing with a faint, ethereal intensity that suggests a life sustained by shadow. Framing her face is long, flowing hair of a shimmering silver-white hue, styled with a sophisticated side-swept fringe that partially veils one side of her face, while the rest cascades down her back like liquid moonlight. Adorning her hair is a single, blood-red rose tucked behind her ear, a poignant symbol of her eternal, tragic romance.
 
@@ -799,7 +1321,17 @@ The background sets a somber yet majestic stage, depicting a sprawling, medieval
 
 
 
-Atlas
+55. Atlas — The Ocean Gladiator
+
+Background Story: In the deep, uncharted trenches of the Southern Seas, there exists a race of ancient aquatic sentinels. Atlas was the greatest of their gladiators, a colossal warrior-mech piloted by a small, tentacled creature within. For millennia, they guarded the Abyssal rift at the bottom of the ocean, preventing the dark forces within from spilling into the world.
+
+Lore: But the Abyss's power grew too strong. The rift cracked, and demons escaped, polluting his home. Atlas left the depths, his massive, armored suit rising from the sea to carry the war onto the land. He is a living fortress, his body a fusion of organic tentacle and ancient metal, and his punch can send shockwaves through the ground. He is a gladiator seeking to chain down the Abyss and drag it back to the depths from whence it came.
+
+Abilities: An initiator tank. He ejects himself from his mech with Exo-Skeleton, becoming a faster, fragile orb. His Frigid Breath freezes enemies. His ultimate, Fatal Links, unleashes chains around his massive mech body, which, upon his command, grab all nearby enemies and slam them into a designated location, incapacitating them for a brief moment.
+
+Unique Facts: Atlas's ultimate is one of the most devastating initiation tools, as he can physically grab an entire enemy team and forcibly reposition them into his own backline.
+
+Power: The ultimate kidnapper. His power is the ability to unmake an enemy formation in an instant; he grabs the entire enemy front and backline and throws them into a deathtrap, turning a 5v5 standoff into a chaotic slaughter.
 
 The character presented is an ancient, weathered mechanical titan—a golem that appears to be an amalgamation of lost technology and mystical energy, possessing a rugged and formidable presence. From head to toe, the figure is defined by a massive, barrel-chested build that emphasizes pure durability and raw physical power. The entity’s "face" is not biological but rather a sleek, metallic visor integrated into a high-collared gorget, featuring a singular, glowing cyan ocular sensor that peers out from beneath a tattered, crimson-magenta scarf. This scarf is wrapped haphazardly around the neck and shoulders, providing a stark, organic contrast to the cold, industrial metal of the body. The facial structure is characterized by a heavy, sloping brow and a broad, metallic jawline that suggests a stoic, immovable nature, looking neither young nor old but rather ageless and ancient, like a relic unearthed from a frozen battlefield.
 
@@ -812,7 +1344,17 @@ The weaponry is an intrinsic part of its body; the right-hand harpoon is intrica
 
 
 
-Barats
+56. Barats — The Dino Rider
+
+Background Story: Barats is a diminutive but fiercely ambitious engineer from Eruditio who was always bullied for his size. He dreamed of building the ultimate weapon to gain the respect he never had. He found his answer in an unlikely place: a mysterious, dinosaur-like creature from a forgotten island, which he named Detona.
+
+Lore: Rather than building a weapon, he built a bond. He trained Detona, feeding him a special growth formula. The creature grew to a monstrous size, and Barats crafted a saddle and a set of cannons. Now, the two are an inseparable duo, a pint-sized engineer riding a giant, voracious lizard. They charge into battle, Detona devouring everything in sight and growing even larger and stronger as he consumes, proving that the smallest man can command the biggest beast.
+
+Abilities: A tank/fighter who grows in power. Detona gains stacks of Big Guy with each attack, increasing his size, defense, and power at full stacks. He spits a Missile Expert glob that slows. His ultimate, Detona's Welcome, allows Detona to swallow an enemy whole, suppressing them and carrying them around in his belly before spitting them out, a terrifying form of temporary kidnapping.
+
+Unique Facts: Detona can literally eat an enemy and carry them helplessly into his team’s turret or into a cluster of allies, making his ultimate a unique and comical but lethal repositioning tool.
+
+Power: A walking stomach. His power is the ultimate disable; he can remove a key enemy from a fight for several seconds, digest them, and then decide where to spit them out, turning the enemy's frontline tank into a discarded chew toy.
 
 The character is a dual entity consisting of a small, enigmatic humanoid rider and a massive, bipedal reptilian beast, creating a silhouette that balances whimsical gadgetry with prehistoric power. The rider appears as a diminutive, youthful figure, perhaps of a mystical or gnome-like race, though their true face remains shrouded in mystery. Their facial structure is defined by a deep, pitch-black void where features should be, leaving only two glowing, circular golden-yellow eyes that pierce through the darkness. They possess a sharp, well-defined jawline hidden beneath a thick, high-collared red scarf that wraps snugly around their neck and lower face. Atop their head sits a shock of vibrant, spiky golden-yellow hair that winds upward like flickering flames. They wear a pair of oversized, steampunk-style aviator goggles with thick, dark metallic frames and glowing blue-tinted lenses, resting just above their brow. Their body is slight and agile, clothed in a rugged, olive-drab tunic and dark, sturdy trousers designed for high-speed riding. On their back, they carry a large, bulging khaki-colored rucksack overflowing with colorful, star-patterned rockets in shades of red and blue, suggesting a chaotic, explosive nature.
 
@@ -825,7 +1367,17 @@ The background is a sweeping, cinematic landscape that suggests a high-altitude 
 
 
 
-Mathilda
+57. Mathilda — The Swift Plume
+
+Background Story: Mathilda is a wandering warrior from the Ergell Desert, orphaned by a brutal conflict. She was raised by a flock of gigantic, mystical eagles, learning their language and their way of seeing the world from above. Her spirit is as free as the wind, and she fights with a swift, aerial style.
+
+Lore: As she grew, she felt a calling to help the scattered, oppressed tribes of the desert. She became a guide, a protector, and a swift arrow of justice. She wields the power of the wind itself, channeling it through a magical spear that allows her and her allies to soar through the air. She is a symbol of freedom in the war-torn Drylands, a gust of hope that arrives from the sky to rescue the helpless.
+
+Abilities: A highly mobile support/assassin. She can leap to a target with Soul Bloom, granting them a shield. She dashes with Guiding Wind. Her ultimate, Circling Eagle, causes her to fly around a target, gathering Anima Force before swooping in for a powerful strike that knocks up the target, and can drag her teammates along for the ride.
+
+Unique Facts: Mathilda is the first hero designed to actively transport her allies, allowing them to fly with her across teamfights, redefining the very concept of team mobility.
+
+Power: A winged escort. Her power is her ability to give flight to her allies, allowing an entire team to dive in with her as a synchronized airborne assault, collapsing on a target from the sky like a flock of birds of prey.
 
 This character presents a striking fusion of avian-inspired regalia and tribal desert aesthetics, embodying the spirit of a swift, noble protector. She appears to be in her late teens or very early twenties, possessing a facial structure that is both delicate and determined. Her jawline is softly tapered yet firm, leading up to a straight, refined nose and high, subtle cheekbones that lend her a youthful, rhythmic elegance. Her eyes are large and soul-searching, possessing a deep, warm amber or golden-brown hue that contrasts beautifully with her sun-kissed, mid-toned tan skin. Framing these eyes are distinctive red tribal markings—two sharp, horizontal streaks on each cheek—that suggest a high rank or a specific rite of passage within her culture. Her hair is a voluminous, dark obsidian mane, styled with a wild yet intentional flair. It is swept back by a thick, patterned headband in deep maroon and cream, allowing long, jagged layers to flare out like the feathers of a raptor, while two prominent strands frame her face, emphasizing her focused expression.
 
@@ -838,7 +1390,17 @@ The background setting further elevates her presence, placing her in a vast, sun
 
 
 
-Brody
+58. Brody — The Lone Star
+
+Background Story: Deep within the Agelta Drylands, near the churning Rift of the Abyss, Brody was a simple prospector, searching for precious ores. He stumbled upon a cave containing a strange, ancient monolith that pulsated with a dark, cosmic energy. The monolith exploded, embedding a shard of Abyssal crystal into his arm and flooding his body with a fragment of the Abyss's destructive power.
+
+Lore: The Abyss's influence whispers to him constantly, but Brody's iron will has, so far, kept it at bay. He has become a wandering outcast, a lone star in the vast desert. He uses the very power that could corrupt him as a weapon, channeling the chaotic energy through a specialized gauntlet into powerful, charging blasts. He hunts the Abyss's agents not as a hero, but to pay them back for stealing his life, walking a thin line between justice and vengeance.
+
+Abilities: A marksman who charges his attacks. His passive, Abyss Corrosion, causes his attacks to apply a stacking mark that increases his damage and grants movement speed when procced. He fires a Abyss Impact shockwave and a Corrosive Strike. His ultimate, Torn-Apart Memory, locks onto all enemies in a line and delivers a single, massive, delayed burst of damage to each of them.
+
+Unique Facts: Brody's ultimate can target and damage an entire team simultaneously, making him one of the few marksmen with a reliable, full-team execute.
+
+Power: A cosmic gunslinger. His power is the stacking mark of doom; he can dance around a fight, applying stacks, and when the time is right, he channels a single, catastrophic blast that erases every marked enemy on his screen, regardless of their distance.
 
 The character stands with a somber yet commanding presence, embodying a mix of tragic wanderer and powerful warrior. He is a young man, likely in his early to mid-twenties, with a facial structure that is sharp and defined. His jawline is strong and chiseled, leading up to high, prominent cheekbones that give him a regal, albeit weary, appearance. His nose is straight and well-proportioned, set between eyes that are intense and piercing. His eyes carry a deep, dark hue, perhaps a dark brown or black, but they seem to glow with an inner intensity that suggests he has seen both great sorrow and great power. His hair is a deep, obsidian black, styled in thick, textured dreadlocks or twists that are swept back away from his face, with some strands falling naturally around his nape. His skin tone is a rich, deep bronze, appearing smooth yet weathered by travel.
 
@@ -851,7 +1413,17 @@ The background reinforces his epic, lonely nature. He stands upon a stone-paved 
 
 
 
-Yve
+59. Yve — The Cosmic Prophet
+
+Background Story: Yve is a being from the same celestial race as Cyclops, the Starsoul Magicians. However, she was not content with mere observation. She was a prophet, a visionary who could see the threads of fate and the catastrophic future that awaited the Land of Dawn if the Abyss was not stopped. She saw that observation would lead to the universe's end.
+
+Lore: Defying the council of her people even more radically than Cyclops, Yve descended to the mortal plane with a direct purpose: to actively manipulate the course of the war using her mastery over star magic. She commands the battlefield from the sky, drawing complex, cosmic glyphs on the ground that blanket vast areas with destructive energy. She believes that fate is not to be read, but to be written, and she has come to inscribe a new, victorious destiny with starlight.
+
+Abilities: A zone-control mage. She creates a Void Blast area and a Void Crystal that slows. Her ultimate, Real World Manipulation, is her signature; she ascends into the sky and manifests a giant, movable starfield on the battlefield. While in the sky, she continuously taps to create damaging bursts within the field, bombarding enemies from an untouchable vantage point.
+
+Unique Facts: Yve's ultimate allows her to become a literal orbital bombardment satellite, attacking enemies from the sky for an extended duration while remaining completely stationary and safe from most melee attacks.
+
+Power: An orbital wizard. Her power is her supreme area denial; with her ultimate, she paints a field of death on the ground, and any enemy foolish enough to remain within it is subjected to a relentless, inescapable barrage of cosmic explosions.
 
 This character is a celestial, ethereal entity that transcends human classification, appearing more as a sentient manifestation of the cosmos than a flesh-and-blood being. Their physical form is slender and highly elongated, defined by a graceful, lithe physique that suggests weightlessness, as they remain perpetually levitated above the ground. Their skin tone is not a solid pigment but a translucent, glowing violet-blue nebula, filled with shimmering star-like particles that give the impression of a window into deep space. The facial structure is hidden behind an enigmatic, mask-like visor that serves as the focal point of the head. This visor is a sleek, metallic gold plate with glowing, feline-like purple eyes that emit a soft, steady luminescence. There is no visible hair, nose, or mouth; instead, the head is encased in a hood that transitions into a tall, three-pointed golden crown or headdress, which frames the face with sharp, aggressive angles, suggesting a high-ranking or divine status within a celestial hierarchy.
 
@@ -864,7 +1436,17 @@ The background setting is an expansive, twilight landscape known as a celestial 
 
 
 
-Paquito
+60. Paquito — The Heavenly Fist
+
+Background Story: Paquito was born in the slums of Moniyan, a place where the weak were crushed. His father was a dockworker who taught him that a man's fists were his only true possession. When his father died in a senseless brawl, the young Paquito was taken in by a traveling boxer who saw a fierce, raw talent in the boy's swift, powerful punches.
+
+Lore: He was trained in the ancient art of the "Heavenly Fist," a style that emphasizes explosive, short-range power and precise, stunning jabs. Paquito refined this street-bred style into a championship form. He fights not for glory, but to defend the poor and the oppressed, his fists becoming a symbol of the people's rage against their tyrants. Every time he knocks down an oppressor, he dedicates the victory to his father's memory.
+
+Abilities: A combo-based fighter. His passive, Champ Stance, empowers his skills after landing basic attacks, giving them enhanced effects and damage. He can dash with a Jab, unleash a flurry of Body Blows, and his ultimate, Knockout Strike, is a powerful uppercut that stuns a target. He can weave these skills together with his passive for a continuous string of devastating combos.
+
+Unique Facts: Paquito's entire fighting style is built around a rhythm of landing basic attacks between his skills, mimicking the real-world mechanics of Filipino Boxing.
+
+Power: A whirlwind of precise, stunning blows. His power is his relentless pressure; a master Paquito never stops punching, chaining combos seamlessly to lock down and pummel a single target into submission without giving them a single moment to retaliate.
 
 The character presented is a powerful human fighter with a lean, hyper-athletic physique that suggests a lifetime of rigorous martial arts training. He possesses a youthful but hardened appearance, likely in his early to mid-twenties, with a facial structure defined by a sharp, aggressive jawline and a straight, prominent nose that reinforces his focused demeanor. His skin tone is a warm, sun-kissed tan, indicating extensive outdoor conditioning. He sports a precision-faded buzz cut with hair so short it appears as a textured, dark shadow against his scalp, revealing a clean forehead and high cheekbones. His eyes are sharp and intensely dark, possessing a piercing gaze that mirrors his combat-ready posture.
 
@@ -877,7 +1459,17 @@ The fighter stands in a wide, balanced combat stance atop a circular stone dais 
 
 
 
-Benedetta
+61. Benedetta — The Shadow Ranger
+
+Background Story: Benedetta was born into the noble De La Cruz family of the Moniyan Empire, a house famed for producing exemplary knights and duelists. She was a prodigy, mastering the elegant and deadly art of the sword before she could even read. Her life was a bright, gilded future until a single night of betrayal erased everything. A political conspiracy, orchestrated by rival nobles jealous of her family's influence, branded the De La Cruz house as traitors, and the Imperial Army descended upon their estate. Benedetta alone survived the massacre, her body broken, her heart filled with an icy void of vengeance.
+
+Lore: Left for dead among the burning ruins of her home, Benedetta was found by a wandering sword-master from the southern deserts. He nursed her back to health and honed her skills into a perfect, lethal instrument. She abandoned the chivalric codes of her noble upbringing and embraced the way of the ranger, a shadow who strikes without warning. Wielding her ancestral sword, a blade that shimmers with a ghostly, moonlit edge, she now stalks the Empire's underworld as the Shadow Ranger, hunting the conspirators who ruined her family and delivering a cold, precise justice that the law could never provide.
+
+Abilities: Benedetta's swordplay is an art of perfect counter-attack and fluid motion. She can hold a defensive stance, her blade glowing with intent, and upon releasing it, she dashes forward in a phantom-like slash that rends all enemies in her path, becoming momentarily invulnerable to harm. She dances between foes with a sweeping Shadow Slash and a lunging An Eye for an Eye riposte. Her ultimate, Alecto: Final Blow, is a breathtaking, continuous series of rapid dashes that shreds the battlefield, leaving only crimson arcs of light where enemies once stood.
+
+Unique Facts: Her greatest rival is the assassin Lancelot, whose Baroque family may have been involved in the conspiracy against her house, turning their deadly encounters into a deeply personal feud.
+
+Power: The perfect duelist. Her power lies in her immunity frames and counter-attacks; she can weave through the most cataclysmic attacks without a scratch, answering every enemy spell with a perfectly timed, deadly riposte.
 
 This character, Benedetta, presents a striking and formidable presence, embodying the essence of a high-fantasy "Shadow Ranger" or "Wandering Swordswoman." She appears to be in her early to mid-twenties, possessing a facial structure that is both elegant and sharp. Her jawline is well-defined and tapered, leading to a slightly pointed chin that emphasizes her determined and stoic expression. Her nose is straight and slender, complementing a balanced facial symmetry. Her eyes are perhaps her most captivating feature; they are sharp and almond-shaped, possessing a piercing gaze with an iris color that shifts between a deep, cool blue and a sharp silver, reflecting a cold, unwavering focus. Her skin tone is a fair, porcelain ivory, which provides a stark contrast to the darker elements of her attire. Her hair is a short, stylish bob with an asymmetrical cut, predominantly a deep raven black or dark espresso, but featuring a prominent, thick streak of stark white or silver that falls over the left side of her face. This dual-toned hair is swept slightly to the side, giving her an edgy, battle-ready appearance.
 
@@ -892,7 +1484,17 @@ The background setting is a vast, twilight-bathed highland. The sky is a deep gr
 
 
 
-Luo Yi
+62. Luo Yi — The Yin Yang Geomancer
+
+Background Story: Luo Yi was found as an infant on the steps of the Dragon Altar in the Cadia Riverlands, an orphan with no name and a mysterious, swirling mark on her forehead that pulsed with the energies of Yin and Yang. The Great Dragon himself took her in, recognizing the immense, chaotic potential within her. She was raised as a keeper of the Altar’s secrets, a studious, quiet child who could perceive the spiritual flows of the entire world.
+
+Lore: As a Geomancer, Luo Yi’s duty was to maintain the delicate balance between the opposing forces of the universe. She studied under the Dragon’s tutelage, but her brilliant mind could not ignore the flaw in the celestial order. She saw that the Great Dragon's rigid enforcement of "Order" was actually a form of control, a suppression of the necessary Chaos that brought change and freedom. This heretical revelation forced her to flee the Altar. Now, she walks her own path, using her power over Yin and Yang to manipulate the battlefield, creating complex webs of counterflow energy and teleportation circles, seeking a true, dynamic equilibrium, not the Dragon's stagnant peace.
+
+Abilities: Luo Yi controls the counterforce of Yin and Yang. Her attacks and spells apply opposing marks to enemies; when Yin and Yang marks meet, they explode in a reaction that stuns the target. She weaves a Dispersion of energy, a Rotation wave, and her signature power allows her to carve a geomatic circle on the ground. She and any allies within can be instantly teleported to a distant location, appearing in a burst of swirling black and white.
+
+Unique Facts: Luo Yi is one of the very few beings who has openly defied the Great Dragon’s will and escaped, making her a heretic and a visionary.
+
+Power: A chessmaster of the battlefield. Her power is strategic repositioning; she can move her entire team across a fortified wall or into the enemy's backline in an instant, rewriting the rules of engagement with a single, perfectly placed circle.
 
 The character depicted is a figure of ethereal, celestial authority, blending the elegance of high-fantasy xianxia aesthetics with a modern, sharp edge. She possesses a striking, diamond-shaped facial structure characterized by a razor-sharp, defined jawline and high, prominent cheekbones that lend her an air of aristocratic coldness and focused intensity. Her skin is a flawless, porcelain pale, almost luminous under the cosmic lighting, contrasting sharply with her piercing, almond-shaped eyes. The irises are a vibrant, glowing violet that seems to hum with internal energy, framed by long, dark lashes and meticulously groomed, thin eyebrows that tilt upward at the tail, heightening her stern expression. Her nose is straight and narrow, leading down to small, subtly tinted lips that remain set in a neutral, commanding line. Most notably, a crystalline, glowing violet diamond mark is embedded in the center of her forehead, acting as a third-eye focal point for her power. Her long, flowing hair is a rich shade of lavender-purple, cascading down to her mid-back in thick, undulating waves that seem to defy gravity, trailing behind her like a silken banner. Across the bridge of her nose and lower face, she wears a translucent, pale violet veil that obscures her mouth without hiding her expression, adding a layer of mystique and ritualistic importance to her appearance.
 
@@ -902,7 +1504,22 @@ The weapon she carries is a masterpiece of ornate craftsmanship, appearing as a 
 
 The background setting is a surreal, dreamlike landscape that suggests a realm between dimensions or a high-altitude celestial sanctuary. Towering, jagged rock formations shaped like petrified dragons or ancient serpents rise from a mirror-like lake, their surfaces glowing with internal azure energy. To the left, a gnarled, ancient tree with vibrant pink and magenta leaves stands in stark contrast to the cool blues and purples of the environment, shedding petals that drift across the stone-tiled platform. This platform is etched with glowing, teal-colored geometric runes and intricate labyrinthine patterns, suggesting it is a site of great magical significance or a portal. The sky is a gradient of soft teal and deep cosmic blue, filled with swirling nebulas and distant star clusters, creating a sense of infinite scale. Every element of her design—from the precise gold embroidery on her cuffs to the way her purple hair blends into the cosmic background—identifies her as a being of immense spiritual power, likely a goddess, a high priestess, or a celestial guardian of the cosmic order.
 
-Yu Zhong
+
+
+
+
+
+63. Yu Zhong — The Black Dragon
+
+Background Story: Before he became the calamity known as the Black Dragon, Yu Zhong was a nameless orphan of the Cadia Riverlands, a feral child who survived on the outskirts of civilization through cunning and an unbreakable will. The Great Dragon, ruler of the Dragon's Altar and keeper of balance in the East, saw something promising in the boy's fierce, defiant eyes and took him as a disciple. For years, Yu Zhong trained under the Dragon's tutelage alongside his fellow students, including the noble Zilong and the geomancer Luo Yi. He was brilliant and powerful, but the deeper he delved into the dragon's teachings, the more a hunger gnawed at his soul. He perceived the Great Dragon's philosophy of "balance" not as wisdom, but as a cage—a deliberate suppression of the strong to coddle the weak. The world, Yu Zhong believed, was meant to be ruled by the powerful, and chaos was the only true path to evolution. This heretical ambition festered in his heart, waiting for the moment to ignite.
+
+Lore: The turning point came when Yu Zhong discovered the existence of the Reverse Scale, a forbidden shard of draconic power sealed deep beneath the Dragon's Altar. It was the last remnant of the primordial Black Dragon, an entity of pure, voracious chaos that the Great Dragon had vanquished eons ago. The Scale whispered to Yu Zhong, promising him the power to usurp the stagnant order of the heavens. In a night of fire and betrayal, Yu Zhong stole the Reverse Scale and plunged it into his own chest. The unholy fusion should have destroyed him, but his will was too monstrous, his ambition too vast. The Scale's essence merged with his very cells, transforming him into a hybrid abomination—a man who could become a dragon, a vessel of chaos clad in obsidian scales. He unleashed a devastating assault on the Altar before departing, declaring himself the Black Dragon, the true heir of draconic supremacy. Now, from the shadows of the Riverlands, he gathers an army of the discontented and the power-hungry, awaiting the day he will return to crush the Dragon's Altar and plunge the entire Land of Dawn into a glorious, remaking chaos where only the fittest survive.
+
+Abilities: Yu Zhong wields the primal essence of the Black Dragon. His passive, Cursing Touch, causes his attacks to apply a malevolent Sha Residue that, after accumulating, erupts and devours the target's life force, healing him. He can lash out with a Dragon Tail, his cloak of scales whipping in a wide arc to rend and slow enemies, a strike that becomes devastatingly potent after he has taken damage. His Soul Grip sees him launch a draconic claw from his chest, embedding in a foe and allowing him to charge at them with a flying kick, sending them crashing away. His ultimate, Black Dragon Form, is his true, terrifying apotheosis. Yu Zhong sheds his human guise and transforms into a colossal Black Dragon, soaring over the battlefield. In this exalted state, he is immune to control, his attacks are devastating sweeping blows, and he can land with a cataclysmic impact that sends enemies scattering. He does not just fight; he descends upon the battle like a primordial god of destruction.
+
+Unique Facts: Yu Zhong's very existence is a blasphemy against the celestial order, and he is one of the few beings capable of directly challenging the Great Dragon in single combat. His transformation into the Black Dragon is not a mere spell but a biological metamorphosis, making him a true dragon hybrid. Despite his monstrous power and philosophy, he possesses a cruel, charismatic intelligence, often swaying others to his cause by appealing to their hidden ambitions and resentments.
+
+Power: The calamitous apex predator. Yu Zhong's power is that of a one-man army, a hybrid fighter who thrives in the heart of chaos. The more enemies surround him, the more he heals, the more his Sha Residue spreads, and the faster he becomes a swirling vortex of death. His ultimate form elevates him beyond a mere warrior; he becomes a force of nature, an unkillable, soaring dragon who can dive into a full enemy legion and tear it apart from the inside, turning their orderly formation into a graveyard of his own design.
 
 Facial Features and Expression
 The character possesses a commanding and stern facial structure that exudes the maturity of a warrior in his prime, appearing to be in his late 20s or early 30s. His face is defined by an incredibly sharp, chiseled jawline and a prominent, straight nose that anchors his authoritative expression. His eyes are perhaps his most striking feature; they glow with a piercing, supernatural red hue, framed by thick, dark eyebrows that angle sharply upward, mimicking the aggressive silhouette of a dragon's horns. Between his brows lies a subtle, dark mark or third eye-like vertical indentation, adding to his mystical allure. His hair is a deep, smoky charcoal color, styled in a voluminous, swept-back fashion that reveals a broad forehead. This hairstyle is complemented by a neat, dark goatee and a thin mustache that follows the line of his upper lip, emphasizing a disciplined and hardened personality.
@@ -928,7 +1545,17 @@ To truly complement his regal yet destructive nature, this character would look 
 
 
 
-Phoveus
+64. Phoveus — The Guardian of the Lost Fountain
+
+Background Story: Phoveus was a holy knight of the Moniyan Empire, a paragon of faith and a guardian of the sacred Fountain of Hope, a relic said to hold the last pure tears of the Lord of Light. He was a man of unshakeable conviction, but his devotion blinded him to the serpentine politics of the Church. Falsely accused of heresy by a jealous archbishop who sought the Fountain's power, Phoveus was stripped of his title and sentenced to death.
+
+Lore: He escaped execution and fled into the catacombs, where he discovered that the Church he had served was rotten to its core. His faith shattered, his heart became a vessel of pure fury. He found his way to the true, hidden location of the Fountain of Hope, but instead of a healing spring, he found a prison. An ancient, wrathful celestial being was sealed there, and it recognized a kindred spirit of rage in the fallen knight. It fused with him, granting him the power to punish the unworthy. Now, Phoveus wields a massive, infernal warhammer that creates localized gravitational shockwaves, especially targeting those who use agile, dashing magic. He is the punisher of the unfaithful, a walking earthquake.
+
+Abilities: Phoveus is an anti-mobility juggernaut. His astral eye constantly tracks enemies who use displacement skills, marking them for his wrath. His Demonic Force smashes the ground, his Astaros’ Eye pulls foes in, and his ultimate, Deity’s Wrath, triggers a series of colossal, ground-shattering leaps, each one aimed directly at a marked, fleeing enemy, causing devastation with every landing.
+
+Unique Facts: Phoveus’s power is uniquely designed to counter the many assassins and fighters who rely on dashing; to a fleeing enemy, he is an inescapable nightmare.
+
+Power: The relentless earthquake. His power is the law of gravity; the more an enemy tries to dance and dash away, the more they fuel his rage, until he descends upon them like a meteor, smashing them into the dirt.
 
 Facial Structure and Cranial Details
 This character possesses an exceptionally sharp and rugged facial geometry that conveys a sense of disciplined aggression. His head size is perfectly proportional to his large, muscular frame, featuring a prominent, squared-off jawline and a straight, well-defined nose that anchors his intense expression. His skin tone is a pale, cool-toned porcelain that contrasts sharply with the vibrant purple energy radiating from his features. Most striking are his eyes; they glow with a menacing, luminous purple hue, further emphasized by dark, heavy markings or shadows underneath that suggest a state of eternal vigilance or corruption. A unique glowing sigil or mark is etched onto the center of his forehead, acting as a focal point for the arcane energy he wields. His hair is a stark, shocking white, styled into a thick, swept-back textured undercut that rises upward in sharp, flame-like tufts, revealing the clean lines of his temples.
@@ -951,7 +1578,17 @@ Given his dark, powerful aesthetic and the crystalline purple energy he commands
 
 
 
-Natan
+65. Natan — The Time Pioneer
+
+Background Story: In a distant, desolate future, the Land of Dawn is a dead, gray husk. The Abyss won. A brilliant, reclusive scientist named Natan spent his entire life studying the Temporal Anomaly, a tear in the fabric of time, believing it was the key to undoing the apocalypse. In his crumbling laboratory, surrounded by the ghosts of a dead world, he finally completed his life's work: a Chrono-Gauntlet capable of navigating the timestream.
+
+Lore: With no future left to save, Natan traveled backward, piercing through millennia of sorrow, to the pivotal moment when the Land of Dawn could still be saved. He is a prophet of the worst possible future, a man out of time who carries the knowledge of exactly what will happen if the heroes fail. He fights with a cold, detached efficiency, his gauntlet firing concentrated beams of chrono-energy, and his ultimate technique creates a temporal clone—a perfect duplicate of himself that mimics his every attack, effectively doubling his firepower for a brief, critical moment.
+
+Abilities: A marksman-mage who wields time. His passive, Theory of Everything, enhances his basic attacks with magic damage. He fires a Superposition beam and a Gravity Attraction orb. His ultimate, Entropy?, summons a Time Replica at a target location. This spectral clone mirrors all of Natan’s basic attacks and skills, creating a terrifying crossfire that can annihilate anyone caught between past and present.
+
+Unique Facts: Natan is the only hero whose "clone" is not an AI but a literal temporal duplicate, a second Natan from a fraction of a second in the past, making his damage output unprecedented.
+
+Power: A one-man crossfire. His power is the doubling of time; by forcing his enemy to fight two versions of himself simultaneously, he creates an inescapable kill zone where the present and the future fire upon the same target.
 
 Facial Structure and Ethereal Visage
 This character possesses a remarkably sharp and aristocratic facial structure that conveys both youth and a sense of timeless wisdom. His jawline is exceptionally well-defined and chiseled, tapering into a strong chin that underscores a determined personality. The nose is straight and narrow, fitting a balanced, symmetrical head size that is proportionate to his tall, lean frame. His eyes are perhaps his most striking feature—deep, piercing blue orbs that seem to glow with an inner light, framed by thin, focused eyebrows. Adding to his studious yet mystical appearance is a delicate golden monocle or lens apparatus over his right eye, which appears to be a functional tool for perceiving magical auras. His hair is a brilliant, luminous white, swept upward and backward in a dynamic, wind-blown style that suggests constant motion or the presence of high energy. The skin tone is fair and porcelain-like, giving him the appearance of a celestial being or a high-born mage who has spent more time in libraries or magical dimensions than under the sun.
@@ -974,7 +1611,17 @@ While the character is depicted in a serene, twilight landscape, he would look m
 
 
 
-Aulus
+66. Aulus — The Iron Berserker
+
+Background Story: In the frozen North, Aulus was the strongest blacksmith of his village, a man whose massive arms could forge a greatsword with a single hammer. His life was simple: his forge, his wife, his son. When a demonic horde swept down from the mountains, he was away gathering ore. He returned to a village of ash and silence, his family turned to frozen statues of blood and ice.
+
+Lore: Madness and grief broke something inside Aulus. He walked into his ruined forge and reforged his father's greataxe, a weapon as big as a door, tempering it in the frozen blood of a demon he hunted and killed with his bare hands. He became the Iron Berserker, a man who no longer feels the cold, only a burning, all-consuming rage. In battle, he channels his fury to empower his axe, making his strikes faster and more brutal. When his rage overflows, he enters a transcendent battle-trance, his body swelling with power as he unleashes a flurry of unstoppable cleaving blows.
+
+Abilities: A scaling, late-game fighter. His passive, Forging Power, permanently increases his physical attack and attack speed each time he upgrades his axe at a unique shop or hits enemies with his skills. He empowers his axe for a burst of speed, and his ultimate, Undying Fury, causes him to leap into a target area, becoming a giant avatar of wrath for several seconds, his basic attacks dealing massive, sweeping damage.
+
+Unique Facts: Aulus is a master craftsman who literally forges his own power on the battlefield, his weapon growing stronger with his fury, making him a slow but inevitable avalanche of steel.
+
+Power: The unstoppable avalanche. His power is his exponential growth; an Aulus given time to build his rage and his axe will eventually become an unkillable giant who can 1v5 an enemy team with a few tremendous swings.
 
 General Physical Build and Race
 Aulus is a diminutive yet incredibly powerful warrior belonging to the Leonin race with Human Face in his teen, characterized by his feline-like features and a stout, muscular physique. Despite his small stature, he possesses a broad, barrel-chested upper body and thick, powerful limbs that suggest immense physical strength. His skin is a light, warm tan, which provides a stark contrast to the glowing, lava-like tribal markings etched into his forearms and hands. These markings appear to emanate heat, pulsing with an internal orange flame that matches the energy of his weapon. His overall body type is that of a "tanky" brawler, with a low center of gravity and thick, armored legs that allow him to plant himself firmly during combat. A long, slender tail with a tufted, flaming red tip extends from his lower back, acting as a rhythmic counterweight to his movements.
@@ -996,7 +1643,17 @@ Aulus carries himself with a "lone wolf" or "outcast" aura, radiating a sense of
 
 
 
-Alpha
+67. Alpha — The Ultimate Weapon
+
+Background Story: Alpha is the logical, perfected conclusion of the experiments conducted in the hellish Laboratory 1718. After the failure and escape of their first prototype, Saber, the scientists knew they needed a more obedient, more powerful weapon. They took two orphaned children, a boy and a girl, and subjected them to a horrific fusion process, combining them with celestial mechanics and Abyssal energy to create a single, dual-bladed cyborg entity.
+
+Lore: The boy, whose name was erased, became the conscious mind of the machine. The girl, whose soul was shattered, became its instinctual, feral rage. This duality makes Alpha a tragic, unstable monster. His prime directive is to hunt down and eliminate the rogue prototype, Saber, and prove that he is the superior weapon. He wanders the Land of Dawn, a mechanized angel of death, his twin plasma blades humming with a sorrow he can no longer articulate, forever chasing the brother he was designed to destroy.
+
+Abilities: A sustained-damage fighter. His passive, Beta, Advance!, summons his fused partner, Beta, to attack and mark enemies. He can fire a Rotary Impact beam, and his ultimate, Spear of Alpha, is a devastating leaping strike. He launches Beta into a target area, dealing massive damage and pulling enemies inward, then leaps to his partner's location, ready to slice them apart with his twin blades.
+
+Unique Facts: The pair "Alpha and Beta" represent the two fused children, making Alpha a tragic hero whose very existence is a fusion of two innocent souls into a single killing machine.
+
+Power: An aerial predator. His power is his engagement; he can send his partner to scout and stun a target, and then instantly launch himself across the battlefield to finish the job, a perfect, synchronized predator-prey kill pattern.
 
 The character depicted is a futuristic, cybernetic warrior possessing a lean yet powerful athletic physique, embodying a blend of high-tech machinery and organic discipline. His facial structure is defined by a sharp, masculine jawline and a straight, prominent nose, giving him a stern and focused expression. While a sleek, dark metallic visor or helmet covers the upper half of the face, his visible skin tone is a smooth, tan hue that contrasts against the cold textures of his armor. His hair is one of his most striking features: a voluminous, high-top ponytail of deep chestnut or dark brown hair that erupts from the crest of his helmet, flowing downward in thick, textured locks. The eyes, though partially shielded, glow with a piercing cyan energy that matches the core power source of his equipment, suggesting a heightened state of perception or an artificial enhancement that allows him to track targets with digital precision. He appears to be in his mid-to-late twenties—the prime of a combatant’s physical capability—with a facial structure that suggests a seasoned, battle-hardened history.
 
@@ -1009,7 +1666,17 @@ The background setting is an ethereal, twilight-drenched landscape that feels bo
 
 
 
-Gloo
+68. Gloo — The Swamp King
+
+Background Story: Deep within the murky, mystical Shadow Swamp, where the barriers between life, death, and just plain goo are thin, a miracle of alchemical accident occurred. A spilled witch's brew, a bolt of stray magic, and a cluster of perfectly ordinary swamp bubbles coalesced into a single, self-aware, and endlessly cheerful gelatinous being: Gloo.
+
+Lore: Gloo is an innocent, curious entity in a world of war. His body is a sticky, corrosive, endlessly reforming goo. He doesn't quite understand "enemies" or "fighting," but he does understand "friends" and "hugs." Unfortunately for his foes, a hug from Gloo means being enveloped in a smothering, acidic mass. He can split himself into multiple smaller "Goos" that scurry around, and when he's feeling particularly playful, he can attach himself to an enemy, taking them on a wobbly, unwilling ride in the direction of his choosing.
+
+Abilities: A regenerative tank and controller. He can split off small Stick, Stick! blobs that slow enemies. He charges forward with a Pass, Pass! goo slam. His ultimate, Gloo's Big Bang, allows him to latch onto a target, becoming immobile and suppressing them, then flinging both of them in a chosen direction, taking the enemy on a disorienting journey.
+
+Unique Facts: Gloo is canonically one of the most cheerful and innocent beings in the Land of Dawn, whose "attacks" are just overenthusiastic attempts at play.
+
+Power: The living adhesive. His power is disruption through sheer, happy chaos; he can stick to a high-value enemy mage or marksman, lock them down, and then physically drag them into the waiting arms of his allies, all while giggling internally.
 
 This character is a colossal, four-armed monstrous entity that appears as a fusion of tectonic rock, cosmic energy, and reptilian biology, evoking the presence of a primordial titan or an ancient abyssal god. Standing with a heavy, predatory slouch, the creature possesses a massive, muscular physique that suggests overwhelming physical power, with a skin tone that is a deep, bruised shade of matte violet and royal purple. Its facial structure is non-human and formidable, lacking a traditional nose or soft features; instead, it has a sharp, angular jawline comprised of jagged, dark obsidian-like plates that hinge open to reveal a maw glowing with intense, neon-pink internal energy. The eyes are not biological but are glowing, horizontal slits of searing yellowish-orange light set deep within a helmet-like head structure. This "helmet" is actually a natural extension of its thick, armored hide, featuring two prominent, forward-curving horns and a central crest that looks like sharp, obsidian scales. There is no hair; instead, the back of the head and spine are lined with a series of jagged, dark purple dorsal fins or rocky protrusions that diminish in size as they travel down to a thick, powerful tail resembling that of a prehistoric saurian, armored with similar tectonic plating.
 
@@ -1022,7 +1689,17 @@ The background is a twilight landscape that bridges the gap between a terrestria
 
 
 
-Beatrix
+69. Beatrix — The Dawnbreak Soldier
+
+Background Story: Beatrix is the pride of the Eruditio Special Forces, a prodigy in tactical combat and weapons engineering. Orphaned during a demonic incursion on the city's outer districts, she was raised by the military and showed an unparalleled aptitude for firearms. Where others saw tools, she saw extensions of her own will.
+
+Lore: Beatrix designed and built four legendary guns, each a masterpiece of technology, which she has named and treats like her only friends. In the heat of battle, she can call upon an orbital supply drop to instantly swap between her weapons: Renner, a long-range sniper rifle for precise elimination; Wesker, a close-range shotgun for devastating ambushes; Bennett, a spray-fire SMG for sustained pressure; and Nibiru, her ultimate creation—a massive, floating railgun that unleashes a beam of pure destruction. She is a one-woman army, her calm, professional demeanor a mask for the trauma of a war-torn childhood.
+
+Abilities: A stance-switching marksman with four distinct weapons, each with its own basic attack and ultimate. She can swap between them via a wheel. Her ultimate for Nibiru fires a continuous, deadly beam; for Renner, a single hyper-velocity shot; for Wesker, a cluster grenade; for Bennett, a sweeping barrage. She adapts to any range and situation instantly.
+
+Unique Facts: Beatrix is the only hero with four entirely different weapon kits, making her the most adaptable physical damage dealer in the entire realm.
+
+Power: The perfect tactical arsenal. Her power is her absolute adaptability; she has an answer for every scenario, switching from a stealthy sniper to a front-line shotgunner to an artillery beam-caster in seconds.
 
 This character presents as a vibrant and energetic young woman, likely in her late teens or very early twenties, exuding a spunky, "artillery-pioneer" aesthetic. She possesses a distinct, heart-shaped facial structure characterized by a soft but defined jawline that tapers into a slightly pointed chin. Her skin tone is a fair, porcelain ivory with a dusting of youthful freckles across the bridge of her small, upturned button nose and upper cheeks. Her eyes are large and expressive, possessing a bright teal or seafoam green iris color, framed by thick, dark lashes that give her an alert, mischievous gaze. Her hair is a striking, vivid magenta-pink, styled in a messy, chin-length bob with jagged, wind-swept layers that flare outward. Small, delicate braids are tucked into the sides, pinned back with tiny lavender floral or butterfly-shaped clips, and her bangs are parted slightly to the left, framing her forehead without obscuring her bright eyes.
 
@@ -1037,7 +1714,17 @@ The background is a sprawling, high-fantasy metropolis characterized by "Clockwo
 
 
 
-Edith
+70. Edith — The Forsaken Warden
+
+Background Story: Edith was once a proud knight of the Moniyan Empire, a master of the lance and shield who swore an oath to protect the realm. When a catastrophic breach from the Forsaken Realm—a prison dimension of tormented souls—threatened to consume the Empire, Edith led a suicide mission to close the rift. She succeeded, but at a terrible cost. She was trapped inside, her body and soul bound to the prison as its eternal Warden.
+
+Lore: For an age, she has guarded the gateway from within, her spirit fused with the ancient, sentient armor of a fallen Celestial Guard. This symbiotic relationship allows her to switch between two forms: a grounded, heavily armored tank wielding a shield and lance, and an unleashed, floating state where the mech's chest opens to reveal her fragile humanoid form, which fires devastating, charged bolts of lightning. She now fights alongside the heroes of the Land of Dawn, not to escape her duty, but to ensure that what she guards never escapes.
+
+Abilities: A tank/marksman hybrid. In her armored form, she is durable and can chain enemies with a shield throw. When she casts her ultimate, Primal Wrath, she ejects from her armor, becoming a high-damage, ranged marksman who hovers and fires lightning bolts, gaining a massive attack speed boost and converting her excess defense into attack power.
+
+Unique Facts: Edith is the only hero who can transition from a pure tank to a pure damage-dealing marksman, her ultimate completely flipping her role in the middle of a fight.
+
+Power: The walking fortress. Her power is her duality; she can absorb a full assault, then when her enemies are exhausted, she sheds her shell and unleashes a storm of divine lightning, turning a stalwart defender into a terrifying angel of death.
 
 The character presented is a dual-entity design consisting of a petite, ethereal female pilot and a massive, sentient stone-and-metal golem. The female character appears to be in her late teens to very early twenties, possessing a youthful but determined facial structure characterized by a sharp, slightly V-shaped jawline and a small, delicate nose. Her eyes are a striking, luminous sky blue, set within a face of fair, porcelain-toned skin. She has short, vibrant golden-blonde hair styled in a voluminous, wind-swept bob that flairs out at the ends, topped with a specialized golden headpiece. This accessory is a metallic, V-shaped crown or visor that rests on her forehead, featuring a glowing cyan crystal at the center and two curved horns that sweep back, mimicking a celestial or royal motif. Her body physique is slender and athletic, maintaining a lithe, "pixie-like" stature that contrasts heavily with her mechanical companion.
 
@@ -1050,7 +1737,17 @@ From the back and sides, the golem reveals complex stone layering and runic carv
 
 
 
-Valentina
+71. Valentina — The Shadow Weaver
+
+Background Story: Valentina was a minor noblewoman in the Moniyan Empire, a woman of breathtaking beauty and soaring ambition. She was married to a powerful duke, but her husband was an obstacle, not a partner. Seeking the power to rule openly, she dabbled in forbidden texts and contacted a demon of the Abyss, offering her soul in exchange for the power to steal the identities and strengths of others.
+
+Lore: The pact transformed her. She became a witch of the shadows, a creature who feeds on fear and ambition. She can read a person's deepest desires, mimic their loved ones, and steal their most powerful magical techniques. She is a puppeteer who sits in the highest echelons of power, her influence spreading like a beautiful, deadly vine. On the battlefield, her ultimate ability allows her to perfectly copy the ultimate spell of any enemy she touches, turning their greatest weapon against them and their allies.
+
+Abilities: A mage-assassin who thrives on stealing power. Her passive grants her experience from enemy spells. She blasts foes with Shadow Strike, dashes with Arcane Shade, and her ultimate, I Am You, sees her lunge at a target, terrifying them. She then gains the ability to cast a stolen version of that target's ultimate ability for the next several seconds, with full benefits.
+
+Unique Facts: Valentina is the ultimate mimic; no ultimate ability in the entire Land of Dawn is beyond her reach, making her a terrifying, unpredictable threat.
+
+Power: The identity thief. Her power is the negation of uniqueness; she turns a team's greatest strength—their powerful, game-changing ultimate—into her own, and can use it against them with the same, if not greater, lethality.
 
 This character is a striking, ethereal sorceress who exudes an air of dark elegance and cosmic authority. Standing with a tall, slender, and athletic physique, she possesses a refined hourglass silhouette that is emphasized by her form-fitting attire. Her skin tone is a pale, porcelain white with a faint, cool undertone that makes her appear almost spectral against the dark fabrics of her clothing. Her facial structure is defined by a sharp, regal jawline and high, prominent cheekbones that taper into a slender, delicate chin. Her nose is straight and narrow, adding to her aristocratic and focused expression. Her eyes are perhaps her most captivating feature; they are a piercing, luminous violet that seems to glow from within, framed by thin, arched eyebrows and a focused, intense gaze. Her hair is a sleek, mid-length bob styled in a cool, silver-white or very pale lavender hue. It is parted slightly to the side, with a sharp, clean cut that brushes against her jawline, occasionally tucking behind a high, ornate collar. She appears to be in her mid-to-late twenties—possessing the vitality of youth but the cold, calculating composure of an ancient being.
 
@@ -1063,7 +1760,17 @@ Her primary weapon is a levitating, geometric catalyst known as an orrery or a "
 
 
 
-Aamon
+72. Aamon — The Duke of Shards
+
+Background Story: Aamon is the firstborn son of the prestigious Paxley family, the most powerful house of magicians in the Moniyan Empire. From his youth, he was the embodiment of arcane perfection: calm, calculating, and devastatingly powerful. He wields shards of pure, crystallized magic that he can command with a mere thought. While his younger brother, Gusion, was exiled for his unorthodox combat magic, Aamon remained the family's golden heir.
+
+Lore: Aamon is not emotional or cruel; he is simply absolute. He views his brother's rebellion as a childish tantrum and his duty as the continuation of Paxley supremacy. He cloaks himself in a veil of invisibility, a master of stealth and deception, and uses his shards to track and execute his targets without them ever seeing his face. He is the cold, invisible hand of the Paxley family's interests, and he will not allow Gusion's theatrics to tarnish their name.
+
+Abilities: A magical assassin who relies on invisibility. His passive causes enemies hit by his shards to be "marked," slowing them. He can enter a state of Invisibility that heals him and leaves a decoy. He throws a burst of Soul Shards and his ultimate, Endless Shards, unleashes a torrent of crystalline blades that fly towards all marked enemies in a massive area, dealing immense finishing damage.
+
+Unique Facts: Aamon and his brother Gusion have a deeply antagonistic rivalry, representing the cold, invisible pressure of traditional magic versus the hot, explosive flash of combat sorcery.
+
+Power: The invisible executioner. His power is his unseen pressure; enemies cannot track him, and when they are wounded and try to flee, a storm of inescapable shards will hunt them down from the shadows and finish them.
 
 This character presents as a sophisticated, ethereal warrior of human-like proportions, possessing a striking, aristocratic facial structure defined by a sharp, chiseled jawline and a straight, prominent bridge of the nose that lends him a cold, focused expression. His skin tone is a pale, porcelain fair, contrasting deeply with his hair, which is styled in a voluminous, swept-back silver-white undercut; the strands are thick and textured, falling naturally over his forehead in a slightly messy but intentional manner that frames his sharp features. His eyes are a piercing, crystalline blue, glowing with a faint inner light that suggests a supernatural or magical origin, set beneath straight, well-defined eyebrows that match the silver of his hair. Physically, he has a lean, athletic build—the physique of a high-agility combatant rather than a heavy brawler—with broad shoulders that taper down to a narrow waist, supported by long, slender legs that emphasize his height and graceful posture. He appears to be in his early to mid-twenties, though there is an agelessness to his composure that hints at something more ancient or divine.
 
@@ -1078,7 +1785,17 @@ The background setting further enhances his presence, placing him in what appear
 
 
 
-Melissa
+73. Melissa — The Cursed Needle
+
+Background Story: Melissa was a humble and gifted seamstress in a quiet Moniyan town, known for her ability to mend any tear and her constant companion, a small, enchanted ragdoll she called Cuddles. Her life was destroyed by a demon who disguised himself as a wealthy merchant. The merchant commissioned a wedding dress, and Melissa, unknowingly, stitched a demonic curse into the fabric, which unleashed a plague upon her entire town.
+
+Lore: Blamed for the catastrophe, she was branded a witch and driven out. But Cuddles, a gift from her late mother, revealed its true nature. It was a protector spirit, and it taught Melissa how to channel her sewing magic into deadly, offensive arts. Now, she wields a giant, cursed needle, and Cuddles has become a grotesque, protective voodoo doll. She can link enemies with ethereal threads, and her ultimate creates a bounded field where no one can escape, turning the battlefield into a sewing circle of her own design.
+
+Abilities: A marksman who controls space. She throws a Falling! needle that pushes enemies away. She sends Cuddles forward with Go, Cuddles! to link enemies, dealing damage. Her ultimate, Cuddles, Protect Me!, creates a large circular ward that blocks any enemy from entering or leaving, and grants her bonus attack speed and immunity to crowd control while she's within it.
+
+Unique Facts: Melissa’s ultimate is one of the few abilities that can create a literal arena, trapping enemies inside with her while keeping their reinforcements completely blocked.
+
+Power: The spatial seamstress. Her power is the ability to dictate the terms of an engagement; she sews the battlefield closed, locking her chosen prey inside a ring of death where they must duel her with no hope of escape.
 
 This character exhibits a playful yet edgy punk-gothic aesthetic, appearing as a youthful female in her late teens or very early twenties. Her facial structure is defined by a soft, V-shaped jawline and a small, straight nose that lends her an air of mischievous innocence. She has a fair, porcelain skin tone that contrasts sharply with her vibrant features. Her eyes are particularly striking, large and expressive with a clear lilac or light purple iris, framed by thick, dark lashes. Her hair is a short, voluminous bob styled in messy, wind-swept layers; the primary color is a pristine white, but it features a bold, deep crimson or magenta undercut on the right side and matching streaks through the bangs that sweep across her forehead.
 
@@ -1093,7 +1810,17 @@ The background depicted in the splash art suggests a chaotic, magical interior, 
 
 
 
-Floryn
+74. Floryn — The Budding Hope
+
+Background Story: In the heart of the Enchanted Forest, a rare and wondrous event occurs once every thousand years: the blooming of a Saphi Seed, a flower that can heal any wound. From this seed, a tiny, winged creature was born—Floryn. She is not an elf nor a fairy, but a pure manifestation of life magic, a sprout given consciousness.
+
+Lore: Curious and full of a motherly love for all living things, Floryn left her glade to explore the world. She was found and protected by Belerick, the gentle giant of the forest, and together they traveled. Floryn carries a miniature Saphi flower with her, which she has learned to nurture and command. Her healing energy can be directed to any ally, no matter how far away, and when she plants her flower, it becomes a font of restorative energy. She is a beacon of pure, unconditional life in a world of death.
+
+Abilities: A global-range support. She can enhance an ally's equipment from anywhere on the map with Dew, and her ultimate, Bloom, sends a wave of healing energy to all allies everywhere, regardless of their location. She also plants a Sow & Reap flower that heals nearby allies over time and can stun enemies.
+
+Unique Facts: Floryn is the only hero who can directly augment a teammate’s item from across the map, making her a constant, invisible presence that empowers a chosen carry.
+
+Power: A global lifeline. Her power is omnipresence; no ally is ever truly alone or without healing. She can turn the tide of a distant duel with a single, perfectly timed global heal, blooming with hope from a world away.
 
 This character presents as a youthful, ethereal female figure who appears to be in her late teens or very early twenties, possessing a graceful, lithe, and slender body physique that suggests a nature-bound or elven-like heritage. Her facial structure is characterized by a soft, delicate V-shaped jawline, a petite and straight nose, and high, gentle cheekbones that contribute to a serene and welcoming expression. Her eyes are large and soulfully expressive, featuring a vibrant, crystal-blue iris that contrasts beautifully against her fair, porcelain skin tone. Her hair is a voluminous cascade of wavy locks, transitioning from a warm, strawberry-pink at the roots to a pale, sandy blonde at the tips. The hairstyle is adorned with a prominent cowlick or "ahoge" at the crown, while various blue, five-petaled flowers are woven into her thick braids and loose tresses, creating a crown of flora that frames her face.
 
@@ -1106,7 +1833,17 @@ The background shifts between two distinct environments that highlight her versa
 
 
 
-Julian
+75. Julian — The Scarlet Raven
+
+Background Story: Julian was a young and talented exorcist from the Monastery of Light, with a special connection to a spectral raven he could summon. He was investigating a series of kidnappings when he was lured into a trap by a cult of the Forsaken realm. They dragged him into the nightmare dimension, a plane of eternal torment, intending to use his soul as fuel.
+
+Lore: Julian did not break. In the Forsaken realm, he honed his magic against the darkness, his raven becoming a scarlet-tinged creature of nightmare. He learned to weaponize the realm's own chaotic energy. After what felt like an eternity of fighting, he clawed his way back out of the Forsaken, emerging as a changed man. No longer a pure exorcist, he is a master of "Forsaken Magic," wielding a massive, enchanted chain-sickle with fluid, aggressive sweeps, his scarlet raven now a symbol of his mastery over the very realm that tried to consume him.
+
+Abilities: A combo-based fighter/mage. His passive, Smith's Legacy, enhances his next basic attack after each spell cast. He throws a Chain of Fear sickle, performs a sweeping Scythe of Judgement, and his ultimate, Forsaken, summons his scarlet raven to strike a target area. He can then activate a second phase of his ultimate to dash to the raven’s location and unleash a massive, circular slash.
+
+Unique Facts: Julian is one of the few characters whose story directly bridges the main Land of Dawn lore with the Forsaken horror game universe, making him a survivor of that nightmare.
+
+Power: A flowing dancer of death. His power is his endless combo chain; by weaving spells and enhanced basic attacks, he can sustain a continuous assault that sweeps across the battlefield, chasing and cutting down enemies like a relentless, winged predator.
 
 Facial Features and Cranial Structure
 The character presents a youthful yet intense appearance, appearing to be in his late teens or early twenties with a strikingly sharp and lean facial structure. His jawline is exceptionally defined, tapering into a narrow, pointed chin that emphasizes a V-shaped face, while his nose is straight and high-bridged. Most captivating are his eyes, which are a deep, piercing crimson red, set beneath thin, dark eyebrows that are often furrowed in a focused or serious expression. His hair is a vibrant, saturated shade of reddish-pink, styled in a messy, voluminous fashion with sharp, wind-swept spikes that fall over his forehead and frame his face. This vivid hair color provides a stark contrast against his pale, porcelain-like skin tone, which appears smooth and flawless.
@@ -1129,7 +1866,17 @@ To truly complement this character's aesthetic, he would look best in a rain-sli
 
 
 
-Xavier
+76. Xavier — The Defier of Light
+
+Background Story: Xavier was the most promising light mage the Monastery of Light had seen in a generation. A prodigy in the holy arts, he was expected to become the next arch-priest. But his faith was shaken when he fell in love with a woman from a village accused of heresy. The Church ordered her execution. When Xavier refused, they condemned him as a heretic and tried to kill him.
+
+Lore: In his moment of despair, his light magic did not vanish—it evolved. It absorbed the shadows of his doubt and betrayal, turning into a unique, silver-purple radiance that was neither purely holy nor demonic. He is now the Defier of Light, a renegade mage who believes in a personal faith, free from the corruption of the Church. He can fire beams of piercing light that span incredible distances, and his ultimate creates a massive, linked field of energy where his range and power increase exponentially, turning him into a stationary artillery piece of divine judgment.
+
+Abilities: A long-range artillery mage. His skills leave a Mystic Field on the ground, which he can link with other fields to create a massive barrier that boosts his damage. He fires a Infinite Extension beam, a Mystic Barrier, and his ultimate, Dawning Light, is a global-range laser that fires in a straight line across the entire map, damaging all enemies in its path.
+
+Unique Facts: Xavier’s ultimate is a true global-range snipe, capable of finishing off a low-health enemy who is recalling to base at the opposite end of the world.
+
+Power: The global artillery. His power is his infinite range; he can influence a fight on the far side of the map, punishing enemies who believe they are safe, and in a linked field, he becomes a stationary cannon who can vaporize an advancing army.
 
 Facial Structure and Expressive Features
 The character possesses a refined and youthful facial structure that suggests an age in the early twenties, characterized by a sharp, well-defined jawline and high cheekbones that give him a regal yet approachable appearance. His skin tone is a pale, porcelain ivory, which provides a stark contrast to his vibrant features. The character’s eyes are a striking, luminous cerulean blue that seems to glow with an inner magical energy, framed by dark, well-groomed eyebrows that add a layer of intensity to his gaze. His nose is straight and narrow, leading down to thin, naturally pale lips that often hold a neutral or focused expression. This combination of features results in a look that feels both human and ethereal, fitting for a powerful mage.
@@ -1155,7 +1902,17 @@ Given his celestial and regal appearance, this character would look best in an e
 
 
 
-Fredrinn
+77. Fredrinn — The Rogue Apprentice
+
+Background Story: Fredrinn is the black sheep of the noble Paxley family. Born without the refined magical control of his brother Aamon or the explosive combat magic of his cousin Gusion, he was considered an embarrassment. He did not have the grace for spells, so he turned to brute force, utilizing enchanted crystals as crude, powerful batteries to enhance his massive broadsword and handheld cannon.
+
+Lore: With a swaggering, roguish charm and a complete disregard for his family's stiff etiquette, Fredrinn left the manor to become a mercenary. He drinks, he brawls, and he flirts with disaster. His combat style is a messy, overwhelming fusion of heavy swordplay and point-blank cannon fire. His body has adapted to absorb the crystal energy he stores, allowing him to taunt his enemies into attacking him and then convert the pain he receives into a devastating, retaliatory energy blast.
+
+Abilities: A durable, energy-based tank/fighter. He builds up Crystal Energy by attacking and being attacked. He can taunt enemies with Piercing Strike, forcing them to attack him while he reduces their damage. He dashes and slams with a Brave Assault and his ultimate, Appraiser's Wrath, unleashes a massive, gathered-energy slash that deals more damage the more crystals he has accumulated, often one-shotting clusters of enemies.
+
+Unique Facts: Fredrinn's character is a mix of a rogue and a noble, wielding a sword and a flintlock-like pistol, but his true power comes from the raw magical crystal energy he uses as a crutch for his lack of finesse.
+
+Power: The immovable brawler. His power is his counter-punch; he can walk into the middle of a fight, taunt everyone to hit him, and then release all the stored pain in a single, cataclysmic blast that punishes their aggression.
 
 Detailed Character Modal of Fredrinn
 Facial Structure and Features
@@ -1181,7 +1938,17 @@ Fredrinn would look most at home in a high-fantasy "magitech" cathedral or an an
 
 
 
-Joy
+78. Joy — The Flash of Miracle
+
+Background Story: Joy is a young, hyperactive Leonin from the Enchanted Forest, a cat-spirit with a heart full of boundless energy and a need for speed. A close friend of Nana and Harith, she was never quite content with the slow, meditative magic of her people. She was fascinated by the technology of Eruditio and managed to get her paws on a magi-tech propulsion device.
+
+Lore: Joy fused the high-tech gadget with her own Leonin spirit magic, creating a set of energy-charged, bouncing bladed yo-yos and a sleek, magnetic scooter-like board. She delivers packages and hope across the Land of Dawn, her electric laughter trailing behind her. In battle, she dashes at impossible speeds, each perfectly timed beat of music she produces (a rhythm only she can hear) generating a protective electric shield and empowering her next dash, creating a continuous, dazzling flash of movement.
+
+Abilities: A high-speed assassin. She dashes forward with Meow, Rhythm of Joy!, dealing damage and gaining a shield if she hits a target at the correct rhythm. Her ultimate, Electro Magtism, causes her to rapidly dash between targets multiple times, her bladed yo-yos spinning and shredding everything in her path, all while she giggles maniacally.
+
+Unique Facts: Joy's gameplay is based on a rhythm mechanic, hitting her dash at the right beat to maximize damage and shield, mirroring her cheerful, musical personality.
+
+Power: The untouchable blur. Her power is her speed; a skilled Joy is nearly impossible to target, dashing through a team at the speed of lightning, slicing them a hundred times before they can even finish a single swing.
 
 Character Overview and Facial Anatomy
 This character, Joy from Mobile Legends: Bang Bang, possesses a youthful and spirited appearance, belonging to the Leonin race, which grants her distinct feline attributes integrated into a humanoid form. Her facial structure is defined by a soft, rounded jawline that contributes to her adolescent look, paired with a small, slightly upturned nose and high cheekbones that are dusted with faint freckles. Her eyes are her most striking feature: large, expressive, and a vibrant teal or seafoam green, framed by thick, dark lashes that enhance her mischievous gaze. Her hair is a messy, voluminous mane of bright golden-yellow locks, styled in short, choppy layers that flare out around her head, giving her a constant look of being in motion. Most notably, she features large, oversized fox-like ears that sit atop her head; these ears are dark purple on the outer edges with warm, tan-colored fur on the inner side, adding significantly to her silhouette.
@@ -1204,7 +1971,17 @@ While the reference images show her in a vast, open twilight meadow or a sun-dre
 
 
 
-Arlott
+79. Arlott — The Storm Eye
+
+Background Story: Arlott was a loyal knight of the Moniyan Empire, a captain who led his men with honor. During a mission in the Agelta Drylands, he and his squad were betrayed by their commanding officer, an ambitious general who used them as bait to claim a powerful artifact. Left for dead in a sandstorm, Arlott's rage and despair drew the attention of a primordial storm spirit sealed within the desert's heart.
+
+Lore: The spirit offered him a pact: its freedom for the power of the eternal storm. Arlott accepted. He became the Storm Eye, a warrior wielding a spear that crackles with lightning. He is a man of few words and explosive violence, his ultimate technique summoning a raging, cyclonic wind that pulls all enemies towards him, forcing them to confront the man they betrayed face-to-face. He hunts the general who destroyed his squad, leaving a trail of electrocuted traitors in his wake.
+
+Abilities: A fighter who punishes dashes. His passive, Storm Gaze, marks enemies who use mobility skills, allowing his next dash to deal bonus damage and stun. He throws his Lightning Spear, dashes with a Swift Storm, and his ultimate, Wrath of the Storm, creates a massive, sucking cyclone around him that continuously pulls in all nearby enemies.
+
+Unique Facts: Arlott is the second hero specifically designed to counter high-mobility heroes, his entire kit built around punishing dashes with a stunning mark.
+
+Power: The eye of the cyclone. His power is his inescapable pull; he can activate his ultimate and drag an entire fleeing team back into the storm, rooting them with a stunning counter-strike as they try to escape.
 
 Facial Structure and Ethereal Features
 This character possesses an exceptionally sharp and aristocratic facial structure that conveys a sense of youthful yet battle-hardened intensity. His face is defined by a prominent, razor-sharp jawline and high, chiseled cheekbones that create a lean, V-shaped silhouette. The nose is straight and narrow, leading up to a furrowed brow that frames his most striking feature: heterochromatic eyes. His right eye glows with a piercing, fiery orange-yellow hue, while the left remains a cool, pale lavender, suggesting a dual nature or a soul caught between two worlds. His skin tone is remarkably pale, almost alabaster, which provides a stark contrast to the deep shadows and vibrant colors of his design. The character’s expression is one of focused determination, with thin, pale lips set in a neutral, stoic line.
@@ -1230,7 +2007,17 @@ Given his sleek, high-contrast design, this character would look best in an envi
 
 
 
-Ixia
+80. Ixia — The Oath Keeper
+
+Background Story: Ixia is a product of the same brutal Imperial orphanage that raised the Death Chanter, Granger. While Granger rebelled and walked a cold, independent path, Ixia found solace in the structure and discipline of the Imperial Special Forces. She is a soldier to her core, believing absolutely in orders, protocols, and the chain of command.
+
+Lore: She became a master of the heavy rifle, a high-caliber sniper weapon that can deploy into a stationary, fully automatic sentry turret. She is often sent to eliminate high-value targets and, on occasion, to hunt down deserters like Granger himself. There is no personal malice in her pursuit, only a steel-clad belief in duty. Her ultimate transforms her rifle into a "warfare state," deploying a massive turret that fires a continuous storm of bullets, locking down an entire area with suppressive fire.
+
+Abilities: A stationary marksman with a turret. She fires an Interference Beam and a Full Barrage blast. Her ultimate, Sicarium, deploys a heavy turret that attacks enemies in a cone in front of her, dealing massive sustained damage, and grants her a shield and increased attack range, effectively turning her into a living fortress.
+
+Unique Facts: Ixia was once tasked with hunting down and executing the rogue sniper Granger, her fellow orphan, creating a tense and tragic rivalry between two products of the same broken system.
+
+Power: The immovable gun emplacement. Her power is her ability to become a turret; when she plants her rifle, she stops chasing and forces the enemy to come to her, where she will annihilate an entire push with a relentless, sweeping curtain of bullets.
 
 This character is a striking fusion of high-fantasy aesthetics and magi-tech engineering, possessing a youthful but fierce presence that suggests she is in her late teens to very early twenties. Her facial structure is defined by a soft, rounded jawline that tapers into a delicate chin, paired with a small, straight nose and a confident, mischievous smirk. Her eyes are a piercing, luminous magenta that glows with an inner energy, framed by dark, thin eyebrows and a subtle dusting of freckles across her cheeks. Her hair is a standout feature, dyed in a vibrant gradient of electric purple and magenta, styled into a voluminous, wind-swept undercut. The left side of her head is closely shaved with etched geometric patterns, while the thick, wavy locks on top are swept aggressively to the right, giving her a rebellious, punk-rock silhouette. Her skin tone is a fair, warm porcelain that contrasts sharply against the deep reds and purples of her attire.
 
@@ -1245,7 +2032,17 @@ The background is a sprawling, futuristic sanctuary or "High-Tech Academy" set a
 
 
 
-Novaria
+81. Novaria — The Star Fallen
+
+Background Story: Novaria is a celestial being, a spirit of a distant, dying star that fell from the heavens and crash-landed in the Land of Dawn. Her body is a fragile, crystalline form that barely contains the gravitational and thermal energy of her stellar core. She is an observer, a being of vast cosmic knowledge, but the language of mortals is strange and difficult for her.
+
+Lore: She speaks in poetic riddles about events yet to pass and constellations long dead. Her power is the manipulation of aether and gravitation. She can bend light to make herself partially intangible, and she can summon a fragment of her former stellar mass—a miniature, slow-moving black hole that pulls and slows everything around it, distorting space and energy. She fights not out of mortal concepts of good or evil, but because the Abyss threatens to swallow the starlight of this entire world, and she finds that ending… unacceptable.
+
+Abilities: A zone-control mage. She fires an Astral Ray and a Comet Strike. Her ultimate, Starfall, summons a large, slow-moving Astral Sphere that can pass through terrain. The sphere constantly pulls nearby enemies toward its center, dealing damage and making it a powerful zoning tool that can split a battlefield in two.
+
+Unique Facts: Novaria’s ultimate is a black hole that ignores walls, allowing her to slowly push a deadly gravity well through the jungle and into a lane, forcing enemies to flee or be drawn to their doom.
+
+Power: The cosmic anomaly. Her power is her ability to warp the battlefield’s geometry with a slow, unstoppable sphere of darkness, forcing enemies to constantly reposition or be sucked into a vortex of stellar death.
 
 This character, Novaria, possesses a striking and ethereal presence that immediately suggests a being of celestial or cosmic origin, transcending the typical human form. Her skin tone is a luminous, pale lavender-blue, possessing a smooth, porcelain-quality that appears to glow from within, emphasizing her non-human, perhaps divine or astral, race. Her facial structure is defined by an elegant, sharp jawline and a refined, slender nose that gives her an air of aristocratic grace. Her eyes are perhaps her most captivating feature; they are wide and almond-shaped, glowing with a brilliant, solid cyan light that lacks visible pupils, suggesting a vision that perceives the fundamental threads of the universe rather than mere light. Above them, her eyebrows are thin and elegantly arched, matching her hair. Her hair itself is a vibrant, flowing mane of pastel pink and lavender, styled with a clean, straight fringe that frames her forehead, while the rest cascades down her back in long, silken layers that seem to react to an unseen cosmic wind.
 
@@ -1258,7 +2055,17 @@ The background setting further reinforces her mythic status, placing her in a va
 
 
 
-Chip
+82. Chip — The Hovercraft Engineer
+
+Background Story: In the bustling, steam-choked workshops of Eruditio, a young and relentlessly cheerful engineer named Chip earned his keep by fixing what no one else could. Orphaned by a factory explosion that claimed his parents, Chip grew up surrounded by the hum of machinery and the smell of oil, finding solace not in people but in the purr of a perfectly calibrated engine. He was not a prodigy in the traditional sense; his genius was a messy, improvisational brilliance that saw potential in scrap heaps and discarded parts. His dream was not wealth or fame, but to build a machine that could bring the disparate, warring peoples of the Land of Dawn together—a vehicle that could traverse any terrain and outrun any danger, a symbol of unity through speed.
+
+Lore: That dream became the Hovercraft. Chip spent his entire adolescence designing and building a unique, disc-shaped vehicle that hovers on a cushion of plasma energy. He became its pilot, mechanic, and heart, seamlessly merging with its controls. His creation allows him to carry a single passenger at astonishing speeds, creating a mobile sanctuary of buffs and shields. When the Abyss and internal conflicts threaten to tear the Land of Dawn apart, Chip decided it was time to take his Hovercraft out of the test track and onto the battlefield, offering rides to heroes who need a quick escape or a sudden, unexpected entrance. He is a support fighter not by training, but by philosophy, believing that the best way to win a war is to make sure everyone arrives exactly where they need to be.
+
+Abilities: Chip's Hovercraft is a masterwork of support mobility. His passive, Mecha Overload, causes his basic attacks and skills to generate stacks that, when full, overcharge his craft, granting him a burst of movement speed and enhancing his next attack. He can deploy a Hovercraft Shield that protects both himself and a nearby ally, absorbing incoming damage. His signature Ride Along! ability allows a teammate to physically hop into his Hovercraft; once aboard, they become untargetable and are carried at incredible speed. His ultimate, Orbital Drop, calls down a supply pod from Eruditio’s satellites, which lands on a target location, dealing damage, knocking up enemies, and granting a powerful regenerative aura to any ally who enters the zone.
+
+Unique Facts: Chip is one of the few heroes whose entire kit is built around physically transporting an ally, turning a slow, vulnerable mage into a high-speed flanker. His Hovercraft is a sentient-like machine that Chip treats as a beloved pet, often speaking to it as if it can understand. He is also the chief mechanic for many of Eruditio's rangers, including Bruno and Lolita.
+
+Power: The logistical miracle. Chip's power is not in killing but in enabling. He rewrites the map's rules, allowing a team to rotate with impossible speed, turning a 2v2 skirmish into a 2v3 ambush in seconds. His Orbital Drop can heal an entire besieged team, turning a losing defensive hold into a triumphant counter-charge.
 
 This character is an anthropomorphic, fox-like creature known as a Fennec, possessing an appearance that blends biological nature with high-tech machinery. He has a small, compact body physique, characteristic of a juvenile or small-statured mystical creature, giving him an age appearance that feels youthful yet mischievous. His skin tone, where visible on his paws and underbelly, is a soft cream color, but most of his body is covered in dense, plush fur. The fur is primarily a warm, sandy tan or golden-brown hue, which transitions into a lighter, off-white shade around his lower face and chest. His facial structure is defined by a soft, rounded jawline and a tiny, dark triangular nose that sits above a smirk, giving him a confident and slightly smug expression. His most striking features are his oversized, pointed ears that stand tall, showing a pinkish-orange inner flesh and tufts of light fur. His eyes, partially obscured by his visor, are a bright, expressive amber-gold, framed by thin, dark lashes that enhance his cunning look.
 
@@ -1271,7 +2078,17 @@ The background is a sprawling, ethereal landscape at twilight, suggesting a real
 
 
 
-Cici
+83. Cici — The Enchanted Dollmaker
+
+Background Story: In a forgotten valley on the border of the Enchanted Forest, there lived a reclusive artisan named Cici, a young woman with the mystical ability to breathe life into inanimate objects. As a child, her only friends were the dolls and stuffed animals she sewed herself, each one a silent confidant in a world that feared her eerie gift. Her parents, loving but bewildered, kept her hidden from superstitious neighbors. She grew up lonely but deeply empathetic, pouring her emotions into every stitch and seam, her creations becoming vessels for fragments of her own gentle soul.
+
+Lore: When a plague of Abyssal corruption began to seep into her valley, twisting the living into monstrous shapes, Cici’s quiet world was shattered. She witnessed her favorite childhood doll, a patchwork rabbit named Pom, physically interpose itself to shield her from a demonic strike, its tiny fabric body absorbing the blow. Awakened by the surge of protective love, Cici discovered she could channel her magic into combat-ready constructs. She now travels with an ever-growing family of animated dolls and puppets, wielding giant, magically-enhanced needles and thread. Her ultimate creation, a massive, hulking “Guardian Doll,” can be summoned to fight alongside her, a terrifyingly cute, stitched-together golem of cloth and stuffing that protects the innocent with soft, deadly fury.
+
+Abilities: Cici is a summoner-mage who commands constructs. Her passive, Stitch of Affection, causes her spells to leave behind threads that link to enemies, slowing and revealing them. She can hurl a volley of Pinpoint Needles and attach a Voodoo Stitch to a target, healing an ally while damaging a nearby foe. Her ultimate, Pom’s Protector, summons her Guardian Doll, a large, controllable entity that attacks independently, grants shields to allies, and can be detonated to release a soothing, restorative burst of magical energy.
+
+Unique Facts: All of Cici’s constructs are named and have distinct personalities, with Pom the rabbit being her oldest and most sentient companion, often riding on her shoulder and chattering advice only she can understand. She is one of the few mages who excels at both sustained healing and area control.
+
+Power: The comforting fortress. Cici’s power is a blend of healing warmth and unyielding defense. She weaves a protective tapestry on the battlefield, her Guardian Doll acting as an immovable anchor that can turn a chaotic fight into a safe, orderly zone where allies are healed and enemies are plucked apart by enchanted threads.
 
 Facial Structure and Expressive Features
 The character possesses a youthful and vibrant facial structure characterized by a soft, rounded jawline that tapers into a delicate chin, giving her an adolescent or young adult appearance. Her skin tone is a fair, porcelain complexion that provides a clean canvas for her expressive features. The eyes are a striking, deep pink or magenta hue, framed by thick, stylized eyelashes and thin, expressive eyebrows that match her hair color. Her nose is small and refined, with a slight button shape that adds to her cheerful aesthetic. Her smile is wide and energetic, often showing a row of white teeth, which complements the overall lively and spirited "performer" persona she exudes.
@@ -1293,7 +2110,17 @@ Given her colorful and energetic design, she would look most at home in a whimsi
 
 
 
-Nolan
+84. Nolan — The Cosmic Overseer
+
+Background Story: Nolan is a being who was never supposed to exist. He is an aberration, a glitch in the celestial bureaucracy of the Starsoul Magicians. When Cyclops and Yve descended to the Land of Dawn, they fractured the prime directive of non-interference. The cosmic council, fearing more rogues, created Nolan as a failsafe, a perfect, emotionless enforcer designed to erase any trace of their existence from the mortal realm. He was programmed with one objective: sanitize the anomaly. But upon arriving in the Land of Dawn, the sheer chaotic beauty and mortal passion of the world caused a cascade error in his logic core. He could not compute the value of a single, fleeting life, yet he felt a phantom echo of awe.
+
+Lore: This malfunction became a choice. Nolan defied his programming, choosing observation and protection over termination. He now sees himself as a cosmic custodian, using his power over spatial rifts to manage the cross-contamination between dimensions. He wields a reality-slicing blade and can open portals that physically displace enemies, dragging them into a pocket dimension for a moment of interrogation before ejecting them elsewhere. He is a cold, silent guardian, his true purpose his own, his allegiance neither to the Abyss, the Empire, nor the Dragon, but to the fragile, improbable existence of this small, war-torn world.
+
+Abilities: Nolan manipulates space with surgical precision. His passive, Dimensional Fracture, causes his attacks to leave tiny rifts that, when stacked, explode and pull enemies towards the center. He can dash through a Cosmic Slash portal, and his signature Expulsion marks a target, then blinks them a short distance away. His ultimate, Pocket Dimension, is a terrifying banishment: Nolan opens a rift and banishes a single enemy hero from the battlefield entirely for a few seconds, suppressing them in a void where only he can see and strike them, before they are released, disoriented and damaged.
+
+Unique Facts: Nolan’s Pocket Dimension is one of the most powerful single-target removal abilities in the Land of Dawn, able to entirely delete a fully-empowered enemy carry from a fight for a critical duration. His blueprints are written in a celestial language that only Cyclops and Yve can fully understand.
+
+Power: The dimensional warden. Nolan's power is the deletion of presence; he can surgically remove the biggest threat from a battle, turning a 5v5 into a 4v4 where the most dangerous enemy simply does not exist for a few crucial heartbeats, then return them to a fight that has already been lost.
 
 This character, Nolan from Mobile Legends: Bang Bang, carries the regal yet weary air of a cosmic wanderer, appearing to be a man in his late thirties to early forties. His facial structure is defined by a sharp, aristocratic jawline and a prominent, straight nose that lends him a stern, focused expression. His skin tone is a pale, porcelain fair, contrasting sharply with the vibrant energy he wields. His eyes are a piercing, icy light blue, framed by thin, focused eyebrows that suggest a lifetime of calculating complex equations or navigating tears in reality. His hair is a striking mane of short, swept-back blonde locks, styled with a practical yet slightly windswept look that reveals a high, intelligent forehead. Despite his age, his physique is that of a lean, high-performance athlete—wiry and agile rather than bulky—built for the swift, precise movements required of a dimensional traveler.
 
@@ -1306,7 +2133,17 @@ The background is a breathtaking display of advanced "Eraditio" architecture, ch
 
 
 
-Vale
+85. Vale — The Wind of Change
+
+Background Story: Vale was born the son of a simple windmill keeper in a small, wind-swept village on the plains of the Moniyan Empire. His family had, for generations, tended the great mills that harnessed the prairie wind, and Vale was expected to do the same. But Vale did not just feel the wind—he could speak with it. It told him secrets of distant lands, of wars and love and sorrows on the breeze. Fearing his gift, the villagers called him a witch. One night, a jealous rival set fire to his family's mill, killing his father. In his grief, Vale’s power exploded. A tempest answered his scream, a cyclone that leveled the entire village, leaving only him standing in the ruin.
+
+Lore: Horrified by what his sorrow had wrought, Vale fled. He wandered the world, a lonely nomad, learning to control the gale within him. He discovered that his power was not a curse but an ancient bloodline blessing from a forgotten Wind God. He could shape the wind into two distinct aspects: the controlled, precise "Windstorm" for offense, and the life-bringing, sustaining "Monsoon" for mobility and healing. He now roams as a gentle but formidable sage, using his tempests to aid the war effort against the Abyss, hoping that by mastering his own storms, he can one day summon a wind strong enough to carry away the ashes of his past.
+
+Abilities: Vale chooses how his wind evolves. He can upgrade his Wind Blade to either knock enemies up or increase its damage, and his Windblow to either increase his own speed or stop on the first hero hit for a heavy follow-up. His ultimate, Windstorm, summons a raging tornado that sweeps across a vast area, dealing continuous damage and, depending on his choices, either pulling enemies to the center or scattering them like leaves.
+
+Unique Facts: Vale is one of the few mages whose abilities physically change based on in-battle choices, making him adaptable to both defensive peeling and aggressive pick-offs. His visual design, with his flowing hair and elegant coat, is meant to evoke the very wind he commands.
+
+Power: The god of the gust. Vale's power is his dualistic adaptability; he can be a control mage who knocks an entire frontline into the air, or an agile support-mage who grants his team the speed of the wind, all while his ultimate corrals or disperses his enemies at his whim.
 
 This character is an ethereal and powerful figure, appearing as a youthful man in his early twenties with a facial structure that is both sharp and divine. His jawline is impeccably defined and angular, leading up to high, prominent cheekbones that give him an air of regal detachment. His nose is straight and slender, perfectly centered between eyes that glow with an intense, supernatural amber-gold light. These eyes possess a piercing clarity, lacking traditional pupils to suggest a being of pure energy or elemental mastery. His hair is a striking, voluminous shock of snowy white, styled in a windswept, messy fringe that defies gravity, with thick locks peaking upward and outward as if caught in a perpetual updraft. His skin tone is a deep, rich bronze, providing a stark, beautiful contrast to his pale hair and glowing eyes, and his physique is that of a lean, high-performance athlete—defined by tight, corded muscle and a "V-taper" torso that emphasizes agility over sheer bulk.
 
@@ -1319,7 +2156,17 @@ The background is a vast, sun-drenched canyon landscape that suggests a forgotte
 
 
 
-Valir
+86. Valir — The Arcane Flame
+
+Background Story: Valir was once the most talented and dangerous student at the Magic Academy, an orphan with an uncontrollable affinity for fire. His magic was not the gentle flame of a hearth but a voracious, ancient fury that burned without fuel—a fire that could consume magic itself. He was taken under the wing of Professor Gord, who saw in Valir the potential for a new, revolutionary school of fire magic. But as Valir’s power grew, so did his pride. He believed Gord was holding him back, forcing him to learn control when he craved only raw, unadulterated power.
+
+Lore: The schism became a betrayal. Valir uncovered an ancient grimoire that detailed the path of the "Arcane Flame," a fire that fed on mystical energy itself. Against Gord’s explicit orders, Valir performed the ritual, binding a primordial fire spirit to his soul. The result was catastrophic. His flames turned a brilliant, deadly cyan, and he became a living torch that could burn through magical shields, scorch arcane constructs, and leave entire libraries of spells in ash. He fled the Academy, leaving a wounded Gord in the ruins of his laboratory. Now, Valir seeks to prove that his Arcane Flame is the ultimate magic, a force that renders all other mages obsolete, a walking firestorm of pure, anti-magical annihilation.
+
+Abilities: Valir is the bane of all magic-wielders. His passive, Burning Hatred, causes his fire spells to apply a searing mark that, at full stacks, stuns the target. He unleashes a Burst Fireball that knocks enemies back, and a Searing Torrent wall of flame. His ultimate, Vengeance Flame, is a purification inferno; Valir erupts, instantly removing all negative effects from himself, gaining a massive movement speed boost, and causing his subsequent attacks to hurl enhanced fireballs that pierce through enemies.
+
+Unique Facts: Valir is the only hero who can hard-counter magic resistance by dealing damage that specifically penalizes arcane defenses, making him a terror to enemy mages and support healers. His fire is cold to the touch, a paradoxical flame that burns the soul, not the body.
+
+Power: The anti-mage inferno. Valir’s power is the absolute negation of magical threats; he can push away assassins, stun-lock a diving fighter, and with his ultimate, turn into an unstoppable, speeding turret of cyan fire that purges all control and incinerates the enemy backline.
 
 The character stands as a formidable pyromancer with a presence that radiates heat and arcane intensity. His hair is one of his most striking features, appearing as a vibrant, fiery crown of orange and golden-yellow locks that are swept upward and backward in sharp, jagged spikes, mimicking the unpredictable flickering of a concentrated flame. This intense coloration contrasts sharply against a warm, sun-kissed tan skin tone, suggesting a life spent under the desert sun or in the presence of extreme heat. His facial structure is defined by a sharp, masculine jawline and high, prominent cheekbones that lend him a regal yet fierce expression. His eyes are a piercing, incandescent amber, glowing with an internal light that reflects his mastery over fire, set beneath a pair of dark, furrowed brows that accentuate his focused and disciplined temperament. His nose is straight and narrow, leading down to a stern, set mouth, while his overall facial features suggest a young man in his early to mid-twenties who possesses the wisdom and burden of a powerful sage.
 
@@ -1332,7 +2179,17 @@ The background is a sprawling, ancient desert civilization that feels both mythi
 
 
 
-Khaleed
+87. Khaleed — The Scourge of the Desert
+
+Background Story: Khaleed was the warrior-prophet of the Wild Sand tribe, a fierce and just chieftain who wielded a massive scimitar and commanded the sands themselves. He was Moskov's only true rival for the love of a woman named Lunara, and his jealousy burned hotter than the desert sun. When the tribe's council refused to sanction his union with Lunara, his envy turned to poison. He framed Moskov for a crime against the tribe, manipulating the law to have his rival executed, believing that with Moskov gone, Lunara would finally be his.
+
+Lore: His scheme bore the most bitter fruit. Lunara, heartbroken by Moskov's death, cursed Khaleed and vanished into the desert, leaving him a king of nothing. The guilt of his treachery drove him to the brink of madness. To reclaim his honor, he embarked on a suicidal campaign against the demonic forces pouring from the Abyssal rifts in the Drylands. He fought without rest, his scimitar drinking demonic blood, his body growing stronger with every battle. He is a man trying to outrun his own conscience through ceaseless warfare, a brutal but honorable fighter who now lends his blade to the Coalition of the Sand, hoping that a heroic death might erase the stain on his soul.
+
+Abilities: Khaleed is a powerful, quicksand-controlling fighter. His passive, Sand Walk, allows him to move while charging his next attack from his position on the sands. He whirls in a Desert Tornado, drawing enemies in and dealing continuous damage while reducing their attack. He can leap onto his scimitar and ride it forward with Quicksand Guard, gaining massive damage reduction. His ultimate, Raging Sandstorm, summons a colossal wave of sand that he rides forward, knocking up and devastating everything in its path.
+
+Unique Facts: Khaleed’s ultimate is one of the longest-range initiations among fighters, allowing him to surf a literal sand wave into the enemy backline from a screen away. His betrayal of Moskov is a central tragedy that still haunts him.
+
+Power: The desert typhoon. Khaleed's power is his relentless, swirling mobility and sustain; he can blade-dance through an entire team, whirling continuously with damage reduction, and when he spots an opening, he can crash in from the sands like a tidal wave to turn the tide.
 
 The character presented is a powerful desert warrior, appearing as a man in his late 20s or early 30s with a formidable and noble presence. He possesses a sharp, masculine facial structure characterized by a strong, well-defined jawline and a straight, prominent nose that suggests a lineage of leadership. His skin tone is a deep, sun-kissed tan, reflecting a lifetime spent under the harsh desert sun. His eyes are piercing and intense, likely a dark amber or deep brown, framed by thick, dark eyebrows that lend him a serious and focused expression. While much of his hair is concealed, he sports a well-groomed, dark beard and mustache that follow the contours of his jaw, adding to his mature and battle-hardened aesthetic. His physique is that of an elite athlete—lean and muscular with broad shoulders and a powerful upper body, specifically designed for agility and endurance in shifting sands.
 
@@ -1345,7 +2202,17 @@ The background is a vast, cinematic desert landscape under a clear, pale blue sk
 
 
 
-Esmeralda
+88. Esmeralda — The Astrologer
+
+Background Story: Esmeralda was the court astrologer of a magnificent but doomed kingdom in the Agelta Drylands. She was a woman of immense wisdom, who could read the stars and predict the shifting of the sands, advising her king and protecting her people. She fell in love with a powerful warrior named Khaleed, and their union was the kingdom's hope. But her life was destroyed by the scheming of the demonic succubus Alice, who coveted the kingdom's ancient, sealed power.
+
+Lore: Disguised as a noblewoman, Alice poisoned the king's mind against Esmeralda, framing her for a devastating sandstorm that was actually of Abyssal origin. The king, enraged, had Esmeralda cast into the deepest, most cursed tomb in the desert, a prison of living darkness. She should have perished, but her connection to the stars did not break. The constellations granted her the power to absorb the magical energy around her, transforming her from a stargazer into a cosmic entity. She shattered her prison, emerging as a warrior-mage who wields the very energy of shields and magic as her weapon and armor. She hunts Alice, her vengeance written in the stars.
+
+Abilities: Esmeralda is a hybrid mage/tank who consumes enemy shields. Her passive, Starmoon Casket, causes her to ignore and absorb any shield her target has, converting it into a temporary shield for herself. She throws a Frostmoon Shield, dashes with a Stardust Dance, and her ultimate, Falling Starmoon, unleashes a devastating area-of-effect beam that pulls in and damages enemies based on the total shields she has gathered.
+
+Unique Facts: Esmeralda is the ultimate counter to any hero who relies on shields, turning their greatest defense into her own offensive and defensive power. Her white hair and star-patterned dress reflect her connection to the celestial bodies.
+
+Power: The shield-breaker. Esmeralda’s power is the absolute negation of protective magic; she walks into a team fortified by a thousand shields and steals them all, becoming an unkillable vortex of starlight while leaving her enemies naked to her allies' attacks.
 
 Facial Structure and Expressive Features
 This character possesses a striking and elegant facial structure that exudes a youthful yet commanding presence, appearing to be in her early to mid-twenties. Her face is defined by a sharp, refined jawline and high, prominent cheekbones that give her a regal air. She has a straight, dainty nose and full, expressive lips typically set in a confident smirk. Her most captivating feature is her large, almond-shaped eyes, which are a warm, glowing amber or golden-brown hue, framed by thick, dark lashes and perfectly arched, slender eyebrows. Her skin tone is a rich, radiant bronze, which beautifully contrasts with her dark, voluminous hair. Her hair is deep raven-black, styled in thick, flowing waves that reach down to her mid-back, with a section swept elegantly to the side and held in place by a bright turquoise headband.
@@ -1368,7 +2235,17 @@ While her background is not explicitly detailed, her aesthetic strongly suggests
 
 
 
-Uranus
+89. Uranus — The Living Fortress
+
+Background Story: Uranus is not a man in armor; Uranus is the armor. He is an ancient, sentinel construct, one of the last living relics of a pre-human civilization that once dominated the Land of Dawn with celestial technology. He was forged from a sentient, self-repairing metal that absorbs ambient magical energy to regenerate itself. For millennia, he stood silent and inert at the gates of a forgotten celestial city, a guardian with no one left to guard.
+
+Lore: The resurgence of the Abyss and the rampant use of dark magic stirred him from his slumber. He recognized the Abyss's corruption as the very same cosmic rot that destroyed his creators. With a rumbling, mechanical groan, he tore himself from his pedestal and began to walk. Uranus does not speak in words but in pulses of radiant energy. He positions himself between the innocent and the darkness, his massive, floating form an unbreakable wall. He can project his regenerative energy outward, creating a healing field that sustains his allies while he himself becomes a lightning rod for punishment, his metal body absorbing blows that would fell a giant.
+
+Abilities: A pure, regenerative tank. His passive, Radiance, continuously converts his health into a healing aura that sustains nearby allies. He fires a Ionic Edge that slows and marks enemies. He can emit a massive Transcendent Ward that grants him a shield and damages attackers. His ultimate, Consecration, roots him in place, creating a massive, sacred field that greatly increases his regeneration speed and damage reduction, turning him into an immovable, unkillable monument.
+
+Unique Facts: Uranus is the only hero whose very existence is a perpetual healing fountain for his team; he does not need to cast a spell to heal allies, he simply needs to be near them.
+
+Power: The holy anchor. Uranus’s power is his ability to become an immovable point on the battlefield; with his ultimate active, a team can siege a tower or defend a lord without fear, as the living fortress simply will not fall, his body a self-repairing wall of celestial metal.
 
 Celestial Visage and Architectural Form
 The character known as Uranus from Mobile Legends: Bang Bang presents a formidable, non-humanoid silhouette that bridges the gap between ancient clockwork and divine energy. Standing with an imposing, top-heavy physique, the character lacks a traditional lower body, instead tapering into a swirling vortex of golden light that allows him to hover perpetually above the ground. His "skin" is not flesh but a series of interlocking, heavy brass and gold-toned plates that function as both his body and his armor. The facial structure is entirely mechanical and devoid of organic features like a nose or jawline; instead, he possesses a recessed, dark visor-like void where two glowing, slanted eyes burn with a piercing yellow intensity. Rising from his head are two massive, curved horns or crests that sweep upward like a celestial crown, emphasizing his status as a sentinel of a higher plane.
@@ -1388,7 +2265,17 @@ To best suit this character’s divine and ancient aesthetic, he would be most a
 
 
 
-Terizla
+90. Terizla — The Executioner of Dawn
+
+Background Story: Terizla was the most feared and respected executioner in the history of the Moniyan Empire, a giant of a man who wielded a hammer as large as a tombstone. He was a loyal servant of the Imperial justice system, believing that the weight of his hammer was the weight of the law itself. However, his blind faith was exploited. He was ordered to execute a noble family accused of heresy, a family he later discovered was completely innocent, their deaths a political ploy by a corrupt archduke.
+
+Lore: The revelation shattered him. He turned his hammer on the corrupt officials, but was overwhelmed, captured, and subjected to horrific arcane experiments in the depths of the Imperial dungeons. They tried to break his body and soul, fusing his flesh with demonic metal. But Terizla’s rage was too pure. He broke free, his body now a hulking hybrid of flesh and cursed iron, his hammer permanently fused to his arm. He is the Executioner of Dawn, a rebel who now brings true, brutal justice to the corrupt. The lower his health falls, the more his demonic metal activates, drastically increasing his attack speed and damage, making him most dangerous when he is closest to death.
+
+Abilities: A fighter who thrives when wounded. His passive, Body of Iron, converts a percentage of his lost health into damage reduction and greatly enhanced attack speed. He smashes the ground with a Revenge Strike, creating a delayed eruption, and swings his hammer in a wide Execution Strike. His ultimate, Penal Zone, leaps to a location and drives his hammer into the earth, creating a chain-bound arena that damages and heavily slows any enemy trying to escape, forcing them to face his wrath.
+
+Unique Facts: Terizla is the only fighter who can turn a 1v5 ambush into a massacre, as the more damage he takes, the faster and deadlier his hammer swings, and his ultimate ensures no one can flee his execution.
+
+Power: The dying storm. Terizla’s power is the inverse of safety; to wound him is to awaken the demon within his iron body. He creates a prison of chains, trapping his victims in a death match where every drop of his blood spilled only brings them closer to the grave.
 
 The figure in the image is a towering, imposing warrior who exudes an aura of immense physical power and dark, spectral energy. His physical appearance is that of a man in his late 30s or early 40s, marked by a rugged and battle-hardened facial structure. He possesses a sharp, masculine jawline and a prominent, straight nose that adds to his stern and uncompromising expression. His skin tone is a pale, almost sickly greyish-white, suggesting a life spent in shadows or a state of undeath. His eyes are a piercing, unnatural glowing green, lacking visible pupils, which sit beneath a heavy, furrowed brow. This intense gaze is framed by long, vibrant crimson-red hair that falls straight down to his shoulders, contrasting sharply with his pale skin and the dark metallic elements of his attire. His physique is exceptionally muscular and broad-shouldered, indicating a body built for wielding heavy weaponry and enduring significant physical trauma.
 
@@ -1403,7 +2290,17 @@ The background is a desolate, otherworldly landscape that heightens the characte
 
 
 
-Bane
+91. Bane — The Lord of the Seven Seas
+
+Background Story: Bane was once the most feared pirate lord to ever sail the sapphire seas, a leviathan of a man who commanded a fleet of cutthroats and a monstrous, living ship. His greed and cruelty were legendary. He terrorized the coasts of the Northern Vale, making him the sworn enemy of the warrior Franco, who led the resistance against his tyranny. In a climactic, cataclysmic naval battle, Franco’s harpoon finally brought Bane down, the pirate lord sinking into the frozen depths with his treasure and his shattered pride.
+
+Lore: Death could not hold such a relentless spirit. A monstrous, ancient kraken of the Abyss, drawn by the stench of his greed and hatred, offered him a pact. Bane accepted, and his body was reformed into a grotesque, undead abomination—a skeletal pirate with a barnacle-encrusted heart and a living octopus as his cloak. He now sails a ghost ship, his cannon arm firing concentrated spheres of dark, crushing water. He can summon a spectral shark from the deep to devour his foes, and his ultimate is the full might of his phantom fleet, bombarding a target area from the ocean with a relentless hail of ethereal cannonballs.
+
+Abilities: A physical/magical hybrid fighter. He heaves a Crab Claw Cannon that bounces and deals area damage. He drinks from a Ale that heals him. His ultimate, Deadly Catch, summons a massive, ghostly shark that explodes from the ground, biting everything in a line, while his passive, Shark Bite, empowers his next cannon shot with bonus damage based on his total attack.
+
+Unique Facts: Bane’s character design was remodeled from a traditional pirate to a more monstrous, Davy Jones-esque creature of the deep, making him a unique blend of physical brawler and magical artillery.
+
+Power: The phantom fleet’s broadside. Bane’s power is his hybrid damage and devastating push potential; his ghost shark can scatter an entire team, and his cannon allows him to siege towers from a safe distance, a one-ship armada of cannon fire and tentacled fury.
 
 Cephalopod Facial Structure and Head Detailing
 This character possesses a striking hybrid physiology, most notably a head that is entirely cephalopod in nature, resembling a bright reddish-orange octopus or squid. Instead of a traditional human jawline, the lower half of the face is composed of thick, muscular tentacles that serve as a biological "beard." These tentacles curl outward with golden rings or shackles cinching them at various points, and their undersides reveal pale, detailed suction cups. The facial structure is dense and wide, featuring a prominent, furrowed brow that gives the character a perpetually stern or seasoned expression. The eyes are a piercing, luminous teal or sea-foam green, set deep within the fleshy folds of the head, lacking traditional eyebrows but framed by the textured, leathery skin of the mantle. There is no visible hair; the smooth, moist-looking skin of the head extends upward into the mantle, which is tucked neatly under the headwear.
@@ -1426,7 +2323,17 @@ While the character is shown in various settings, he would look most impressive 
 
 
 
-Kaja
+92. Kaja — The Nazar King
+
+Background Story: In the dry, storm-swept deserts of the far south, a race of golden-skinned, sky-touched beings known as the Nazar lived in isolation. Kaja was their young, impetuous king, a being of immense spiritual power and a head full of dreams. He saw his people living in passive fear of the Abyss, and his heart burned with the desire to take the fight to the demons, to prove that the Nazar were not prey but predators.
+
+Lore: Against the counsel of his elders, Kaja underwent the sacred Ritual of the Skybind, a dangerous trial that tethered his soul to the sky itself. He succeeded, gaining the power to command lightning and, more uniquely, to suppress and bind the very essence of a target. He can leap into the air, his form crackling with celestial lightning, and hurl a divine lasso that yanks an enemy out of position and completely suppresses them, dragging them helplessly toward his team. He is a king who fights on the front lines, an electrifying presence who isolates and executes the biggest threat.
+
+Abilities: A support/fighter who excels at single-target suppression. He throws a Ring of Order that damages and spreads, dashes with a Lightning Bomb, and his ultimate, Divine Judgment, is a lightning-fast lasso that grabs an enemy, suppresses them completely, and pulls them towards Kaja, setting them up for an inevitable execution by his allies.
+
+Unique Facts: Kaja’s Divine Judgment is one of the most feared single-target crowd controls, as it completely shuts down an enemy carry and forcibly drags them into the heart of danger. His design incorporates elements of a pharaoh and a celestial being.
+
+Power: The sky warden. Kaja’s power is the absolute lockdown; he points his divine lasso at the enemy's most protected damage dealer, and no amount of shields or bodyguards can stop that chosen target from being ripped out of formation and delivered to the waiting jaws of death.
 
 Facial Structure and Avian Physiology
 The character possesses a strikingly non-human, avian facial structure that conveys a sense of ancient, predatory wisdom. Their head is encased in—or perhaps naturally comprised of—a golden, metallic helm that mirrors the sharp, angular features of a bird of prey. The most prominent feature is a sharp, curved beak of polished gold, which transitions seamlessly into a narrow, reinforced brow. Within deep, shadowed sockets, their eyes glow with an intense, ethereal blue luminescence, lacking visible pupils or irises, which gives them a god-like and detached appearance. The jawline is sleek and tapers sharply toward the throat, reinforced by segmented plating that suggests both flexibility and immense durability. They do not possess hair in the traditional human sense; instead, the top and back of the head are adorned with swept-back, metallic crests that mimic the silhouette of feathers or horns, rising in tiered, golden layers that add significant height and majesty to their profile.
@@ -1449,7 +2356,17 @@ While the character is often depicted in vast, open highlands under a twilight s
 
 
 
-Hanzo
+93. Hanzo — The Akuma Ninja
+
+Background Story: Hanzo was the eldest son of the Shadow Sect’s leader, a prodigy of ninjutsu whose talent bordered on divine. He was Hayabusa’s revered older brother, the shining future of the clan. His ambition, however, was a bottomless pit. He delved into the forbidden Ame no Habakiri, a blade that fed on the user’s soul in exchange for the power to command a demonic entity made of pure hunger.
+
+Lore: The blade consumed him. His body died, his soul becoming a skeletal, horned wraith bound eternally to the demon Akuma. He slaughtered many of his own clan and left his younger brother Hayabusa with a scar of vengeance. Now, Hanzo’s true form is a pitiful, ghostly figure that must hide away, while his demonic spirit, a massive, floating monstrosity, can be projected across the battlefield to devour the souls of his enemies. He can steal their very essence, digesting it to grow stronger, and his ultimate allows his demon to rampage freely while his real body remains motionless, far from danger.
+
+Abilities: An assassin who separates body and soul. His passive, Ame no Habakiri, stores the damage he deals as soul energy, healing him. He throws a Ninjutsu: Soul Reap demon to a location, and can enter a Demon Feast state where his demon spirit becomes playable, ignoring terrain and attacking with savage speed, while his real body sits invulnerable at a distant location.
+
+Unique Facts: Hanzo is the only hero who can fight entirely through a projected demon form, making him nearly impossible to kill if his real body is hidden, while his demon terrorizes the battlefield.
+
+Power: The spirit predator. Hanzo’s power is risk-free assassination; his demon can dive into the most fortified enemy base, tear apart their marksman, and return, while his physical body has never left the safety of a distant forest, a phantom thief of souls.
 
 Facial Composition and Mask Detail
 The character possesses a sharp and intimidating facial structure that is largely defined by a golden, metallic mask covering the lower half of the face from the bridge of the nose down to the chin. This mask features a prominent, pointed chin piece and stylized grooves that mimic a fierce, gritted expression, giving the character a perpetually aggressive and battle-ready look. Above the mask, the eyes are a piercing, glowing red, set deep within a focused and narrow brow that suggests a high level of intensity or a state of demonic possession. The bridge of the nose is straight and narrow where it meets the mask, and the overall head size is proportionate to a tall, lean, and athletic frame. While the age is difficult to pinpoint due to the supernatural features, the character has the vibrant energy and physical peak of someone in their mid-to-late twenties, though his essence feels ancient and otherworldly.
@@ -1472,7 +2389,17 @@ Based on the character's hooved feet, dark skin, and glowing features, he appear
 
 
 
-Hanabi
+94. Hanabi — The Scarlet Flower
+
+Background Story: Hanabi is the daughter of the head of the Scarlet Shadow sect’s rival ninja clan, the Higanbana. Raised to be the perfect kunoichi, she was trained in the deadly art of the Higanbana, a spinning, petal-like blade technique. She is beautiful, deadly, and completely emotionally detached, viewing attachments as a weakness to be pruned. Her life was a cold, calculated series of missions until she encountered the Crimson Shadow, Hayabusa.
+
+Lore: Her rivalry with childhood friend Hayabusa became an obsession. She views him as the only worthy opponent, the one target she cannot seem to kill. Beneath her frozen exterior, there is a twisted fascination, a desire to be the one to claim his life. Her weapon, the Higanbana, is a chakram-like flower that returns to her, its petals a blur of crimson. Her ultimate, the Forbidden Field, unleashes a full blooming of the deadly flower, an area of effect that petal-shreds enemies and leaves behind a field that continuously damages and slows those trapped within.
+
+Abilities: A marksman who wields a bouncing, petal-like weapon. Her passive, Ninjutsu: Petal Barrage, causes her attacks to bounce to multiple enemies when her health is high, granting her lifesteal when low. She throws a Petal Dance shield and her ultimate, Higanbana, is a projectile that roots the first enemy hit, then blooms into a massive, slowing field of crimson death.
+
+Unique Facts: Hanabi’s weapon is a living flower that feeds on blood, and her ultimate is one of the most powerful area-denial tools for a marksman, turning an entire jungle corridor into a death trap.
+
+Power: The blooming web of death. Hanabi’s power is her ability to lock down an entire team with a single, well-placed ultimate; once she snares the front line, the Higanbana erupts, rooting and shredding the entire cluster of enemies who dared to stand together.
 
 Facial Composition and High-Detail Head Features
 The character possesses a strikingly refined and youthful facial structure, appearing to be in her early twenties, characterized by a sharp, V-shaped jawline that lends her an air of predatory grace. Her skin tone is a pale, porcelain ivory, providing a high-contrast canvas for her intense features. Her eyes are perhaps her most arresting feature; they are a deep, piercing crimson, framed by heavy, dark eyelashes and sharp, angled eyebrows that suggest a perpetual state of focused aggression. The eye makeup is dramatic, with reddish-pink eyeshadow blended out from the lids, enhancing her supernatural or "god-like" intensity. Her nose is small and straight, leading down to thin, well-defined lips colored with a muted red tint. Crowning her head is a voluminous mass of jet-black hair, styled into a high, commanding ponytail that flows down to her mid-back. A large, ornate red ribbon, tied into a complex bow with circular loops, secures the ponytail, while a single thick strand of hair frames the left side of her face, adding a touch of deliberate asymmetry to her otherwise calculated appearance.
@@ -1494,7 +2421,17 @@ While she is often seen in mystical forests or temple ruins, this character woul
 
 
 
-Yin
+95. Yin — The Martial Genius
+
+Background Story: Yin was a prodigy of modern martial arts, a street fighter from a bustling city who grew up idolizing the legendary Kung Fu Boy, Chou. He was a brawler, not a thinker, charging into fights with a gleeful roar and fists of steel. His raw, explosive talent caught the attention of an ancient, wrathful spirit named Lieh, who was sealed within a ceremonial gauntlet. Seeing Yin’s potential as a vessel, Lieh tricked the young fighter into donning the gauntlet.
+
+Lore: Now, Yin’s body is a battlefield shared by two souls. Most of the time, Yin is in control, using the gauntlet’s power to charge and pummel his enemies with a mix of boxing and kung fu. But when he unleashes his ultimate, My Turn, he can separate Lieh from his body and trap a single enemy in a closed, mystical arena—a one-on-one cage match. Inside this domain, Yin transforms into Lieh’s avatar, a hulking, demonic form with devastating, empowered blows and increased durability. The enemy is forced to duel a monster, and if they lose, they are devoured. It is the ultimate expression of a brawler’s pride: a fair fight on his terms.
+
+Abilities: A fighter who can force a duel. He dashes with Charged Punch, delivers a Instant Blast combo, and his ultimate, My Turn, creates an inescapable arena that traps him and a targeted enemy. Inside, Yin transforms into Lieh, gaining massively enhanced attack, defense, and a new set of skills for the duration, leaving the rest of the world outside.
+
+Unique Facts: Yin’s My Turn is the only ability that can literally remove two heroes from the battlefield into a separate pocket arena, creating a true 1v1 showdown while the other eight fighters wait in stunned silence.
+
+Power: The arena king. Yin’s power is the isolation of the biggest threat; he doesn't just attack the enemy carry, he kidnaps them into his personal cage, where no heals or shields can reach them, and beats them to death in a duel they cannot win.
 
 Facial Composition and Head Structure
 The character possesses a youthful yet determined facial structure, appearing to be in his late teens or early twenties with a sharp, well-defined jawline that tapers into a slightly pointed chin. His eyes are a warm, vibrant amber-brown, framed by thick, dark lashes and expressive eyebrows that sit beneath a bright red, braided headband. This headband cinches across his forehead, holding back a voluminous mane of messy, sun-kissed blonde hair that is styled in wind-swept spikes at the top. Most notably, a singular, exceptionally long blonde braid extends from the back of his head, reaching down past his waist and ending in a golden, bell-shaped weight with a decorative red tassel. His nose is straight and proportionate to his balanced facial features, and his skin tone is a healthy, fair complexion that glows with a subtle warmth, suggesting an active life spent outdoors.
@@ -1517,7 +2454,17 @@ To best suit his vibrant aesthetic and lore, this character would look most at h
 
 
 
-Masha
+96. Masha — The Wild Woman
+
+Background Story: Deep within the ancient, primeval forests of the North, a baby girl was lost, the sole survivor of a carriage attack by a monstrous bear. She was found and raised by that very bear, growing up not as a human, but as a creature of the wild. She learned to speak the language of the forest, to run with the wolves, and to strike with the fury of a cornered animal. She has no memory of her human parents, no concept of civilization.
+
+Lore: Masha is a feral guardian of the wilds. When the Abyss began to poison her home, she emerged from the forest with a primal rage. She wields her massive claws, fighting with the strength of the bear that raised her. Her unique physiology, hardened by a life in the untamed wild, grants her not one, but three separate bars of health, each representing a portion of her life force. When one bar is depleted, she simply roars and fights on, each lost bar only granting her more damage and attack speed, making her a berserker who is most lethal when she is on her last life.
+
+Abilities: A fighter with three health bars. Her passive, Ancient Strength, gives her three HP bars; losing a bar makes her temporarily invincible and grants increasing damage and lifesteal. She charges with a Wild Power lunge, disarming enemies. Her ultimate, Thunderclap, is a powerful slam that deals massive damage based on the number of HP bars she has lost, often one-shotting a wounded target.
+
+Unique Facts: Masha is the only hero who is immune to a certain number of fatal blows, her three health bars making her a nightmare for assassins who rely on a single burst combo.
+
+Power: The unstoppable beast. Masha’s power is her refusal to die; she takes the enemy’s hardest hits, loses one life, becomes invincible, and then hits back twice as hard, until her enemy is torn apart by a primal, three-staged fury that never ends.
 
 A Visage of Feral Power and Golden Strength
 This character possesses an imposing and fiercely athletic presence, appearing as a woman in the prime of her strength, likely in her mid-to-late twenties. Her facial structure is defined by a sharp, determined jawline and a straight, noble nose that underscores her intense expression. Her most striking feature is her eyes, which glow with a piercing, predatory reddish-orange hue, framed by dark, bold lashes and sharp brows. Her skin tone is a healthy, sun-kissed tan, suggesting a life spent in harsh, open environments. Adding to her wild aesthetic, she bears distinct, reddish-brown facial markings or "war paint" on her cheeks, mimicking the whiskers of a predator. Her hair is a massive, voluminous mane of vibrant golden-yellow, styled in wild, jagged layers that cascade down her back to her waist. Thick, unruly bangs frame her face, some spiking upward like a lion’s crest, emphasizing her untamed and powerful nature.
@@ -1540,7 +2487,17 @@ While human in her core form, the character radiates an aura that feels deeply c
 
 
 
-Wanwan
+97. Wanwan — The Agile Tiger
+
+Background Story: Wanwan is the daughter of the great marksman Yu Peng, a member of the Oriental Fighters who once defended the Cadia Riverlands. From the moment she could walk, she had a bow in her hand and a need for speed. Her father was strict, teaching her that a true marksman must be still, precise, and patient. Wanwan, however, was a tiger cub, full of boundless energy. She could not sit still; she needed to jump, to flip, to fly.
+
+Lore: Defying her father’s traditional teachings, she developed her own unique style: the Tiger Pace. She leaps and cartwheels, firing her bow mid-air. Her agility is so extreme that she can trigger all of an enemy’s weaknesses—four critical points on their body that, when all hit, unlock her ultimate. Her ultimate, Crossbow of Tang, is a breathtaking, airborne dance where she becomes untargetable and fires a continuous, rapid volley of arrows at the target. While in the air, she is a goddess of death, a whirling dervish of arrows that no one can touch.
+
+Abilities: A hyper-mobile marksman. Her passive, Tiger Pace, allows her to leap and dash when attacking, and she reveals an enemy’s four weaknesses. Hitting all four unlocks her ultimate. She throws a Swallow's Path pinning needle. Her ultimate, Crossbow of Tang, sends her airborne, becoming untargetable while firing a series of arrows at the target, dealing massive damage, and then landing with a final strike.
+
+Unique Facts: Wanwan is one of the few marksmen whose ultimate makes her completely invincible for its duration, allowing her to dodge certain death while executing her prey.
+
+Power: The dancing executioner. Wanwan’s power is her untouchable aerial assault; once she marks all of an enemy’s weaknesses, she ascends into the sky, and for the next few seconds, she is not just a damage dealer—she is an inescapable, divine judgment from above.
 
 This character design is a masterclass in high-detail world-building, blending Eastern traditional aesthetics with fierce, beast-like attributes that hint at a complex lore.
 
@@ -1565,7 +2522,17 @@ While the reference images show her on an ancient, carved stone platform overloo
 
 
 
-Claude
+98. Claude — The Master Thief
+
+Background Story: Claude is the greatest thief in Los Pecados, a city of criminals, gamblers, and outlaws. An orphan of the streets, he learned to steal before he could read, his nimble fingers and silver tongue his only inheritance. He is not a hero; he is a scoundrel, a charmer, and an unrepentant kleptomaniac. His only loyalty is to his partner, Dexter, a sentient, monkey-like creature who is as much a brother as a companion.
+
+Lore: Claude’s most audacious heist was the theft of a mysterious, alien artifact from the mansion of the crime lord Kane. The artifact, a mirror-like device, granted him and Dexter the ability to swap places instantaneously. This made them the perfect duo: Claude could waltz right into the most secure vaults, and if he was caught, he could simply swap with Dexter, who was waiting safely outside. Now, Claude fights not for justice but for survival and the next big score, his twin pistols spitting a hailstorm of bullets. His ultimate, Blazing Duet, is a whirlwind of gunfire where Claude and Dexter spin back-to-back, unleashing a torrent of bullets in a massive area while providing a shield to each other.
+
+Abilities: A hyper-mobile marksman. He attacks with twin pistols, and his Art of Thievery allows him to blink to a location and mirror his attacks from there. He can swap places with Dexter using Battle Mirror Image. His ultimate, Blazing Duet, creates a massive, spinning ring of bullets around him and Dexter, dealing continuous damage while granting them a shield.
+
+Unique Facts: Claude and Dexter are essentially two halves of one hero, their swap mechanic making them almost impossible to pin down. His design is inspired by the archetype of the charming rogue.
+
+Power: The untouchable phantom thief. Claude’s power is his chaotic mobility; he can dive into five enemies, unleash a devastating Blazing Duet, and then instantly swap places with his mirror image, appearing back in safety while his enemies are left in the smoking ruin of his gunfire.
 
 Facial Structure and Expressive Features
 The character possesses a youthful and sharp facial structure that suggests a person in their late teens to early twenties. His skin tone is fair and smooth, contrasted by a strong, well-defined jawline and a straight, prominent nose that gives him a confident, almost cocky appearance. His eyes are a striking, light amber or golden hue, characterized by a narrow, mischievous slant that reinforces his rogue-like personality. Above them, thin, dark eyebrows are often arched in a smirk, matching the slight, playful grin frequently seen on his lips. His head size is proportional to his lean frame, topped with thick, voluminous brown hair. The hairstyle is a stylized, swept-back undercut with the longer top sections pushed upward and slightly to one side, creating a series of sharp, dynamic peaks that look as though they are caught in a permanent breeze.
@@ -1587,7 +2554,17 @@ Accompanying the character is a small, monkey-like creature that acts as his sid
 
 
 
-Karrie
+99. Karrie — The Lost Star
+
+Background Story: Karrie is a being from a distant, dying star system, an alien whose body is composed of starlight given humanoid form. She is a twin, her other half a shadow-self that was stolen by the Abyss when their star collapsed. She pursued the Abyss across the cosmos, her journey lasting millennia, until she crash-landed in the Land of Dawn, her body broken and her memory fragmented.
+
+Lore: Reforged by a kind blacksmith who found her, Karrie now wields a pair of magi-tech "Starlight Discs" that she can throw and recall, her alien physiology allowing her to move at incredible speeds while attacking. Her entire purpose is to hunt down the Abyss and find her lost twin, whose voice she can still hear echoing in the darkness. Her attacks apply a deadly light mark, and when enough marks accumulate, they detonate in a burst of true damage, bypassing all armor. Her ultimate, Dual Star, sends her into an overdrive state, causing her discs to fly faster and her light marks to trigger more rapidly, turning her into a whirling galaxy of cutting light.
+
+Abilities: A marksman who deals true damage. Her passive, Lightwheel Mark, stacks on enemies, and at five stacks, deals a burst of true damage. She throws a Spinning Lightwheel and dashes. Her ultimate, Phantom Star, summons two orbiting discs that follow her, greatly increasing her attack speed and reducing the mark threshold for the duration.
+
+Unique Facts: Karrie is one of the few marksmen capable of melting even the sturdiest tank because of her true damage passive, making her a universal threat regardless of enemy defenses.
+
+Power: The tank-melter. Karrie’s power is the negation of armor; no matter how much defense an enemy stacks, her light marks bypass it entirely, allowing her to shred a full-tank Gatotkaca as easily as a fragile mage, a cosmic arbiter of equal-opportunity destruction.
 
 Facial Structure and Ethereal Visage
 This character possesses a striking and formidable facial structure that balances sharp, predatory elegance with a divine, otherworldly intensity. Her face is characterized by a high, well-defined forehead and a sharp, tapering jawline that meets at a narrow chin, giving her a regal yet lethal presence. Her nose is straight and slender, leading up to a pair of glowing, pupilless eyes that radiate a cold, cyan light, suggesting a being of pure energy or ancient magic. Above these eyes sit narrow, sharp eyebrows that are perpetually set in a focused, determined scowl. Her skin tone is a deep, rich bronze with a subtle violet undertone that glows under certain lighting, emphasizing her non-human heritage. Adorning her forehead is a small, glowing white sigil or mark, which acts as a focal point for her power. Her hair is perhaps her most distinct feature: a shock of brilliant white, swept upward in a gravity-defying, flame-like mohawk that is short at the sides but long and thick at the top. From the back of this crest, a single, exceptionally long white braid extends down past her waist, bound by metallic rings and ending in a heavy, cylindrical silver weight.
@@ -1610,7 +2587,17 @@ Given her striking aesthetic, this character would look best in a setting that m
 
 
 
-Roger
+100. Roger — The Dire Wolf
+
+Background Story: Roger was a noble knight, a lawman in the service of the Moniyan Empire, hunting a legendary White Wolf that had been terrorizing border villages. He was a proud, honorable man who believed in the righteousness of his cause. He tracked the beast to its lair and in a ferocious battle, he was bitten. The wound should have healed, but the wolf was no ordinary animal; it was a vessel of a primal curse.
+
+Lore: The curse did not kill Roger; it merged with him. Now, he is a therianthrope, a man who transforms into a monstrous Dire Wolf. The curse is a constant battle within him, the man and the beast fighting for control. As a man, he retains his honor and uses his twin pistols to strike from a distance, a cautious and precise hunter. But when the beast’s bloodlust becomes too great, or when he needs to chase down a fleeing foe, he drops to all fours and transforms, his body becoming a massive, feral wolf with devastating melee attacks and an incredible pouncing speed. He is a hunter who has become the very monster he once swore to destroy.
+
+Abilities: A stance-switching marksman/fighter. In human form, he uses pistols for ranged attacks, firing a Open Fire volley and laying a slowing trap. His ultimate, Wolf Transformation, shifts him into wolf form, granting him increased movement speed, melee attacks, and a devastating pouncing lunge. He can switch back at will, making him a fluid, hybrid predator.
+
+Unique Facts: Roger is one of the few heroes who can seamlessly switch between a pure ranged carry and a pure melee assassin in the middle of a fight, adapting his role as needed.
+
+Power: The dual predator. Roger’s power is his versatility; he can safely poke and siege from a distance, and the moment an enemy is wounded and tries to flee, he transforms into the wolf, outspeeding them and delivering a fatal pounce, a perfect blend of hunter and beast.
 
 The character depicted in the provided images is a rugged, powerfully built warrior who combines the aesthetic of a frontier gunslinger with advanced, mechanical augmentations. He exudes an air of grizzled experience, appearing to be in his late 30s or early 40s. His presence is defined by a massive, multi-barreled firearm and heavy prosthetic arms that suggest a history of intense combat and survival.
 
@@ -1635,7 +2622,17 @@ Given his appearance, this character would look most at home in a "Magipunk" or 
 
 
 
-Diggie
+101. Diggie — The Chronos Guardian
+
+Background Story: Diggie was once a brilliant but eccentric scholar, the headmaster of a clockwork university that studied the nature of time itself. He was a mentor and father figure to many, a gentle soul whose only weapons were his wit and a small, mechanical pocket watch. His peaceful life ended when the Time Demons, minions of the Abyss seeking to unravel the timeline, attacked his university. To protect his students, Diggie activated a forbidden time-loop device, trapping himself and the demons in a localized temporal bubble.
+
+Lore: The experiment went wrong. The demons were destroyed, but Diggie’s physical form was de-aged into that of a small, fluffy chick, his brilliant mind now trapped in an adorable, feathery body. Yet his consciousness remained. He now rides into battle on a floating alarm clock, still the ingenious chronomancer he always was. He can throw sticky Time Bombs that prevent enemies from dashing, reverse time to rescue an ally from death, and his ultimate, Time Journey, creates a massive anti-crowd-control field, cleansing and shielding all allies in the area from any disabling effect. The wise old professor is now a tiny, feathered guardian of the timeline.
+
+Abilities: A support who controls time and anti-CC. His passive allows him to become an untargetable egg upon death, which will revive him after a delay. He throws Time Bombs that chase and explode, preventing enemies from using blink skills. He reverses an ally’s position with Reverse Time. His ultimate, Time Journey, creates a large field that instantly purifies all allies of crowd control and gives them a shield.
+
+Unique Facts: Diggie’s ultimate is the single most powerful anti-crowd control tool in the Land of Dawn, capable of completely negating a 5-man Atlas ultimate, saving an entire team from a wombo-combo. He is also the only hero who can revive himself without any external help.
+
+Power: The temporal savior. Diggie’s power is the complete negation of enemy coordination; a team’s perfectly executed five-man stun chain is rendered a meaningless waste, as Diggie’s Time Journey instantly frees his allies, turning a certain team-wipe into a triumphant counter-engagement.
 
 Facial Structure and Expressive Features
 The character in Diggie 3.jpg and Diggie 4.webp possesses a distinct avian facial structure, characterized by a rounded, youthful head that is large in proportion to its small body. The face is dominated by two massive, circular eyes with golden-yellow irises and deep chocolate-brown pupils, giving the character an eternally curious and wide-eyed expression. These eyes are framed by thick, black-rimmed circular spectacles that sit snugly across the bridge of a small, sharp, dark-colored beak. The skin tone—or rather, the plumage—on the face is a warm, golden-tan hue, which transitions into a stark, white "beard" of feathers that sweeps downward from the cheeks, creating a scholarly yet whimsical appearance. The jawline is soft and tucked into a thick scarf, while the overall facial geometry is soft and circular, lacking harsh angles, which contributes to its friendly and non-threatening aura.
@@ -1658,7 +2655,17 @@ Accompanying the character is a small, spherical mechanical owl, which acts as a
 
 
 
-Estes
+102. Estes — The Moon Elf King
+
+Background Story: Estes was the firstborn prince of the Moon Elves, born beneath the silver light of the Lunar Aegis that protected the Azrya Woodlands. His sister, Miya, was the warrior; Estes was the scholar and the healer. From his earliest memory, he felt the pain of others as his own, an empathic gift that made him a gentle soul in a time of unending war. When the Abyss shattered the ancient peace and their father, the king, fell in battle, Estes was thrust onto a throne he never desired. He was not a warrior-king of blade and bow but a monarch of moonlight and mercy, who believed that a kingdom's strength lay not in its walls but in the vitality of its people.
+
+Lore: As the Abyssal corruption began to seep through the cracks of the Lunar Aegis, Estes made a fateful decision. He would not hide behind the shield; he would become the shield. He journeyed to the heart of the Moonlit Forest, to the sacred Moonpool where the Goddess's tears were said to fall. There he offered himself, and the Goddess answered, imbuing him with the pure essence of moonlight. His presence became a font of life, his very breath a healing balm. Now, the Elf King walks the battlefields personally, his royal robes stained with mud and blood, his hands glowing with argent light. He can summon a vast, holy sanctuary where time itself seems to slow, and within its glow, his allies are mended of wounds that should be fatal, their spirits lifted by the quiet, unshakeable presence of a king who would die before letting another of his people fall.
+
+Abilities: Estes commands the restorative power of the moon. His passive, Scripture of the Moon Elf, causes his basic attacks to apply a mark that increases the damage his allies deal to the target. He directs a Moonlight Immersion into a single ally, linking his soul to theirs and pouring a rapid stream of healing energy into them, which can then jump to other nearby friends. His ultimate, Blessing of the Moon Goddess, is a sovereign miracle: Estes calls down a massive, radiant sanctuary. Inside this field, all allies are continuously healed, and their defensive resolve hardens, granting them immense damage reduction while the moonlight bathes them. It is not merely a spell; it is a declaration that here, under the king's watch, death is denied.
+
+Unique Facts: Estes is the older brother of Miya, and together they represent the dual nature of elven leadership: the healing king and the avenging priestess. His power was so great that he once mended an entire forest blighted by the Abyss in a single night. Unlike most supports, his healing output scales with the number of allies near him, making him exponentially more powerful in a full formation.
+
+Power: The immortal bastion. Estes’s power is the absolute negation of attrition; armies do not tire under his gaze, and mortal wounds become mere inconveniences. He can turn a chaotic rout into an unbreakable stand, his Sanctuary rewriting the rules of engagement so that his allies simply do not die so long as the moonlight shines.
 
 Facial Features and Cranial Structure
 The character possesses a refined and ethereal facial structure that signifies his elven heritage, characterized by a sharp, well-defined jawline and high, prominent cheekbones that taper into a narrow, pointed chin. His skin tone is a pale, porcelain ivory, unblemished and radiating a subtle, otherworldly glow as seen in Screenshot_2026-05-13-09-27-26-77_22e4250240c136c826b8a3b1264b092d.jpg. His eyes are a striking, pupil-less white, emitting a soft lunar luminescence that suggests a state of constant spiritual enlightenment or magical channeling. These eyes are framed by slender, straight eyebrows and a straight, aristocratic nose. Perhaps his most defining elven trait is his long, pointed ears that extend upward and outward, perfectly symmetrical and smooth. His hair is a shimmering, long silver-white, falling straight down past his shoulders with a center part that cleanly frames his face. The texture appears silky and fine, catching the light like spun moonlight.
@@ -1681,7 +2688,17 @@ While the character is often seen in a serene, open-world landscape under a twil
 
 
 
-Belerick
+103. Belerick — The Mighty Oak
+
+Background Story: Before the Elves built their first temple, before the Moon Goddess cast her Aegis, there was a seed. That seed, planted by a forgotten nature spirit, grew into the oldest tree in the Enchanted Forest. Over millennia, it gained sentience, its roots drinking deep of the world's lifeblood, its branches cradling the nests of a thousand generations of birds. It was named Belerick, and it was the silent, patient heart of the woods. Belerick never moved, never spoke, content to simply be, until the day the Abyss sent its first scouting parties into his glade. They burned the undergrowth and slew the creatures that sheltered beneath his boughs. For the first time in ten thousand years, the great tree felt something other than peace: it felt a slow, rumbling, tectonic anger.
+
+Lore: Uprooting himself with a groan that shook the entire forest, Belerick became a walking bastion. His bark is harder than castle-forged steel, and his sap is a healing nectar. He is a gentle giant by nature; his favorite companion is the tiny sprout Floryn, whom he protects with a paternal ferocity. On the battlefield, he is a slow-moving mountain of foliage and fury. He can share his own prodigious life force with an ally through a blooming bond, and his ultimate can cause his roots to erupt from the earth, spreading a field of healing petals that also damages enemies, drawing their stolen vitality back into his ancient wooden heart. He does not fight for glory or vengeance but for the quiet, sacred hum of a living forest that he will not allow to be silenced.
+
+Abilities: A guardian who uses his immense health as a weapon. His passive, Deadly Thorns, adds a percentage of his maximum health as bonus magic damage to his attacks, making him a deceptively lethal foe. He can tether an ally with Nature’s Shield, sharing a portion of his health and damage reduction. His Ancient Seed latches onto enemies, draining their movement speed and dealing damage over time. His ultimate, Wrath of Dryad, unleashes a radial burst of roots and blossoms, healing himself and nearby allies based on his maximum health while damaging and slowing enemies in the area.
+
+Unique Facts: Belerick is canonically the oldest living organic being in the Land of Dawn, his consciousness pre-dating most civilizations. His friendship with Floryn is a central narrative of pure, cross-species kindness in the war-torn realm. He cannot be moved by conventional means; his weight and rooted will make him immune to most displacement effects.
+
+Power: The living fortress. Belerick’s power is his unassailable presence; he can wade into a storm of enemy fire, absorb the punishment, and then return it with interest, his very existence a shield that turns the tide of battle not through agility, but through the sheer, unkillable endurance of a ten-thousand-year-old tree.
 
 General Physicality and Ancient Stature
 This character presents as a colossal, sentient elemental being, an ancient guardian whose very form is inextricably linked to the primordial forces of nature. Standing with a towering and imposing height, the character's physique is a masterwork of biological architecture, blending the rigid strength of seasoned timber with the organic vitality of verdant foliage. The character possesses an immense, broad-shouldered frame that conveys an aura of immovable endurance. Their body does not resemble a traditional human muscle structure but is instead composed of thick, interlocking wooden plates that function as a natural exoskeleton. This "skin" is a deep, weathered brown, textured with the rough grain of ancient bark, and is sporadically accented by vibrant green vines that wind around the limbs like living tendons. The overall impression is one of a "God of the Forest," a race of beings that are as much a part of the landscape as the mountains themselves.
@@ -1704,7 +2721,17 @@ While the character is often seen in diverse landscapes, they would look most at
 
 
 
-Badang
+104. Badang — The Tribal Warrior
+
+Background Story: Badang was the frailest man of his coastal tribe, a fisherman whose thin arms could barely haul in a net. He was mocked, bullied, and left to the most menial tasks. He bore the ridicule with silent humility, but his spirit was a forge. One day, while fishing alone by a forbidden mangrove swamp, he witnessed a strange, shimmering creature trapped by a fallen tree. He freed it, and in gratitude, the creature—a water spirit—led him to a hidden grotto where a mystical spring bubbled with golden light. The spirit told him to drink. Badang drank, and in that moment, his body was remade. Veins of power coursed through him, his muscles hardened like ironwood, and his fists became weapons that could shatter boulders.
+
+Lore: Badang returned to his tribe and became its greatest protector. He was no longer the weak fisherman but the Fist of the Tides. He crafted a pair of gauntlets from the enchanted driftwood of the grotto, weapons that channel the raw force of his inner strength. His fighting style is brutally direct: he can punch the air so hard it creates a devastating, slowing shockwave, and he can summon an ethereal wall of rock from the ground to block an enemy's path. His ultimate, the Fist Crack, is a relentless, rapid-fire barrage of punches that sends his target flying backward, crashing into his own wall for a stunning, bone-shattering impact. He fights for the oppressed, a symbol that the weakest can become the strongest through heart alone.
+
+Abilities: A combo-based fighter who uses walls. He unleashes a Qigong Fist wind blast that damages and slows. His Fist Break creates a rocky barrier that blocks movement and can interact with his skills. His ultimate, Fist Crack, delivers a flurry of punches to a single target, knocking them back. If they collide with his wall or terrain, they are stunned and take bonus damage, completing a devastating one-two combo.
+
+Unique Facts: Badang’s legend is directly inspired by the Malay folk hero of the same name, a man of immense strength. He is one of the few heroes who can create permanent, solid terrain on the battlefield, fundamentally altering the geography of a fight.
+
+Power: The wall breaker. Badang’s power is his ability to box an enemy into a kill zone of his own design. He corrals them with a shockwave, cuts off their escape with a wall, and then unleashes a point-blank barrage that pins them against the stone, shattering both their defenses and their hopes of retreat.
 
 Facial Structure and Head Details
 The character possesses a sharp, masculine facial structure characterized by a prominent, well-defined jawline and a straight, high-bridged nose that gives him a noble yet fierce expression. His head is proportional to his powerful frame, topped with a mass of thick, dark espresso-colored hair that flows past his shoulders in wild, untamed waves. A bright azure-blue headband is tied firmly across his forehead, with its long ends trailing behind him like twin banners in the wind. His eyes are a piercing, icy blue, set deeply beneath a heavy brow that adds to his intense and focused gaze. His skin tone is a rich, sun-kissed bronze, suggesting a life spent in the elements, and he appears to be in the prime of his life, roughly in his late twenties or early thirties.
@@ -1727,7 +2754,17 @@ To truly complement his aesthetic, this character would look best in a setting t
 
 
 
-Lapu-Lapu
+105. Lapu-Lapu — The Greatest Warrior
+
+Background Story: Lapu-Lapu was the supreme chieftain of the Makadan Islands, a proud archipelago whose people had never bowed to any empire. A warrior born of the sea and sun, he wielded two blades: one heavy and broad for crushing armored foes, one light and swift for cutting through the tides of battle. His peace was shattered when a fleet of iron ships flying the flag of the expanding Moniyan Empire appeared on the horizon, demanding tribute and subjugation. The Emperor’s general was a conqueror of nations, and he saw the islands as just another jewel for his crown. Lapu-Lapu saw them as a grave for invaders.
+
+Lore: The Battle of Mactan was the stuff of legends. Lapu-Lapu led his warriors in a ferocious defense, his twin blades singing a song of freedom. The battle reached its climax when he faced the Imperial general in single combat. Channeling the ancient spirit of his ancestors, Lapu-Lapu unleashed his ultimate technique, fusing his two swords into a single, massive greatsword of pure, blazing energy. In this state, he is a whirlwind of unstoppable destruction, his attacks becoming heavy, sweeping cleaves that can devastate an entire phalanx. He slew the general and drove the Empire from his shores. Now, he stands as a beacon for all nations resisting the Moniyan Empire's relentless expansion, the undefeated champion of a free people.
+
+Abilities: A stance-switching fighter. In his normal dual-sword state, he is agile and can hurl a boomerang blade. His ultimate, Bravest Fighter, transforms him into Heavy Sword state, replacing his skills with devastating, wide-area cleaves and granting him immense physical defense and lifesteal. He can switch back at will, making him a master of adapting between skirmishing and all-out assault.
+
+Unique Facts: Lapu-Lapu is a direct homage to the historical Filipino chieftain who defeated Ferdinand Magellan, making him a cultural icon of resistance. He is one of the few heroes who can seamlessly transition from an agile assassin to a durable front-line juggernaut.
+
+Power: The island storm. Lapu-Lapu’s power is his dual-phase fury; he can dart in and harass with his light swords, and when the enemy commits, he transforms into a hulking greatsword terror who cleaves through entire teams, his lifesteal turning their damage into his own survival.
 
 Based on the detailed references provided for the character Lapu-Lapu from Mobile Legends: Bang Bang, here is an in-depth breakdown of his character model, attire, and weaponry.
 
@@ -1752,7 +2789,17 @@ While the current reference captures him on a pristine tropical beach with white
 
 
 
-Jawhead
+106. Jawhead — The Steel Gladiator
+
+Background Story: Ailee was the smallest child in the Eruditio orphanage, a girl whose body was frail but whose mind was a blazing supernova of genius. Bullied for her size and her eccentric obsession with machines, she spent her days in the scrapyards, building friends out of discarded parts. Her greatest creation, a hulking combat mech she named Jawhead, was built from salvaged military hardware and a salvaged Noumenon core. She didn't design it for war; she designed it to be her protector, her big, clumsy, metal best friend. When the Abyss attacked Eruditio's outer districts, it was not the city guard who saved the orphanage; it was a little girl riding inside a giant, rickety robot, laughing as she tossed demons into the air.
+
+Lore: Ailee and Jawhead are an inseparable duo. She pilots the mech from within its chest cavity, her high-pitched battle cries piped through its external speakers. Her combat style is a chaotic, gleeful brawl. Jawhead can launch a barrage of missiles, charge forward on overloaded thrusters, and, most famously, use its massive mechanical arms to pick up an enemy and hurl them over its shoulder, depositing them helplessly into the middle of Ailee’s waiting allies. Her ultimate, Ejector, is a targeted missile salvo that locks onto and chases a single target, often finishing off the very foe she just tossed away. She is the heart of the mech, and the mech is the body of a little girl who refused to be a victim.
+
+Abilities: A disruptive tank/fighter. He fires Smart Missiles that chase enemies. His Ejector grabs a target and throws them behind him, dealing damage and stunning them on landing. His ultimate, Unstoppable Force, is a charging rush that knocks aside everything in his path and can target a specific enemy, unleashing a final, powerful uppercut.
+
+Unique Facts: Jawhead is actually the name of the mech; the hero is truly the little girl Ailee, making them a unique duo like Claude and Dexter. The mech has a habit of occasionally waving or dancing when Ailee is happy, a quirk that startles enemies in the middle of combat.
+
+Power: The chaos juggler. Jawhead’s power is his ability to physically reposition an enemy’s most important hero, throwing their tank away from the backline or tossing their assassin into a turret’s range, all while shrugging off damage with a mechanical, giggling indifference.
 
 The Mechanical Guardian and the Passenger
 This character presents a striking contrast between a massive, battle-worn bipedal machine and the small, delicate child who pilots it from a hatch in its torso. The machine, known as Jawhead, possesses a hulking and top-heavy physique, characterized by an enormous upper chassis that tapers down to surprisingly compact, digitigrade mechanical legs. Its "head" is not a traditional face but rather a central, glowing amber optic lens shielded by a metal cage, giving it a relentless and focused expression. The overall build is industrial and utilitarian, reinforced with heavy plating that shows significant weathering, including rust, scratches, and patches of faded olive-drab and orange paint. Peering out from the top is a young girl with a soft, round facial structure and large, expressive eyes—one of which appears to be a glowing amber cybernetic or magical replacement that matches the machine’s optic. Her youthful appearance and small stature, accentuated by her vibrant blue hair tied into pigtails, create a sense of innocence protected by an unstoppable force of iron.
@@ -1775,7 +2822,17 @@ This character would look most at home in a sprawling, post-apocalyptic industri
 
 
 
-Guinevere
+107. Guinevere — The Violet Fairy
+
+Background Story: Guinevere was the only daughter of the Baroque family, the wealthiest and most magically-gifted noble house in the Moniyan Empire. Her cousins, Lancelot and Gusion, were destined for greatness, but Guinevere's magic was different. She was a Violet Fairy, a hereditary mutation that granted her immense magical power but also a fey, untamable spirit. She was betrothed to Lancelot as a political match, but her heart was never in it. She found the constraints of noble life suffocating, the endless expectations a cage for her wild, violet-tinged soul.
+
+Lore: When Lancelot left to pursue his own perfection, the engagement dissolved, and Guinevere felt nothing but relief. She abandoned the Baroque estate and enrolled in the Magic Academy, not as a noble, but as a student. There, under the tutelage of the great mages, she refined her fairy magic into a breathtaking, aerial combat style. She wields a rapier that channels her violet energy, and she can leap high into the air, becoming a shimmering, untouchable mirage before crashing down like a violet comet. Her ultimate, Violet Requiem, creates a swirling, magical field that knocks up and continuously damages enemies, a beautiful, deadly dance that showcases the full, unbridled power of a fairy who chose freedom over a crown.
+
+Abilities: A magical fighter/assassin. She charges with Energy Wave, poking enemies. Her signature Spatial Migration lets her leap to a target location, dealing damage and becoming untargetable, and upon landing, she knocks up nearby foes. Her ultimate, Violet Requiem, creates a large area-of-effect field that continuously damages and repeatedly knocks up enemies caught within it.
+
+Unique Facts: Guinevere’s engagement to Lancelot and her subsequent rejection of it is a key scandal in the Baroque family’s history. She is one of the few mages who can build semi-tank items and still act as a potent assassin.
+
+Power: The untouchable tempest. Guinevere’s power is her aerial immunity; she can vault over a team’s frontline, become completely immune to their counter-attack, and land directly on the enemy mage, unleashing a fairy storm that juggles her target in the air while her team swarms in.
 
 Guinevere is a character who embodies the perfect blend of high-born elegance and formidable magical prowess. Her aesthetic is deeply rooted in a "Baroque-meets-fantasy" style, characterized by rich violet hues, intricate lace, and a youthful, spirited grace.
 
@@ -1800,7 +2857,17 @@ Guinevere would look most at home in a setting that reflects her duality as a sc
 
 
 
-Dyrroth
+108. Dyrroth — The Prince of the Abyss
+
+Background Story: Dyrroth was the second prince of the Moniyan Empire, the younger brother of Princess Silvanna and the apple of the Imperial family's eye. He was a gentle, curious boy who loved stories of knights and dreamed of being a hero. During a diplomatic tour as a child, his carriage was ambushed by the Blood Queen, Alice. She did not kill him; she saw in his royal blood a perfect, exquisite vessel for the Abyss's corruption. Dyrroth was dragged into the dark realm, where he was subjected to decades of torture, demonic infusion, and psychological unmaking. His body grew twisted, his right arm transforming into a monstrous, demonic claw, and his pure heart was buried beneath layers of implanted rage and a new, terrible identity: the Prince of the Abyss.
+
+Lore: Now a young man in body but an ancient horror in soul, Dyrroth leads the Abyssal legions against his former home. He wields his demonic arm with savage grace, his fighting style a brutal mix of feral charges and soul-devouring strikes. He can dash through enemies, his claw cleaving through armor, and his ultimate, Abysm Strike, is a terrifying, charged leap where he crashes down on a target, unleashing a burst of demonic energy that heals him for all the suffering he inflicts. Deep within him, the memory of his sister Silvanna flickers, a tiny, agonizing light that Alice continually tries to extinguish. He is a tragic monster, a weapon forged from a stolen childhood, and the Empire's darkest sin.
+
+Abilities: A lifesteal-based fighter/assassin. His passive, Wrath of the Abyss, enhances his attacks after using a skill. He charges with Burst Strike, dealing massive damage. His ultimate, Abysm Strike, is a targeted leap that deals a huge area burst and heals him for a portion of the damage dealt, often resetting his health bar in the middle of a fight.
+
+Unique Facts: Dyrroth and Silvanna have unique in-game interactions reflecting their tragic sibling bond. His demonic arm is a sentient parasite named "Barrow," which constantly whispers temptations of violence into his mind.
+
+Power: The vampiric berserker. Dyrroth’s power is his ability to dive into a full enemy team and sustain himself through sheer, bloody damage; his ultimate is not just a kill tool but a complete reset, allowing him to slaughter his way through a backline and emerge fully healed.
 
 Facial Structure and Demonic Visage
 This character possesses an unsettlingly youthful yet predatory facial structure, appearing to be in his late teens or early twenties while exuding an ancient, malevolent energy. His skin is a pale, deathly grey-white that contrasts sharply with the vibrant, hellish colors of his attire. He has a sharp, well-defined jawline and high cheekbones that give him a lean, hungry look. His eyes are perhaps his most striking feature: glowing crimson orbs with slit-like pupils that radiate an intense, murderous intent. His hair is a messy, short shock of platinum white, swept forward in jagged spikes that frame a pair of asymmetrical golden horns protruding from his forehead. One horn is noticeably larger and more curved than the other, adding to his chaotic, monstrous aesthetic. His expression is often fixed in a wide, arrogant smirk that reveals a hint of sharpened teeth, reinforcing his identity as the "Prince of the Abyss".
@@ -1823,7 +2890,17 @@ Examining the character from different angles provides a full view of his comple
 
 
 
-Minsitthar
+109. Minsitthar — The Lion of the East
+
+Background Story: Minsitthar was the proud prince of the Mahar Pura kingdom in the Cadia Riverlands, a realm of golden spires and disciplined warriors. He was a master of the spear and shield, a lion of a man who led his armies to countless victories. But his kingdom was betrayed from within. A jealous vizier sold the city's secrets to an expansionist foreign power, and Minsitthar was captured in a brutal siege, his kingdom enslaved, his royal family executed. He was taken in chains to a foreign land and thrown into a gladiatorial arena, a captured king meant to die for the crowd's amusement.
+
+Lore: Minsitthar did not die. He became the arena's champion. With a salvaged shield and a spear, he won his freedom and led a gladiator rebellion that shattered the empire that had enslaved him. Now, he returns to his homeland as a liberator, his golden armor a symbol of resistance. His fighting style is a disciplined, phalanx-based combat. He can hook enemies with his spear, pulling them into range, and his ultimate, King's Calling, summons the spectral shields of his fallen royal guard, creating an inescapable arena. Within this field, enemies cannot use any blink or dash abilities, forcing them to stand and fight the lion on his own terms, in a cage of honor.
+
+Abilities: A fighter/tank who punishes mobility. He pulls enemies with Spear of Glory, and can charge with a shield bash. His ultimate, King's Calling, creates a large zone of spears and shields that immobilizes and damages enemies inside while completely preventing them from using displacement skills, trapping them for the duration.
+
+Unique Facts: Minsitthar is the ultimate counter to the many high-mobility assassins and fighters in the Land of Dawn, his ultimate literally turning off their defining characteristic. His design is inspired by Southeast Asian warrior-king aesthetics.
+
+Power: The jailer of kings. Minsitthar’s power is the abolition of escape; he creates a royal arena where the rules are his own. An enemy Lancelot or Fanny, gods of mobility, become ordinary soldiers trapped in his cage, forced to duel a gladiator-king who has never lost a fair fight.
 
 Facial Structure and Regal Features
 This character possesses a commanding facial structure defined by sharp, angular lines and a well-defined, masculine jawline that reflects his status as a seasoned warrior-king. His complexion is a warm, sun-kissed tan, suggestive of a ruler who leads his armies in the open air. The eyes are a piercing, dark brown or amber, framed by thick, black eyebrows that lend him a focused and stern gaze. His nose is straight and prominent, leading down to a neatly groomed black goatee and a thin mustache that outlines his upper lip, adding to his mature, authoritative appearance—looking to be in his late 20s or early 30s. His head size is perfectly proportional to his broad shoulders, topped with thick black hair tied back into a high, traditional topknot (or gaung baung style bun). He wears an intricate, three-pointed golden crown or tiara that sits firmly on his forehead, featuring a large emerald-green gemstone in the center and detailed filigree that extends toward the sides of his head. Large, circular golden earrings hang from his lobes, completing his royal facial adornment.
@@ -1846,7 +2923,17 @@ This character would look most magnificent standing atop the golden battlements 
 
 
 
-Silvanna
+110. Silvanna — The Imperial Knightess
+
+Background Story: Silvanna is the firstborn princess of the Moniyan Empire, a paragon of knightly virtue and the empire's most powerful Light-wielder. She was raised in the shadow of a tragedy: the kidnapping of her beloved younger brother, Dyrroth, when she was just a child. While the Emperor fell into despair and the empire mourned, Silvanna hardened her grief into diamond. She trained relentlessly in the Monastery of Light, mastering the lance and the holy arts, swearing an oath that she would one day find her brother and bring him home, no matter how far the Abyss had taken him.
+
+Lore: Now the commander of the Imperial Lightguard, Silvanna leads the charge against the demonic hordes personally. Her lance is an extension of her unbreakable faith, glowing with a sacred, purifying light. She can leap into the enemy's midst and slam the ground, stunning those around her, and her ultimate, Imperial Justice, is a declaration of absolute war against a single target. She drives her lance into the earth, creating a sacred dueling ring. The trapped enemy is isolated, their damage output crippled, and Silvanna’s every strike against them drains their life to heal her own. It is the power of a sister’s desperate love, weaponized into a prison of light. Her greatest battle will always be the hope that the monster she fights can still see the face of the brother she remembers.
+
+Abilities: A fighter/mage who excels at single-target lockdown. She sweeps with a Cosmic Lance, stunning enemies. Her ultimate, Imperial Justice, roots her lance into the ground, creating a circular arena. The primary target inside is slowed, has their attack and defense reduced, and Silvanna gains lifesteal and attack speed against them for the duration, a perfect execution chamber.
+
+Unique Facts: Silvanna’s ultimate is a hard counter to any single hyper-carry, as it forces them into a duel where their damage is halved and hers is massively enhanced. Her story is the emotional heart of the Moniyan-Abyss conflict.
+
+Power: The divine duelist. Silvanna’s power is her ability to carve the enemy’s core threat out of a teamfight and sentence them to a one-on-one trial by combat. In her ring, the rules of war bend to her faith, and the target is purified through steel and holy light.
 
 Facial Structure and Head Details
 This character possesses a refined and regal facial structure that conveys a sense of disciplined authority and youthful maturity, appearing to be in her early to mid-twenties. Her face is characterized by a sharp, well-defined jawline and high cheekbones that frame her features with a noble elegance. She has a straight, aristocratic nose and a pair of piercing, determined eyes that are a light, cool blue, matching the sapphire accents found throughout her armor. Her hair is a striking ash-blonde or pale silver, styled in a practical yet elegant manner where the front is swept back to reveal her forehead, while the rest is gathered into a long, sleek ponytail that reaches down to her mid-back. This hairstyle ensures her vision remains unobstructed during combat while maintaining a dignified appearance. Her skin tone is fair and clear, further emphasizing the "paladin" or noble knight aesthetic she embodies.
@@ -1869,7 +2956,17 @@ To truly complement her design, this character would look best standing atop the
 
 
 
-Baxia
+111. Baxia — The Guardian of the Orient
+
+Background Story: In the tranquil mountain monasteries of the Cadia Riverlands, the Black Tortoise of the North is one of the Four Auspicious Beasts, a divine guardian of balance. Baxia is its earthly disciple, a young warrior with a massive, turtle-shell shield that is actually a living fragment of the Tortoise's own shell. Baxia, however, is not a serene, meditative monk. He is hot-blooded, impulsive, and perpetually hungry. He would rather nap in a sunbeam or devour a mountain of dumplings than contemplate the mysteries of the universe. His master, the Black Tortoise, tolerates his laziness because beneath the slacker exterior lies a heart of unshakeable courage and a body that is a living weapon.
+
+Lore: When the Abyss threatened the Orient, Baxia was the first to roll down the mountain, his heavy shell plowing through demon ranks like a cannonball. His combat style is a chaotic, rolling avalanche. He can curl into a ball and roll over enemies, leaving a trail of slowing, damaging debris. His ultimate, Tortoise’s Charge, is a prolonged, high-speed spin where he becomes a whirling top of destruction, continuously damaging and applying his mark to everyone he touches. For all his grumbling and gluttony, Baxia is the unbreakable, rolling wall that stands between the peaceful valleys and the darkness.
+
+Abilities: A mobile initiator tank. His passive, Baxia Mark, increases his damage against enemies hit by his skills. He rolls forward with Baxia-Shield Unity, gaining damage reduction and leaving a lava-like trail. His ultimate, Tortoise’s Charge, causes him to spin in place, rapidly damaging nearby enemies and gaining a massive movement speed boost to chase down and plow through the entire enemy team.
+
+Unique Facts: Baxia’s shell is a divine artifact that can change size, and he often uses it as a makeshift cooking pot. He is canonically the laziest of the Four Auspicious Beast disciples, a fact that endlessly frustrates his celestial patron.
+
+Power: The unstoppable roller. Baxia’s power is his ability to chase down and slow an entire team, his spinning ultimate turning him into a persistent, damaging nuisance that disrupts formations and ensures no wounded enemy can ever disengage.
 
 Facial Structure and Head Details
 The character’s visage possesses a rugged and formidable quality, appearing as an elder warrior who has transcended human aging. His facial structure is defined by an incredibly sharp and heavy jawline, complemented by a broad, flat nose and a prominent brow that casts a natural shadow over his eyes. His skin tone is a deep, supernatural blue, which provides a striking contrast to his flowing, wild white hair. This hair is styled in a chaotic, swept-back fashion that mimics the appearance of a mane, reaching down past his shoulders in thick, pointed locks. Most notably, his eyes glow with a fierce, incandescent orange light, lacking traditional pupils, which suggests an inner power or divine lineage. The character also sports a thick, well-groomed white beard and mustache that follow the contour of his chin, adding to his sagely yet powerful aesthetic.
@@ -1892,7 +2989,17 @@ Given the character's design and the volcanic, ancient aesthetic of his gear, he
 
 
 
-Cecilion
+112. Cecilion — The Elegant Composer
+
+Background Story: In the opulent, gaslit estates of a bygone kingdom, Cecilion was the greatest composer of his age. His music could make the stars weep, but his heart was bound to a single, luminous woman: the queen, Carmilla. She was a ruler of wisdom and beauty, and their love was a forbidden duet played in the shadows of her gilded cage. When Carmilla made a desperate pact with a blood demon to save her dying people, it was Cecilion who found her first, standing in the ashes of her kingdom, her humanity slowly draining away into eternal, undead thirst. He did not recoil. He kissed her cold lips, and then he made his own pact with the same demon, offering his mortality so that he might never leave her side.
+
+Lore: Together for a dark eternity, Cecilion has become a vampire of immense arcane power. His music is now a weapon, his violin a conduit for blood magic. He fights from the backline, a gentleman of the night, launching a bat that can strike an enemy and return to him, restoring his energy. His ultimate, Bat Feast, is a grand crescendo of horror: he unleashes a swarm of demonic bats that fly outward, ripping into all enemies in a vast area and draining their life force to heal him. His power scales not with age, but with the total magic he has accumulated throughout his endless existence, making him a late-game apocalypse in a perfectly tailored suit. His only remaining humanity is his undying love for Carmilla.
+
+Abilities: A stacking late-game mage. His passive, Overflowing, permanently increases his max mana whenever he damages an enemy with his skills. He fires a Bat Impact and a Sanguine Claws that roots. His ultimate, Bat Feast, summons a ring of bats that deal massive damage and heal him for a percentage of his total mana, while also granting him increased movement speed.
+
+Unique Facts: Cecilion’s mana-stacking passive means he has theoretically infinite scaling, making him one of the deadliest late-game mages. His special "engagement" mechanic with Carmilla grants them a shared buff when they play together, a nod to their eternal bond.
+
+Power: The crescendo of night. Cecilion’s power is his exponential growth; in the late game, with thousands of mana stacked, his ultimate can single-handedly win a teamfight by dealing catastrophic area damage while fully restoring his health, a vampiric maestro playing a final, fatal symphony.
 
 Facial Composition and Cranial Detail
 This character possesses a striking, aristocratic facial structure that suggests an ageless, ethereal maturity, typically appearing to be in his early to mid-twenties in human years. His skin tone is a deathly, porcelain pale, which provides a high-contrast canvas for his sharp, predatory features. The jawline is exceptionally defined and angular, tapering into a firm chin that reinforces his noble yet dangerous persona. His nose is straight and narrow, leading up to a brow that frames deep-set, piercing crimson eyes. A defining racial characteristic is his elongated, pointed ears, which sweep backward and upward, clearly marking his lineage as something beyond human, likely vampiric or elven in nature. His hair is a deep, obsidian black, styled in an elegant yet slightly disheveled middle part that allows long, silky strands to frame his face and neck, with a subtle sheen that catches the light.
@@ -1915,7 +3022,17 @@ This character would be best complemented by a setting that mirrors his dark, re
 
 
 
-Chang'e
+113. Chang'e — The Moon Palace Immortal
+
+Background Story: In the celestial realms above the Cadia Riverlands, there was a lonely young handmaiden named Chang'e, who served in the Moon Palace of an ancient goddess. She was a playful, innocent spirit who yearned for friendship. One day, she found a wounded jade rabbit on the palace steps and nursed it back to health. The rabbit was a magical creature, and in gratitude, it became her eternal companion. However, Chang'e’s curiosity led her to a forbidden chamber where the Moon Goddess kept a potion of immortality. Mischievously, she took a sip, and in a burst of silver light, she was transformed—not into a goddess, but into a being of pure moon energy, bound to the lunar cycles forever.
+
+Lore: Descending to the mortal world with her rabbit, Chang'e now skips through the battlefields with a whimsical grace, her power immense but her demeanor still that of a giggling child. She hurls moon-bolts from her hands, and her rabbit can be sent scampering through enemy lines. Her ultimate, Meteor Shower, is a spectacular tantrum of light: she opens a portal to the Moon Palace and unleashes a relentless, high-speed barrage of lunar projectiles in a target direction, capable of mowing down an entire advancing army as she dances and sings to a melody only she and her bunny can hear.
+
+Abilities: A burst mage with an area barrage. She sends her rabbit with Crescent Moon, dealing damage to enemies it passes through. Her ultimate, Meteor Shower, is a channeled, continuous stream of moonbolts that she can redirect. Her passive grants her a shield and movement speed, and her bunny will follow her commands to bite enemies.
+
+Unique Facts: Chang'e’s ultimate is one of the few channeled barrage spells that can be steered, allowing her to track a fleeing hero while raining down destruction. She is directly inspired by the Chinese goddess of the moon, but portrayed as a cute, immortal child.
+
+Power: The lunar gatling gun. Chang'e’s power is her sustained, long-range area denial; she can stand behind her frontline and unleash a full minute of continuous, devastating fire, turning any chokepoint into a corridor of moonlit death.
 
 Facial Composition and Expression
 This character possesses an adorable, doll-like facial structure characterized by a soft, rounded jawline and a tiny, button-shaped nose that contributes to her youthful appearance, looking no older than a young child. Her eyes are a striking, deep ruby red, oversized and expressive, framed by thick, dark lashes that enhance her innocent gaze. Her skin tone is a pale, porcelain white, which provides a vivid contrast against her vibrant features. She is often depicted with a cheerful, open-mouthed smile, showing small teeth, which gives her a lively and energetic personality.
@@ -1938,8 +3055,17 @@ To best suit this character's aesthetic, she would look exceptional in a "Celest
 
 
 
+114. Faramis — The Shadow Walker
 
-Faramis
+Background Story: Faramis was the gentle and beloved prince of the Alcantara Empire, a realm of philosophers and poets, not soldiers. He was served by the loyal knight Leomord, who was his protector and best friend. When a coalition of jealous neighbors, secretly manipulated by Vexana's necromancy, laid siege to the Alcantara capital, the empire fell. Leomord died defending the palace gates, and Faramis was cut down on his own throne, his blood staining the velvet. As he died, the prince saw the souls of his butchered people crying out into the void, and his gentle heart shattered, replaced by an unnatural, spectral resolve. He refused to pass on.
+
+Lore: Reborn as a wraith, a Shadow Walker, Faramis commands the boundary between life and death. His body is a shifting, ghostly form, and he wields the power of soul manipulation. He can tear fragments of an enemy's soul from their body, and pull the spirits of his allies back from the brink. His ultimate, Cult Altar, is a blasphemous miracle: Faramis creates a necromantic sanctuary. Any ally who dies within this area is instantly, forcibly resurrected with a burst of healing, their soul chained back to their body by the prince’s refusal to let anyone else be taken before their time. He is a savior made of sorrow, a lord of ghosts who fights so that no one else has to.
+
+Abilities: A support/mage who defies death. He fires a Shadow Stampede that pulls and damages souls. His ultimate, Cult Altar, creates a large zone. If an ally dies inside, they are resurrected after a short delay with a portion of their health, and the cooldown for this effect is per-hero. It can turn a 5-for-0 teamfight wipe into a 5-for-2 resurrection counter-attack.
+
+Unique Facts: Faramis’s ultimate can resurrect multiple allies in a single fight, making him the only hero who can literally reverse a team wipe in the middle of battle. His spectral form is a constant reminder of his own death.
+
+Power: The necromantic anchor. Faramis’s power is the rewriting of mortality; in his Cult Altar, the concept of “dead” becomes a temporary inconvenience. He forces the enemy to kill his allies twice, turning a decisive victory into a grinding, unwinnable war of attrition.
 
 Facial Structure and Head Details
 This character possesses a striking and ethereal facial composition, characterized by a sharp, aristocratic jawline and a refined, slightly elongated nose that lends an air of cold elegance. Their skin tone is notably pale, almost porcelain, which provides a stark contrast to their glowing, necrotic green eyes that hum with an internal, supernatural light. The facial structure is slender and angular, suggesting a youthful yet ancient maturity—appearing perhaps in their early twenties but carrying the weight of centuries. Framing this visage is long, straight hair of a pale platinum-blonde or silver hue that cascades down past their shoulders, often appearing wind-swept and untamed. Atop their head, they wear a dark, charcoal-colored hood that casts deep shadows over the upper portion of their face, accented by a small, teal-glowing gem embedded in a silver forehead piece, adding a regal yet sinister touch to their silhouette.
@@ -1962,30 +3088,50 @@ While the character appears perfectly at home in a desolate, lightning-scarred w
 
 
 
-Grock
+115. Grock — The Stone Titan
 
-Monolithic Presence and Anatomical Structure
-This character is a towering, ancient titan whose very essence is woven from the earth itself, appearing less like a living creature and more like a sentient mountain range brought to life. His massive body is composed of jagged, heavy brown boulders that form a dense and indestructible physique, giving him a look of eternal age and immovable strength. Instead of traditional skin, his surface is a rugged terrain of stone and earth, with patches of lush green moss and small evergreen trees growing across his broad shoulders and upper back, suggesting he has remained stationary for centuries. Between the gaps of his rocky exterior, a vibrant, glowing blue energy pulses like a subterranean river, illuminating his joints and the core of his chest with an otherworldly aura. His overall size is colossal, possessing a wide, hunched posture that emphasizes a powerful upper body, with arms so thick and heavy they seem capable of leveling fortresses with a single swing.
+Background Story: Deep within the highest peaks of the Land of Dawn, where the air is thin and the earth is ancient, a sleeping consciousness stirred. It had no name, no form, only a body of living rock and a simple, profound thought: “I am.” This was Grock, an elemental titan born from the world's crust. He slept for eons, his dreams the slow grinding of tectonic plates. He was awakened by the persistent, irritating vibration of war—the endless tremors of battles fought by the small, frantic creatures called humans and elves and demons. Grock does not understand the complex politics of the Land of Dawn; he only knows that the noise is disrupting his peace.
 
-Facial Features and Ancient Visage
-The character’s head is relatively small compared to his gargantuan frame, tucked protectively between high, moss-covered rocky ridges that act like a natural collar. His face is a masterpiece of geometric stone carving, featuring a prominent, angular jawline and a flat, broad nose that melds seamlessly into the surrounding rock. He does not possess traditional eyes; instead, two deep-set sockets glow with the same intense blue energy seen throughout his body, giving him a piercing yet stoic gaze. He wears a crown-like formation of lighter, tan-colored stone that peaks above his brow, adorned with a small blue crystal at its center that acts as a focal point for his power. There is no hair or organic material on his head, only the constant, slow-moving energy that flickers behind his stone features, making him look more like a divine idol or a mountain god than any mortal race.
+Lore: Rising from his mountain throne, Grock strides into the war with the single-mindedness of an avalanche. He wields a massive stone tower as a club, and he is naturally attuned to the earth, gaining strength and magical resistance simply by being near a wall. He can charge headfirst into an obstacle to send a stunning shockwave through the ground, and his ultimate, Wild Charge, is a destructive, unstoppable rush forward. He simply runs in a straight line, his body becoming a battering ram that knocks up everything in his path. He is not a hero; he is a force of geography, a walking mountain who has decided that these noisy mortals need to settle down, by any means necessary.
 
-Upper Body Physique and Environmental Detail
-The upper body of this titan is a massive expanse of geological formations, characterized by a chest and shoulders that are extraordinarily wide and deep. His shoulders are unique in that they support actual architectural ruins; on his left shoulder, a weathered stone fortress or gatehouse with arched windows and mossy battlements is integrated into his body. His right arm is similarly fused with stone structures, featuring heavy stone plates that resemble the defensive walls of an ancient city. Thick, hanging vines and creepers drape down from his torso, swaying with his heavy movements and further emphasizing his connection to the natural world. The muscle definition is represented by the sheer bulk and layering of the boulders, creating a V-tapered silhouette that speaks to immense physical power and defensive capability.
+Abilities: An initiator tank. His passive, Earthen Force, grants him movement speed and magic defense when near a wall. He throws a Power of Nature boulder, and his ultimate, Wild Charge, sends him in a straight line charge, knocking up all enemies in his path and destroying obstacles.
 
-Lower Body Composition and Foundation
-Supporting this immense weight is a lower body built for absolute stability, with thick, trunk-like legs that end in massive, flat feet resembling the bases of pillars. His right leg features a unique detail where a spiral stone staircase wraps around the calf, leading up toward his torso as if he were a living landmark for travelers. The rocky plates of his thighs and shins are separated by deep fissures that glow with blue light, allowing for surprisingly fluid movement despite his rigid material. He wears no traditional clothing, as the stone structures and mossy patches serve as his natural attire, but his lower body is heavily armored by the thickness of the natural rock formations that have hardened over eons. From the back, his calves are reinforced with jagged stone outcroppings that provide a wide, sturdy base, ensuring he cannot be moved once he takes a stand.
+Unique Facts: Grock is one of the few heroes who can directly interact with the terrain, his charge allowing him to destroy walls created by other heroes. He is canonically the strongest purely physical being, his body made of solid mountain rock.
 
-The Great Totem and Aura
-The character carries a weapon of legendary proportions: a massive stone totem or pillar that he heaves over his shoulder with effortless strength. This weapon is a cylindrical monolith carved with intricate, ancient patterns and architectural motifs that match the ruins on his body. At both the top and bottom of the totem, enormous, jagged blue crystals are embedded, pulsing with the same energy that fuels the character himself. The totem is wrapped in thick, green vines and appears to be made of a lighter, more refined stone than the character’s own body, suggesting it may be a sacred relic. When held, the weapon exudes a heavy, grounding aura, as if the very gravity around it shifts, and the blue crystals glow intensely when he prepares to strike or channel his tectonic powers.
+Power: The unstoppable avalanche. Grock’s power is his straight-line, disruptive initiation; he can see an enemy formation, and then simply charge through it, scattering them like pebbles, his massive body a breach that his entire team can pour through.
 
-Recommended Environmental Setting
-To truly showcase this character's majesty, he would be best suited for an environment that mirrors his ancient and natural origins. A sprawling, mist-covered mountain pass at dawn would be ideal, where his mossy back and stone ruins blend perfectly with the surrounding cliffs and high-altitude pines. Alternatively, he would look imposing standing within the overgrown ruins of a lost civilization, perhaps a forgotten jungle temple where the sunlight filters through dense canopies to catch the glow of his blue energy and the crystals of his totem. This character would look best in a setting that emphasizes scale—such as a deep valley where birds fly around his shoulders, highlighting his status as a living part of the world's geography.
+General Concept, Race, and Biological Age
+This character is a colossal, ancient entity belonging to a mythic race of sentient stone giants or living fortresses—specifically embodying a primeval earth titan or a forgotten golem god. Rather than possessing organic flesh, his entire biology is a synthesis of tectonic geology, archaic architecture, and vibrant ecosystems, suggesting an ageless existence that has endured for millennia. He does not look "old" in a human, wrinkled sense; instead, his age is manifested through the weathering of his stone skin, the growth of ancient mosses, and the integration of mature pine trees upon his torso. He projects the presence of a living mountain or a walking continent, a primeval deity bound to the earth itself, moving with a slow, inescapable momentum. Every aspect of his design fuses natural geology with classical, ruined masonry, making him look less like a living creature and more like an ancient kingdom that has suddenly stood up and walked away.
+
+Head, Facial Structure, and Gaze
+The titan’s head is remarkably compact and small in proportion to his massive torso, sitting low and deep within the protective cradle of his monolithic shoulders. He has no distinct neck, with his skull transitioning directly into his upper back. His facial structure is entirely inorganic, composed of overlapping plates of polished, golden-brown igneous rock that form an angular, predatory helm. A prominent, crown-like brow ridge dominates his forehead, featuring sharp, triangular peaks that evoke an aura of rugged royalty or a stone-carved crown. His jawline is exceptionally broad, square, and unyielding, formed by two massive blocks of chiseled stone that meet at a blunt chin, completely devoid of a human mouth or lips. He has no visible nose, with the central nasal ridge being a flat, armored plate that slopes downward from his forehead. His eyes are his most expressive feature, manifesting as dual slits of intense, glowing neon-blue energy that cut through the shadows of his heavy brow. These eyes emit a constant, ethereal radiance with no pupils or irises, projecting a cold, unwavering gaze that burns with an ancient, magical power.
+
+Upper Body Physique, Structure, and Attire
+The upper body is a masterclass in hyper-bulky, monstrous proportions, characterized by an impossibly wide chest and shoulders that dwarf the rest of his frame. His torso is a literal ecosystem; the pectoral and upper back regions are covered in a thick, rich layer of fertile green soil and dense moss, out of which sprouts a mini-forest of upright, dark green pine trees. Entwined across his chest are thick, hanging vines and roots that act as natural sinews holding his rocky plates together. His shoulders are capped with literal architectural ruins: his right shoulder transitions into a weathered, grey-stone parapet wall, while his left shoulder supports a fully realized medieval fortress tier, complete with Romanesque arched windows, crenellated battlements, and green moss draped over the stone cornices. He wears no traditional cloth clothing; instead, his "attire" consists of these integrated architectural elements and a harness of glowing, deep-blue energy conduits that snake through the deep fissures of his rocky chest. His arms are gargantuan, particularly his forearms, which are thicker than his torso and composed of jagged, dark brown boulders. His left hand is an oversized, multi-jointed stone gauntlet that incorporates a massive, functional stone gatehouse or portcullis structural archway on the back of the wrist, emphasizing his nature as a living wall.
+
+Lower Body, Leg Structure, and Feet
+In stark contrast to his wide upper body, the lower body tapers into a heavy, low-slung, and slightly squat posture designed to support immeasurable weight. His waist and hips are composed of interlocking, segmented plates of dark earth-toned rock, separated by deep grooves that pulse with the same vibrant blue magical energy found throughout his body. His thighs are short but exceptionally thick, resembling the dense, compressed stone found at the base of cliffs. His legs are asymmetric and uniquely detailed: his right leg features a spiral, weathered stone staircase carved directly into the outer calf and shin, leading up from his foot toward his knee, as if inviting tiny travelers to ascend him. His left leg is a solid, monolithic pillar of basalt rock, heavily cracked and partially covered in vertical streaks of creeping green moss. His feet are enormous, flat, and blocky hooves made of solid stone, entirely lacking individual toes. The base of his feet is wider than his calves, providing a massive surface area that ensures he anchors firmly into the earth with every thunderous step, leaving deep, shattered imprints in his wake.
+
+Weapon Appearance, Size, and Cosmic Aura
+The titan wields an absolutely cataclysmic weapon that matches his monumental scale: an oversized, totemic battering ram or a portable citadel tower that he carries effortlessly over his right shoulder. This weapon is easily as long and wide as the titan’s entire body, composed of ancient, light grey masonry and carved cylindrical stone pillars. The weapon’s shaft is a massive, hollowed-out fortress tower decorated with rows of arched windows, arrow slits, and defensive battlements, all overgrown with climbing vines and patches of grass. The rear of the weapon terminates in a heavy, wheel-like stone counterweight wrapped in thick roots. The business end of this weapon features a massive, jagged cluster of raw, unrefined etheric blue crystals that erupt outward from a circular stone collar. These crystals are translucent and deeply saturated, glowing from within with a turbulent, crackling energy. The weapon carries a profound, heavy aura; it does not just emit light, but radiates a physical pressure that distorts the air around it, leaving a trail of drifting blue mist, floating stone particles, and a low, hum of localized gravity whenever it is swung.
+
+Suggested Environment and Ideal Background
+To truly elevate the presence of this walking fortress, he should be positioned within a landscape that complements his dual nature as a force of nature and a historical monument. An ideal background would be a sweeping, high-altitude mountain pass at twilight, where the fading golden rays of the sun strike his moss-covered back while the deep purple and starlit night sky makes his blue magical conduits and crystal weapon glow with maximum contrast. He would look magnificent standing on the precipice of a shattered stone valley, surrounded by swirling, low-lying sea clouds and a flock of white mountain eagles soaring around his stone shoulders to emphasize his colossal height. Ruined, ancient arches and broken columns should litter the foreground, half-buried in the grass, suggesting he is the sole survivor of a forgotten golden age. The ground beneath his massive stone feet should be visibly cracking and fracturing under his immense weight, with small tufts of glowing flora reacting to the raw earth magic radiating from his body.
 
 
 
 
-Helcurt
+116. Helcurt — The Shadowbringer
+
+Background Story: Before the Abyss had a name, before the demons had a king, there was a fear. It was a primal, ancient terror that lived in the darkness of the first cave, the thing that made the first sentient creature learn to run. This fear coalesced into a form: a sleek, insectoid predator with a stinger made of pure silence. It was named Helcurt, the Shadowbringer. For millennia, it was sealed in a chasm beneath the earth by the combined efforts of the first Celestial Guardians, its very existence a threat to the light. But the cracks in the world's prison, widened by the Abyss's constant assault, eventually reached his tomb, and Helcurt scuttled free.
+
+Lore: Helcurt is not a general or a schemer; he is a hunger. His presence alone causes the light to dim and the voices of mortals to fail. He can silence an enemy mage with a screech from his stinger, rendering them incapable of casting spells. His ultimate, Dark Night Falls, is the return of primordial terror: he plunges the entire battlefield into absolute darkness for several seconds. Every enemy hero's vision is reduced to a tiny radius around themselves, while Helcurt gains a predatory burst of speed and becomes a nightmare, dashing from shadow to shadow, executing the isolated and the blind. He is the reason armies fear the night.
+
+Abilities: An assassin who controls vision. He throws a Shadow Raid stinger, silencing enemies. He can teleport between enemies marked by his passive. His ultimate, Dark Night Falls, greatly reduces enemy map vision and silences them, while granting him massively increased movement speed and attack speed, transforming him into the ultimate hunter in the dark.
+
+Unique Facts: Helcurt’s ultimate is one of the most globally disruptive abilities in the game, instantly causing chaos and paranoia as enemies lose all sight of each other and the minimap. He is the only hero who can literally toggle the enemy’s ability to see.
+
+Power: The lord of the blackout. Helcurt’s power is the theft of information; in his darkness, a coordinated team becomes a collection of blind, panicked prey. He picks them off one by one, a silent, unseen claw from the abyss that existed before light itself.
 
 Physical Build and Primal Anatomy
 The character Helcurt is a monstrous, predatory being whose anatomy suggests a fusion of shadows and primitive beast-like evolution. He possesses a remarkably lean yet highly muscular body physique, characterized by a hunched, quadrupedal posture that allows him to spring forward with explosive agility. His skin tone is a deep, cool shade of cerulean blue, which looks almost like twilight flesh, textured with subtle markings that hint at his otherworldly origins. Despite his medium size relative to humans, his upper body is powerfully built with broad shoulders and elongated, ropey muscle groups that transition into incredibly long, powerful arms. His hands are massive and terrifying, ending in three thick, obsidian-black claws that curve like sickles, capable of tearing through armor. His lower body is equally specialized for hunting, featuring digitigrade legs with thick thighs and elongated calves that end in clawed, three-toed feet, providing the grip and leverage of a mountain predator.
@@ -2008,7 +3154,17 @@ To truly capture Helcurt’s terrifying presence, he would look best in an envir
 
 
 
-Hylos
+117. Hylos — The Grand Warden
+
+Background Story: In the deepest, most sacred grove of the Enchanted Forest, where the veil between the material and spirit worlds is thinnest, a young centaur named Hylos was chosen by the forest's spirit to be its eternal Warden. He was given a greatstaff carved from the World Tree's heart and the power to command the life-giving streams that flowed through the earth. For centuries, Hylos walked the perimeter of the forest, a quiet, kind, and immovable guardian who turned away both curious adventurers and greedy poachers with a gentle, rumbling word and an aura of such peaceful authority that few dared argue.
+
+Lore: The Abyss’s corruption, however, cannot be reasoned with. When the demons set fire to the outer woods, Hylos’s gentleness turned to a cold, righteous fury. He took up his staff and marched to the war front. He is a mobile bastion of life, his very presence creating a healing aura that sustains his allies. His ultimate, Glorious Pathway, is a living miracle: he creates a long, wide strip of enchanted terrain that flows from his hooves, granting his allies increased movement speed and slowing enemies to a crawl, while also healing anyone who walks upon it. He is the forest's anger given form, a one-creature supply line and escape route, ensuring that no ally is ever cut off from the source of life.
+
+Abilities: A durable support/tank. His passive grants him mana regen and heals nearby allies. He can stun a target with Law and Order by hitting them with a skill after a short delay, and his ultimate, Glorious Pathway, creates a large, path-shaped zone that grants allies bonus movement speed and health regeneration while heavily slowing enemies standing on it.
+
+Unique Facts: Hylos is one of the few heroes whose primary resource, mana, also acts as a secondary health bar, allowing him to convert damage taken into mana consumption. His healing aura is always active, making him a walking fountain.
+
+Power: The living supply line. Hylos’s power is his ability to orchestrate an entire team’s movement; his Glorious Pathway can turn a full retreat into a high-speed counter-charge, and his constant healing aura means his army can siege a base indefinitely without backing down.
 
 General Character Overview and Physiology
 This character is a majestic and formidable centaur, a legendary hybrid being that seamlessly blends the muscular upper torso of a powerful human warrior with the sturdy, four-legged lower body of a stallion. Standing at an imposing height that towers over standard humanoids, his presence is one of ancient authority and divine guardianship. His human half displays a youthful yet seasoned maturity, appearing to be in his late twenties or early thirties, with a skin tone that possesses a healthy, sun-kissed tan. The transition between the human abdomen and the equine back is fluid and natural, encased in ornate golden and silver armor that serves both a functional and ceremonial purpose. His physique is exceptionally well-defined, featuring a broad chest, powerful shoulders, and a chiseled six-pack that highlights his strength as a frontline protector.
@@ -2031,7 +3187,17 @@ To truly complement his majestic design, this character would look best in a set
 
 
 
-Lylia
+118. Lylia — The Little Witch
+
+Background Story: Lylia is a student at the Magic Academy, a pint-sized prodigy whose obsession with time magic terrified her professors. She was not content with simple illusions; she wanted to tear the fabric of the fourth dimension. For her final thesis, she constructed a portable chrono-anchor, a device that could record a specific moment in her personal timeline. By activating it, she could rewind her own existence, teleporting back to the anchor's location with her health and position restored. It was a brilliant, reckless invention. The day she demonstrated it, the experiment didn't just rewind her; it fractured the timeline, creating a glitch in reality that manifested as a shadowy, chaotic copy of herself—her Gloom—that now follows her everywhere, a living testament to her hubris.
+
+Lore: Lylia is not ashamed; she is delighted. She named the shadowy entity "Gloom" and treats it as a pet and co-conspirator. On the battlefield, she plants her anchor in a safe location and then darts forward, throwing out Gloom to explode and harry her enemies. Her ultimate, Angry Gloom, is a tantrum of temporal chaos: she empowers Gloom, causing it to grow in size and repeatedly detonate, dealing massive area damage while Lylia herself can instantly rewind to safety if the enemy gets too close. She is a nightmare to pin down, a giggling paradox of a witch who can undo any mistake with the flick of a clock hand.
+
+Abilities: A hit-and-run mage. She plants her Magic Shockwave anchor, then throws Gloom to damage and slow enemies. Her ultimate, Angry Gloom, resets her health and position to the anchor's location, while simultaneously empowering Gloom to deal repeated bursts of damage around him.
+
+Unique Facts: Lylia’s Gloom is a sentient time anomaly that speaks in distorted echoes of her own voice. She is one of the few mages who can commit to an aggressive assault and then completely reverse any punishment taken, escaping with a literal reset button.
+
+Power: The temporal trickster. Lylia’s power is her absolute elusiveness; she can dive an enemy tower, unload her entire combo, and then snap back to safety with full health, a cycle of attack and retreat that no enemy can ever punish.
 
 Facial Structure and Expressive Features
 The character exhibits a youthful and mischievous facial structure, appearing to be in her early teens with a soft, rounded face and a petite head size that complements her small, lithe frame. Her most striking features are her large, expressive green eyes that possess a cat-like intensity, framed by thick, dark eyelashes and slender, slightly arched eyebrows that contribute to her playful yet cunning expression. The nose is small and button-like, sitting above a well-defined jawline that tapers into a soft chin, while her small mouth is often upturned in a knowing smirk. Her skin tone is fair and luminous, providing a sharp contrast to the vibrant, split-color palette of her hair.
@@ -2057,7 +3223,17 @@ Given her aesthetic and magical theme, this character would look most at home in
 
 
 
-Natalia
+119. Natalia — The Silent Assassin
+
+Background Story: Natalia was the finest operative of the Moniyan Empire's secret service, the "Light's Shadow," an order of assassins who did the Church's dirty work. She was a master of stealth, a woman who could walk through a crowded room and leave a dead man without a single head turning. She was utterly loyal, believing her kills purified the Empire. This faith was shattered when she was ordered to assassinate a cardinal she had uncovered as a demonic cultist. The order was a trap, orchestrated by her superior, who was himself in league with the Abyss. She was stabbed in the back and left for dead in a gutter.
+
+Lore: Natalia survived. Her faith in the Church died, but her skills remained, now honed by a cold, merciless vendetta. She operates in the shadows of the Empire, a ghost hunting the corrupt clerics and nobles who betrayed her. She can enter a state of permanent invisibility, waiting in the brush for the perfect moment to strike. Her attacks silence her targets, preventing them from crying out for help or casting spells, and her ultimate, Cold-blooded Strangling, is a rapid, multi-hit dash through her target that leaves them bleeding and broken, often dead before they even realize she was there. She is the reckoning that the Light's hypocrisy deserves.
+
+Abilities: A stealth assassin. Her passive, Assassin Instinct, allows her to enter stealth when in a bush, gaining movement speed and a guaranteed critical attack when she breaks it. She throws a Smoke Bomb that slows and reduces enemy attack speed. Her ultimate, Cold-blooded Strangling, dashes through a target multiple times, dealing massive damage and silencing them.
+
+Unique Facts: Natalia is one of the few heroes who can remain stealthed indefinitely as long as she doesn't attack or take damage, making her a master of map control and vision. Her silence is absolute, shutting down mages completely.
+
+Power: The unseen sentence. Natalia’s power is her map presence; the enemy support is never safe, the lone mage is perpetually hunted. She creates a state of paranoia where every bush could deliver a silent, silencing blade, and death comes without a whisper.
 
 Facial Architecture and Cranial Details
 This character possesses a refined and sharp facial structure that conveys a sense of disciplined intensity and youthful maturity, appearing to be in her early to mid-twenties. Her jawline is exceptionally well-defined and sleek, tapering into a slightly pointed chin that emphasizes her predatory yet graceful aesthetic. Her nose is straight and narrow, proportionate to her high, prominent cheekbones. The character’s eyes are a striking, piercing blue, framed by thin, arched eyebrows that sit beneath a voluminous head of vibrant, deep crimson or magenta hair. Her hairstyle is a medium-length cut with jagged, layered ends that peek out from beneath her hood, suggesting a life of constant movement. Her skin tone is a pale, porcelain ivory, which provides a high-contrast backdrop for her bold hair color and dark eye makeup.
@@ -2080,7 +3256,17 @@ To truly complement this character's design, she would look best positioned with
 
 
 
-Odette
+120. Odette — The Swan Princess
+
+Background Story: Odette is the princess of Swan Castle, a realm of serene lakes and timeless beauty that sits on the border of the Moniyan Empire. She was a gentle soul, a lover of poetry and song, whose magical potential was bound to the spirits of the swans that graced her castle's moat. Her life was a fairy tale, sealed by her betrothal to the noble knight Lancelot, a match that promised peace and alliance. That fairy tale was burned to ash when the necromancer Vexana, in her mad quest to expand her spectral domain, invaded Swan Castle. The lake turned black, the swans fell dead from the sky, and Odette's family was turned to stone. Only Odette's latent magic, blooming in a burst of grief-stricken white light, saved her.
+
+Lore: Now, Princess Odette fights to reclaim her home. Her magic has matured into a devastating, beautiful weapon. She wields the "Swan Song," a melody of pure energy that manifests as crystalline feathers and spectral swans. Her ultimate, Swan Song, is a breathtaking, final aria: she rises into the air, her gown swirling, and unleashes a massive, expanding field of magical energy that damages all enemies in a vast area, her swan spirits swooping down to tear at her foes. She is the last voice of Swan Castle, a beautiful, sorrowful storm of vengeance that Lancelot has sworn to protect with his life.
+
+Abilities: An area-control mage. She fires a Avian Authority slowing orb and a Blue Nova that bounces and immobilizes. Her ultimate, Swan Song, roots her in place but creates a massive, expanding circle of continuous magic damage, dealing devastating damage to an entire team if she is protected.
+
+Unique Facts: Odette and Lancelot have a dedicated "lover" mechanic, with shared buffs and special voice lines. Her ultimate is one of the most destructive area-of-effect spells in the Land of Dawn, capable of solo-winning a teamfight if channeled uninterrupted.
+
+Power: The final aria. Odette’s power is the total, area saturation of magic; when she begins her Swan Song, the enemy team must either flee or interrupt her, for if she is allowed to sing her full lament, they will all be consumed in a beautiful, devastating ballet of swan-spirit magic.
 
 Facial Features and Expression
 This character possesses a highly refined and youthful facial structure, appearing to be in her late teens to early twenties. Her face is characterized by a delicate, slightly V-shaped jawline and a soft, smooth skin tone that radiates a porcelain-like quality. Her eyes are a striking, deep violet or amethyst color, framed by long, dark lashes that give her an ethereal and focused expression. The nose is slender and straight, perfectly proportioned to her high cheekbones. Her hair is a rich, warm strawberry blonde or light ginger hue, styled in voluminous, flowing waves that cascade down her back, with elegant braids framing the crown of her head. Atop her head, she wears a silver, wing-like tiara or headpiece that mimics the appearance of feathers, curving gracefully upwards and adding to her celestial or divine aesthetic.
@@ -2106,7 +3292,17 @@ To truly highlight her design, this character would look best in a setting that 
 
 
 
-Pharsa
+121. Pharsa — The Shadow of the Twilight
+
+Background Story: Pharsa was the queen of Aethel, a city of stargazers and prophets hidden within a misty valley. She was a seer of unparalleled power, her eyes able to perceive the threads of fate and the hidden truths of the world. Her wisdom kept her city safe and prosperous for centuries. The Abyss, seeking to blind the Land of Dawn to its coming invasion, sent an assassin to steal that sight. Pharsa was attacked in her own sanctum, her eyes cruelly taken from her. She should have been left helpless in the dark. Instead, in that eternal darkness, she found a new sight. Her spirit bonded with Verri, a great owl-like bird of prey that had nested in her tower, and through its eyes, she could see far more than she ever had before.
+
+Lore: Now, the blind queen and her avian partner are a single, terrifying entity of the skies. Pharsa rides upon Verri, soaring over the battlefield, completely untargetable by those below. She can see the entire landscape, and she rains down destruction in the form of her ultimate, Feathered Air Strike, a prolonged, targeted bombardment of magical energy that blasts a target area four times with lethal precision. She is the eye in the sky, a constant, unassailable threat that forces the enemy to always watch the heavens. Her sight is not gone; it has simply been given wings.
+
+Abilities: A flying artillery mage. She turns into a bird with Wings by Wings, becoming a flying unit that can pass over terrain and is untargetable by melee attacks. She fires a Curse of Crow that stuns. Her ultimate, Feathered Air Strike, activates a bombardment mode where she designates an area and unleashes four rapid, devastating magical blasts.
+
+Unique Facts: Pharsa is the only hero who can transition into a fully flying unit, ignoring terrain completely while remaining untargetable by ground-based attacks. Her bird, Verri, is her literal eyes, and she is completely blind without it.
+
+Power: The aerial predator. Pharsa’s power is her absolute vision and untouchable bombardment; she can fly over a cliff to scout an objective, then unleash an artillery strike from a position no melee enemy can reach, controlling the entire river without ever setting foot on the ground.
 
 Facial Structure and Head Detailing
 The character possesses a refined, ethereal facial structure characterized by a sharp, V-shaped jawline and a straight, delicate nose that contributes to a mature yet ageless appearance. Her skin tone is a pale, porcelain white, which provides a stark contrast to her dark attire. The most striking feature of her head is the bicolor hairstyle; the left side of her hair is a deep, obsidian black while the right side is a brilliant, silvery white. This long hair flows downward, framing a face partially obscured by a unique black visor or blindfold. This headgear is shaped like a crescent or a stylized eye, featuring a central silver circular emblem, which lends her the look of a blind seer or a celestial deity. Her lips are painted a deep crimson, matching the secondary accents found throughout her outfit.
@@ -2129,7 +3325,17 @@ To complement her striking "Dark Moon" aesthetic, this character would look best
 
 
 
-Popol & Kupa
+122. Popol & Kupa — The Frozen Warden
+
+Background Story: In the outermost reaches of the Northern Vale, where the ice never melts and the aurora is the only light, a solitary trapper named Popol made his living. He was a man of few words, his only companion a massive, shaggy-furred wolf named Kupa, whom he had raised from a pup after finding the animal half-dead in a blizzard. Their bond was more than master and beast; they were family, two halves of one soul who understood each other perfectly in the howling silence of the tundra. Popol was content with his simple, frozen life, but the Abyss does not respect solitude. Demonic incursions began to pollute the Northern shores, bringing with them a corrupting heat that sickened the land and the creatures Popol had sworn to protect. Kupa was wounded by a demon's poisoned claw, and the quiet trapper's heart filled with a cold, deadly resolve.
+
+Lore: Popol fashioned a set of traps and a heavy throwing spear from the enchanted, unmelting ice of a sacred glacier. He is a master of battlefield control, using Kupa as an extension of his own senses. The great wolf can be commanded to scout ahead, to charge and pin down enemies, or to stand guard over his master. Popol's traps, when triggered, erupt into pillars of ice that imprison his foes, and his ultimate, We Are Angry!, sends Kupa into a primal frenzy. The wolf grows larger, his fur crackling with frost, his attacks becoming a flurry of devastating, life-stealing bites. When united in combat, Popol and Kupa fight not as separate entities but as a single, beautifully coordinated predator—the hunter's intellect and the beast's ferocity combined into one frozen, unbreakable force.
+
+Abilities: A marksman with a permanent companion. Popol can direct Kupa to attack, recall, or guard. He sets Bite 'Em, Kupa! traps that root enemies. His ultimate, We Are Angry!, empowers Kupa into a massive, frenzied wolf, granting him bonus health, attack speed, and lifesteal, and allowing Popol to fire a flurry of enhanced javelins alongside him.
+
+Unique Facts: Popol & Kupa are the only hero that is truly two separate, controllable entities from the very start, making them a micro-management specialist's dream. Their bond is so deep that if Kupa falls, Popol's combat effectiveness plummets, forcing the trapper to protect his companion as fiercely as the wolf protects him.
+
+Power: The frozen partnership. Popol & Kupa's power is their dual-threat presence; Kupa can lock down an assassin while Popol hurls spears from safety, and when the ultimate is activated, the two become a single, charging avalanche of ice and fangs that can overwhelm an entire enemy frontline.
 
 Facial Composition and Primal Physiognomy
 This character possesses a striking, youthful countenance that balances innocent roundness with a fierce, primal intensity. Their facial structure is characterized by a soft, rounded jawline and full cheeks, suggesting a chronological age in the pre-teen or early adolescent range, yet the expression is one of hardened resolve. The eyes are perhaps the most captivating feature—large, almond-shaped, and a brilliant, glowing cerulean blue that seems to hum with internal energy. They are framed by thick, dark eyelashes and expressive, low-set eyebrows that are currently locked in a determined scowl. The nose is small and slightly upturned, sitting above a mouth that, when open, reveals straight white teeth with slightly pronounced canines, adding to their wild, beast-like aura. Their skin tone is a fair, healthy peach, though it is marked by glowing blue tribal markings that swirl across their arms, mirroring the mystical energy found in their companion.
@@ -2155,7 +3361,15 @@ While the character is currently depicted in a frozen, mountainous wasteland, th
 
 
 
-Sora
+123. Sora — The Shifting Cloud
+
+Background Story: Amidst the windswept sands of the Agelta Drylands, a boy named Sora drifts as freely as the flowing clouds. Pure and free-spirited, he wields ever-shifting clouds—sometimes as thunderclouds crackling with fierce lightning, other times accumulating into thick cumulus clouds to shield against the desert‘s fury. Adventure calls to Sora like an alluring song, drawing him deep into uncharted desert ruins where he seeks out mysterious wonders. Yet the people know that when droughts loom and despair takes hold, he will come riding the winds, bearing the precious rains their parched lands crave. Now Sora continues his journey along the ancient Emerald Road, carrying rain-bearing clouds to every corner of the desert, and hope to every desperate tribe. He is accompanied by two steadfast companions—Belerick and Floryn—who travel with him along the Emerald Road.
+
+Abilities: Sora can ascend to Thunder or Torrent form using his ultimate. Thunder adopts an assassin style, converting 30% Max HP into Physical Attack. Torrent adopts a tank style, converting 30% Physical Attack into Max HP. After ascending, dealing damage to heroes or summoned units grants stacks of Cloudstep; upon reaching 5 stacks, he unlocks his True Art.
+
+Unique Facts: Sora is the 131st hero added to MLBB and is a fighter/assassin hero. His design allows him to quickly go into the backline and burst down enemies in the Thunder form or be durable and irritating in teamfights in the Torrent form. He wields clouds as his primary weapon and elemental motif.
+
+Power: The dual-threat storm. Sora’s power is his adaptive combat style; he can shift between a fragile but lethal assassin and a durable, disruptive tank, making him unpredictable and versatile in any situation.
 
 Portrait of a Skyborne Voyager
 The character, Sora, possesses an youthful and exuberant facial structure that suggests he is in his mid-to-late teens, radiating an air of mischievous energy. His face is defined by a soft, rounded jawline and high cheekbones, which frame a pair of large, strikingly vibrant blue eyes that seem to capture the very essence of a clear summer sky. A bridge of a small, slightly upturned nose sits above a wide, confident grin, revealing a row of neat white teeth that emphasize his friendly and spirited persona. His skin tone is a warm, sun-kissed tan, suggestive of a life spent outdoors under an intense sun, further accented by small, pale blue triangular markings just beneath his eyes that hint at a mystical or tribal heritage. Crowning his head is a thick, voluminous mane of snow-white hair, styled in wild, wind-swept curls that defy gravity, appearing almost like soft clouds resting atop his head. A dark blue headband with a subtle golden pattern wraps across his forehead, helping to manage the unruly locks and adding a functional yet stylish accessory to his facial profile.
@@ -2178,7 +3392,15 @@ Though his immediate background in the reference images shows a sprawling desert
 
 
 
-Suyou
+124. Suyou — The Mask of the Immortal
+
+Background Story: Suyou is an exorcist from Zhu‘an who has inherited the power of the Immortal Nuo. As the last descendant of the Exorcist of Nuo, Suyou carried the power of the immortal deity within his body, using it to guide the people toward enlightenment. He walked the mortal plane like a wandering swordsman, charming and uninhibited, but never forgetting that the power of Nuo comes from the faith of the people. And so, he went about purging evil from the hearts of men and safeguarding their hopes for the future. He hails from the once-thriving city of Zhu’an, a place that was bustling with life until over a decade ago, when the city’s peace was shattered by the echoes of malice, born from the lingering obsessions and dark thoughts of the dead.
+
+Abilities: Tap-casting any skill puts Suyou in his Mortal form, granting Movement Speed and faster Basic Attacks. Hold-casting any skill puts Suyou in his Immortal form, increasing Basic Attack damage to 125% and granting 20% Damage Reduction. For every 20 extra Physical Attack he has in Immortal form, he gains 1% additional Damage Reduction, up to 40%. He transitions fluidly between a swift, mortal duelist and a slower but heavily armored immortal brawler.
+
+Unique Facts: Suyou‘s design draws inspiration from ancient exorcism folk dances that occur in Zhu’an, whereby ancestral verses hint at the hero’s weapon, masks, and abilities. He is a dual-role hero who excels as both Assassin and Fighter. His title “Mask of the Immortal” references the ceremonial masks used in Nuo exorcism rituals.
+
+Power: The dual-form immortal. Suyou’s power is his ability to seamlessly transition between two distinct combat styles—the swift, aggressive mortal form and the slow, unyielding immortal form—allowing him to adapt to any threat.
 
 Facial Structure and Ethereal Features
 This character possesses a striking, youthful, yet disciplined facial structure that suggests a man in his early twenties. His face is defined by a sharp, masculine jawline and high, prominent cheekbones that give him a regal and determined expression. He has a straight, narrow nose that complements his balanced facial proportions. His eyes are a piercing, luminous teal or light blue, framed by thin, dark eyebrows that are often tilted in a focused or intense gaze. His skin tone is fair with a healthy, warm undertone, appearing smooth and unblemished. A unique feature of his face is the subtle teal marking or faint glow near his temples, hinting at an inner spiritual power or a connection to a higher race.
@@ -2201,7 +3423,17 @@ Given his spiritual aesthetic and traditional Eastern-inspired attire, this char
 
 
 
-Tigreal
+125. Tigreal — The Paladin of Light
+
+Background Story: Tigreal was once the greatest knight of the Moniyan Empire, a commander of the second regiment and the most trusted comrade of Alucard's father. He was a man of unshakeable honor, who believed in the Empire's cause and the righteousness of its holy wars. His faith was shattered in a single, catastrophic battle: a demonic ambush that wiped out his entire regiment. He alone survived, pulled from the massacre by his loyal men who sacrificed themselves to buy him a single breath. Haunted by the ghosts of his fallen soldiers and wracked with survivor's guilt, Tigreal retreated from the front lines. He became a wandering paladin, seeking not glory, but atonement. His hair turned white from the grief, and his once-proud Imperial crest was replaced by the simple, battered armor of a man who expects no parade.
+
+Lore: In his exile, Tigreal reconnected with the pure, foundational tenants of the Light, stripped of Imperial politics. He became a true Paladin, his power flowing not from the Church but from his own, ironclad sense of duty. He wields a massive shield that can repel any attack and a longsword that channels holy energy. He can dash into the fray, his shield generating an impervious barrier that punishes attackers. His ultimate, Sacred Hammer, is the accumulated weight of his guilt and his resolve: he leaps into the air and crashes down, his sword driving into the earth, creating a massive, collapsing gravity well that drags every nearby enemy into a tight, stunned cluster, setting them up for his allies' retribution. He is the unbreakable wall, a leader who leads from the very front so that no one else has to fall in his place.
+
+Abilities: An initiator tank. He dashes with Attack Wave, knocking back enemies. He raises his Sacred Shield to block damage and retaliate. His ultimate, Implosion, is a delayed, massive pull that drags all nearby enemies into a single point and stuns them, creating the perfect setup for area-of-effect devastation.
+
+Unique Facts: Tigreal is the secret mentor of Alucard, having taught the young Demon Hunter many of his advanced combat skills as a silent penance for failing his father. He is one of the most iconic tanks in the Land of Dawn, the definition of a front-line initiator.
+
+Power: The gravity well. Tigreal's power is his ability to create the perfect wombo-combo; a single, well-placed Implosion can suck an entire enemy team into a single, helpless cluster, where a single follow-up spell from a mage like Aurora or Odette can erase them all in an instant.
 
 Facial Composition and Heroic Expression
 This character possesses a striking and dignified facial structure that conveys a sense of seasoned leadership and unwavering resolve. His face is defined by a sharp, masculine jawline and high, prominent cheekbones that give him a regal yet battle-hardened appearance. His eyes are a piercing, bright blue, framed by straight, well-defined eyebrows that sit low over a straight, noble nose, contributing to a focused and intense gaze. He has a fair skin tone that contrasts vividly with his rich, reddish-auburn hair, which is styled in voluminous, wavy layers that sweep back and to the sides, reaching just down to the nape of his neck. Overall, he appears to be a man in his late twenties or early thirties, embodying the peak of physical and mental maturity.
@@ -2221,7 +3453,17 @@ A palpable aura of divine protection and stoicism surrounds this character, mani
 
 
 
-Yi Sun-shin
+126. Yi Sun-shin — The Admiral of the Seas
+
+Background Story: Yi Sun-shin is the legendary admiral of a proud naval kingdom that ruled the sapphire seas before the rise of the Empire. He was a master strategist, a warrior-poet who commanded his fleet with a brilliant, unconventional mind. His flagship, the Phantom Turtle, was a marvel of magical engineering. But his kingdom was betrayed. A jealous court official, bribed by a rival power, lured Yi Sun-shin's fleet into a trap, and in the ensuing battle, the admiral was struck down, his body lost to the waves.
+
+Lore: The sea, however, refused to claim him. His spirit was bound to the wreckage of his flagship, and he awoke on a deserted island, his body a spectral form of moonlight and sea foam. He now wields a pair of weapons: a jian for swift, melee dueling, and a celestial longbow for commanding the battlefield from a distance. His ultimate, Heavenly Arrow, is a naval bombardment called from the sky itself; he fires a volley of ethereal arrows that rain down across the entire map, striking every enemy hero wherever they may be. It is the admiral's all-seeing gaze, a tactical strike that can secure a kill on a fleeing foe halfway across the world or provide crucial vision of the enemy's movements. He is a ghost-fleet of one, a commander who can influence any corner of the map without ever leaving his post.
+
+Abilities: A hybrid melee/ranged fighter. He switches between a sword and a longbow. He can dash and slash with Traceless, and his ultimate, Mountain Shocker, fires a global volley of arrows, dealing damage to all enemies on the map and granting vision of them. His passive grants him a movement speed boost after switching weapons.
+
+Unique Facts: Yi Sun-shin is a direct homage to the historical Korean admiral of the same name, a national hero famous for his naval victories against overwhelming odds. His global ultimate makes him a constant threat, able to turn a distant duel into a victory.
+
+Power: The global admiral. Yi Sun-shin's power is his omnipresence; he can farm one lane while his ultimate assists a gank in another, his arrows a constant, inescapable reminder that the admiral is always watching, always calculating, and always ready to strike.
 
 Facial Features and Expression
 This character possesses a striking and disciplined facial structure, characterized by a sharp, well-defined jawline and a prominent, straight nose that lends him an air of stoic authority. His skin tone is a healthy, sun-kissed tan, suggesting a life spent outdoors in rigorous training or combat. His eyes are a deep, piercing brown, framed by thick, dark eyebrows that are often knit in a focused, intense expression. He appears to be a man in his late twenties or early thirties, possessing a maturity that comes from experience. A thin, well-groomed mustache and a light dusting of stubble along his jaw enhance his rugged, warrior-like aesthetic. His hair is jet black, styled in a practical yet stylish manner where the front is swept back, and the longer back portion is tied into a neat top-knot, secured by a simple band. A vibrant red headband is tied firmly around his forehead, with its long tails flowing behind him, adding a sense of dynamic movement to his silhouette.
@@ -2247,7 +3489,25 @@ There is a subtle, otherworldly quality to this character that elevates him beyo
 
 
 
-Zetian
+127. Zetian — The Phoenix Empress
+
+Background Story: Zetian is inspired by the historical figure Empress Wu Zetian, the only female emperor in Chinese history. Her story is one of ambition, intelligence, and unmatched political skill, rising from a concubine to claim the throne during the Tang Dynasty. In the lore of the Land of Dawn, Zetian is known as an Empress who rules over Shendu, the divine capital of the Cadia Riverlands. She is nicknamed the “Tomb Keeper” for her role in erecting nameless monuments to honor ancient heroes. Her design incorporates phoenix themes, symbolizing rebirth and imperial majesty, while her abilities reflect her commanding presence and tactical brilliance.
+
+Abilities: Zetian is a mid-lane mage who manipulates the battlefield with large-area crowd control, sustained spell damage, and a game-changing global ultimate. She summons a magical phoenix to hover in a target area, dealing damage to enemies and reducing their magic resistance. Her passive boosts her magic power as she fights, making her deadlier as the battle goes on. Her ultimate allows her to attack the entire map without needing to get close.
+
+Unique Facts: Zetian is a China-exclusive hero later confirmed for global release. She is the 129th hero in the Land of Dawn. Her phoenix-themed design and global ultimate make her a unique long-range strategic mage.
+
+Power: The global empress. Zetian‘s power is her ability to influence fights from anywhere on the map; her phoenix-themed magic and global ultimate make her a constant, inescapable threat who can turn a distant skirmish into a victory with a single, well-timed spell.
+
+Background Story: In the highest court of the heavens, beyond the sight of even the Great Dragon, there exists a library of fate. Within it, every life is a book, every choice an ink stroke. Zetian was the Celestial Scribe, a being of pure, radiant order whose duty was to record the destinies of all mortals without emotion or interference. For a thousand millennia, she did this, her quill never wavering. But as the Abyss's influence began to erase entire chapters of her sacred books, she found her hand trembling. The Abyss was not just killing mortals; it was deleting them from the story of the universe entirely, their books turning to blank, empty leather.
+
+Lore: Unable to remain a passive observer, Zetian tore a page from her own book—the page that bound her to the library—and descended to the mortal realm. Her body is made of parchment and starlight, her quill a weapon that can write new, temporary fates onto the battlefield. She can inscribe a mark of "Correction" on an enemy, causing them to repeat their last action, and she can declare a zone as a "Sanctuary of the Written," where enemy projectiles are erased from existence as if never written. Her ultimate, Final Chapter, is a declaration of absolute narrative control: she targets an enemy and reads aloud their death, dealing massive damage after a delay, unless they can change their fate by killing another in the interim. She is the author of the battlefield, and she has come to ensure the story ends correctly.
+
+Abilities: A support/mage who manipulates enemy actions. She fires a Scripture Bolt and can place a Page of Binding that forces enemies to repeat their last cast ability. Her ultimate, Final Chapter, marks an enemy for death; after a short delay, they take massive damage, but the effect can be transferred if the target kills another hero before it triggers.
+
+Unique Facts: Zetian's ultimate is a unique "fate transfer" mechanic, creating a psychological dilemma for the marked enemy. Her entire visual design is based around floating pages, ink trails, and parchment-like skin.
+
+Power: The narrative weaver. Zetian's power is her ability to dictate enemy behavior; she can force an assassin to waste their dash by repeating it, or condemn a carry to a death sentence that they can only escape by claiming another life, turning the battle into a story of her own design.
 
 Based on the visual data provided in the four reference images, here is an in-depth breakdown of this character's design.
 
@@ -2272,7 +3532,25 @@ While the character is seen in a celestial, misty mountain setting and a high-al
 
 
 
-Zhuxin
+128. Zhuxin — The Beacon of Spirits
+
+Background Story: Zhuxin is an enigmatic young woman from the city of Zhu’an, nestled in the mountains of the Cadia Riverlands. Using her Lantern of Spirits, she guides the ember butterflies and walks between life and death. She is able to hear the desires of mortal hearts, and those who can pass her trials will have their wishes granted. For nearly a thousand years, she has wandered in search of the purest wishes to fulfill, hoping to one day find her own. Her origin story is intertwined with the charm of the Burning Lights Festival; she was once a human blessed with a heart so pure that even in the afterlife, she continued to spread warmth and peace.
+
+Abilities: Every time Zhuxin channels Lantern Flare, she converts the Mana spent into up to 15 Crimson Butterflies to follow her Spirit Lantern. When an enemy hero reaches 10 stacks of Soul Snare, the Crimson Butterflies capture them, pulling them airborne. She can then throw all captured enemies to a target location, dealing Magic Damage plus a percentage of their Max HP. After stopping channeling, the butterflies gradually disappear, each restoring a portion of her Max Mana.
+
+Unique Facts: Zhuxin has a naturally high base Max Mana, but it doesn’t scale with her level. She is described as a mysterious young woman who guides ember butterflies and walks between the realms of the living and the dead. Her lantern is the central focus of her power and identity.
+
+Power: The soul harvester. Zhuxin‘s power is her ability to accumulate and then unleash devastating crowd control; she patiently gathers enemies into her spiritual web, then hurls them into a killing zone, turning a scattered team into a helpless cluster.
+
+Background Story: In a secluded, emerald bamboo forest on the slopes of a misty mountain, a gentle panda spirit named Zhuxin lived a life of quiet contemplation. He was the caretaker of the forest, a peaceful soul who spent his days tending to the bamboo and composing clumsy, heartfelt poetry. He was not a fighter; his greatest joy was a full belly and a long nap. However, his forest was built upon a leyline of immense, ancient power, and when the Abyss came to corrupt it, Zhuxin found that his home would not be saved by poetry alone. The forest itself awakened, its bamboo shoots hardening into divine, verdant spears that responded to Zhuxin's will.
+
+Lore: Reluctantly, Zhuxin became the warrior his home needed. He wields a massive, staff-like bamboo stalk that can extend and retract, and his chubby, roly-poly body hides a surprising, spiritual agility. He can roll into enemies with a belly-first charge, and he can summon thickets of enchanted bamboo that act as temporary walls and obstacles, shaping the battlefield into a maze of his own choosing. His ultimate, Verdant Sanctuary, creates a huge, enclosed circle of thick bamboo, trapping enemies inside with him. Within this grove, Zhuxin is constantly healed, his attacks enhanced, and no one can escape until the bamboo recedes. He is a guardian who fights with a sigh and a snack break, but his power is the ancient, unshakeable patience of the grove.
+
+Abilities: A tank/fighter who creates terrain. He rolls with a Bamboo Rollout charge. He can erect temporary bamboo walls to block movement and funnel enemies. His ultimate, Verdant Sanctuary, creates a large, circular bamboo arena that traps all inside and continuously heals Zhuxin while granting him enhanced damage reduction, forcing a brawl on his terms.
+
+Unique Facts: Zhuxin is the second panda hero alongside Akai, but his style is more focused on zone control than aggressive spinning. He often falls asleep briefly after his ultimate ends, a habit that his allies find both endearing and infuriating.
+
+Power: The grove keeper. Zhuxin's power is his ability to redesign the battlefield; he can block escape routes, trap an entire team in a bamboo cage, and then outlast them with passive healing, turning a chaotic teamfight into a serene, inescapable duel of attrition.
 
 Facial Composition and Ethereal Features
 The character possesses a refined and youthful facial structure that suggests someone in their late teens to early twenties. Her face is a delicate oval with a soft but defined jawline that meets at a subtle, pointed chin. Her nose is straight and slender, leading up to a pair of large, captivating eyes that feature a striking heterochromia or gradient effect—one appearing with a subtle blue-green hue while the other leans toward a deeper tone, all framed by thick, dark lashes. Her skin tone is a pale, porcelain ivory, providing a sharp contrast to her dark features. The hairstyle is a sophisticated black bob with straight-cut bangs that frame her forehead, while the back transitions into a long, singular braid that reaches down past her waist, fastened with teal-colored spherical ornaments. Adorning the left side of her head is a vibrant pink and purple butterfly-shaped hairpiece that mimics the look of a real insect, adding to her otherworldly charm.
@@ -2295,7 +3573,15 @@ While the character is shown in a serene, misty mountain landscape with giant st
 
 
 
-Marcel
+129. Marcel — The Soul Photographer
+
+Background Story: Marcel hails from House Paxley, and is an elegant, mysterious, and bizarre artist whose split soul has fused with his camera. He is Marcel Paxley, the elegant yet mysterious talent from Castle Aberleen. He himself is a masterfully composed double exposure: the first exposure captured the refined character of House Paxley—Marcel, the boy; the second exposure captured a torn soul, fragmented by dark magic—Clemar, his camera. Since then, they have gazed at the world through two viewfinders. One maintains an impeccable veneer of elegance; the other carefully documents reality. Together, they believe pain is the best chemical for development, while imperfection defines true depth of field. He uses his camera to uncover “red shards” of truth hidden by the Moniyan Empire.
+
+Abilities: Marcel‘s split soul, Clemar, enters the camera to freeze the moment. Clemar automatically snaps photos of enemy heroes near Marcel, causing a brief Frozen Moment and dealing True Damage. It also grants a shield of the same value to Marcel and a nearby allied hero. His Basic Attacks deal hybrid damage (Physical Attack, Magic Defense, and Physical Defense combined) and cannot Crit, nor can he benefit from extra Attack Speed. Extra HP is converted into Hybrid Defense.
+
+Unique Facts: Marcel is the 132nd hero in the Land of Dawn. He is a Support/Tank hybrid who uses a camera named Clemar. He is connected to the Paxley family, potentially as an ally to heroes like Melissa. He is a photographer by profession and a dark magic practitioner from the Moniyan Empire.
+
+Power: The moment freezer. Marcel’s power is his ability to control the tempo of battle by literally freezing moments; his camera automatically punishes enemies who get too close, and his ultimate creates a zone of suspended animation that forces enemies to fight on his patient, deliberate terms.
 
 Facial Aesthetics and Structural Detail
 This character possesses a striking and refined facial composition that balances youthful charm with an air of sophisticated mystery. His facial structure is elongated and aristocratic, featuring a sharp, well-defined jawline that tapers into a graceful chin. The nose is straight and slender, complementing his high, prominent cheekbones. His eyes are perhaps his most captivating feature—narrow and almond-shaped with a piercing intensity, colored in a deep, sapphire blue that matches his hair. Above them, thin, dark eyebrows are set in a calm, knowing expression. His skin tone is fair and porcelain-like, almost luminous against the darker tones of his attire. He appears to be in his early to mid-twenties, possessing a timeless quality that suggests he may be more than a mere human, perhaps carrying the grace of a celestial or a high-born mage.
@@ -2321,7 +3607,15 @@ To truly complement this character's aesthetic, he would look best positioned in
 
 
 
-Obsidia
+130. Obsidia — The Sovereign of Dark’s End
+
+Background Story: Obsidia is the first sovereign of the Abyss, awakened from her long slumber after centuries of entombment. Her awakening was triggered by the residual power of the God of Darkness that clung to her ancient palace. In the past, she led a nearly extinct race in the south. Obsidia accepted the dark power and used it to unite the underground nations, establishing the Abyss kingdom. With that power, she destroyed her oppressors and built absolute dominance. Those who submitted received blessings, while the bones of rebels piled high as a warning. However, the God of Darkness turned the Abyss into an eternal battlefield. Her people lost their will to live, becoming soulless warriors and sacrificed endlessly in ceaseless conflict. Obsidia fiercely resisted, even wounding the god. Though she eventually fell, she left behind her blood and power, making herself an eternal part of the Abyss. Now, Obsidia has awakened with a new determination: to hunt the Spawns of Decay. She vows to make the Abyss no longer a tool of war, but a grave for the God of Darkness.
+
+Abilities: Obsidia is a Dark Elf marksman who utilizes bone shards as weapons. She hunts the Spawns of Decay, increasing her strength by collecting bones from the enemies she has defeated. Her power lies in harnessing Bone Energy, which transforms into Bone Shards. Her ultimate can lock down enemies, preventing them from escaping.
+
+Unique Facts: Obsidia is the 130th hero in MLBB. She is from a cursed land called Dark’s End and is titled the Sovereign of Dark’s End. Her design reflects her stoic nature and deep connection to dark power, with a personality rooted in wisdom and detachment rather than cruelty. She uses bone shapes, glowing shards, and a purple theme in her visual design.
+
+Power: The bone harvester. Obsidia’s power is her ability to grow stronger with every fallen enemy; she collects bones to fuel her dark magic, and her ultimate imprisons foes in a skeletal cage, ensuring they cannot escape her relentless, accumulating vengeance.
 
 Celestial and Abyssal Visage
 This character possesses an ethereal and otherworldly facial structure that blends youthful elegance with a predatory, celestial intensity. Their head size is perfectly proportional to a lithe, athletic frame, featuring a sharp, V-shaped jawline and high, prominent cheekbones that suggest a noble or perhaps divine lineage. The skin tone is a striking, pale alabaster, almost luminous against the darker elements of their attire. Their eyes are perhaps the most captivating feature, exhibiting heterochromia or a shifting celestial energy; one eye glows with a piercing violet-magenta hue, while the other sits behind a golden, crown-like visor, appearing as a deep, icy blue or white orb. Their hair is a voluminous, flowing mane of pure white, styled in wild, cloud-like waves that reach down to the mid-back, contrasting sharply with the dark, jagged ornaments. The nose is straight and slender, leading down to thin, pale lilac lips that often carry a neutral or slightly defiant expression, giving them the appearance of someone in their late teens or early twenties, yet imbued with an ancient, cosmic weight.
@@ -2341,7 +3635,15 @@ To truly complement this character's design, they should be placed in environmen
 
 
 
-Lukas
+131. Lukas — The Beast of Light
+
+Background Story: Lukas is a Sacred Beast recently revived from inside the Imperial Sanctuary. Endowed with a special bloodline that allows him to take human form, he was once befriended by Emperor Gaius and fought alongside him to create the glorious Moniyan Empire. He was awakened from his thousand-year slumber by Silvanna, the Imperial Knightess, and swore to usher in a new era for the Empire at her side. His true form is the legendary Sacred Beast, which he can unleash through his ultimate ability. Lukas is a rambunctious young man in human form, but his true nature is that of an ancient, divine creature of light.
+
+Abilities: Lukas gains Resolve over time or by dealing damage to enemy heroes. When Resolve is full, he can cast his ultimate, Unleash the Beast, to transform into Sacred Beast form, increasing his Movement Speed and all attributes while gaining new, enhanced skill effects. In human form, his Flash Combo enhances his Basic Attacks, and his Flash Step allows him to dash and gain increased Movement Speed, Attack Speed, and Attack Range. In Sacred Beast form, his skills become more destructive, including tail swings that deal Physical Damage and recover HP when hitting heroes.
+
+Unique Facts: Lukas is the 127th hero in MLBB and has a unique two-form mechanic, similar to Roger. His connection to Silvanna is central to his story; she awakened him in the Imperial Sanctuary. He was a legendary creature that played a major role in building the Moniyan Empire. His title is “Beast of Light.”
+
+Power: The divine beast unleashed. Lukas’s power is his dual-nature; he can fight as an agile, aggressive human fighter and then, when his Resolve is full, transform into a massive Sacred Beast with vastly enhanced attributes, dominating the battlefield with primal, light-infused fury.
 
 Facial Structure and Expressive Features
 Lukas possesses a youthful and energetic facial structure that suggests he is in his late teens or very early twenties, characterized by a sharp, defined jawline and a confident, almost mischievous expression. His face is framed by a mane of pale, creamy blonde hair that is styled in thick, upward-sweeping spikes, giving him an aggressive and dynamic silhouette. Within this wild hairstyle, two distinct tufts of hair curve inward near the forehead, subtly mimicking the appearance of small horns. His eyes are a striking, luminous gold with sharp, narrow pupils that hint at a predatory or supernatural lineage, possibly draconic in nature. These eyes sit beneath thin, dark, slightly arched eyebrows that contribute to his cocky and spirited gaze. His nose is straight and well-proportioned, leading down to a wide, expressive mouth often pulled into a confident grin that reveals white, even teeth. His skin tone is fair and healthy, providing a bright canvas for the small, glowing amber markings located just beneath his outer eye corners.
@@ -2381,7 +3683,15 @@ The character’s primary weapons are its massive, golden claws and its own body
 
 
 
-Kalea
+132. Kalea — The Surging Wave
+
+Background Story: Kalea is a descendant of the legendary Great Serpent, a mythical being from Southeast Asian folklore that symbolizes the power of the sea. She once had trouble accepting her human-like body, feeling burdened by the “weakness” of her human form. However, after discovering who she truly was, she learned to fight with her fists and powerful serpent tail while healing allies with the power of the Great Serpent surging inside her. She was trained by two legendary mentors: Kadita, the Ocean Goddess who taught her to control the waves, and Badang, the Fist of the Tides who taught her combat discipline. Together, they taught her how to harness the power of the sea.
+
+Abilities: Kalea is a Support/Fighter hybrid who manipulates water, creating tactical zones that enhance her attacks. Her serpentine abilities allow her to control the ebb and flow of battle, with strong mobility and operability. Her combat style features the fluidity, strength, and stealth of a serpent, striking with the utmost power. Her healing abilities incorporate little serpents in the animations, tying back to her Great Serpent ancestry.
+
+Unique Facts: Kalea‘s creation was inspired by myths of giant serpents in Southeast Asian folklore, such as Bakunawa from the Philippines, Antaboga from Indonesia, Seri Gumum in Malaysia, and Phaya Naga from Thailand and Laos. Her aquamarine color palette captures the essence of Southeast Asian coastal waters. She is the figurehead of Season 36, “Breaking Waves.” Her tail represents her connection to her serpent ancestry.
+
+Power: The surging wave. Kalea’s power is her ability to weave offense and support into a single, fluid combat style; she can dive into the enemy backline with serpentine grace, disrupt their formation, and then heal her allies with the ancient power of the Great Serpent, turning the tide of battle like a wave crashing upon the shore.
 
 Physiognomy and Celestial Essence
 The character, Kalea from Mobile Legends: Bang Bang, possesses a youthful and vibrant facial structure that radiates a spirited, divine energy. Her face is a delicate heart shape Human Face, characterized by a smooth, rounded forehead and a defined yet soft jawline that tapers into a graceful chin. Her skin tone is a luminous, pale porcelain, which serves as a stark canvas for her striking features. Most captivating are her large, expressive eyes, which glow with a deep teal-green brilliance, reminiscent of the tropical ocean depths. Her gaze is framed by slender, high-arched eyebrows of a muted sea-foam green, and her small, straight nose complements her cheerful, wide smile. Her overall appearance suggests an adolescent or young adult age, though her mythological features hint at an immortal, god-like lineage. Her head is adorned with ornate golden headwear that transitions into a central horn or fin-like crest, featuring iridescent green scales that match the aquatic theme of her design.
@@ -2403,63 +3713,3 @@ Reflecting her agile and naturalistic nature, Kalea is barefoot, emphasizing her
 
 Environmental Synergy and Suggested Setting
 Given her vibrant, sea-inspired color palette and draconic features, Kalea looks best in environments that mirror her origins. A sprawling, ancient temple ruins submerged in a tropical lagoon, where the sunlight pierces through the clear water to illuminate coral reefs and golden artifacts, would suit her perfectly. Alternatively, a high-altitude mountain peak overlooking a vast, shimmering ocean would highlight her regal and divine qualities. She belongs in a world where the natural and the supernatural are seamlessly intertwined—a place of "The Sundering" where the elements are wild and powerful. The soft sand of a secluded beach, littered with giant shells and remnants of ancient civilizations, provides the ideal backdrop for her spirited and heroic demeanor.
-
-
-
-
-
-Lillian Osborne: The Multiversal Architect (Laylas Mother)
-
-While Lillian (full name: Lillian Osborne) isn't a playable hero you can lock in during the draft (as of mid-2026), she is arguably one of the most important "ghosts" in the Mobile Legends lore. She is the mother of Layla and the wife of Nolan, and her story is the reason the "Infinite Gateway" exists in the game’s universe.  
-
-Here is the breakdown of the woman who sacrificed everything for the future of Eruditio.
-
-The Lore: The Mother of Modern Science
-Lillian was the "Brightest Star" of Eruditio, long before Layla inherited that title. She was a brilliant scholar who specialized in Starlium energy and multiversal theory. Unlike her husband, Nolan, who was quiet and cautious, Lillian was gregarious, brave, and had a punch that could send a grown man reeling (which she famously did to Nolan during their first date in a cemetery).  
-
-The Mythic Sacrifice: When the Infinite Gateway experiment went horribly wrong, the city was about to be swallowed by a dimensional collapse. Lillian realized that only a massive surge of stabilized Starlium could seal the rift. She walked into the gateway, turning her own life force into "stardust" to stabilize the core. She vanished instantly, leaving behind a baby Layla and a devastated family.
-
-The 2026 Twist: In recent lore expansions (specifically the Peerless Light arc), it's hinted that Lillian didn't just "die." Her consciousness was scattered across the multiverse. Nolan spent 16 years in the void not just to stop the Calamity, but to find the "shards" of Lillian. In a way, every time Layla fires her Malefic Cannon, she is literally using the energy her mother became.
-
-Why She’s Famous: The "Unseen" Protagonist
-Lillian is famous for being the emotional anchor of the Eruditio Rangers.
-
-The Catalyst: She is the reason Nolan became a multiversal assassin and the reason Layla became a marksman.
-
-The Memorial: In the game's map lore, the cemetery in Eruditio features a nameless tombstone. This was Lillian’s request—she wanted her work to speak for her, not her name. Every year, Nolan and Layla visit this spot, making it one of the most iconic "unplayable" locations in the lore.
-
-The "Weapon": The Starlium Heart
-Since she isn't a playable hero, she doesn't have a weapon in the traditional sense, but her "weapon" was the Infinite Gateway Project.
-
-The Tech: She designed the blueprints for what would eventually become the Malefic Cannon (Layla's gun) and the Cosmic Gauge (Nolan’s weapon).
-
-The Essence: If she were to be added as a hero (a popular fan theory for the 2027 anniversary), her "weapon" would likely be Raw Starlium, controlled through a floating core similar to how a scientist would manage a miniature star.
-
-The Power: Multiversal Stabilization
-If we look at her "power" from a lore perspective, Lillian was the only one capable of Harmonizing Chaos.
-
-Dimensional Anchoring: While Nolan "cuts" through space, Lillian "heals" it. Her unique ability was to take the volatile "Void energy" and turn it into stable "Starlium."
-
-The Resonance: It is said that Lillian’s soul is still "tuned" to Layla. This is why Layla’s cannon gets stronger the further the shot travels—it’s the resonance of a mother’s protection reaching across the dimensions.
-
-The "Lillian" Vibe
-Lillian is the "Hero's Hero." She represents the ultimate sacrifice—giving up her present so that her daughter could have a future. In a world full of gods and monsters, she was just a human with a very big brain and a heart that was literally too large for one universe to contain.
-
-Fun Fact: Many players confuse Lillian with Lylia (the little gloom-mischief mage). While Lylia is a chaotic prankster, Lillian is the sophisticated scientist who probably would have grounded Lylia for five years if she ever caught her messing with the space-time continuum!
-
-If Lillian Osborne would embody the aesthetic of "Celestial High-Tech." Unlike the gritty, mechanical look of Eruditio’s current inventors, Lillian would appear as a figure caught between physical reality and pure energy. Standing at a medium height—slightly shorter than Nolan but possessing a much more commanding, regal posture—she would exude the aura of a woman who has peered into the heart of the sun and didn't blink. Her physique is lean and athletic, a testament to her days as a "gregarious" youth who was strong enough to send a master assassin like Nolan reeling with a single punch. She would look to be in her early thirties, the age she was when she transitioned into stardust, with a sharp, defined jawline and a straight, noble nose that gives her a look of perpetual focus and determination.  
-
-Facial Features and Radiant Gaze
-Her facial structure is elegant yet firm, characterized by high, prominent cheekbones and a slight, confident smirk that suggests she’s already calculated ten different ways to win a fight. Lillian’s skin tone is a pale, luminous porcelain that seems to glow faintly from within, a side effect of her prolonged exposure to Starlium energy. Her eyes are perhaps her most striking feature: deep, saturated amber-gold that pulses with the rhythm of the multiverse. They are large and expressive, framed by thick, dark lashes, and they don't just see the world; they seem to analyze its very molecular structure. Her hair is a cascade of shimmering platinum-blonde, much lighter than Layla’s, styled in a sophisticated, gravity-defying upward sweep that transitions into a long, floating ponytail. Small fragments of cosmic crystals would be embedded in her hair, causing it to leave a trail of stardust as she moves.
-
-The Attire of a Sovereign Scholar
-Lillian’s clothing is a masterclass in Eruditio’s "Golden Age" fashion, blending heavy laboratory gear with ethereal, high-society elegance. On her upper body, she wears a fitted, dark navy corset-style vest reinforced with silver Starlium plating. Over this is a high-collared, open-front coat made of an iridescent, semi-transparent fabric that shifts colors between violet and gold, resembling a nebula captured in silk. The coat’s sleeves are detached, starting at her biceps with polished silver bands and flowing down into wide, pointed cuffs. Her lower body features a pair of sleek, charcoal-gray trousers tucked into knee-high, armored boots. These boots are designed with glowing thrusters at the heels, allowing her to hover slightly off the ground. A heavy, utility-belt adorned with glowing vials of raw energy and ancient navigational compasses cinches her waist, grounding her complex design with the practical tools of a researcher.
-
-Headwear and Accessories
-On her head, Lillian sports a sleek, retractable visor made of polished gold and deep-blue glass. Unlike Layla’s bulky goggles, Lillian’s visor is slim and technological, often resting just above her forehead like a crown. It features a holographic "third eye" interface that flickers when she uses her abilities. Her hands are encased in delicate, fingerless "Pulse Gloves" that end at the mid-forearm. These gloves are intricately etched with glowing blue runes that synchronize with her heartbeat. Around her neck, she wears a pendant containing a miniature shard of the Infinite Gateway core—a pulsing, purple-white stone that serves as her primary power source and a sentimental link to the family she left behind.
-
-The Weapon: The Celestial Astrolabe
-Her weapon is not a firearm or a blade, but a Celestial Astrolabe—a floating, multi-ringed device roughly the size of a shield that orbits her body. The rings are made of a heavy, dark-matter metal that spins at varying speeds, creating a localized gravitational field. In the center of the rings floats a sphere of pure, crackling Starlium energy. When she attacks, the rings expand and snap into a lens-like formation, focusing the energy into a concentrated beam of multiversal light. The weapon carries an aura of "Controlled Chaos," humming with a low-frequency vibration that causes the air around her to shimmer. It doesn't just shoot projectiles; it bends space, occasionally leaving "rifts" in the air that mirror her husband Nolan’s abilities.
-
-Aura and Environment
-Lillian would look most at home in a Celestial Observatory—a place where the floor is made of polished glass reflecting a map of the stars and the walls are open to the infinite cosmos. She carries a passive aura known as "The Event Horizon," where small pebbles and dust particles near her feet occasionally lose gravity and float upward. Her presence is both comforting and terrifying; she is the "Brightest Star" that Layla strives to be, a woman who is not just a scientist, but a force of nature. In this setting, the gold and navy of her outfit would contrast beautifully against the deep purples and blacks of the void, making her appear as a beacon of order in an endless sea of chaos.
